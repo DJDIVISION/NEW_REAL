@@ -3,6 +3,12 @@
   src: local('Rajdhani-Semibold'), url(./fonts/Rajdhani-SemiBold.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: 'Neonballroom';
+  src: local('Neonballroom'), url(./fonts/Neonballroom.ttf) format('truetype');
+}
+
+
 
 
 body {
@@ -117,6 +123,11 @@ a {
 
 .icon-right {
   margin-left: auto;
+}
+
+.icon-middle {
+  margin-left: 100px;
+  display: inline;
 }
 
 .menu{
