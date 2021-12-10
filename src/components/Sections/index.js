@@ -1,7 +1,7 @@
 import React from 'react';
 // import { Button } from "@material-ui/core";
 // import { Section, Container } from "./Elements";
-import { InfoContainer, InfoWrapper, InfoRow, Column1, Column2, TextWrapper, TopLine, Heading, Subtitle, BtnWrap, ImgWrap, Img, Button } from "./Elements";
+import { InfoContainer, InfoWrapper, InfoRow, Column1, Column2, TextWrapper, TopLine, Heading, Subtitle, ImgWrap, Img, Button, BtnWrap } from "./Elements";
 
 
 const InfoSectionButton = ({lightBg, id, imgStart, topLine, lightText, headline, darkText, description, buttonLabel, logo, alt }) => {
