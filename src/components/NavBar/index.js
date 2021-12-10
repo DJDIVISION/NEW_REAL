@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from "styled-components";
 import { CSSTransition } from "react-transition-group";
-import { Nav, NavBarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavbarLink, Logo } from "./Elements";
+import { Nav, NavBarContainer, NavLogo, NavMenu, NavItem, NavbarLink, Logo } from "./Elements";
 import MenuIcon from '@mui/icons-material/Menu';
 import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
@@ -23,15 +23,19 @@ import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import RocketIcon from '@mui/icons-material/Rocket';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import ArticleIcon from '@mui/icons-material/Article';
-import { Link } from "react-router-dom";
-import { Link as LinkScroll } from "react-scroll";
+import { Link as LinkR } from "react-router-dom";
+import { Link as LinkS } from "react-scroll";
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const SmartIcon = styled(MenuIcon)`
-     
+     color: gold;
 `;
 
 
-const Navbar = ({ toggle }) => {
+const Navbar = () => {
+
+    
+
     return (
         <>
             <Nav>
@@ -45,28 +49,28 @@ const Navbar = ({ toggle }) => {
                     </NavItemMenu>
                     <NavMenu>
                         <NavItem>
-                            <NavbarLink to="Telos">Telos</NavbarLink>
+                            <NavbarLink to="telos" smooth={true} duration={500}>Telos</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="BSC">BSC</NavbarLink>
+                            <NavbarLink to="bsc" smooth={true} duration={500}>BSC</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="News">News</NavbarLink>
+                            <NavbarLink to="news" smooth={true} duration={500}>News</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="/TeamPage">Team</NavbarLink>
+                            <NavbarLink to="team" smooth={true} duration={500}>Team</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="Gaming">Gaming</NavbarLink>
+                            <NavbarLink to="gaming" smooth={true} duration={500}>Gaming</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="/PartnersPage">Partners</NavbarLink>
+                            <NavbarLink to="partners" smooth={true} duration={500}>Partners</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="NFTs">NFTs</NavbarLink>
+                            <NavbarLink to="nft" smooth={true} duration={500}>NFTs</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="SocialMedia">Social Media</NavbarLink>
+                            <NavbarLink to="socialmedia">Social Media</NavbarLink>
                         </NavItem>
                     </NavMenu>
                 </NavBarContainer>
@@ -95,7 +99,7 @@ function DropDownMenu() {
        <div className="dropdown">
            <CSSTransition in={activeMenu === "main"} unmountOnExit timeout={500} classNames="menu-primary">
                <div className="menu">
-                    <DropDownItem leftIcon={<NewspaperIcon />} rightIcon={<NavigateNextIcon />} goToMenu="news">News</DropDownItem>
+                    <DropDownItem leftIcon={<NewspaperIcon />} rightIcon={<NavigateNextIcon />} goToMenu="news"><LinkS to="news">News</LinkS></DropDownItem>
                     <DropDownItem leftIcon={<PeopleIcon />} rightIcon={<NavigateNextIcon />} goToMenu="team">Team</DropDownItem>
                     <DropDownItem leftIcon={<CasinoIcon />} rightIcon={<NavigateNextIcon />} goToMenu="gaming">Gaming</DropDownItem>
                     <DropDownItem leftIcon={<SupervisedUserCircleIcon />} rightIcon={<NavigateNextIcon /> }goToMenu="partners">Partners</DropDownItem>
@@ -118,9 +122,9 @@ function DropDownMenu() {
            <CSSTransition in={activeMenu === "team"} unmountOnExit timeout={500} classNames="menu-secondary">
                <div className="menu">
                     <DropDownItem leftIcon={<ChevronLeftIcon />} goToMenu="main" />
-                    <Link to="/TeamPage"><DropDownItem leftIcon={<PersonPinIcon />}>CEO</DropDownItem></Link>
-                    <Link to="/TeamPage"><DropDownItem leftIcon={<PersonPinIcon />}>CIO</DropDownItem></Link>
-                    <Link to="/TeamPage"><DropDownItem leftIcon={<PersonPinIcon />}>DEVs</DropDownItem></Link>
+                    <LinkR to="/TeamPage"><DropDownItem leftIcon={<PersonPinIcon />}>CEO</DropDownItem></LinkR>
+                    <LinkR to="/TeamPage"><DropDownItem leftIcon={<PersonPinIcon />}>CIO</DropDownItem></LinkR>
+                    <LinkR to="/TeamPage"><DropDownItem leftIcon={<PersonPinIcon />}>DEVs</DropDownItem></LinkR>
                 </div>
            </CSSTransition>
 
@@ -136,12 +140,12 @@ function DropDownMenu() {
            <CSSTransition in={activeMenu === "partners"} unmountOnExit timeout={500} classNames="menu-secondary">
                <div className="menu">
                     <DropDownItem leftIcon={<ChevronLeftIcon />} goToMenu="main" />
-                    <Link to="/PartnersPage"><DropDownItem leftIcon={<MonetizationOnIcon />}>FORTIS</DropDownItem></Link>
-                    <Link to="/PartnersPage"><DropDownItem leftIcon={<ViewModuleIcon />}>TELOS</DropDownItem></Link>
-                    <Link to="/PartnersPage"><DropDownItem leftIcon={<BrushIcon />}>NFTFY</DropDownItem></Link>
-                    <Link to="/PartnersPage"><DropDownItem leftIcon={<AccountBalanceWalletIcon />}>WOMBAT</DropDownItem></Link>
-                    <Link to="/PartnersPage"><DropDownItem leftIcon={<AccountBalanceWalletIcon />}>ANCHOR</DropDownItem></Link>
-                    <Link to="/PartnersPage"><DropDownItem leftIcon={<RocketIcon />}>T-STARTER</DropDownItem></Link>
+                    <LinkR to="/PartnersPage"><DropDownItem leftIcon={<MonetizationOnIcon />}>FORTIS</DropDownItem></LinkR>
+                    <LinkR to="/PartnersPage"><DropDownItem leftIcon={<ViewModuleIcon />}>TELOS</DropDownItem></LinkR>
+                    <LinkR to="/PartnersPage"><DropDownItem leftIcon={<BrushIcon />}>NFTFY</DropDownItem></LinkR>
+                    <LinkR to="/PartnersPage"><DropDownItem leftIcon={<AccountBalanceWalletIcon />}>WOMBAT</DropDownItem></LinkR>
+                    <LinkR to="/PartnersPage"><DropDownItem leftIcon={<AccountBalanceWalletIcon />}>ANCHOR</DropDownItem></LinkR>
+                    <LinkR to="/PartnersPage"><DropDownItem leftIcon={<RocketIcon />}>T-STARTER</DropDownItem></LinkR>
                 </div>
            </CSSTransition>
 
@@ -164,14 +168,14 @@ function DropDownMenu() {
                 </div>
            </CSSTransition>
 
-           <CSSTransition in={activeMenu === "social"} unmountOnExit timeout={500} classNames="menu-secondary">
-               <div className="telos">
+           <CSSTransition in={activeMenu === "telos"} unmountOnExit timeout={500} classNames="menu-secondary">
+               <div className="menu">
                     <DropDownItem leftIcon={<ChevronLeftIcon />} goToMenu="main" />
                 </div>
            </CSSTransition>
 
-           <CSSTransition in={activeMenu === "social"} unmountOnExit timeout={500} classNames="menu-secondary">
-               <div className="bsc">
+           <CSSTransition in={activeMenu === "bsc"} unmountOnExit timeout={500} classNames="menu-secondary">
+               <div className="menu">
                     <DropDownItem leftIcon={<ChevronLeftIcon />} goToMenu="main" />
                 </div>
            </CSSTransition>

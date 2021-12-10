@@ -1,19 +1,20 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link as LinkR } from "react-router-dom";
+import { Link as LinkS} from "react-scroll";
 
 
 export const Nav = styled.nav`
     background: transparent;
     height: 80px;
-    margin-top: -40px;
+    margin-top: -80px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1rem;
     position: sticky;
     top: 0;
-    z-index: 30;
+    z-index: 10;
 
     @media screen and (max-width: 960px) {
         transition: 0.8s all ease;
@@ -29,10 +30,10 @@ export const NavBarContainer = styled.div`
     padding: 0 24px;
     max-width: 1100px;
 `;
-
-export const NavLogo = styled(Link)`
-   color: whitesmoke;
-   justify-content: flex-start;
+ 
+export const NavLogo = styled(LinkR)`
+   color: gold;
+   justify-self: flex-start;
    cursor: pointer;
    display: flex;
    font-size: 1.5rem;
@@ -42,7 +43,7 @@ export const NavLogo = styled(Link)`
    text-decoration: none;
 `;
 
-export const Logo = styled(Link)`
+export const Logo = styled(LinkS)`
     width: 80px;
     
     
@@ -84,8 +85,8 @@ export const NavItem = styled.li`
     height: 80px;
 `;
 
-export const NavbarLink = styled(Link)`
-   color: whitesmoke;
+export const NavbarLink = styled(LinkS)`
+   color: gold;
    display: flex;
    align-items: center;
    text-decoration: none;
@@ -94,6 +95,6 @@ export const NavbarLink = styled(Link)`
    cursor: pointer;
 
    &.active {
-       border-bottom: 3px solid navy;
+       border-bottom: 3px solid whitesmoke;
    }
 `;
