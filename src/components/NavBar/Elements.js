@@ -7,7 +7,7 @@ import { Link as LinkS} from "react-scroll";
 export const Nav = styled.nav`
     background: transparent;
     height: 80px;
-    margin-top: -80px;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,6 +29,7 @@ export const NavBarContainer = styled.div`
     width: 100%;
     padding: 0 24px;
     max-width: 1100px;
+    //color: ${({scrollNav}) => (scrollNav ? "transparent" : "gold")}
 `;
  
 export const NavLogo = styled(LinkR)`

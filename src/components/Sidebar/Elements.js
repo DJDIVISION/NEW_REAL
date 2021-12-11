@@ -16,14 +16,16 @@ export const SidebarContainer = styled.aside`
     z-index: 999;
     width: 100%;
     height: 100%;
+    
     background: black;
-    display:grid;
+    display:column;
     align-items: center;
     top: 0;
     left: 0;
     transition: 0.3s ease-in-out;
     opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
-    top: ${({ isOpen }) => (isOpen ? "0" : "-100%")}; 
+    top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};  
+    
     
 `;
 
@@ -31,7 +33,7 @@ export const CloseIcon = styled(HighlightOffIcon)`
     color: whitesmoke;
 `;
 
-export const Icon1 = styled(NewspaperIcon)`
+/* export const Icon1 = styled(NewspaperIcon)`
     margin-right: 10px;
 
 `;
@@ -60,7 +62,7 @@ export const Logo1 = styled.img`
     width: 30px;
     margin-right: 15px;
 
-`;
+`; */
 
 
 export const Icon = styled.div`
@@ -80,14 +82,17 @@ export const SidebarWrapper = styled.div`
 export const SidebarMenu = styled.ul`
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(8, 60px);
+    grid-template-rows: repeat(6, 80px);
     text-align: center;
-
+    margin-top: 120px;
+    padding-left: 1.6rem;
     @media screen and (max-width: 480px) {
-       grid-template-rows: repeat(8, 40px);
+       grid-template-rows: repeat(8, 60px);
     }
 
 `;
+
+
 
 export const SidebarLink = styled(LinkS)`
     display: flex;
@@ -104,10 +109,12 @@ export const SidebarLink = styled(LinkS)`
     
 
     &:hover {
-        color: blue;
+        color: gold;
         transition: 0.2 ease-in-out;
     }
 `;
+
+
 
 export const SidebarRoute = styled(LinkR)`
     border-radius: 50px;
@@ -127,5 +134,5 @@ export const SidebarRoute = styled(LinkR)`
         background: whitesmoke;
         color: blue;
     }
-`;
-
+`; 
+ 

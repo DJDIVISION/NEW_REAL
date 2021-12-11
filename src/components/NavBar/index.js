@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from "styled-components";
 import { CSSTransition } from "react-transition-group";
-import { Nav, NavBarContainer, NavLogo, NavMenu, NavItem, NavbarLink, Logo } from "./Elements";
+import { Nav, NavBarContainer, NavLogo, NavMenu, NavItem, NavbarLink, MobileIcon } from "./Elements";
 import MenuIcon from '@mui/icons-material/Menu';
+import { scroll } from "react-scroll";
 import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import NewspaperIcon from '@mui/icons-material/Newspaper';
@@ -28,25 +29,42 @@ import { Link as LinkS } from "react-scroll";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const SmartIcon = styled(MenuIcon)`
-     color: gold;
+     //color: gold;
 `;
 
 
-const Navbar = () => {
+const Navbar = ({ toggle }) => {
 
-    
+    const [scrollNav, setScrollNav] = useState(false);
+
+    const changeNav = () => {
+        if(window.scrollY >= 80) {
+            setScrollNav(true)
+        } 
+        else {
+            setScrollNav(true)
+        }
+    }
+
+    useEffect(() => {
+       window.addEventListener('scroll', changeNav) 
+    }, []);
+
+    const toggleHome = () => {
+      scroll.scrollTop();
+    }
 
     return (
         <>
             <Nav>
-                <NavBarContainer>
-                    <NavLogo to="/">Destiny Airlines</NavLogo>
-                    {/* <MobileIcon onClick={toggle}>
+                <NavBarContainer scrollNav={scrollNav}>
+                    <NavLogo to="" onClick={toggleHome}>Destiny Airlines</NavLogo>
+                    <MobileIcon onClick={toggle}>
                         <MenuIcon />
-                    </MobileIcon> */}
-                    <NavItemMenu icon={<SmartIcon />}>
+                    </MobileIcon> 
+                    {/* <NavItemMenu icon={<SmartIcon />}>
                         <DropDownMenu />
-                    </NavItemMenu>
+                    </NavItemMenu> */}
                     <NavMenu>
                         <NavItem>
                             <NavbarLink to="telos" smooth={true} duration={500}>Telos</NavbarLink>
@@ -80,7 +98,7 @@ const Navbar = () => {
 };
 
 
-function DropDownMenu() {
+/* function DropDownMenu() {
 
     const [activeMenu, setActiveMenu] = useState("main");
     
@@ -200,6 +218,6 @@ function NavItemMenu(props){
            {open && props.children}
        </li> 
     )
-}
+} */
 
 export default Navbar;

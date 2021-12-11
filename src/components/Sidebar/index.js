@@ -1,18 +1,20 @@
 import React from 'react';
-import { SidebarContainer, Icon,  CloseIcon, SidebarWrapper, SidebarLink, SidebarMenu, Icon1, Icon2, Icon3, Icon4, Icon5, Icon6, Logo1 } from "./Elements";
+import styled from "styled-components";
+import { SidebarContainer, Icon,  CloseIcon, SidebarWrapper, SidebarLink, SidebarMenu, SidebarRoute, SidebarRow, Icon1, Icon2, Icon3, Icon4, Icon5, Icon6, Logo1 } from "./Elements";
 import logoTelos from "../../images/telos_logo.png";
 import logoBsc from "../../images/bsc_logo.png";
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { Link } from "react-router-dom";
 import "../../index.css";
 
 
-function Navbar2(props) {
+/* function Navbar2(props) {
     return (
         <nav className="navbar2">
             <ul className="navbar2-nav"> { props.children} </ul>
         </nav>
     ) 
-}
+} */
 
 /* const Sidebar = ({ isOpen, toggle }) => {
     return (
@@ -52,4 +54,31 @@ function Navbar2(props) {
     );
 } */
 
-export default Navbar2;
+const DownArrow = styled(KeyboardArrowDownIcon)`
+    color: whitesmoke;
+    
+    
+`;
+
+const Sidebar = ({ isOpen, toggle }) => {
+    return (
+       <SidebarContainer isOpen={isOpen} onClick={toggle}>
+           <Icon onClick={toggle}>
+               <CloseIcon />
+           </Icon>
+           <SidebarWrapper>
+               <SidebarMenu>
+                    <SidebarLink to="news" onClick={toggle}>News</SidebarLink>
+                    <SidebarLink to="team" onClick={toggle}>Team</SidebarLink>
+                    <SidebarLink to="partners" onClick={toggle}>Partners</SidebarLink>
+                    <SidebarLink to="gaming" onClick={toggle}>Gaming</SidebarLink>
+                    <SidebarLink to="nft" onClick={toggle}>NFTs</SidebarLink>
+                    <SidebarLink to="telos" onClick={toggle}>TELOS</SidebarLink>
+                    <SidebarLink to="bsc" onClick={toggle}>BSC</SidebarLink>
+               </SidebarMenu>
+           </SidebarWrapper>
+       </SidebarContainer>
+    );
+}
+
+export default Sidebar;

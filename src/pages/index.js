@@ -21,7 +21,7 @@ const Home = () => {
     return (
         <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
             <Sidebar isOpen={isOpen} toggle={toggle}/>
-            <NavBar />
+            <NavBar toggle={toggle}/>
             <HeroSection />
             <InfoSection {...HomeNews}/>
             <InfoSection {...HomeTeam}/>
