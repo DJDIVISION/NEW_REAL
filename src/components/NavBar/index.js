@@ -42,7 +42,7 @@ const Navbar = ({ toggle }) => {
             setScrollNav(true)
         } 
         else {
-            setScrollNav(true)
+            setScrollNav(false)
         }
     }
 
@@ -51,14 +51,14 @@ const Navbar = ({ toggle }) => {
     }, []);
 
     const toggleHome = () => {
-      scroll.scrollTop();
+      scroll.scrollToTop();
     }
 
     return (
         <>
-            <Nav>
-                <NavBarContainer scrollNav={scrollNav}>
-                    <NavLogo to="" onClick={toggleHome}>Destiny Airlines</NavLogo>
+            <Nav >
+                <NavBarContainer >
+                    <NavLogo to="" onClick={toggleHome} scrollNav={scrollNav}>Destiny Airlines</NavLogo>
                     <MobileIcon onClick={toggle}>
                         <MenuIcon />
                     </MobileIcon> 
@@ -67,25 +67,25 @@ const Navbar = ({ toggle }) => {
                     </NavItemMenu> */}
                     <NavMenu>
                         <NavItem>
-                            <NavbarLink to="telos" smooth={true} duration={500}>Telos</NavbarLink>
+                            <NavbarLink to="telos" smooth={true} duration={500} spy={true} exact="true" >Telos</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="bsc" smooth={true} duration={500}>BSC</NavbarLink>
+                            <NavbarLink to="bsc" smooth={true} duration={500} spy={true} exact="true" >BSC</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="news" smooth={true} duration={500}>News</NavbarLink>
+                            <NavbarLink to="news" smooth={true} duration={500} spy={true} exact="true" >News</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="team" smooth={true} duration={500}>Team</NavbarLink>
+                            <NavbarLink to="team" smooth={true} duration={500} spy={true} exact="true" >Team</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="gaming" smooth={true} duration={500}>Gaming</NavbarLink>
+                            <NavbarLink to="gaming" smooth={true} duration={500} spy={true} exact="true" >Gaming</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="partners" smooth={true} duration={500}>Partners</NavbarLink>
+                            <NavbarLink to="partners" smooth={true} duration={500} spy={true} exact="true" >Partners</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="nft" smooth={true} duration={500}>NFTs</NavbarLink>
+                            <NavbarLink to="nft" smooth={true} duration={500} spy={true} exact="true" >NFTs</NavbarLink>
                         </NavItem>
                         <NavItem>
                             <NavbarLink to="socialmedia">Social Media</NavbarLink>

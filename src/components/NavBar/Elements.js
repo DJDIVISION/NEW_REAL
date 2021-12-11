@@ -29,10 +29,11 @@ export const NavBarContainer = styled.div`
     width: 100%;
     padding: 0 24px;
     max-width: 1100px;
-    //color: ${({scrollNav}) => (scrollNav ? "transparent" : "gold")}
+    
 `;
  
 export const NavLogo = styled(LinkR)`
+   //color: ${({scrollNav}) => (scrollNav ? "transparent" : "gold")};
    color: gold;
    justify-self: flex-start;
    cursor: pointer;
@@ -96,6 +97,8 @@ export const NavbarLink = styled(LinkS)`
    cursor: pointer;
 
    &.active {
-       border-bottom: 3px solid whitesmoke;
+       border-bottom: 1px solid gold;
+       
+       
    }
 `;

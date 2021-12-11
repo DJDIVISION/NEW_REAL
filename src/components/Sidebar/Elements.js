@@ -80,14 +80,16 @@ export const SidebarWrapper = styled.div`
 `;
 
 export const SidebarMenu = styled.ul`
-    display: grid;
+    display: flex;
+    flex-direction: column;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 80px);
+    grid-template-rows: repeat(7, 60px);
     text-align: center;
     margin-top: 120px;
+    border-radius: 20px;
     padding-left: 1.6rem;
     @media screen and (max-width: 480px) {
-       grid-template-rows: repeat(8, 60px);
+       grid-template-rows: repeat(7, 50px);
     }
 
 `;
