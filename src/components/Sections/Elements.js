@@ -36,6 +36,7 @@ export const InfoContainer = styled.div`
     
    @media screen and (max-width: 768px) {
        padding: 60px 0;
+       height: 650px;
    }
 `;
 
@@ -101,6 +102,11 @@ export const TopLine = styled.p`
     margin-bottom: 80px;
     animation: ${move} 2.5s ease infinite;
     color: ${({ colorText }) => (colorText ? 'navy' : 'gold')};
+
+    @media screen and (max-width: 768px) {
+        font-size: 52px;
+        margin-top: -40px;
+    }
 `;
 
 export const Heading = styled.h1`
