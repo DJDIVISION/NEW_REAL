@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Link as LinkS } from "react-scroll";
 import { Link as LinkR } from "react-router-dom";
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
+import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
 import NewspaperIcon from '@mui/icons-material/Newspaper';
 import PeopleIcon from '@mui/icons-material/People';
 import CasinoIcon from '@mui/icons-material/Casino';
@@ -32,6 +33,8 @@ export const SidebarContainer = styled.aside`
 export const CloseIcon = styled(HighlightOffIcon)`
     color: whitesmoke;
 `;
+
+
 
 /* export const NewsIcon = styled(NewspaperIcon)`
     margin-right: 10px;

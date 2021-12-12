@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
-import { Link as LinkS} from "react-scroll";
+import { Link as LinkS } from "react-scroll";
 
 
 export const Nav = styled.nav`
@@ -68,6 +68,21 @@ export const MobileIcon = styled.div`
     }
 `;
 
+export const MobileIcon2 = styled.div`
+    display: none;
+
+    @media screen and (max-width: 760px){
+        display: block;
+        position: absolute;
+        top: ${({ scrollNavDown }) => (scrollNavDown ? "50px" : "-50px")};
+        right: 0;
+        transform: translate(-100%, 60%);
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: whitesmoke;
+    }
+`;
+
 export const NavMenu = styled.ul`
     display: flex;
     align-items: center;
@@ -98,7 +113,6 @@ export const NavbarLink = styled(LinkS)`
    cursor: pointer;
 
    &.active {
-       border-bottom: 1px solid gold;
        
        
    }

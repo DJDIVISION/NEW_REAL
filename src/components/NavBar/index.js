@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import styled from "styled-components";
 import { CSSTransition } from "react-transition-group";
-import { Nav, NavBarContainer, NavLogo, NavMenu, NavItem, NavbarLink, MobileIcon } from "./Elements";
+import { Nav, NavBarContainer, NavLogo, NavMenu, NavItem, NavbarLink, MobileIcon, MobileIcon2 } from "./Elements";
 import MenuIcon from '@mui/icons-material/Menu';
+import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
 import { animateScroll as scroll } from "react-scroll";
 import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
@@ -32,6 +33,13 @@ const SmartIcon = styled(MenuIcon)`
      color: gold;
 `;
 
+const ScrollIcon = styled(ArrowCircleUpIcon)`
+    color: gold;
+    
+
+    top: 600px;
+`;
+
 
 const Navbar = ({ toggle }) => {
 
@@ -50,19 +58,22 @@ const Navbar = ({ toggle }) => {
        window.addEventListener('scroll', changeNavDown) 
     }, []);
 
-
     const toggleHome = () => {
-      scroll.scrollToTop()
+        scroll.scrollToTop();
     }
+    
 
     return (
         <>
             <Nav scrollNavDown={scrollNavDown}>
                 <NavBarContainer >
-                    <NavLogo to="/" onClick={toggleHome}>Destiny Airlines</NavLogo>
+                    <NavLogo to="/" >Destiny Airlines</NavLogo>
                     <MobileIcon onClick={toggle}>
                         <SmartIcon />
-                    </MobileIcon> 
+                    </MobileIcon>
+                    <MobileIcon2 scrollNavDown={scrollNavDown}>
+                        <ScrollIcon onClick={toggleHome}/>
+                    </MobileIcon2> 
                     <NavMenu>
                         <NavItem>
                             <NavbarLink to="telos" smooth={true} duration={500} spy={true} exact="true" >Telos</NavbarLink>
