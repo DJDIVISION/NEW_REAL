@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { animationOne, transition } from "../animations";
 import PartnerSmallCards from "../components/PartnersHome/PartnerSmallCards";
 import { HomeNews, HomePartners, HomeTeam, HomeGaming, HomeNFT } from "../components/Sections/Data.js";
+import Footer from '../components/Footer';
 
 
 
@@ -28,18 +29,12 @@ const Home = () => {
             <InfoSection {...HomeGaming}/>
             <InfoSection {...HomePartners}/>
             <InfoSection {...HomeNFT}/>
-            <PartnerSmallCards />
+            <Footer />
         </motion.div>
     );
 }
 
-function Menu(props) {
-    return (
-        <nav className="menu">
-            <ul className="menu-nav"> { props.children } </ul>
-        </nav>
-    )
-}
+
 
 
 

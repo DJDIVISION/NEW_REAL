@@ -23,10 +23,10 @@ const StyledButton = styled(Button)`
 
       &:hover{
           background-color: gold;
-          color: black;
+          color: red;
           font-weight: bold;
           transform: scale(0.95);
-          transition: 0.2s all ease-in-out;
+          transition: 0.3s ease-in-out;
       }
     }
 `;

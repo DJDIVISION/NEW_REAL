@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { CSSTransition } from "react-transition-group";
 import { Nav, NavBarContainer, NavLogo, NavMenu, NavItem, NavbarLink, MobileIcon } from "./Elements";
 import MenuIcon from '@mui/icons-material/Menu';
-import { scroll } from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
 import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import NewspaperIcon from '@mui/icons-material/Newspaper';
@@ -29,42 +29,40 @@ import { Link as LinkS } from "react-scroll";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const SmartIcon = styled(MenuIcon)`
-     //color: gold;
+     color: gold;
 `;
 
 
 const Navbar = ({ toggle }) => {
 
-    const [scrollNav, setScrollNav] = useState(false);
+    const [scrollNavDown, setScrollNavDown] = useState(false);
 
-    const changeNav = () => {
-        if(window.scrollY >= 80) {
-            setScrollNav(true)
+    const changeNavDown = () => {
+        if(window.scrollY >= 120) {
+            setScrollNavDown(true)
         } 
         else {
-            setScrollNav(false)
+            setScrollNavDown(false)
         }
     }
 
     useEffect(() => {
-       window.addEventListener('scroll', changeNav) 
+       window.addEventListener('scroll', changeNavDown) 
     }, []);
 
+
     const toggleHome = () => {
-      scroll.scrollToTop();
+      scroll.scrollToTop()
     }
 
     return (
         <>
-            <Nav >
+            <Nav scrollNavDown={scrollNavDown}>
                 <NavBarContainer >
-                    <NavLogo to="" onClick={toggleHome} scrollNav={scrollNav}>Destiny Airlines</NavLogo>
+                    <NavLogo to="/" onClick={toggleHome}>Destiny Airlines</NavLogo>
                     <MobileIcon onClick={toggle}>
-                        <MenuIcon />
+                        <SmartIcon />
                     </MobileIcon> 
-                    {/* <NavItemMenu icon={<SmartIcon />}>
-                        <DropDownMenu />
-                    </NavItemMenu> */}
                     <NavMenu>
                         <NavItem>
                             <NavbarLink to="telos" smooth={true} duration={500} spy={true} exact="true" >Telos</NavbarLink>

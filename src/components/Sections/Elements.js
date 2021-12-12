@@ -119,7 +119,7 @@ export const Heading = styled.h1`
 export const Subtitle = styled.p`
     max-width: 440px;
     margin-bottom: 35px;
-    font-size: 22px;
+    font-size: 16px;
     line-height: 1.3;
     margin-top: -30px;
     margin-bottom: 50px;
@@ -152,7 +152,7 @@ export const Img = styled.img`
 
     @media screen and (max-width: 768px) {
         padding: 2rem;
-        margin-top: -100px;
+        margin-top: -150px;
     }
 `;
 

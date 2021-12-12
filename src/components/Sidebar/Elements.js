@@ -15,10 +15,10 @@ export const SidebarContainer = styled.aside`
     position: fixed;
     z-index: 999;
     width: 100%;
-    height: 100%;
+    height: 600px;
     
     background: black;
-    display:column;
+    display: grid;
     align-items: center;
     top: 0;
     left: 0;
@@ -33,28 +33,28 @@ export const CloseIcon = styled(HighlightOffIcon)`
     color: whitesmoke;
 `;
 
-/* export const Icon1 = styled(NewspaperIcon)`
+/* export const NewsIcon = styled(NewspaperIcon)`
     margin-right: 10px;
 
 `;
 
-export const Icon2 = styled(PeopleIcon)`
+export const TeamIcon = styled(PeopleIcon)`
     margin-right: 10px;
 `;
 
-export const Icon3 = styled(CasinoIcon)`
+export const GamingIcon = styled(CasinoIcon)`
     margin-right: 10px;
 `;
 
-export const Icon4 = styled(SupervisedUserCircleIcon)`
+export const PartnersIcon = styled(SupervisedUserCircleIcon)`
     margin-right: 10px;
 `;
 
-export const Icon5 = styled(BrushIcon)`
+export const NftIcon = styled(BrushIcon)`
     margin-right: 10px;
 `;
 
-export const Icon6 = styled(TwitterIcon)`
+export const SocialIcon = styled(TwitterIcon)`
     margin-right: 10px;
 `;
 
@@ -62,7 +62,7 @@ export const Logo1 = styled.img`
     width: 30px;
     margin-right: 15px;
 
-`; */
+`;  */
 
 
 export const Icon = styled.div`
@@ -80,16 +80,15 @@ export const SidebarWrapper = styled.div`
 `;
 
 export const SidebarMenu = styled.ul`
-    display: flex;
-    flex-direction: column;
+    display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(7, 60px);
+    grid-template-rows: repeat(8, 60px);
     text-align: center;
-    margin-top: 120px;
-    border-radius: 20px;
+    
+    
     padding-left: 1.6rem;
     @media screen and (max-width: 480px) {
-       grid-template-rows: repeat(7, 50px);
+       grid-template-rows: repeat(8, 50px);
     }
 
 `;
@@ -114,6 +113,8 @@ export const SidebarLink = styled(LinkS)`
         color: gold;
         transition: 0.2 ease-in-out;
     }
+
+    
 `;
 
 

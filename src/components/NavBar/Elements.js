@@ -13,7 +13,7 @@ export const Nav = styled.nav`
     align-items: center;
     font-size: 1rem;
     position: sticky;
-    top: 0;
+    top: ${({ scrollNavDown }) => (scrollNavDown ? "-50px" : "0")};
     z-index: 10;
 
     @media screen and (max-width: 960px) {
@@ -33,7 +33,8 @@ export const NavBarContainer = styled.div`
 `;
  
 export const NavLogo = styled(LinkR)`
-   //color: ${({scrollNav}) => (scrollNav ? "transparent" : "gold")};
+   color: gold;
+   
    color: gold;
    justify-self: flex-start;
    cursor: pointer;
