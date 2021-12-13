@@ -84,7 +84,7 @@ const Image = styled(motion.img)`
     max-width: 250px;
     max-height: 250px;
     position: absolute;
-    z-index: 5;
+    z-index: 25;
 `;
 
 const ColumnRight = styled.div`
@@ -158,7 +158,7 @@ const AnimatedSection = () => {
                     whileTap={{scale: 1.3}} 
                     drag={true}
                     initial={{x: -50, y:-350, scale: 0.2}}
-                    animate={{x: 150, y:-550,  scale: 2, transition: { duration: 26}}}/>
+                    animate={{x: 120, y:-550,  scale: 2, transition: { duration: 26}}}/>
                    {/*  <Image src={Planet4} alt="planet" 
                     whileTap={{scale: 1.3}} 
                     drag={true}
