@@ -41,7 +41,7 @@ export const NavLogo = styled(LinkR)`
    display: flex;
    font-size: 1.5rem;
    align-items: center;
-   margin-left: 24px;
+   margin-left: 12px;
    font-weight: bold;
    text-decoration: none;
 `;
@@ -61,7 +61,7 @@ export const MobileIcon = styled.div`
         position: absolute;
         top: 0;
         right: 0;
-        transform: translate(-100%, 60%);
+        transform: translate(-100%, 80%);
         font-size: 1.8rem;
         cursor: pointer;
         color: whitesmoke;
@@ -69,18 +69,14 @@ export const MobileIcon = styled.div`
 `;
 
 export const MobileIcon2 = styled.div`
-    display: none;
-
-    @media screen and (max-width: 760px){
-        display: block;
-        position: absolute;
-        top: ${({ scrollNavDown }) => (scrollNavDown ? "50px" : "-50px")};
-        right: 0;
-        transform: translate(-100%, 60%);
-        font-size: 1.8rem;
-        cursor: pointer;
-        color: whitesmoke;
-    }
+    display: block;
+    position: absolute;
+    top: ${({ scrollNavDown }) => (scrollNavDown ? "50px" : "-80px")};
+    right: 0;
+    transform: translate(-20%, 20%);
+    
+    cursor: pointer;
+    color: gold;
 `;
 
 export const NavMenu = styled.ul`

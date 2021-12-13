@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { CSSTransition } from "react-transition-group";
 import { Nav, NavBarContainer, NavLogo, NavMenu, NavItem, NavbarLink, MobileIcon, MobileIcon2 } from "./Elements";
 import MenuIcon from '@mui/icons-material/Menu';
+import { IconButton } from "@material-ui/core";
 import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
 import { animateScroll as scroll } from "react-scroll";
 import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle';
@@ -72,7 +73,9 @@ const Navbar = ({ toggle }) => {
                         <SmartIcon />
                     </MobileIcon>
                     <MobileIcon2 scrollNavDown={scrollNavDown}>
-                        <ScrollIcon onClick={toggleHome}/>
+                        <IconButton>
+                            <ScrollIcon onClick={toggleHome}/>
+                        </IconButton>
                     </MobileIcon2> 
                     <NavMenu>
                         <NavItem>
