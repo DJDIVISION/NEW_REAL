@@ -34,7 +34,7 @@ const Container = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 100vh;
-    padding: 3rem calc(100vw - 1300px / 2 );
+    padding: 2rem calc(100vw - 1300px / 2 );
     
     @media screen and (max-width: 768px) {
         //grid-template-columns: 1fr;
