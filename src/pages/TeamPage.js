@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Sidebar from "../components/Sidebar";
 import NavBar from "../components/NavBar";
-import HeroSectionTeam from "../components/HeroSection/team.js";
+import AnimatedSection from "../components/Sections";
 import { TeamCards } from "../components/TeamCard";
 import InfoSection from "../components/Sections";
 import Picture1 from "../images/teamSvg.svg";
@@ -22,8 +22,7 @@ const TeamPage = () => {
         <motion.div initial="out" animate="end" exit="out" variants={animationThree}>
             <Sidebar isOpen={isOpen} toggle={toggle}/>
             <NavBar toggle={toggle}/> 
-            <HeroSectionTeam />
-            <InfoSection image={Picture1}/>
+            <AnimatedSection />
             <TeamCards/>
         </motion.div>
     )

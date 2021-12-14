@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from "styled-components";
 import { motion } from "framer-motion";
-//import { Button } from "@material-ui/core";
 import Planet1 from "../../images/planet1.png";
 import Planet2 from "../../images/planet6.png";
 import Planet3 from "../../images/planet3.png";
 import Planet4 from "../../images/planet4.png";
+import { Link as LinkR } from "react-router-dom";
 
 
 const Button = styled(motion.button)`
@@ -37,7 +37,7 @@ const Container = styled.div`
     padding: 3rem calc(100vw - 1300px / 2 );
     
     @media screen and (max-width: 768px) {
-        grid-template-columns: 1fr;
+        //grid-template-columns: 1fr;
     }
 `;
 
@@ -48,11 +48,13 @@ const ColumnLeft = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 6rem 2rem;
+    padding: 6rem 0.5rem;
     z-index: 10;
+    
 
     @media screen and (max-width: 768px) {
         align-items: center;
+        margin-left: 100px;
     }
 
     h1 {
@@ -67,13 +69,15 @@ const ColumnLeft = styled.div`
     }
 
     p {
-        margin: 2rem 0;
+        margin: 1.5rem 0;
         font-size: 4rem;
+        width: 600px;
 
         @media screen and (max-width: 768px) {
-        font-size: 60px;
+        font-size: 48px;
         text-align: center;
         margin-bottom: 60px;
+        width: 200px;
     }
     }
 `;
@@ -84,7 +88,7 @@ const Image = styled(motion.img)`
     max-width: 250px;
     max-height: 250px;
     position: absolute;
-    z-index: 25;
+    z-index: 5;
 `;
 
 const ColumnRight = styled.div`
@@ -95,20 +99,33 @@ const ColumnRight = styled.div`
     position: relative;
 
     ${Image}:nth-child(1) {
-        top: 10px;
-        left: 10px;
+        top: 100px;
+        right: 50px;
     }
     ${Image}:nth-child(2) {
-        top: 10px;
-        right: 10px;
+        
     }
     ${Image}:nth-child(3) {
-        bottom: 10px;
-        left: 10px;
+        
+        
     }
     ${Image}:nth-child(4) {
-        bottom: 10px;
-        right: 10px;
+        
+    }
+
+    @media screen and (max-width: 880px) {
+        ${Image}:nth-child(1) {
+        
+        }
+        ${Image}:nth-child(2) {
+            
+        }
+        ${Image}:nth-child(3) {
+          
+        }
+        ${Image}:nth-child(4) {
+            
+        }
     }
 
 `;
@@ -130,18 +147,18 @@ const AnimatedSection = () => {
                         initial={{ opacity: 0}}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 2}}
-                    >Welcome to <br/> Destiny Airlines</motion.h1>
+                    >Meet <br/> the team</motion.h1>
                     <motion.p
                         initial={{ opacity: 0, x: 100}}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{duration: 2}}
-                    >A Journey to Outer Space</motion.p>
-                    <Button 
+                    >That will take you to Outer Space</motion.p>
+                    {/* <LinkR to="/TeamPage"><Button 
                     whileHover={{scale:1.05}} 
-                    whileTap={{scale:0.95, backgroundColor:'gold', border: 'none', color: 'black' }}
+                    whileTap={{backgroundColor:'gold', border: 'none', color: 'black' }}
                     initial={{ opacity: 0}}
                     animate={{ opacity: 1, transition: { duration: 2.5 }}}
-                    >Learn more</Button>
+                    >Learn more</Button></LinkR> */}
                 </ColumnLeft>
                 <ColumnRight>
                     {/* <Image src={Planet1} alt="planet" 
@@ -155,10 +172,10 @@ const AnimatedSection = () => {
                     initial={{x: 550, y:395, scale: 0.6}}
                     animate={{x: -500, y:25, scale: 2.3, transition: { duration: 24}}}/> */}
                     <Image src={Planet3} alt="planet" 
-                    whileTap={{scale: 1.3}} 
+                    whileTap={{scale: 0.8}} 
                     drag={true}
-                    initial={{x: -50, y:-350, scale: 0.2}}
-                    animate={{x: 120, y:-550,  scale: 2, transition: { duration: 26}}}/>
+                    initial={{x: 0, y:0, scale: 0.2}}
+                    animate={{x: 0, y:0,  scale: 2, transition: { duration: 13, repeat: Infinity, repeatType: 'reverse'}}} />
                    {/*  <Image src={Planet4} alt="planet" 
                     whileTap={{scale: 1.3}} 
                     drag={true}

@@ -32,7 +32,7 @@ const StyledButton = styled(Button)`
 `;
 
 
-const InfoSection = ({ lightBg, imgStart, topLine, lightText, darkText, buttonLabel, img, alt, id, headline, description, colortext }) => {
+const InfoSection = ({ lightBg, imgStart, topLine, lightText, darkText, buttonLabel, img, alt, id, headline, description, colortext, pagelink }) => {
     return (
        <>
         <InfoContainer lightBg={lightBg} id={id}>
@@ -43,7 +43,7 @@ const InfoSection = ({ lightBg, imgStart, topLine, lightText, darkText, buttonLa
                             <TopLine colorText={colortext}>{topLine}</TopLine>
                             <Heading lightText={lightText}>{headline}</Heading>
                             <Subtitle darkText={darkText}>{description}</Subtitle>
-                            <StyledButton to="home">{buttonLabel}</StyledButton>
+                            <StyledButton to={pagelink}>{buttonLabel}</StyledButton>
                         </TextWrapper>
                     </Column1>
                     <Column2>

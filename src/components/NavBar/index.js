@@ -73,8 +73,8 @@ const Navbar = ({ toggle }) => {
                         <SmartIcon />
                     </MobileIcon>
                     <MobileIcon2 scrollNavDown={scrollNavDown}>
-                        <IconButton>
-                            <ScrollIcon onClick={toggleHome}/>
+                        <IconButton onClick={toggleHome}>
+                            <ScrollIcon />
                         </IconButton>
                     </MobileIcon2> 
                     <NavMenu>
