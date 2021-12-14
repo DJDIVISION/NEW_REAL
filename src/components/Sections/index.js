@@ -23,7 +23,7 @@ const Button = styled(motion.button)`
 
 
 const Section = styled.section`
-    height: 100vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,7 +33,7 @@ const Section = styled.section`
 const Container = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 100vh;
+    height: 80vh;
     padding: 2rem calc(100vw - 1300px / 2 );
     
     @media screen and (max-width: 768px) {
@@ -48,36 +48,37 @@ const ColumnLeft = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 6rem 0.5rem;
+    //padding: 6rem 1rem;
+    margin-top: 5rem;
     z-index: 10;
     
 
     @media screen and (max-width: 768px) {
         align-items: center;
-        margin-left: 100px;
+        margin-left: 40px;
     }
 
     h1 {
-      margin-bottom: 0.5rem;
-      font-size: 2rem;  
+      
+      font-size: 3rem;  
 
       @media screen and (max-width: 768px) {
-        font-size: 26px;
+        font-size: 30px;
         text-align: center;
-        margin-bottom: 20px;
+        
     }
     }
 
     p {
-        margin: 1.5rem 0;
-        font-size: 4rem;
+        margin: 0.5rem 0;
+        font-size: 5rem;
         width: 600px;
 
         @media screen and (max-width: 768px) {
         font-size: 48px;
         text-align: center;
         margin-bottom: 60px;
-        width: 200px;
+        width: 250px;
     }
     }
 `;
@@ -134,25 +135,22 @@ const ColumnRight = styled.div`
 
 const AnimatedSection = () => {
 
-    const FadeLeft = {
-        hidden: { opacity: 0, x: 100 },
-        visible: { opacity: 1, x: 0 }
-    };
+    
 
     return(
         <Section>
             <Container>
                 <ColumnLeft>
                     <motion.h1
-                        initial={{ opacity: 0}}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 2}}
+                        initial={{ opacity: 0, x: 100}}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 3}}
                     >Meet <br/> the team</motion.h1>
                     <motion.p
                         initial={{ opacity: 0, x: 100}}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{duration: 2}}
-                    >That will take you to Outer Space</motion.p>
+                        transition={{duration: 3}}
+                    >that will take you to Outer Space</motion.p>
                     {/* <LinkR to="/TeamPage"><Button 
                     whileHover={{scale:1.05}} 
                     whileTap={{backgroundColor:'gold', border: 'none', color: 'black' }}
@@ -174,8 +172,8 @@ const AnimatedSection = () => {
                     <Image src={Planet3} alt="planet" 
                     whileTap={{scale: 0.8}} 
                     drag={true}
-                    initial={{x: 0, y:0, scale: 0.2}}
-                    animate={{x: 0, y:0,  scale: 2, transition: { duration: 13, repeat: Infinity, repeatType: 'reverse'}}} />
+                    initial={{x: 10, y:0, scale: 0.2}}
+                    animate={{x: -40, y:0,  scale: 2, transition: { duration: 13, repeat: Infinity, repeatType: 'reverse'}}} />
                    {/*  <Image src={Planet4} alt="planet" 
                     whileTap={{scale: 1.3}} 
                     drag={true}
