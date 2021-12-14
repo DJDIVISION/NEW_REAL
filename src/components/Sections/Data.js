@@ -37,6 +37,7 @@ export const HomePartners = {
     primary: true,   
     darkText: false,
     colorText: true,
+    
 };
 
 export const HomeTeam = {
@@ -55,6 +56,8 @@ export const HomeTeam = {
     primary: true,   
     darkText: false,
     colorText: false,
+    pagelink: "/TeamPage"
+    
 };
 
 export const HomeGaming = {

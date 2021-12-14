@@ -3,6 +3,7 @@ import { Button } from "@material-ui/core";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { Section, Container } from "./Elements";
+import { Link as LinkR } from "react-router-dom";
 
 import {InfoContainer, InfoWrapper, InfoRow, Column1, TextWrapper, TopLine, Heading, Subtitle, Column2, ImgWrap, Img, alt} from "./Elements";
 
@@ -43,7 +44,7 @@ const InfoSection = ({ lightBg, imgStart, topLine, lightText, darkText, buttonLa
                             <TopLine colorText={colortext}>{topLine}</TopLine>
                             <Heading lightText={lightText}>{headline}</Heading>
                             <Subtitle darkText={darkText}>{description}</Subtitle>
-                            <StyledButton to={pagelink}>{buttonLabel}</StyledButton>
+                            <LinkR to="/TeamPage"><StyledButton>{buttonLabel}</StyledButton></LinkR>
                         </TextWrapper>
                     </Column1>
                     <Column2>
