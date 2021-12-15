@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import Planet1 from "../../images/planet1.png";
-import Planet2 from "../../images/planet6.png";
-import Planet3 from "../../images/planet3.png";
+import Planet1 from "../../images/planet4.png";
+import Astronaut from "../../images/planet6.png";
+import Planet3 from "../../images/planet11.png";
 import Planet4 from "../../images/planet4.png";
 import { Link as LinkR } from "react-router-dom";
 
@@ -17,6 +17,7 @@ const Button = styled(motion.button)`
     cursor: pointer;
     background: transparent;
     color: whitesmoke;
+    margin-bottom: 100px;
     
 
 
@@ -35,6 +36,7 @@ const Section = styled.section`
     justify-content: center;
     align-items: center;
     background: black;
+    height: 880px;
 `;
 
 const Container = styled.div`
@@ -107,11 +109,12 @@ const ColumnRight = styled.div`
     position: relative;
 
     ${Image}:nth-child(1) {
-        top: 100px;
-        right: 50px;
+        top: 0;
+        right: 1px;
     }
     ${Image}:nth-child(2) {
-        
+        top: 100px;
+        right: 50px;
     }
     ${Image}:nth-child(3) {
         
@@ -140,7 +143,7 @@ const ColumnRight = styled.div`
 
 
 
-const AnimatedSectionButton = () => {
+const TeamSection = () => {
 
     
 
@@ -166,11 +169,11 @@ const AnimatedSectionButton = () => {
                     >Meet the Team</Button></LinkR>
                 </ColumnLeft>
                 <ColumnRight>
-                    {/* <Image src={Planet1} alt="planet" 
-                    whileTap={{scale: 1.3}} 
+                    <Image src={Planet3} alt="planet" 
+                    whileTap={{scale: 0.6}} 
                     drag={true}
-                    initial={{x: -700, y:275, scale: 0.7}}
-                    animate={{x: 300, y:-50, scale: 1.9, transition: { duration: 20}}}/> */}
+                    initial={{x:-250, y:100, scale: 0, opacity: 0.5}}
+                    animate={{x: 500, y:0, scale: 1.9, opacity: 1, transition: { duration: 6, repeat: Infinity}}} />
                     {/* <Image src={StarsBack1} alt="planet" 
                     whileTap={{scale: 1.3}} 
                     drag={true}
@@ -179,8 +182,8 @@ const AnimatedSectionButton = () => {
                     <Image src={Planet1} alt="planet" 
                     whileTap={{scale: 0.8}} 
                     drag={true}
-                    initial={{x: 10, y:0, scale: 0.2}}
-                    animate={{x: -40, y:0,  scale: 2, transition: { duration: 6, repeat: Infinity, repeatType: 'reverse'}}} />
+                    initial={{x: 10, y:0, scale: 0}}
+                    animate={{x: -40, y:0,  scale: 3, transition: { duration: 6, repeat: Infinity, repeatType: 'reverse'}}} />
                    {/*  <Image src={Planet4} alt="planet" 
                     whileTap={{scale: 1.3}} 
                     drag={true}
@@ -193,4 +196,4 @@ const AnimatedSectionButton = () => {
 }
 
 
-export default AnimatedSectionButton;
+export default TeamSection;
