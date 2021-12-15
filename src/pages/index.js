@@ -3,6 +3,7 @@ import Sidebar from "../components/Sidebar";
 import NavBar from "../components/NavBar";
 import HeroSection from "../components/HeroSection";
 import TeamSection from "../components/Sections/TeamSection";
+import NewsSection from "../components/Sections/NewsSection";
 import { motion } from "framer-motion";
 import { animationOne, transition } from "../animations";
 import PartnerSmallCards from "../components/PartnersHome/PartnerSmallCards";
@@ -23,6 +24,7 @@ const Home = () => {
             <Sidebar isOpen={isOpen} toggle={toggle}/>
             <NavBar toggle={toggle}/>
             <HeroSection />
+            <NewsSection />
             <TeamSection />
             <Footer />
         </motion.div>

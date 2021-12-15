@@ -45,9 +45,10 @@ const Container = styled.div`
     grid-template-columns: 1fr 1fr;
     height: 80vh;
     padding: 2rem calc(100vw - 1300px / 2 );
-    
+    margin-left: 30px;
     @media screen and (max-width: 768px) {
         //grid-template-columns: 1fr;
+        
     }
 `;
 
@@ -57,38 +58,49 @@ const ColumnLeft = styled.div`
     color: whitesmoke;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-end;
     //padding: 6rem 1rem;
     margin-top: 5rem;
     z-index: 10;
     
+    
 
     @media screen and (max-width: 768px) {
-        align-items: left;
+        diaply: flex-end:
+        align-text: center;
         margin-left: 60px;
     }
 
     h1 {
-      
-      font-size: 3rem;  
-
+        
+      text-align: right;
+      font-size: 3rem;
+      text-shadow: -1px 1px 0 whitesmoke,
+                          4px 6px 0 black,
+                         1px -1px 0 #000,
+                        -1px -1px 0 #000;  
+        
       @media screen and (max-width: 768px) {
         font-size: 30px;
-        text-align: left;
+        text-align: right;
         
     }
     }
 
     p {
         margin: 0.5rem 0;
-        font-size: 5rem;
+        font-size: 4rem;
         width: 600px;
-
+        text-align: right;
         @media screen and (max-width: 768px) {
         font-size: 48px;
-        text-align: left;
+        text-align: right;
         margin-bottom: 60px;
         width: 250px;
+        text-shadow: -1px 1px 0 whitesmoke,
+                          4px 6px 0 black,
+                         1px -1px 0 #000,
+                        -1px -1px 0 #000;
     }
     }
 `;
@@ -106,11 +118,11 @@ const ColumnRight = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 1rem;
     position: relative;
 
     ${Image}:nth-child(1) {
-        top: 0;
+        top: 20px;
         right: 50px;
     }
     ${Image}:nth-child(2) {
@@ -143,37 +155,37 @@ const ColumnRight = styled.div`
 
 
 
-const TeamSection = () => {
+const NewsSection = () => {
 
     
 
     return(
-        <Section id="team">
+        <Section id="news">
             <Container>
                 <ColumnLeft>
                     <motion.h1
-                        initial={{ opacity: 0, x: -300}}
+                        initial={{ opacity: 0, x: 300}}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 3}}
-                    >This is <br/> the team</motion.h1>
+                    >Get the <br/> latest news</motion.h1>
                     <motion.p
-                        initial={{ opacity: 0, x: -300}}
+                        initial={{ opacity: 0, x: 300}}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{duration: 3}}
-                    >that will take you to Outer Space</motion.p>
-                    <LinkR to="/TeamPage"><Button 
+                    >from Destiny Airlines and his parters</motion.p>
+                    <LinkR to="/NewsPage"><Button 
                     whileHover={{scale:1.05}} 
                     whileTap={{backgroundColor:'gold', border: 'none', color: 'black' }}
                     initial={{ opacity: 0, scale: 0.2}}
                     animate={{ opacity: 1, scale: 1, transition: { duration: 6 }}}
-                    >Meet the Team</Button></LinkR>
+                    >Read the news</Button></LinkR>
                 </ColumnLeft>
                 <ColumnRight>
-                    <Image src={Astronaut} alt="planet" 
+                    <Image src={Planet1} alt="planet" 
                     whileTap={{scale: 0.8}} 
                     drag={true}
-                    initial={{x: 0, y:-50, scale: 1}}
-                    animate={{x: -20, y:80,  scale: 2.6, transition: { duration: 9, repeat: Infinity, repeatType: 'reverse'}}} />
+                    initial={{x: -250, y:0, scale: 0.1}}
+                    animate={{x: -150, y:50,  scale: 1.9, transition: { duration: 9, repeat: Infinity, repeatType: 'reverse'}}} />
                 </ColumnRight>
             </Container>
         </Section>
@@ -181,4 +193,4 @@ const TeamSection = () => {
 }
 
 
-export default TeamSection;
+export default NewsSection;
