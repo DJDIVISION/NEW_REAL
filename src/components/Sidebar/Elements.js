@@ -30,6 +30,24 @@ export const SidebarContainer = styled.aside`
     
 `;
 
+export const SidebarContainerTeam = styled.aside`
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 600px;
+    
+    background: black;
+    display: grid;
+    align-items: center;
+    top: 0;
+    left: 0;
+    transition: 0.3s ease-in-out;
+    opacity: ${({ isTeamOpen }) => (isTeamOpen ? "100%" : "0")};
+    top: ${({ isTeamOpen }) => (isTeamOpen ? "0" : "-100%")};  
+    
+    
+`;
+
 export const CloseIcon = styled(HighlightOffIcon)`
     color: whitesmoke;
 `;

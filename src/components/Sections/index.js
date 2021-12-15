@@ -5,6 +5,7 @@ import Planet1 from "../../images/planet1.png";
 import Planet2 from "../../images/planet6.png";
 import Planet3 from "../../images/planet3.png";
 import Planet4 from "../../images/planet4.png";
+import StarsBack1 from "../../images/starsBack1.jpg"
 import { Link as LinkR } from "react-router-dom";
 
 
@@ -164,11 +165,11 @@ const AnimatedSection = () => {
                     drag={true}
                     initial={{x: -700, y:275, scale: 0.7}}
                     animate={{x: 300, y:-50, scale: 1.9, transition: { duration: 20}}}/> */}
-                    {/* <Image src={Planet2} alt="planet" 
+                    {/* <Image src={StarsBack1} alt="planet" 
                     whileTap={{scale: 1.3}} 
                     drag={true}
-                    initial={{x: 550, y:395, scale: 0.6}}
-                    animate={{x: -500, y:25, scale: 2.3, transition: { duration: 24}}}/> */}
+                    initial={{x: -100, y:0, scale: 4}}
+                    animate={{x: -100, y:0, scale: 4.1, transition: { duration: 2, repeat: Infinity, repeatType: 'reverse'}}}/>  */}
                     <Image src={Planet3} alt="planet" 
                     whileTap={{scale: 0.8}} 
                     drag={true}

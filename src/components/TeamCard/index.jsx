@@ -46,7 +46,7 @@ export function TeamCards(props) {
         <div>
         
         <CardContext5.Provider value={contextValue}>
-            <CardContainer>
+            <CardContainer id="ceo">
                 <CardWrapper>
                     <CeoOverview/>
                     <CeoPostview/>
@@ -54,7 +54,7 @@ export function TeamCards(props) {
             </CardContainer>
         </CardContext5.Provider>
         <CardContext4.Provider value={contextValue}>
-            <CardContainer>
+            <CardContainer id="cio">
                 <CardWrapper>
                     <CioOverview/>
                     <CioPostview/>
@@ -62,7 +62,7 @@ export function TeamCards(props) {
             </CardContainer>
         </CardContext4.Provider>
         <CardContext.Provider value={contextValue}>
-            <CardContainer>
+            <CardContainer id="devs">
                 <CardWrapper>
                     <Dev1Overview/>
                     <Dev1Postview/>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import Sidebar from "../components/Sidebar";
-import NavBar from "../components/NavBar";
+import TeamSidebar from "../components/Sidebar/TeamSideBar";
+import TeamNavBar from "../components/NavBar/TeamNavBar";
 import AnimatedSection from "../components/Sections";
 import { TeamCards } from "../components/TeamCard";
 import InfoSection from "../components/Sections";
@@ -20,8 +20,8 @@ const TeamPage = () => {
 
     return (
         <motion.div initial="out" animate="end" exit="out" variants={animationThree}>
-            <Sidebar isOpen={isOpen} toggle={toggle}/>
-            <NavBar toggle={toggle}/> 
+            <TeamSidebar isOpen={isOpen} toggle={toggle}/>
+            <TeamNavBar toggle={toggle}/> 
             <AnimatedSection />
             <TeamCards/>
         </motion.div>
