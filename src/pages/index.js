@@ -2,12 +2,10 @@ import React, { useState } from 'react'
 import Sidebar from "../components/Sidebar";
 import NavBar from "../components/NavBar";
 import HeroSection from "../components/HeroSection";
-import InfoSection from "../components/Sections/InfoSection";
-import AnimatedSection from "../components/Sections";
+import TeamSection from "../components/Sections/TeamSection";
 import { motion } from "framer-motion";
 import { animationOne, transition } from "../animations";
 import PartnerSmallCards from "../components/PartnersHome/PartnerSmallCards";
-import { HomeNews, HomePartners, HomeTeam, HomeGaming, HomeNFT } from "../components/Sections/Data.js";
 import Footer from '../components/Footer';
 
 
@@ -25,12 +23,7 @@ const Home = () => {
             <Sidebar isOpen={isOpen} toggle={toggle}/>
             <NavBar toggle={toggle}/>
             <HeroSection />
-            <AnimatedSection />
-            <InfoSection {...HomeNews}/>
-            <InfoSection {...HomeTeam}/>
-            <InfoSection {...HomeGaming}/>
-            <InfoSection {...HomePartners}/>
-            <InfoSection {...HomeNFT}/>
+            <TeamSection />
             <Footer />
         </motion.div>
     );
