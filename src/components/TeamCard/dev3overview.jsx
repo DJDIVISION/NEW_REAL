@@ -33,7 +33,7 @@ const TitleContainer = styled.div`
 
 const Title = styled.h1`
   margin: 0;
-  color: black;
+  color: whitesmoke;
   font-size: 40px;
   font-weight: 700;
   text-align: center;

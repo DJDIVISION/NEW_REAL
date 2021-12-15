@@ -20,7 +20,7 @@ const OverviewContainer = styled(motion.div)`
   
   border-radius: 28px;
   padding-bottom: -2em;
-  z-index: 10;
+  z-index: 5;
 `;
 
 const TitleContainer = styled.div`

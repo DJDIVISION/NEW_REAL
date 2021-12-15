@@ -44,7 +44,7 @@ const InfoSection = ({ lightBg, imgStart, topLine, lightText, darkText, buttonLa
                             <TopLine colorText={colortext}>{topLine}</TopLine>
                             <Heading lightText={lightText}>{headline}</Heading>
                             <Subtitle darkText={darkText}>{description}</Subtitle>
-                            <LinkR to="/TeamPage"><StyledButton>{buttonLabel}</StyledButton></LinkR>
+                            <LinkR to="/GamingPage"><StyledButton>{buttonLabel}</StyledButton></LinkR>
                         </TextWrapper>
                     </Column1>
                     <Column2>

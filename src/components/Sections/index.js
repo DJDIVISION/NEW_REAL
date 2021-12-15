@@ -142,12 +142,12 @@ const AnimatedSection = () => {
             <Container>
                 <ColumnLeft>
                     <motion.h1
-                        initial={{ opacity: 0, x: 100}}
+                        initial={{ opacity: 0, x: 300}}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 3}}
                     >Meet <br/> the team</motion.h1>
                     <motion.p
-                        initial={{ opacity: 0, x: 100}}
+                        initial={{ opacity: 0, x: 300}}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{duration: 3}}
                     >that will take you to Outer Space</motion.p>
@@ -173,7 +173,7 @@ const AnimatedSection = () => {
                     whileTap={{scale: 0.8}} 
                     drag={true}
                     initial={{x: 10, y:0, scale: 0.2}}
-                    animate={{x: -40, y:0,  scale: 2, transition: { duration: 13, repeat: Infinity, repeatType: 'reverse'}}} />
+                    animate={{x: -40, y:0,  scale: 2, transition: { duration: 6, repeat: Infinity, repeatType: 'reverse'}}} />
                    {/*  <Image src={Planet4} alt="planet" 
                     whileTap={{scale: 1.3}} 
                     drag={true}

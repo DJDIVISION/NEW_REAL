@@ -18,7 +18,7 @@ const ScrollIcon = styled(ArrowCircleUpIcon)`
 `;
 
 
-const TeamNavBar = ({ toggle }) => {
+const GamingNavBar = ({ toggle }) => {
 
     const [scrollNavDown, setScrollNavDown] = useState(false);
 
@@ -55,19 +55,13 @@ const TeamNavBar = ({ toggle }) => {
                     </MobileIcon2> 
                     <NavMenu>
                         <NavItem>
-                            <NavbarLink to="ceo" smooth={true} duration={500} spy={true} offset={-30} exact="true" >DAVID</NavbarLink>
+                            <NavbarLink to="telegram" smooth={true} duration={500} spy={true} offset={-30} exact="true" >TELEGRAM</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="cio" smooth={true} duration={500} spy={true} offset={-30} exact="true" >FILIP</NavbarLink>
+                            <NavbarLink to="website" smooth={true} duration={500} spy={true} offset={-30} exact="true" >WEBSITE</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="dev1" smooth={true} duration={500} spy={true} offset={-30} exact="true" >VICTOR</NavbarLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavbarLink to="dev2" smooth={true} duration={500} spy={true} offset={-30} exact="true" >BHASKAR</NavbarLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavbarLink to="dev3" smooth={true} duration={500} spy={true} offset={-30} exact="true" >ABHIK</NavbarLink>
+                            <NavbarLink to="metaverse" smooth={true} duration={500} spy={true} offset={-30} exact="true" >METAVERSE</NavbarLink>
                         </NavItem>
                     </NavMenu>
                 </NavBarContainer>
@@ -77,4 +71,4 @@ const TeamNavBar = ({ toggle }) => {
 };
 
 
-export default TeamNavBar;
+export default GamingNavBar;
