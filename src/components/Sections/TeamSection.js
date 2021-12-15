@@ -36,7 +36,7 @@ const Section = styled.section`
     justify-content: center;
     align-items: center;
     background: black;
-    height: 880px;
+    height: 780px;
 `;
 
 const Container = styled.div`
@@ -169,26 +169,11 @@ const TeamSection = () => {
                     >Meet the Team</Button></LinkR>
                 </ColumnLeft>
                 <ColumnRight>
-                    <Image src={Planet3} alt="planet" 
-                    whileTap={{scale: 0.6}} 
-                    drag={true}
-                    initial={{x:-100, y:100, scale: 0, opacity: 0.5}}
-                    animate={{x: 200, y:0, scale: 1.9, opacity: 1, transition: { duration: 6, repeat: Infinity}}} />
-                    {/* <Image src={StarsBack1} alt="planet" 
-                    whileTap={{scale: 1.3}} 
-                    drag={true}
-                    initial={{x: -100, y:0, scale: 4}}
-                    animate={{x: -100, y:0, scale: 4.1, transition: { duration: 2, repeat: Infinity, repeatType: 'reverse'}}}/>  */}
                     <Image src={Planet1} alt="planet" 
                     whileTap={{scale: 0.8}} 
                     drag={true}
                     initial={{x: 10, y:0, scale: 0}}
-                    animate={{x: -40, y:0,  scale: 2, transition: { duration: 6, repeat: Infinity, repeatType: 'reverse'}}} />
-                   {/*  <Image src={Planet4} alt="planet" 
-                    whileTap={{scale: 1.3}} 
-                    drag={true}
-                    initial={{x: 600, y:-380, scale: 2.4}}
-                    animate={{x: -600, y:0, scale: 0.4, transition: { duration: 28}}}/> */}
+                    animate={{x: -60, y:40,  scale: 2, transition: { duration: 6, repeat: Infinity, repeatType: 'reverse'}}} />
                 </ColumnRight>
             </Container>
         </Section>
