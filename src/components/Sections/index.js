@@ -5,7 +5,6 @@ import Planet1 from "../../images/planet1.png";
 import Planet2 from "../../images/planet6.png";
 import Planet3 from "../../images/planet3.png";
 import Planet4 from "../../images/planet4.png";
-import StarsBack1 from "../../images/starsBack1.jpg"
 import { Link as LinkR } from "react-router-dom";
 
 
