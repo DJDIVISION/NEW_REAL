@@ -18,9 +18,11 @@ const TeamSidebar = ({ isOpen, toggle }) => {
            </Icon>
            <SidebarWrapper>
                <SidebarMenu>
-                    <SidebarLink to="ceo" onClick={toggle} smooth={true} duration={500} spy={true} exact="true">CEO</SidebarLink>
-                    <SidebarLink to="cio" onClick={toggle} smooth={true} duration={500} spy={true} exact="true">CIO</SidebarLink>
-                    <SidebarLink to="devs" onClick={toggle} smooth={true} duration={500} spy={true} exact="true">DEVs</SidebarLink>
+                    <SidebarLink to="ceo" onClick={toggle} smooth={true} duration={500} spy={true} exact="true">DAVID</SidebarLink>
+                    <SidebarLink to="cio" onClick={toggle} smooth={true} duration={500} spy={true} exact="true">FILIP</SidebarLink>
+                    <SidebarLink to="dev1" onClick={toggle} smooth={true} duration={500} spy={true} exact="true">VICTOR</SidebarLink>
+                    <SidebarLink to="dev2" onClick={toggle} smooth={true} duration={500} spy={true} exact="true">BHASKAR</SidebarLink>
+                    <SidebarLink to="dev3" onClick={toggle} smooth={true} duration={500} spy={true} exact="true">ABHIK</SidebarLink>
                </SidebarMenu>
            </SidebarWrapper>
        </SidebarContainer>

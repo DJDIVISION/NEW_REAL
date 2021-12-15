@@ -18,7 +18,7 @@ const CardContainer = styled.div`
   height: 500px;
   display: flex;
   border-radius: 28px;
-  box-shadow: 0 0 12px 1px rgba(15, 15, 15, 0.12);
+  box-shadow: 0 0 12px 1px whitesmoke;
   position: relative;
   align-items: center;
   justify-content: center;
@@ -26,6 +26,9 @@ const CardContainer = styled.div`
   margin-right: auto;
   margin-top: 150px;
   margin-bottom: 150px;
+  
+
+  
 `;
 
 const CardWrapper = styled.div`
@@ -34,6 +37,8 @@ const CardWrapper = styled.div`
   height: 100%;
   overflow: hidden;
   border-radius: 28px;
+
+  
 `;
 
 export function TeamCards(props) {
@@ -62,7 +67,7 @@ export function TeamCards(props) {
             </CardContainer>
         </CardContext4.Provider>
         <CardContext.Provider value={contextValue}>
-            <CardContainer id="devs">
+            <CardContainer id="dev1">
                 <CardWrapper>
                     <Dev1Overview/>
                     <Dev1Postview/>
@@ -70,7 +75,7 @@ export function TeamCards(props) {
             </CardContainer>
         </CardContext.Provider>
         <CardContext2.Provider value={contextValue}>
-            <CardContainer>
+            <CardContainer id="dev2">
                 <CardWrapper>
                     <Dev2Overview/>
                     <Dev2Postview/>
@@ -78,7 +83,7 @@ export function TeamCards(props) {
             </CardContainer>
         </CardContext2.Provider>
         <CardContext3.Provider value={contextValue}>
-            <CardContainer>
+            <CardContainer id="dev3">
                 <CardWrapper>
                     <Dev3Overview/>
                     <Dev3Postview/>

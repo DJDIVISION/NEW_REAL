@@ -79,13 +79,19 @@ const TeamNavBar = ({ toggle }) => {
                     </MobileIcon2> 
                     <NavMenu>
                         <NavItem>
-                            <NavbarLink to="telos" smooth={true} duration={500} spy={true} exact="true" >CEO</NavbarLink>
+                            <NavbarLink to="ceo" smooth={true} duration={500} spy={true} offset={-30} exact="true" >DAVID</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="bsc" smooth={true} duration={500} spy={true} exact="true" >CIO</NavbarLink>
+                            <NavbarLink to="cio" smooth={true} duration={500} spy={true} offset={-30} exact="true" >FILIP</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="news" smooth={true} duration={500} spy={true} exact="true" >DEVs</NavbarLink>
+                            <NavbarLink to="dev1" smooth={true} duration={500} spy={true} offset={-30} exact="true" >VICTOR</NavbarLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavbarLink to="dev2" smooth={true} duration={500} spy={true} offset={-30} exact="true" >BHASKAR</NavbarLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavbarLink to="dev3" smooth={true} duration={500} spy={true} offset={-30} exact="true" >ABHIK</NavbarLink>
                         </NavItem>
                     </NavMenu>
                 </NavBarContainer>
