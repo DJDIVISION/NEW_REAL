@@ -172,8 +172,8 @@ const TeamSection = () => {
                     <Image src={Planet3} alt="planet" 
                     whileTap={{scale: 0.6}} 
                     drag={true}
-                    initial={{x:-250, y:100, scale: 0, opacity: 0.5}}
-                    animate={{x: 500, y:0, scale: 1.9, opacity: 1, transition: { duration: 6, repeat: Infinity}}} />
+                    initial={{x:-100, y:100, scale: 0, opacity: 0.5}}
+                    animate={{x: 200, y:0, scale: 1.9, opacity: 1, transition: { duration: 6, repeat: Infinity}}} />
                     {/* <Image src={StarsBack1} alt="planet" 
                     whileTap={{scale: 1.3}} 
                     drag={true}
@@ -183,7 +183,7 @@ const TeamSection = () => {
                     whileTap={{scale: 0.8}} 
                     drag={true}
                     initial={{x: 10, y:0, scale: 0}}
-                    animate={{x: -40, y:0,  scale: 3, transition: { duration: 6, repeat: Infinity, repeatType: 'reverse'}}} />
+                    animate={{x: -40, y:0,  scale: 2, transition: { duration: 6, repeat: Infinity, repeatType: 'reverse'}}} />
                    {/*  <Image src={Planet4} alt="planet" 
                     whileTap={{scale: 1.3}} 
                     drag={true}
