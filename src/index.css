@@ -92,21 +92,7 @@ a {
   transform: scale(1.2);
 }
 
-.dropdown {
-  position: absolute;
-  top: 58px;
-  width: 300px;
-  box-shadow: 0 2px 15px 1px whitesmoke;
-  transform: translateX(-45%);
-  background-color: var(--bg);
-  border: 1px solid whitesmoke;
-  border-radius: var(--border-radius);
-  padding: 1rem;
-  overflow: hidden;
-  margin-top: 30px;
-  
-  
-}
+
 
 .menu-item{
   height: 50px;
@@ -175,3 +161,53 @@ a {
 }
 
 
+
+.row {
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  width: 320px;
+  height: 200px;
+  overflow: hidden;
+  background: white;
+  border-radius: 30px;
+  top: -25vh;
+  left: 20px;
+  
+}
+
+.container > img {
+  height: 100%;
+  width: 100%;
+  
+
+}
+
+.slider {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(180deg, black, grey)
+}
+
+.buttons{
+  display: flex-end;
+  margin-top: 180px;
+  margin-left: 30px;
+  padding: 20px;
+}
+
+@media only screen and (max-width:860px){
+  .joystick{
+    margin-top: -250px;
+    margin-left: -450px;
+    z-index: 5;
+  }
+
+}

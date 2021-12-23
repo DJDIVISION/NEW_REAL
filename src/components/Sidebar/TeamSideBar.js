@@ -1,10 +1,5 @@
 import React from 'react';
-import styled from "styled-components";
-import { SidebarContainer, Icon,  CloseIcon, SidebarWrapper, SidebarLink, SidebarMenu, SidebarRoute, NewsIcon, TeamIcon, GamingIcon, PartnersIcon, NftIcon, SocialIcon, Logo1 } from "./Elements";
-import logoTelos from "../../images/telos_logo.png";
-import logoBsc from "../../images/bsc_logo.png";
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import { Link } from "react-router-dom";
+import { SidebarContainer, Icon,  CloseIcon, SidebarWrapper, SidebarLink, SidebarMenu } from "./Elements";
 import "../../index.css";
 
 

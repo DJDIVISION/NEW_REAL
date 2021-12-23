@@ -1,34 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import styled from "styled-components";
-import { CSSTransition } from "react-transition-group";
+import { motion } from "framer-motion";
 import { Nav, NavBarContainer, NavLogo, NavMenu, NavItem, NavbarLink, MobileIcon, MobileIcon2 } from "./Elements";
 import MenuIcon from '@mui/icons-material/Menu';
 import { IconButton } from "@material-ui/core";
 import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
 import { animateScroll as scroll } from "react-scroll";
-import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle';
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
-import NewspaperIcon from '@mui/icons-material/Newspaper';
-import PeopleIcon from '@mui/icons-material/People';
-import CasinoIcon from '@mui/icons-material/Casino';
-import BrushIcon from '@mui/icons-material/Brush';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import CandlestickChartIcon from '@mui/icons-material/CandlestickChart';
-import FiberNewIcon from '@mui/icons-material/FiberNew';
-import PersonPinIcon from '@mui/icons-material/PersonPin';
-import TelegramIcon from '@mui/icons-material/Telegram';
-import LanguageIcon from '@mui/icons-material/Language';
-import ViewInArIcon from '@mui/icons-material/ViewInAr';
-import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
-import ViewModuleIcon from '@mui/icons-material/ViewModule';
-import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
-import RocketIcon from '@mui/icons-material/Rocket';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import ArticleIcon from '@mui/icons-material/Article';
-import { Link as LinkR } from "react-router-dom";
-import { Link as LinkS } from "react-scroll";
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const SmartIcon = styled(MenuIcon)`
      color: gold;
@@ -36,6 +13,7 @@ const SmartIcon = styled(MenuIcon)`
 
 const ScrollIcon = styled(ArrowCircleUpIcon)`
     color: gold;
+    transition: 0.8s all ease;
     
 
     top: 600px;
@@ -47,7 +25,7 @@ const Navbar = ({ toggle }) => {
     const [scrollNavDown, setScrollNavDown] = useState(false);
 
     const changeNavDown = () => {
-        if(window.scrollY >= 120) {
+        if(window.scrollY >= 240) {
             setScrollNavDown(true)
         } 
         else {
@@ -79,12 +57,6 @@ const Navbar = ({ toggle }) => {
                     </MobileIcon2> 
                     <NavMenu>
                         <NavItem>
-                            <NavbarLink to="telos" smooth={true} duration={500} spy={true} exact="true" >Telos</NavbarLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavbarLink to="bsc" smooth={true} duration={500} spy={true} exact="true" >BSC</NavbarLink>
-                        </NavItem>
-                        <NavItem>
                             <NavbarLink to="news" smooth={true} duration={500} spy={true} exact="true" >News</NavbarLink>
                         </NavItem>
                         <NavItem>
@@ -100,7 +72,16 @@ const Navbar = ({ toggle }) => {
                             <NavbarLink to="nft" smooth={true} duration={500} spy={true} exact="true" >NFTs</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="socialmedia">Social Media</NavbarLink>
+                            <NavbarLink to="roadmap" smooth={true} duration={500} spy={true} exact="true" >RoadMap</NavbarLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavbarLink to="telos" smooth={true} duration={500} spy={true} exact="true" >Telos</NavbarLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavbarLink to="bsc" smooth={true} duration={500} spy={true} exact="true" >BSC</NavbarLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavbarLink to="social" smooth={true} duration={500} spy={true} exact="true">Social Media</NavbarLink>
                         </NavItem>
                     </NavMenu>
                 </NavBarContainer>

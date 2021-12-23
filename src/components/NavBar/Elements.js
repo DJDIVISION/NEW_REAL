@@ -15,7 +15,7 @@ export const Nav = styled.nav`
     position: sticky;
     top: ${({ scrollNavDown }) => (scrollNavDown ? "-50px" : "0")};
     z-index: 10;
-
+    transition: 0.8s all ease;
     @media screen and (max-width: 960px) {
         transition: 0.8s all ease;
     }
@@ -41,15 +41,23 @@ export const NavLogo = styled(LinkR)`
    display: flex;
    font-size: 1.5rem;
    align-items: center;
-   margin-left: 12px;
+   margin-left: 0px;
    font-weight: bold;
    text-decoration: none;
+
+   &:hover{
+       transform: scale(1.2);
+       transition: 0.2s ease-out;
+       color: yellow;
+   }
+
+   @media screen and (min-width: 1100px){
+       margin-left: -140px;
+   }
 `;
 
 export const Logo = styled(LinkS)`
     width: 80px;
-    
-    
 
 `;
 
@@ -108,8 +116,11 @@ export const NavbarLink = styled(LinkS)`
    height: 100%;
    cursor: pointer;
 
-   &.active {
-       
-       
+   &:hover{
+       transform: scale(1.3);
+       transition: 0.2s ease-out;
+       color: yellow;
    }
+     
+   
 `;

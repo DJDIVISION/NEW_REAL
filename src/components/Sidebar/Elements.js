@@ -103,13 +103,13 @@ export const SidebarWrapper = styled.div`
 export const SidebarMenu = styled.ul`
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(8, 60px);
+    grid-template-rows: repeat(9, 60px);
     text-align: center;
     
     
     padding-left: 1.6rem;
     @media screen and (max-width: 480px) {
-       grid-template-rows: repeat(8, 50px);
+       grid-template-rows: repeat(9, 50px);
     }
 
 `;
