@@ -4,15 +4,15 @@ import styled from "styled-components";
 
 
 export const HeroContainer = styled.div`
-    background: #0c0c0c;
+    //background: #0c0c0c;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 30px;
+    
     height: 880px;
     position: relative;
     z-index: 1;
-    margin-top: -100px;
+    margin-top: -150px;
 
     :before {
         content: "";
@@ -59,6 +59,7 @@ export const HeroContent = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center; 
+    font-family: 'Julius Sans One', sans-serif;
 `;
 
 export const HeroH1 = styled.h1`

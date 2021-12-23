@@ -71,10 +71,15 @@ const ColumnLeft = styled.div`
     h1 {
       
       font-size: 3rem;  
+      text-shadow: -1px 1px 0 whitesmoke,
+                          4px 6px 0 black,
+                         1px -1px 0 #000,
+                        -1px -1px 0 #000;
 
       @media screen and (max-width: 768px) {
         font-size: 30px;
         text-align: left;
+        
         
     }
     }
@@ -83,6 +88,10 @@ const ColumnLeft = styled.div`
         margin: 0.5rem 0;
         font-size: 5rem;
         width: 600px;
+        text-shadow: -1px 1px 0 whitesmoke,
+                          4px 6px 0 black,
+                         1px -1px 0 #000,
+                        -1px -1px 0 #000;
 
         @media screen and (max-width: 768px) {
         font-size: 48px;
@@ -164,16 +173,16 @@ const TeamSection = () => {
                     <LinkR to="/TeamPage"><Button 
                     whileHover={{scale:1.05}} 
                     whileTap={{backgroundColor:'gold', border: 'none', color: 'black' }}
-                    initial={{ opacity: 0, scale: 0.2}}
-                    animate={{ opacity: 1, scale: 1, transition: { duration: 6 }}}
+                    initial={{ opacity: 0, x: -300}}
+                    animate={{ opacity: 1, x:0, transition: { duration: 3 }}}
                     >Meet the Team</Button></LinkR>
                 </ColumnLeft>
                 <ColumnRight>
                     <Image src={Astronaut} alt="planet" 
-                    whileTap={{scale: 0.8}} 
+                    whileTap={{scale: 1.2}} 
                     drag={true}
-                    initial={{x: 0, y:-50, scale: 1}}
-                    animate={{x: -20, y:80,  scale: 2.6, transition: { duration: 9, repeat: Infinity, repeatType: 'reverse'}}} />
+                    initial={{x: -20, y:20, opacity: 0, scale: 1}}
+                    animate={{x: -20, y:80,  opacity: 1, scale: 2.6, transition: { duration: 9, repeat: Infinity,  repeatType: 'reverse'}}} />
                 </ColumnRight>
             </Container>
         </Section>

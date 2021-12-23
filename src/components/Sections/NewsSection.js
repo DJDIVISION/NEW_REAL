@@ -2,9 +2,6 @@ import React from 'react';
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import Planet1 from "../../images/planet4.png";
-import Astronaut from "../../images/astronaut3.png";
-import Planet3 from "../../images/planet11.png";
-import Planet4 from "../../images/planet4.png";
 import { Link as LinkR } from "react-router-dom";
 
 
@@ -123,7 +120,7 @@ const ColumnRight = styled.div`
 
     ${Image}:nth-child(1) {
         top: 20px;
-        right: 50px;
+        right: 350px;
     }
     ${Image}:nth-child(2) {
         
@@ -138,7 +135,8 @@ const ColumnRight = styled.div`
 
     @media screen and (max-width: 880px) {
         ${Image}:nth-child(1) {
-        
+            top: 20px;
+            right: 50px;
         }
         ${Image}:nth-child(2) {
             
@@ -176,16 +174,16 @@ const NewsSection = () => {
                     <LinkR to="/NewsPage"><Button 
                     whileHover={{scale:1.05}} 
                     whileTap={{backgroundColor:'gold', border: 'none', color: 'black' }}
-                    initial={{ opacity: 0, scale: 0.2}}
-                    animate={{ opacity: 1, scale: 1, transition: { duration: 6 }}}
+                    initial={{ opacity: 0, x: 300}}
+                    animate={{ opacity: 1, x: 0, transition: { duration: 3 }}}
                     >Read the news</Button></LinkR>
                 </ColumnLeft>
                 <ColumnRight>
                     <Image src={Planet1} alt="planet" 
                     whileTap={{scale: 0.8}} 
                     drag={true}
-                    initial={{x: -250, y:0, scale: 0.1}}
-                    animate={{x: -150, y:50,  scale: 1.9, transition: { duration: 9, repeat: Infinity, repeatType: 'reverse'}}} />
+                    initial={{x: -200, y:0, scale: 0.8, opacity: 0}}
+                    animate={{x: -120, y:50,  scale: 2.3, opacity: 1, transition: { duration: 5, repeat: Infinity, repeatType: "reverse"}}} />
                 </ColumnRight>
             </Container>
         </Section>
