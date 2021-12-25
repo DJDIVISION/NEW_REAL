@@ -15,21 +15,24 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 export const SidebarContainer = styled.aside`
     position: absolute;
     z-index: 999;
-    width: 90%;
-    height: 600px;
+    width: calc(100vw - 30%);
+    height: 500px;
     justify-content: center;
     background: black;
     display: grid;
     align-items: center;
     top: 0;
     left: 0;
-    transition: 0.3s ease-in-out;
     //opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
     //top: ${({ isOpen }) => (isOpen ? "0" : "-100%")}; 
-    border-radius: 20px; 
-    margin: -20px 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+
     
-    
+    @media screen and (max-width: 768px){
+        width: calc(100vw - 15%);
+        margin-left: 25px;
+    }
     
     
 `;
@@ -45,59 +48,12 @@ export const SidebarContainerTeam = styled.aside`
     align-items: center;
     top: 0;
     left: 0;
-    transition: 0.3s ease-in-out;
-    opacity: ${({ isTeamOpen }) => (isTeamOpen ? "100%" : "0")};
-    top: ${({ isTeamOpen }) => (isTeamOpen ? "0" : "-100%")};  
     
     
 `;
 
 export const CloseIcon = styled(HighlightOffIcon)`
     color: whitesmoke;
-`;
-
-
-
-/* export const NewsIcon = styled(NewspaperIcon)`
-    margin-right: 10px;
-
-`;
-
-export const TeamIcon = styled(PeopleIcon)`
-    margin-right: 10px;
-`;
-
-export const GamingIcon = styled(CasinoIcon)`
-    margin-right: 10px;
-`;
-
-export const PartnersIcon = styled(SupervisedUserCircleIcon)`
-    margin-right: 10px;
-`;
-
-export const NftIcon = styled(BrushIcon)`
-    margin-right: 10px;
-`;
-
-export const SocialIcon = styled(TwitterIcon)`
-    margin-right: 10px;
-`;
-
-export const Logo1 = styled.img`
-    width: 30px;
-    margin-right: 15px;
-
-`;  */
-
-
-export const Icon = styled.div`
-    position: absolute;
-    top: 1.2rem;
-    right: 1.5rem;
-    background: transparent;
-    font-size: 2rem;
-    cursor: pointer;
-    outline: none;
 `;
 
 export const SidebarWrapper = styled.div`
@@ -147,10 +103,7 @@ export const SidebarLink = styled(LinkS)`
 
 export const SidebarRoute = styled(LinkR)`
     border-radius: 50px;
-    background: blue;
-    white-space: nowrap;
     padding: 16px 64px;
-    color: green;
     font-size: 16px;
     outline: none;
     border: none;

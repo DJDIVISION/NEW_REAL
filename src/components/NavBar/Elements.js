@@ -64,7 +64,7 @@ export const Logo = styled(LinkS)`
 export const MobileIcon = styled.div`
     display: none;
 
-    @media screen and (max-width: 760px){
+    @media screen and (max-width: 860px){
         display: block;
         position: absolute;
         top: 0;
@@ -96,7 +96,7 @@ export const NavMenu = styled.ul`
 
     
 
-    @media screen and (max-width: 760px){
+    @media screen and (max-width: 860px){
        display: none; 
     }
 

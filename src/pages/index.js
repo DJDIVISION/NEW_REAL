@@ -7,7 +7,7 @@ import NewsSection from "../components/Sections/NewsSection";
 import RoadMapSection from "../components/Sections/RoadMapSection";
 import GamingSection from "../components/Sections/GamingSection";
 import NftSection from "../components/Sections/NftSection"; 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { animationOne, transition } from "../animations";
 import PartnersSection from "../components/Sections/PartnersSection";
 import Footer from '../components/Footer';
@@ -43,11 +43,13 @@ const Home = () => {
      }, []);
 
     return (
+        <AnimatePresence>
         <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
             {/* <Sidebar isOpen={isOpen} toggle={toggle}/> */}
-            <NavBar showMenu={showMenu} toggle={toggle}/>
+            <NavBar showMenu={showMenu} />
             <Footer /> 
         </motion.div>
+        </AnimatePresence>
     );
 }
 

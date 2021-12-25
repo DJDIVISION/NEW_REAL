@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { SidebarContainer, Icon,  CloseIcon, SidebarWrapper, SidebarLink, SidebarMenu, SidebarRoute, NewsIcon, TeamIcon, GamingIcon, PartnersIcon, NftIcon, SocialIcon, Logo1 } from "./Elements";
 import logoTelos from "../../images/telos_logo.png";
 import logoBsc from "../../images/bsc_logo.png";
@@ -11,15 +11,15 @@ import "../../index.css";
 
 const MenuVariants = {
     hidden: {
-        x: "-100vw",
+        y: "-50",
     },
     show: {
-        x: "0",
+        y: "0",
     },
     transition: {
         duration: 0.8, 
         type: "spring",
-        stiffness: 500,
+        stiffness: 300,
         damping: 20,
     },
 };
@@ -27,6 +27,7 @@ const MenuVariants = {
 const Sidebar = ({ showMenu, setShowMenu, toggle, isOpen }) => {
     return (
         <>
+        <AnimatePresence>
         {showMenu && (
             <motion.div variants={MenuVariants} initial="hidden" animate="show">
             <SidebarContainer isOpen={isOpen} onClick={toggle}>
@@ -45,7 +46,9 @@ const Sidebar = ({ showMenu, setShowMenu, toggle, isOpen }) => {
                 </SidebarWrapper>
             </SidebarContainer>
             </motion.div>
+            
         )}
+        </AnimatePresence>
         </>
     );
 }

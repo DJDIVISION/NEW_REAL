@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from "styled-components";
-import { motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { Nav, NavBarContainer, NavLogo, NavMenu, NavItem, NavbarLink, MobileIcon, MobileIcon2 } from "./Elements";
 import MenuIcon from '@mui/icons-material/Menu';
 import { IconButton } from "@material-ui/core";
@@ -21,7 +21,7 @@ const ScrollIcon = styled(ArrowCircleUpIcon)`
 `;
 
 
-const Navbar = ({ toggle }) => {
+const Navbar = () => {
 
     const [showMenu, setShowMenu] = useState(false);
 
@@ -47,6 +47,7 @@ const Navbar = ({ toggle }) => {
 
     return (
         <>
+            <AnimatePresence>
             <Nav scrollNavDown={scrollNavDown}>
                 <NavBarContainer >
                     <NavLogo to="/" >Destiny Airlines</NavLogo>
@@ -90,6 +91,7 @@ const Navbar = ({ toggle }) => {
                 </NavBarContainer>
             </Nav>
             <Sidebar showMenu={showMenu}/>
+            </AnimatePresence>
         </>
     );
 };
