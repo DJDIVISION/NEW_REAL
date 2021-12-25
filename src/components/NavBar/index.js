@@ -6,6 +6,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { IconButton } from "@material-ui/core";
 import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
 import { animateScroll as scroll } from "react-scroll";
+import Sidebar from "../Sidebar";
 
 const SmartIcon = styled(MenuIcon)`
      color: gold;
@@ -21,6 +22,8 @@ const ScrollIcon = styled(ArrowCircleUpIcon)`
 
 
 const Navbar = ({ toggle }) => {
+
+    const [showMenu, setShowMenu] = useState(false);
 
     const [scrollNavDown, setScrollNavDown] = useState(false);
 
@@ -47,7 +50,7 @@ const Navbar = ({ toggle }) => {
             <Nav scrollNavDown={scrollNavDown}>
                 <NavBarContainer >
                     <NavLogo to="/" >Destiny Airlines</NavLogo>
-                    <MobileIcon onClick={toggle}>
+                    <MobileIcon onClick={() => setShowMenu(!showMenu)}>
                         <SmartIcon />
                     </MobileIcon>
                     <MobileIcon2 scrollNavDown={scrollNavDown}>
@@ -86,6 +89,7 @@ const Navbar = ({ toggle }) => {
                     </NavMenu>
                 </NavBarContainer>
             </Nav>
+            <Sidebar showMenu={showMenu}/>
         </>
     );
 };

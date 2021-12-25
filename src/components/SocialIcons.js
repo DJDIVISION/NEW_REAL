@@ -12,6 +12,7 @@ const GitHub = styled(GitHubIcon)`
     width: 30px;
     height: 30px;
     color: whitesmoke;
+    position: relative;
 `;
 
 const Telegram = styled(TelegramIcon)`

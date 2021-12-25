@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: 'Rajdhani-SemiBold';
   src: local('Rajdhani-Semibold'), url(./fonts/Rajdhani-SemiBold.ttf) format('truetype');
 }
@@ -48,12 +48,12 @@ a {
   text-decoration: none;
 }
 
-/* .navbar2 {
+.navbar2 {
   height: var(--nav-size);
   background-color: var(--bg);
   padding: 0 1rem;
   border-bottom: var(--border);
-} */
+} 
 
 .navbar2.nav {
   max-width: 100%;
@@ -211,3 +211,4 @@ a {
   }
 
 }
+ */

@@ -1,14 +1,15 @@
 import React from 'react';
+import { ThemeProvider } from "styled-components";
+import { lightTheme, darkTheme } from "./components/Themes"
 import { useEffect } from "react";
 import { useLocation } from "react-router";
-import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/index.js";
+import Home from "./pages/index.js";/* 
 import PartnersPage from "./pages/PartnersPage";
 import TeamPage from "./pages/TeamPage";
 import NewsPage from "./pages/NewsPage";
 import GamingPage from "./pages/GamingPage";
-import RoadMap from "./pages/RoadMap";
+import RoadMap from "./pages/RoadMap"; */
 import { AnimatePresence } from "framer-motion";
 import GlobalStyle from "./globalStyles";
 
@@ -28,16 +29,18 @@ function App() {
     <Router>
       <ScrollToTop>
         <GlobalStyle />
-        <AnimatePresence exitBeforeEnter>
-          <Routes>
-            <Route exact path="/" element={<Home />}/>
-            <Route exact path="/partnerspage" element={<PartnersPage />}/>
-            <Route exact path="/teampage" element={<TeamPage />}/>
-            <Route exact path="/gamingpage" element={<GamingPage />}/>
-            <Route exact path="/newspage" element={<NewsPage />}/>
-            <Route exact path="/roadmap" element={<RoadMap />}/>
-          </Routes>
-        </AnimatePresence>
+          <ThemeProvider theme={lightTheme}>
+            <AnimatePresence exitBeforeEnter>
+              <Routes>
+                <Route exact path="/" element={<Home />}/>{/* 
+                <Route exact path="/partnerspage" element={<PartnersPage />}/>
+                <Route exact path="/teampage" element={<TeamPage />}/>
+                <Route exact path="/gamingpage" element={<GamingPage />}/>
+                <Route exact path="/newspage" element={<NewsPage />}/>
+                <Route exact path="/roadmap" element={<RoadMap />}/> */}
+              </Routes>
+            </AnimatePresence>
+          </ThemeProvider>
       </ScrollToTop>
     </Router>
   );

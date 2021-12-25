@@ -16,7 +16,7 @@ export const HeroContainer = styled.div`
 
     :before {
         content: "";
-        position: absolute;
+        position: relative;
         top: 0;
         right: 0;
         bottom: 0;
@@ -33,7 +33,7 @@ export const HeroContainer = styled.div`
 `;
 
 export const HeroBack = styled.div`
-    position: absolute;
+    position: relative;
     top: 0;
     right: 0;
     bottom: 0;
@@ -54,7 +54,7 @@ export const VideoBack = styled.video`
 export const HeroContent = styled.div`
     z-index: 3;
     max-width:1200px;
-    position: absolute;
+    position: relative;
     padding: 8px 24px;
     display: flex;
     flex-direction: column;
@@ -63,6 +63,7 @@ export const HeroContent = styled.div`
 `;
 
 export const HeroH1 = styled.h1`
+    position: relative;
     color: transparent;
     text-shadow: -1px 1px 0 whitesmoke,
                           4px 6px 0 black,
@@ -84,6 +85,7 @@ export const HeroH1 = styled.h1`
 `;
 
 export const HeroP = styled.p`
+    position: relative;
     margin-top: 16px;
     color: transparent;
     text-shadow: -1px 1px 0 whitesmoke,
