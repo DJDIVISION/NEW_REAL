@@ -64,13 +64,13 @@ export const SidebarWrapper = styled.div`
 export const SidebarMenu = styled.ul`
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(9, 60px);
+    grid-template-rows: repeat(9, 50px);
     text-align: center;
    
     
     padding-left: 1.6rem;
     @media screen and (max-width: 480px) {
-       grid-template-rows: repeat(9, 50px);
+       grid-template-rows: repeat(9, 40px);
     }
 
 `;
@@ -90,6 +90,7 @@ export const SidebarLink = styled(LinkS)`
     cursor: pointer;
     margin-left: -40px;
     font-weight: bold;
+    
      
     
     

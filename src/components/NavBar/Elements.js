@@ -34,8 +34,6 @@ export const NavBarContainer = styled.div`
  
 export const NavLogo = styled(LinkR)`
    color: gold;
-   
-   color: gold;
    justify-self: flex-start;
    cursor: pointer;
    display: flex;
@@ -105,21 +103,23 @@ export const NavMenu = styled.ul`
 
 export const NavItem = styled.li`
     height: 80px;
+    
 `;
 
 export const NavbarLink = styled(LinkS)`
-   color: gold;
+   color: ${props => props.theme.text};
    display: flex;
    align-items: center;
    text-decoration: none;
    padding: 0 1rem;
    height: 100%;
    cursor: pointer;
+   font-weight: bold;
 
    &:hover{
-       transform: scale(1.3);
+       transform: scale(1.2);
        transition: 0.2s ease-out;
-       color: yellow;
+       color: gold;
    }
      
    

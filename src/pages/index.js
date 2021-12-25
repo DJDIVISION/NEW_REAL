@@ -20,9 +20,10 @@ import SocialIcons from "../components/SocialIcons";
 
 
 
+
 const Home = () => {
 
-    const [theme, setTheme] = useState("light");
+    const [theme, setTheme] = useState("dark");
 
     const [showMenu, setShowMenu] = useState(true);
 

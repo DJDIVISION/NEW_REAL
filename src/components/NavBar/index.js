@@ -7,6 +7,10 @@ import { IconButton } from "@material-ui/core";
 import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
 import { animateScroll as scroll } from "react-scroll";
 import Sidebar from "../Sidebar";
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+
+
 
 const SmartIcon = styled(MenuIcon)`
      color: gold;
@@ -20,8 +24,32 @@ const ScrollIcon = styled(ArrowCircleUpIcon)`
     top: 600px;
 `;
 
+const MobileIcon3 = styled.div`
+    color: gold;
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.2);
+    }
+    
+`;
 
-const Navbar = () => {
+
+
+
+const Navbar = (props, theme, setTheme) => {
+
+    function changeTheme() {
+        if(props.theme === "light") {
+            props.setTheme("dark");
+        } else {
+            props.setTheme("light");
+        }
+    }
+
+    const icon = props.theme === "light" ? <DarkModeIcon /> : <LightModeIcon /> 
 
     const [showMenu, setShowMenu] = useState(false);
 
@@ -54,6 +82,9 @@ const Navbar = () => {
                     <MobileIcon onClick={() => setShowMenu(!showMenu)}>
                         <SmartIcon />
                     </MobileIcon>
+                    <MobileIcon3 onClick={changeTheme}>
+                        {icon}
+                    </MobileIcon3>
                     <MobileIcon2 scrollNavDown={scrollNavDown}>
                         <IconButton onClick={toggleHome}>
                             <ScrollIcon />
