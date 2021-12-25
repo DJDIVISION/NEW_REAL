@@ -28,15 +28,15 @@ const DarkIcon = styled(DarkModeIcon)`
 
 const MenuVariants = {
     hidden: {
-        y: "-50",
+        y: "-400px",
     },
     show: {
-        y: "0",
+        y: "0px",
     },
     transition: {
         duration: 0.8, 
         type: "spring",
-        stiffness: 300,
+        stiffness: 500,
         damping: 20,
     },
 };
