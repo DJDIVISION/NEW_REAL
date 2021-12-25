@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import { ThemeProvider } from "styled-components";
+import { lightTheme, darkTheme, themes } from "../components/Themes"
 import NavBar from "../components/NavBar"
 import Sidebar from "../components/Sidebar";
 import HeroSection from "../components/HeroSection";
@@ -20,14 +22,13 @@ import SocialIcons from "../components/SocialIcons";
 
 const Home = () => {
 
+    const [theme, setTheme] = useState("light");
+
     const [showMenu, setShowMenu] = useState(true);
 
-    const [isOpen, setIsOpen] = useState(false);
 
-    const toggle = () => {
-        setIsOpen(!isOpen);
-    }
 
+    
     const [scrollNavDown, setScrollNavDown] = useState(false);
 
     const changeNavDown = () => {
@@ -43,13 +44,13 @@ const Home = () => {
      }, []);
 
     return (
-        <AnimatePresence>
+        <ThemeProvider theme={themes[theme]}>
         <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
             {/* <Sidebar isOpen={isOpen} toggle={toggle}/> */}
-            <NavBar showMenu={showMenu} />
+            <NavBar showMenu={showMenu} theme={theme} setTheme={setTheme}/>
             <Footer /> 
         </motion.div>
-        </AnimatePresence>
+        </ThemeProvider>
     );
 }
 

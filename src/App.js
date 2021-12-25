@@ -1,6 +1,4 @@
 import React from 'react';
-import { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme } from "./components/Themes"
 import { useEffect } from "react";
 import { useLocation } from "react-router";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -29,7 +27,6 @@ function App() {
     <Router>
       <ScrollToTop>
         <GlobalStyle />
-          <ThemeProvider theme={lightTheme}>
             <AnimatePresence exitBeforeEnter>
               <Routes>
                 <Route exact path="/" element={<Home />}/>{/* 
@@ -40,7 +37,6 @@ function App() {
                 <Route exact path="/roadmap" element={<RoadMap />}/> */}
               </Routes>
             </AnimatePresence>
-          </ThemeProvider>
       </ScrollToTop>
     </Router>
   );

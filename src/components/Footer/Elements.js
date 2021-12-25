@@ -37,7 +37,7 @@ export const FooterLinksWrapper = styled.div`
 export const FooterLinkItems = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     margin: 16px;
     text-align: left;
     width: 160px;
@@ -57,6 +57,7 @@ export const FooterLinkTitle = styled.h1`
     margin-bottom: 0.5rem;
     font-size: 14px;
     margin-bottom: 16px;
+    
 `;
 
 export const FooterLink = styled(Link)`
@@ -102,7 +103,8 @@ export const SocialLogo = styled(Link)`
 
 export const WebsiteRights = styled.small`
     color: whitesmoke;
-    margin-bottom: 16px;
+    margin-bottom: 26px;
+    margin-top: 10px;
 
 `;
 

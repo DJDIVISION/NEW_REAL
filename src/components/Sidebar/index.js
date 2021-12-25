@@ -1,4 +1,4 @@
-import React from 'react';
+
 import styled from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
 import { SidebarContainer, Icon,  CloseIcon, SidebarWrapper, SidebarLink, SidebarMenu, SidebarRoute, NewsIcon, TeamIcon, GamingIcon, PartnersIcon, NftIcon, SocialIcon, Logo1 } from "./Elements";
@@ -6,8 +6,25 @@ import logoTelos from "../../images/telos_logo.png";
 import logoBsc from "../../images/bsc_logo.png";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { Link } from "react-router-dom";
-import "../../index.css";
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import { IconButton } from "@material-ui/core";
 
+
+function ChangeMode(props) {
+    function changeTheme() {
+        if(props.theme === "Light") {
+            props.setTheme("dark");
+        } else {
+            props.setTheme("light");
+        }
+    }
+}
+
+const DarkIcon = styled(DarkModeIcon)`
+    color: ${props => props.theme.text};
+    margin-left: -40px;
+`;
 
 const MenuVariants = {
     hidden: {
@@ -42,6 +59,7 @@ const Sidebar = ({ showMenu, setShowMenu, toggle, isOpen }) => {
                          <SidebarLink to="telos" onClick={toggle} smooth={true} duration={500} spy={true} exact="true">TELOS</SidebarLink>
                          <SidebarLink to="bsc" onClick={toggle} smooth={true} duration={500} spy={true} exact="true">BSC</SidebarLink>
                          <SidebarLink to="social" onClick={toggle} smooth={true} duration={500} spy={true} exact="true">Social Media</SidebarLink>
+                         <IconButton><DarkIcon /></IconButton>
                     </SidebarMenu>
                 </SidebarWrapper>
             </SidebarContainer>

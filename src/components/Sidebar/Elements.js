@@ -18,7 +18,7 @@ export const SidebarContainer = styled.aside`
     width: calc(100vw - 30%);
     height: 500px;
     justify-content: center;
-    background: black;
+    background: ${props => props.theme.body};
     display: grid;
     align-items: center;
     top: 0;
@@ -27,6 +27,7 @@ export const SidebarContainer = styled.aside`
     //top: ${({ isOpen }) => (isOpen ? "0" : "-100%")}; 
     border-radius: 20px;
     margin-top: 20px;
+    box-shadow: 0 2px 15px 1px ${props => props.theme.body};
 
     
     @media screen and (max-width: 768px){
@@ -65,7 +66,7 @@ export const SidebarMenu = styled.ul`
     grid-template-columns: 1fr;
     grid-template-rows: repeat(9, 60px);
     text-align: center;
-    
+   
     
     padding-left: 1.6rem;
     @media screen and (max-width: 480px) {
@@ -85,9 +86,12 @@ export const SidebarLink = styled(LinkS)`
     list-style: none;
     transition: 0.2s ease-in-out;
     text-decoration: none;
-    color: whitesmoke;
+    color: ${props => props.theme.text};
     cursor: pointer;
     margin-left: -40px;
+    font-weight: bold;
+     
+    
     
     
 
