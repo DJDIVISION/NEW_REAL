@@ -15,7 +15,7 @@ const Home = () => {
 
     const [theme, setTheme] = useState("dark");
 
-    const [showMenu, setShowMenu] = useState(true);
+    const [showMenu, setShowMenu] = useState(false);
 
 
 
@@ -37,7 +37,9 @@ const Home = () => {
     return (
         <ThemeProvider theme={themes[theme]}>
         <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
-            <NavBar showMenu={showMenu} theme={theme} setTheme={setTheme}/>
+            <NavBar showMenu={showMenu} theme={theme} setTheme={setTheme} setShowMenu={setShowMenu}/>
+            <Footer /> 
+            <Footer /> 
             <SimpleSlider />
             <Footer /> 
         </motion.div>

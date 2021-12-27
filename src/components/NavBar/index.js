@@ -36,7 +36,7 @@ const MobileIcon3 = styled.div`
 
 
 
-const Navbar = (props, theme, setTheme) => {
+const Navbar = (props, show) => {
 
     function changeTheme() {
         if(props.theme === "light") {

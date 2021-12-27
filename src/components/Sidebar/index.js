@@ -71,8 +71,8 @@ const Sidebar = ({ showMenu, setShowMenu, props}) => {
             <motion.div variants={MenuVariants} initial="hidden" animate="show">
             <SidebarContainer >
                 <SidebarWrapper>
-                    <SidebarMenu>
-                         <SidebarLink to="news"  smooth={true} duration={500} spy={true} exact="true"><NewsSidebarIcon />News</SidebarLink>
+                    <SidebarMenu >
+                         <SidebarLink to="news" onClick={() => setShowMenu(!showMenu)} smooth={true} duration={500} spy={true} exact="true"><NewsSidebarIcon />News</SidebarLink>
                          <SidebarLink to="team"  smooth={true} duration={500} spy={true} exact="true"><TeamIcon />Team</SidebarLink>
                          <SidebarLink to="partners"   duration={500} spy={true} exact="true"><PartnersIcon />Partners</SidebarLink>
                          <SidebarLink to="gaming"  smooth={true} duration={500} spy={true} exact="true"><GamingIcon />Gaming</SidebarLink>

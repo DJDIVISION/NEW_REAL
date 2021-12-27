@@ -118,7 +118,7 @@ export default function SimpleSlider() {
   };
   return (
     <Slider {...settings}>
-      <div>
+      <div id="partners">
       <MainContainer style={{backgroundImage: `url(${FortisBack})`}}>
             <Container>
                 <LogoContainer>
