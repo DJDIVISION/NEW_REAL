@@ -42,6 +42,7 @@ export const NavLogo = styled(LinkR)`
    margin-left: 0px;
    font-weight: bold;
    text-decoration: none;
+   font-family: 'Alphacentauri';
 
    &:hover{
        transform: scale(1.2);

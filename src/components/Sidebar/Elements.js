@@ -70,7 +70,7 @@ export const SidebarMenu = styled.ul`
     
     padding-left: 1.6rem;
     @media screen and (max-width: 480px) {
-       grid-template-rows: repeat(9, 40px);
+       grid-template-rows: repeat(9, 45px);
     }
 
 `;

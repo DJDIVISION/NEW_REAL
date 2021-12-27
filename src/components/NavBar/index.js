@@ -9,6 +9,7 @@ import { animateScroll as scroll } from "react-scroll";
 import Sidebar from "../Sidebar";
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
+import NewspaperIcon from '@mui/icons-material/Newspaper';
 
 
 
@@ -30,10 +31,6 @@ const MobileIcon3 = styled.div`
     align-items: center;
     margin-right: 50px;
     cursor: pointer;
-    &:hover{
-        transform: scale(1.2);
-    }
-    
 `;
 
 
