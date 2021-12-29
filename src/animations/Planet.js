@@ -5,7 +5,20 @@ import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 import { Earth } from "./components";
 import { HeroSection } from "../components/HeroSection";
+import { motion } from "framer-motion";
 
+
+const Variants = {
+    hidden: {
+        opacity: 0,
+    },
+    visible: {
+        opacity: 1,
+        transition: {
+            duration: 3,
+        },
+    },
+};
 
 const CanvasContainer = styled.div`
     width: 100%;
@@ -15,6 +28,7 @@ const CanvasContainer = styled.div`
 
 const Planet = () => {
     return (
+        <motion.div variants={Variants} initial="hidden" animate="visible">
         <CanvasContainer >
             <HeroSection />
             <Canvas>
@@ -23,6 +37,7 @@ const Planet = () => {
                 </Suspense>
             </Canvas>
         </CanvasContainer>
+        </motion.div>
     )
 }
 
