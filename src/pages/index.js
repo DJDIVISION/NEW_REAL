@@ -68,7 +68,7 @@ function HomeLoader() {
     useEffect(() => {
        setTimeout (() =>{
            setIsLoading(false);
-       }, 3000);
+       }, 7000);
     })
 
     return (
