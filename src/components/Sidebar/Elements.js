@@ -14,7 +14,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 
 export const SidebarContainer = styled.aside`
     position: absolute;
-    z-index: 999;
+    z-index: 9999;
     width: calc(100vw - 30%);
     height: 500px;
     justify-content: center;
@@ -28,6 +28,7 @@ export const SidebarContainer = styled.aside`
     border-radius: 20px;
     margin-top: 20px;
     box-shadow: 0 2px 15px 1px ${props => props.theme.body};
+    
 
     
     @media screen and (max-width: 768px){
@@ -38,28 +39,7 @@ export const SidebarContainer = styled.aside`
     
 `;
 
-export const SidebarContainerTeam = styled.aside`
-    position: fixed;
-    z-index: 999;
-    width: 100%;
-    height: 600px;
-    
-    background: black;
-    display: grid;
-    align-items: center;
-    top: 0;
-    left: 0;
-    
-    
-`;
-
-export const CloseIcon = styled(HighlightOffIcon)`
-    color: whitesmoke;
-`;
-
-export const SidebarWrapper = styled.div`
-    color: whitesmoke;
-`;
+export const SidebarWrapper = styled.div``;
 
 export const SidebarMenu = styled.ul`
     display: grid;
@@ -90,6 +70,7 @@ export const SidebarLink = styled(LinkS)`
     cursor: pointer;
     margin-left: -40px;
     font-weight: bold;
+    z-index: 999;
     
      
     
@@ -106,20 +87,5 @@ export const SidebarLink = styled(LinkS)`
 
 
 
-export const SidebarRoute = styled(LinkR)`
-    border-radius: 50px;
-    padding: 16px 64px;
-    font-size: 16px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    transition: all 0,2s ease-in-out;
-    text-decoration: none;
 
-    &:hover {
-        transition: all 0.2s ease-in-out;
-        background: whitesmoke;
-        color: blue;
-    }
-`; 
  

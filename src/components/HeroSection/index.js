@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import MenuIcon from '@mui/icons-material/Menu';
+import { IconButton } from "@material-ui/core";
 import { HeroContainer, HeroBack, VideoBack, HeroContent, HeroH1, HeroP } from "./Elements";
 //import video from "../../videos/video3.mp4";
 
@@ -21,7 +23,7 @@ import { HeroContainer, HeroBack, VideoBack, HeroContent, HeroH1, HeroP } from "
 }; */
 
 const Container = styled.div`
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 980px;
     top: 0;
@@ -31,7 +33,8 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    z-index: 99;
+    z-index: 5;
+    
 `;
 
 const Logo = styled.div`
@@ -58,9 +61,22 @@ const Slogan = styled.h4`
     
 `;
 
+const Icon = styled(MenuIcon)`
+    opacity: 0;
+
+    @media screen and (max-width: 860px) {
+        opacity: 1;
+        transform: scale(3);
+        color: ${props => props.theme.text};
+        margin-top: -200px;
+        cursor: pointer;
+    }
+`;
+
 export function HeroSection () {
     return (
         <Container>
+            <IconButton><Icon /></IconButton>
             <Logo>DESTINY AIRLINES</Logo>
             <Slogan>We take you <br></br>to outer space</Slogan>
         </Container>

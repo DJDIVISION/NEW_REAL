@@ -66,7 +66,7 @@ const Sidebar = ({ showMenu, setShowMenu, props}) => {
     
     return (
         <>
-        <AnimatePresence>
+        
         {showMenu && (
             <motion.div variants={MenuVariants} initial="hidden" animate="show">
             <SidebarContainer >
@@ -87,7 +87,7 @@ const Sidebar = ({ showMenu, setShowMenu, props}) => {
             </motion.div>
             
         )}
-        </AnimatePresence>
+        
         </>
     );
 }

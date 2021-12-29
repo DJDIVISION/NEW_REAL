@@ -72,7 +72,7 @@ const Navbar = (props, show) => {
 
     return (
         <>
-            <AnimatePresence>
+            
             <Nav scrollNavDown={scrollNavDown}>
                 <NavBarContainer >
                     <NavLogo to="/" >Destiny Airlines</NavLogo>
@@ -119,7 +119,7 @@ const Navbar = (props, show) => {
                 </NavBarContainer>
             </Nav>
             <Sidebar showMenu={showMenu}/>
-            </AnimatePresence>
+            
         </>
     );
 };

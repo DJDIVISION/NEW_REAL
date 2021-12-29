@@ -21,14 +21,14 @@ import AnchorLogo from "../../images/anchor_logo.png";
 
 
 const MainContainer = styled.section`
-    width: 100%;
+    width: 100vw;
     height: 90vh;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    position: relative;
 `;
 
 const Container = styled.div`
