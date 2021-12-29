@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
+
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, themes } from "../components/Themes"
 import NavBar from "../components/NavBar";
@@ -8,8 +9,17 @@ import PartnersSection from "../components/Sections/PartnersSection";
 import Footer from '../components/Footer';
 import SimpleSlider from "../components/Sections/Partners";
 import Planet from "../animations/Planet";
+import HeroLoader from "../animations/Planet";
+import Loader from "react-loader-spinner";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
-
+const Loading = () => {
+    return (
+        <div align="center">
+            <Loader type="Circles" color="#00BFFF" height={80} width={80}/>
+        </div>
+    );
+}
 
 
 const Home = () => {
@@ -39,7 +49,7 @@ const Home = () => {
         <ThemeProvider theme={themes[theme]}>
         <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
             <NavBar showMenu={showMenu} theme={theme} setTheme={setTheme} setShowMenu={setShowMenu}/>
-            <Planet />
+            <HeroLoader />
             <Footer /> 
             <Footer /> 
             <Footer /> 
@@ -52,4 +62,22 @@ const Home = () => {
 
 
 
-export default Home;
+function HomeLoader() {
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+       setTimeout (() =>{
+           setIsLoading(false);
+       }, 3000);
+    })
+
+    return (
+        <div>
+            {
+                isLoading==true ? <Loading /> : <Home />
+            }
+        </div>
+    );
+}
+
+export default HomeLoader;
