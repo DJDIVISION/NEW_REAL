@@ -13,7 +13,7 @@ const BackIcon = styled(ArrowBackIosIcon)`
     @media screen and (max-width: 860px) {
         color: ${props => props.theme.text};
         transform: scale(1.1);
-        margin: 10px;
+        margin-bottom: 15px;
         
         z-index: 500;
 }
@@ -25,7 +25,7 @@ const Icon = styled(MenuIcon)`
     @media screen and (max-width: 860px) {
         color: ${props => props.theme.text};
         transform: scale(1.5);
-        margin: 10px;
+        margin-bottom: 15px;
         z-index: 500;
     }
 `;
@@ -48,7 +48,7 @@ const SectionContainer = styled(motion.div)`
 
 const SectionContainerTwo = styled(motion.div)`
     position: absolute;
-    width: 80vw;
+    width: 90vw;
     height: 400px;
     border-radius: 20px;
     background-color: #1756dd21;
@@ -82,9 +82,11 @@ const Slogan = styled.h4`
 `;
 
 const MenuItem = styled.li`
-    height: 60px;
+    height: 55px;
     color: ${props => props.theme.text};
     font-size: 24px;
+    
+    
 `;
 
 const MenuOverview = styled.ul`
@@ -124,8 +126,8 @@ export function CanvasSectionTwo(props) {
     const { active , setActive } = useContext(MenuContext);
 
     let animate = {};
-    if(active === "menuOne") animate = { opacity: 0 };
-    else if (active === "menuTwo") animate = { opacity: 1};
+    if(active === "menuOne") animate = { opacity: 0, y: 0, scale: 1 };
+    else if (active === "menuTwo") animate = { opacity: 1, y: -40, scale: 1.1};
 
     return(
             <SectionContainerTwo animate={animate} initial={{opacity: 0}}>
