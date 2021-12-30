@@ -4,8 +4,10 @@ import styled from "styled-components";
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 import { Earth } from "./components";
-import { HeroSection } from "../components/HeroSection";
+import { CanvasSection, CanvasSectionTwo, Both } from "./CanvasSection";
 import { motion } from "framer-motion";
+import NavBar from "../components/NavBar";
+
 
 
 const Variants = {
@@ -30,7 +32,7 @@ const Planet = () => {
     return (
         <motion.div variants={Variants} initial="hidden" animate="visible">
         <CanvasContainer >
-            <HeroSection />
+            <Both />
             <Canvas>
                 <Suspense fallback={null}>
                     <Earth />

@@ -13,7 +13,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 
 
 export const SidebarContainer = styled.aside`
-    position: absolute;
+    position: fixed;
     z-index: 9999;
     width: calc(100vw - 30%);
     height: 500px;
@@ -70,7 +70,7 @@ export const SidebarLink = styled(LinkS)`
     cursor: pointer;
     margin-left: -40px;
     font-weight: bold;
-    z-index: 999;
+    z-index: 9999;
     
      
     

@@ -42,7 +42,7 @@ const Home = () => {
             <CanvasContainer />
             <Footer /> 
             <Footer /> 
-            <SimpleSlider />
+            {/* <SimpleSlider /> */}
             <Footer /> 
         </motion.div>
         </ThemeProvider>
