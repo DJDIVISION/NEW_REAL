@@ -59,7 +59,7 @@ const SectionContainerTwo = styled(motion.div)`
     padding-top: 20px;
     z-index: 99;
     margin-top: 80px;
-    margin-left: 30px;
+    margin-left: 15px;
 `;
 
 
