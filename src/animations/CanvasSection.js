@@ -65,7 +65,7 @@ const SectionContainerTwo = styled(motion.div)`
 
 
 const Logo = styled.h1`
-    margin-top: 40vh;
+    margin-top: 30vh;
     color: ${props => props.theme.text};
     font-weight: 700;
     font-family: "Alphacentauri";
@@ -127,7 +127,7 @@ export function CanvasSectionTwo(props) {
 
     let animate = {};
     if(active === "menuOne") animate = { opacity: 0, y: 0, scale: 1 };
-    else if (active === "menuTwo") animate = { opacity: 1, y: -40, scale: 1.1};
+    else if (active === "menuTwo") animate = { opacity: 1, y: -80, scale: 1.1};
 
     return(
             <SectionContainerTwo animate={animate} initial={{opacity: 0}}>
