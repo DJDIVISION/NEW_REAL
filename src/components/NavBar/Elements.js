@@ -13,7 +13,7 @@ export const Nav = styled.nav`
     align-items: center;
     font-size: 1rem;
     position: sticky;
-    top: ${({ scrollNavDown }) => (scrollNavDown ? "-50px" : "0")};
+    top: ${({ scrollNavDown }) => (scrollNavDown ? "-100px" : "0")};
     z-index: 10;
     transition: 0.8s all ease;
     @media screen and (max-width: 960px) {
@@ -45,9 +45,9 @@ export const NavLogo = styled(LinkR)`
    font-family: 'Alphacentauri';
 
    &:hover{
-       transform: scale(1.2);
+       transform: scale(1.05);
        transition: 0.2s ease-out;
-       color: yellow;
+       color: ${props => props.theme.text}
    }
 
    @media screen and (min-width: 1100px){
@@ -78,7 +78,7 @@ export const MobileIcon = styled.div`
 export const MobileIcon2 = styled.div`
     display: block;
     position: absolute;
-    top: ${({ scrollNavDown }) => (scrollNavDown ? "50px" : "-80px")};
+    top: ${({ scrollNavDown }) => (scrollNavDown ? "90px" : "-90px")};
     right: 0;
     transform: translate(-20%, 20%);
     
@@ -116,9 +116,10 @@ export const NavbarLink = styled(LinkS)`
    height: 100%;
    cursor: pointer;
    font-weight: bold;
+   font-size: 10px;
 
    &:hover{
-       transform: scale(1.2);
+       transform: scale(1.1);
        transition: 0.2s ease-out;
        color: gold;
    }

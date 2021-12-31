@@ -33,7 +33,7 @@ const Icon = styled(MenuIcon)`
 const SectionContainer = styled(motion.div)`
     position: absolute;
     width: 100%;
-    height: 100vw;
+    height: 800px;
     top: 0;
     left: 0;
     background-color: #1756dd21;
@@ -43,6 +43,8 @@ const SectionContainer = styled(motion.div)`
     padding-top: 20px;
     z-index: 99;
     margin-top: 80px;
+
+    
 `;
 
 
@@ -65,7 +67,7 @@ const SectionContainerTwo = styled(motion.div)`
 const SectionContainerThree = styled(motion.div)`
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 400px;
     border-radius: 20px;
     background-color: black;
     display: flex;
@@ -221,7 +223,7 @@ const LoaderVariants = {
         y: -800,
         
         transition: {
-            delay: 10,
+            delay: 12,
             type: "spring",
             stiffness: 500,
             damping: 20
