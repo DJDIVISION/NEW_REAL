@@ -10,27 +10,17 @@ import NavBar from "../components/NavBar";
 
 
 
-const Variants = {
-    hidden: {
-        opacity: 0,
-    },
-    visible: {
-        opacity: 1,
-        transition: {
-            duration: 2,
-        },
-    },
-};
+
 
 const CanvasContainer = styled.div`
     width: 100%;
-    height: 900px;
+    height: 800px;
     background-color: ${props => props.theme.body};
 `;
 
 const Planet = () => {
     return (
-        <motion.div variants={Variants} initial="hidden" animate="visible">
+        <motion.div>
         <CanvasContainer >
             <Both />
             <Canvas>

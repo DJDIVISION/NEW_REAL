@@ -33,7 +33,7 @@ const Icon = styled(MenuIcon)`
 const SectionContainer = styled(motion.div)`
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100vw;
     top: 0;
     left: 0;
     background-color: #1756dd21;
@@ -60,6 +60,22 @@ const SectionContainerTwo = styled(motion.div)`
     z-index: 99;
     margin-top: 80px;
     margin-left: 15px;
+`;
+
+const SectionContainerThree = styled(motion.div)`
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    border-radius: 20px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    z-index: 599;
+    
+   
 `;
 
 
@@ -196,6 +212,32 @@ export function CanvasSection(props) {
 }
 
 
+const LoaderVariants = {
+    hidden: {
+        y: 0,
+        
+    },
+    visible: {
+        y: -800,
+        
+        transition: {
+            delay: 10,
+            type: "spring",
+            stiffness: 500,
+            damping: 20
+        }
+    }
+}
+
+export function Loader(props) {
+    return (
+        <SectionContainerThree variants={LoaderVariants} initial="hidden" animate="visible">
+
+        </SectionContainerThree>
+    );
+}
+
+
 export function Both(props) {
 
     
@@ -206,6 +248,7 @@ export function Both(props) {
 
     return(
         <MenuContext.Provider value={contextValue}>
+            <Loader />
             <CanvasSection />
             <CanvasSectionTwo />
     </MenuContext.Provider>
