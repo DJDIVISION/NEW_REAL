@@ -32,7 +32,7 @@ function App() {
               <Routes>
                 <Route exact path="/" element={<HomeLoader />}/>
                 <Route exact path="/partnerspage" element={<PartnersPage />}/>
-                <Route exact path="/homonoloader" element={<HomeNoLoader />}/>
+                <Route exact path="/homenoloader" element={<HomeNoLoader />}/>
                 <Route exact path="/teampage" element={<TeamPage />}/>
                 <Route exact path="/gamingpage" element={<GamingPage />}/>
                 <Route exact path="/newspage" element={<NewsPage />}/>

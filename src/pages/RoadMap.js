@@ -12,9 +12,17 @@ import { FacebookIcon, YoutubeIcon, TwitterIcon, GithubIcon, TelegramIcon, DairS
 import { RoadData } from "../components/data/RoadMapData" ;
 import { Link } from "react-scroll";
 import { animateScroll as scroll } from "react-scroll";
+import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
 
 
-
+const HomeIcon = styled(DoubleArrowIcon)`
+    color: white;
+    transform: rotate(180deg) scale(2);
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 75vh;
+    
+`;
 
 
 const move = keyframes`
@@ -191,21 +199,22 @@ const RoadMap = (props) => {
                <Text>2022</Text>
                
               <Center click={click}>
-              <TextJourney className="text">CHOOSE DESTINATION</TextJourney>  
+                
               <Circle>
                 <svg width="150" height="150" onClick={scrollToOne}>
                     <circle className="progress-infinite" cx="75" cy="75" r="40" fill="transparent" stroke="aqua" strokeWidth="4px"/>
-                    <motion.text  initial={{opacity: 0}} animate={{opacity:1}} transition={{duration: 4}} fill="aqua" x="55" y="85" text-anchor="middle" alignment-baseline="middle" fontSize="28px">1Q</motion.text>
+                    <motion.text  initial={{opacity: 0}} animate={{opacity:1}} transition={{duration: 4}} fill="aqua" x="55" y="85" text-anchor="middle" alignment-baseline="middle" fontSize="22px">1QT</motion.text>
                 </svg>
                 <svg width="150" height="150" onClick={scrollToTwo}>
                     <circle className="progress-infinite" cx="75" cy="75" r="40" fill="transparent" stroke="aqua" strokeWidth="4px"/>
-                    <motion.text  initial={{opacity: 0}} animate={{opacity:1}} transition={{duration: 4.5}} fill="aqua" x="55" y="85" text-anchor="middle" alignment-baseline="middle" fontSize="28px">2Q</motion.text>
+                    <motion.text  initial={{opacity: 0}} animate={{opacity:1}} transition={{duration: 4.5}} fill="aqua" x="55" y="85" text-anchor="middle" alignment-baseline="middle" fontSize="22px">2QT</motion.text>
                 </svg>
                 <svg width="150" height="150" onClick={scrollToThree}>
                     <circle className="progress-infinite" cx="75" cy="75" r="40" fill="transparent" stroke="aqua" strokeWidth="4px"/>
-                    <motion.text  initial={{opacity: 0}} animate={{opacity:1}} transition={{duration: 5}} fill="aqua" x="55" y="85" text-anchor="middle" alignment-baseline="middle" fontSize="28px">3Q</motion.text>
+                    <motion.text  initial={{opacity: 0}} animate={{opacity:1}} transition={{duration: 5}} fill="aqua" x="55" y="85" text-anchor="middle" alignment-baseline="middle" fontSize="22px">3QT</motion.text>
                 </svg>
             </Circle>
+            
                {/* <IconQone onClick={scrollToOne} width={click ? 60 : 80} height={click ? 60 : 80} color="white"/>
                <IconQtwo onClick={scrollToTwo} width={click ? 60 : 80} height={click ? 60 : 80} color="white"/>
                <IconQthree onClick={scrollToThree} width={click ? 60 : 80} height={click ? 60 : 80} color="white"/>  */}
@@ -224,8 +233,10 @@ const RoadMap = (props) => {
             <Rotate ref={planet}>
                 <DairSVG  onClick={toggleHome} width={110} height={110} x={10} fill="white"/>
             </Rotate>
+            <NavLink to="/HomeNoLoader"><HomeIcon /></NavLink>
             
             </Box>
+            <TextJourney className="text">CHOOSE DESTINATION</TextJourney>
         </motion.div>
         
     )
