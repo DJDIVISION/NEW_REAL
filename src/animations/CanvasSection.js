@@ -5,6 +5,7 @@ import { IconButton } from "@material-ui/core";
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { MenuContext } from "./context";
 import { motion } from "framer-motion";
+import { ProgressCircle } from "./components/Progress";
 
 
 const BackIcon = styled(ArrowBackIosIcon)`
@@ -67,7 +68,7 @@ const SectionContainerTwo = styled(motion.div)`
 const SectionContainerThree = styled(motion.div)`
     position: absolute;
     width: 100%;
-    height: 400px;
+    height: 800px;
     border-radius: 20px;
     background-color: black;
     display: flex;
@@ -129,6 +130,11 @@ const IconContainer = styled.ul`
     align-items: center;
 
 
+`;
+
+const LoaderText = styled(motion.h2)`
+    color: ${props => props.theme.text};
+    font-size: 24px;
 `;
 
 
@@ -220,10 +226,10 @@ const LoaderVariants = {
         
     },
     visible: {
-        y: -800,
+        y: -1000,
         
         transition: {
-            delay: 12,
+            delay: 1200,
             type: "spring",
             stiffness: 500,
             damping: 20
@@ -231,13 +237,31 @@ const LoaderVariants = {
     }
 }
 
+const PlaneVariants = {
+    hidden: {
+      scale: 0.8,
+      y: 0,
+    },
+    visible: {
+      scale: 1.2,
+      y: -50,
+    },
+    transition: {
+      duration: 3,
+    }
+  }
+
+
+
 export function Loader(props) {
     return (
         <SectionContainerThree variants={LoaderVariants} initial="hidden" animate="visible">
-
+            <ProgressCircle />
         </SectionContainerThree>
     );
 }
+
+
 
 
 export function Both(props) {
