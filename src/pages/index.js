@@ -44,6 +44,7 @@ const Home = () => {
             <CanvasContainer />
             <Footer /> 
             <RoadMapSection /> 
+            <RoadMapSection />
             {/* <SimpleSlider /> */}
             <Footer /> 
         </motion.div>
