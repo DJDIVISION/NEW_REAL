@@ -74,7 +74,7 @@ const Center = styled.button`
 
 const Box = styled.div`
     background-color: black;
-    
+    max-width: 100vw;
     height: 1600vh;
     position: relative;
     overflow: hidden;
@@ -111,12 +111,15 @@ const Main = styled.ul`
 `;
 
 const Text = styled.h1`
-    position: fixed;
+    position: relative;
+    background: black;
+    width: 100vw;
+    padding: 20px;
     top: ${props => props.top};
     left: ${props => props.left};
     right: ${props => props.right};
     color: grey;
-    font-size: calc(5rem + 5vw);
+    font-size: calc(4rem + 3vw);
     z-index:0;
 `;
 
@@ -185,8 +188,10 @@ const RoadMap = (props) => {
         
             {/* <RoadMapSidebar isOpen={isOpen} toggle={toggle}/>
             <RoadMapNavBar toggle={toggle}/> */}
+               <Text>2022</Text>
                
               <Center click={click}>
+              <TextJourney className="text">CHOOSE DESTINATION</TextJourney>  
               <Circle>
                 <svg width="150" height="150" onClick={scrollToOne}>
                     <circle className="progress-infinite" cx="75" cy="75" r="40" fill="transparent" stroke="aqua" strokeWidth="4px"/>
@@ -194,11 +199,11 @@ const RoadMap = (props) => {
                 </svg>
                 <svg width="150" height="150" onClick={scrollToTwo}>
                     <circle className="progress-infinite" cx="75" cy="75" r="40" fill="transparent" stroke="aqua" strokeWidth="4px"/>
-                    <motion.text  initial={{opacity: 0}} animate={{opacity:1}} transition={{duration: 4}} fill="aqua" x="55" y="85" text-anchor="middle" alignment-baseline="middle" fontSize="28px">2Q</motion.text>
+                    <motion.text  initial={{opacity: 0}} animate={{opacity:1}} transition={{duration: 4.5}} fill="aqua" x="55" y="85" text-anchor="middle" alignment-baseline="middle" fontSize="28px">2Q</motion.text>
                 </svg>
                 <svg width="150" height="150" onClick={scrollToThree}>
                     <circle className="progress-infinite" cx="75" cy="75" r="40" fill="transparent" stroke="aqua" strokeWidth="4px"/>
-                    <motion.text  initial={{opacity: 0}} animate={{opacity:1}} transition={{duration: 4}} fill="aqua" x="55" y="85" text-anchor="middle" alignment-baseline="middle" fontSize="28px">3Q</motion.text>
+                    <motion.text  initial={{opacity: 0}} animate={{opacity:1}} transition={{duration: 5}} fill="aqua" x="55" y="85" text-anchor="middle" alignment-baseline="middle" fontSize="28px">3Q</motion.text>
                 </svg>
             </Circle>
                {/* <IconQone onClick={scrollToOne} width={click ? 60 : 80} height={click ? 60 : 80} color="white"/>
@@ -217,7 +222,7 @@ const RoadMap = (props) => {
                 }
             </Main>
             <Rotate ref={planet}>
-                <DairSVG  onClick={toggleHome} width={80} height={80} fill="white"/>
+                <DairSVG  onClick={toggleHome} width={110} height={110} x={10} fill="white"/>
             </Rotate>
             
             </Box>

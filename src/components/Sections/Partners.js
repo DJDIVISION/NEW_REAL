@@ -31,6 +31,7 @@ const MainContainer = styled.section`
     position: relative;
 `;
 
+
 const Container = styled.div`
     display: flex;
     align-items: center;

@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomeLoader from "./pages/index.js";
+import HomeNoLoader  from "./pages/HomeNoLoader";
 import PartnersPage from "./pages/PartnersPage";
 import TeamPage from "./pages/TeamPage";
 import NewsPage from "./pages/NewsPage";
@@ -31,6 +32,7 @@ function App() {
               <Routes>
                 <Route exact path="/" element={<HomeLoader />}/>
                 <Route exact path="/partnerspage" element={<PartnersPage />}/>
+                <Route exact path="/homonoloader" element={<HomeNoLoader />}/>
                 <Route exact path="/teampage" element={<TeamPage />}/>
                 <Route exact path="/gamingpage" element={<GamingPage />}/>
                 <Route exact path="/newspage" element={<NewsPage />}/>

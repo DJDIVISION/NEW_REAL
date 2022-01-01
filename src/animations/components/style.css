@@ -63,14 +63,27 @@ from {
 }
 
 .progress-infinite-back {
-    stroke-dasharray: 0;
-    stroke-dashoffset: 440;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 0;
     animation: CircleProgressBack 4s linear infinite;
 }
 
+@keyframes Eternal {
+    from {
+        opacity: 0;
+        transform: scale(0.6);
+        z: 0;
+        }
+        to {
+        opacity: 1;
+        transform: scale(1);
+        z: 40;
+        }
+    }
+
 .text {
     color: aqua;
-    font-size: 24px;
+    font-size: 22px;
     position: absolute;
     top:80px;
     left:0;
@@ -78,5 +91,9 @@ from {
     right:0;
     margin: auto;
     text-align: center;
+    animation: Eternal 4s linear infinite;
+    font-family: "Alphacentauri";
+    margin-top: 15px;
+    
     
 }
