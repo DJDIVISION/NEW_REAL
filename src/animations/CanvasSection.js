@@ -274,7 +274,6 @@ export function Both(props) {
 
     return(
         <MenuContext.Provider value={contextValue}>
-            <Loader />
             <CanvasSection />
             <CanvasSectionTwo />
     </MenuContext.Provider>

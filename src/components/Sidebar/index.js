@@ -2,7 +2,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
-import { SidebarContainer, Icon,  CloseIcon, SidebarWrapper, SidebarLink, SidebarMenu } from "./Elements";
+import { SidebarContainer, Icon, SidebarWrapper, SidebarLink, SidebarMenu } from "./Elements";
 import logoTelos from "../../images/telos_logo.png";
 import logoBsc from "../../images/bsc_logo.png";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';

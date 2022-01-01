@@ -12,6 +12,15 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 
 
 
+export const CloseIcon = styled.div`
+
+`;
+
+export const Icon = styled.div`
+
+`;
+
+
 export const SidebarContainer = styled.aside`
     position: fixed;
     z-index: 9999;

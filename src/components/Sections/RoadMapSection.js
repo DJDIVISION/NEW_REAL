@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Planet1 from "../../images/planet3.png";
 import Astronaut from "../../images/astronaut21.png";
 import Planet3 from "../../images/planet11.png";
-import Planet4 from "../../images/planet4.png";
+import StarsBack from "../../images/stars_back1.jpg";
 import { Link as LinkR } from "react-router-dom";
 
 
@@ -31,13 +31,13 @@ const ButtonSection = styled.section`
 
 
 const Section = styled.section`
-    height: 80vh;
+    height: 110vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background: black;
-    height: 780px;
     overflow: hidden;
+    
 `;
 
 const Container = styled.div`
@@ -64,11 +64,14 @@ const ColumnLeft = styled.div`
     z-index: 10;
     
     
+    
+    
 
     @media screen and (max-width: 768px) {
-        diaply: flex-end:
-        align-text: center;
+        display: flex-end:
+        text-align: center;
         margin-left: 60px;
+        margin-top: 7rem;
     }
 
     h1 {
@@ -81,7 +84,7 @@ const ColumnLeft = styled.div`
                         -1px -1px 0 #000;  
         
       @media screen and (max-width: 768px) {
-        font-size: 30px;
+        font-size: 26px;
         text-align: right;
         
     }
@@ -89,11 +92,13 @@ const ColumnLeft = styled.div`
 
     p {
         margin: 0.5rem 0;
-        font-size: 4rem;
+        font-size: 3rem;
         width: 600px;
         text-align: right;
-        @media screen and (max-width: 768px) {
-        font-size: 48px;
+        margin-left: 200px;
+        @media screen and (max-width: 860px) {
+        margin-left: 0px;
+        font-size: 40px;
         text-align: right;
         margin-bottom: 60px;
         width: 250px;
@@ -122,8 +127,9 @@ const ColumnRight = styled.div`
     position: relative;
 
     ${Image}:nth-child(1) {
+        transform: scale(8);
         top: 20px;
-        right: 850px;
+        right: 340px;
     }
     ${Image}:nth-child(2) {
         
@@ -138,10 +144,14 @@ const ColumnRight = styled.div`
 
     @media screen and (max-width: 880px) {
         ${Image}:nth-child(1) {
-            top: 20px;
-            right: 300px;
+            transform: scale(5); 
+            top: 150px;
+            right: 150px;
         }
         ${Image}:nth-child(2) {
+            transform: scale(1.5);
+            top: 80px;
+            right: 200px;
             
         }
         ${Image}:nth-child(3) {
@@ -182,11 +192,13 @@ const NewsSection = () => {
                     >Go to RoadMap</Button></LinkR>
                 </ColumnLeft>
                 <ColumnRight>
-                    <Image src={Astronaut} alt="planet" 
-                    whileTap={{scale: 0.8}} 
+                    <Image src={StarsBack} alt="planet" 
+                    
+                    /* whileTap={{scale: 0.8}} 
                     drag={true}
                     initial={{x: -0, y:0, scale: 0.5}}
-                    animate={{x: 120, y:50,  scale: 2.4, transition: { duration: 6}}} />
+                    animate={{x: 120, y:50,  scale: 2.4, transition: { duration: 6}}} */ />
+                    <Image src={Planet3} alt="" />
                 </ColumnRight>
             </Container>
         </Section>

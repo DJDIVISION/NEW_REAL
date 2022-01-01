@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme, themes } from "../components/Themes"
+import { themes } from "../components/Themes"
 import NavBar from "../components/NavBar";
-import { motion, AnimatePresence } from "framer-motion";
+import { Loader } from "../animations/CanvasSection"
+import { motion } from "framer-motion";
 import { animationOne, transition } from "../animations";
 import PartnersSection from "../components/Sections/PartnersSection";
 import Footer from '../components/Footer';
 import SimpleSlider from "../components/Sections/Partners";
 import CanvasContainer from "../animations/Planet"
+import RoadMapSection from "../components/Sections/RoadMapSection";
 
 
 
@@ -41,7 +43,7 @@ const Home = () => {
             <NavBar showMenu={showMenu} theme={theme} setTheme={setTheme} setShowMenu={setShowMenu}/>
             <CanvasContainer />
             <Footer /> 
-            <Footer /> 
+            <RoadMapSection /> 
             {/* <SimpleSlider /> */}
             <Footer /> 
         </motion.div>
@@ -49,8 +51,18 @@ const Home = () => {
     );
 }
 
+function HomeLoader () {
+    
+    return (
+        <div>
+            <Loader/>
+            <Home/>
+        </div>
+    )
+}
 
 
 
 
-export default Home;
+
+export default HomeLoader;
