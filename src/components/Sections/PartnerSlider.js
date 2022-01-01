@@ -2,9 +2,10 @@ import React, {useState} from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import Slider from "react-slick";
+import { Link as LinkR } from "react-router-dom";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import { IconButton } from "@material-ui/core";
+import { IconButton, Button } from "@material-ui/core";
 import "../../../node_modules/slick-carousel/slick/slick.css";
 import "../../../node_modules/slick-carousel/slick/slick-theme.css";
 
@@ -20,6 +21,11 @@ import TstarterBack from "../../images/tstarter_background.png";
 import TstarterLogo from "../../images/tstarter_logo.png";
 import AnchorBack from "../../images/anchor_background.png";
 import AnchorLogo from "../../images/anchor_logo.png";
+import AreaXBack from "../../images/areax_background.jpg";
+import AreaXLogo from "../../images/areax_logo.jpg";
+import WayneLogo from "../../images/wayne.jpg";
+import WayneBack from "../../images/wayne_background.jpg";
+
 
 
 const MainContainer = styled.section`
@@ -47,6 +53,8 @@ const Container = styled.div`
     backdrop-filter: blur(5px);
     color: ${props => props.theme.body};
     border: 2px solid gold;
+    margin-top: 30px;
+    
 
     @media screen and (max-width: 860px) {
         width: 280px;
@@ -109,6 +117,7 @@ const Section = styled.div`
     width: 100%;
     padding: 3rem 0;
     background: ${props => props.theme.body};
+    
 
 `;
 
@@ -143,11 +152,38 @@ const Carroussel = styled.div`
     justify-content: center;
     margin-top: 30px;
     
+    .slick-arrow:before{
+        color: ${props => props.theme.text};
+        font-size: 1.5rem;
+    }
+
+    .slick-dots button:before{
+        color: ${props => props.theme.text};
+        font-size: 0.5rem;
+        margin-top: 10px;
+    }
+    
 
     @media screen and (max-width: 860px) {
         width: 85%;
     }
          
+`;
+
+const PartnerButton = styled(Button)`
+    &&& {
+        color: ${props => props.theme.body};
+        font-size: 18px;
+        font-weight: bold;
+        border: 1px solid gold;
+        padding: 8px 20px;
+        border-radius: 20px;
+        font-family: "Alphacentauri";
+        margin-top: 30px;
+        background: ${props => props.theme.text};
+        text-decoration: none;
+        
+    }
 `;
 
 const PartnerSlider = () => {
@@ -160,7 +196,7 @@ const PartnerSlider = () => {
       };
     return(
         <Section>
-            <Title>MEET OUR PARTNERS HERE</Title>
+            <Title> OUR PARTNERS </Title>
             <Carroussel>
             <Slider {...settings}>
       <div id="partners">
@@ -174,6 +210,7 @@ const PartnerSlider = () => {
                     <PartnerType>PARTNER</PartnerType>
                     <PartnerDesc>Fortis is a decentralised, open, digital money. This means that everyone can use it and transfer money to anyone they want  </PartnerDesc>
                 </TextContainer>
+                <LinkR to="/PartnersPage"><PartnerButton>MEET ME</PartnerButton></LinkR>
             </Container>
         </MainContainer>
       </div>
@@ -188,6 +225,7 @@ const PartnerSlider = () => {
                     <PartnerType>BLOCKCHAIN</PartnerType>
                     <PartnerDesc>Telos is the ideal network for real world use across multiple industries .Telos based Tokens NFT’s and Smart Contracts are already used for DeFi </PartnerDesc>
                 </TextContainer>
+                <LinkR to="/PartnersPage" ><PartnerButton>MEET ME</PartnerButton></LinkR>
             </Container>
         </MainContainer>
       </div>
@@ -202,6 +240,7 @@ const PartnerSlider = () => {
                     <PartnerType>PARTNER</PartnerType>
                     <PartnerDesc>Nftfy is a permissionless Decentralized Application (DApp) that fractionalizes Non-Fungible Tokens, generating ERC20-compliant fractions fully backed by the NFTs.  </PartnerDesc>
                 </TextContainer>
+                <LinkR to="/PartnersPage"><PartnerButton>MEET ME</PartnerButton></LinkR>
             </Container>
         </MainContainer>
       </div>
@@ -216,6 +255,7 @@ const PartnerSlider = () => {
                     <PartnerType>WALLET</PartnerType>
                     <PartnerDesc>With Wombat, you can send, receive, and earn various tokens without any technical knowledge. With only a couple of taps, you can operate over 50 assets across multiple networks.   </PartnerDesc>
                 </TextContainer>
+                <LinkR to="/PartnersPage"><PartnerButton>MEET ME</PartnerButton></LinkR>
             </Container>
         </MainContainer>
       </div>
@@ -228,8 +268,9 @@ const PartnerSlider = () => {
                 <TextContainer>
                     <PartnerName>T-STARTER</PartnerName>
                     <PartnerType>LAUNCHPAD</PartnerType>
-                    <PartnerDesc>At T-Starter we have made it our mission not to allow scam projects on the platform. This vetting process can however add friction to the listing process and discourage projects from using our platform. </PartnerDesc>
+                    <PartnerDesc>At T-Starter we have made it our mission not to allow scam projects on the platform. This vetting process can however add friction to the listing process . </PartnerDesc>
                 </TextContainer>
+                <LinkR to="/PartnersPage"><PartnerButton>MEET ME</PartnerButton></LinkR>
             </Container>
         </MainContainer>
       </div>
@@ -242,8 +283,39 @@ const PartnerSlider = () => {
                 <TextContainer>
                     <PartnerName>ANCHOR</PartnerName>
                     <PartnerType>WALLET</PartnerType>
-                    <PartnerDesc>Anchor is a security and privacy focused open-source digital wallet for all EOSIO-based networks. Anchor uses modern approaches to ensure the security of your accounts. The use of strong encryption1 helps keep your private keys as safe as possible. </PartnerDesc>
+                    <PartnerDesc>Anchor is a security and privacy focused open-source digital wallet for all EOSIO-based networks. Anchor uses modern approaches to ensure the security of your accounts. </PartnerDesc>
                 </TextContainer>
+                <LinkR to="/PartnersPage"><PartnerButton>MEET ME</PartnerButton></LinkR>
+            </Container>
+        </MainContainer>
+      </div>
+      <div>
+      <MainContainer style={{backgroundImage: `url(${AreaXBack})`}}>
+            <Container>
+                <LogoContainer>
+                    <img src={AreaXLogo} style={{width: 150, height:150, border: '5px solid gold', borderRadius: '50%'}}/>
+                </LogoContainer>
+                <TextContainer>
+                    <PartnerName>AREA X</PartnerName>
+                    <PartnerType>PARTNER</PartnerType>
+                    <PartnerDesc>Anchor is a security and privacy focused open-source digital wallet for all EOSIO-based networks. Anchor uses modern approaches to ensure the security of your accounts.  </PartnerDesc>
+                </TextContainer>
+                <LinkR to="/PartnersPage"><PartnerButton>MEET ME</PartnerButton></LinkR>
+            </Container>
+        </MainContainer>
+      </div>
+      <div>
+      <MainContainer style={{backgroundImage: `url(${WayneBack})`}}>
+            <Container>
+                <LogoContainer>
+                    <img src={WayneLogo} style={{width: 150, height:150, border: '5px solid gold', borderRadius: '50%'}}/>
+                </LogoContainer>
+                <TextContainer>
+                    <PartnerName>W. SHEPPARD</PartnerName>
+                    <PartnerType>PARTNER</PartnerType>
+                    <PartnerDesc>Anchor is a security and privacy focused open-source digital wallet for all EOSIO-based networks. Anchor uses modern approaches to ensure the security of your accounts.  </PartnerDesc>
+                </TextContainer>
+                <LinkR to="/PartnersPage"><PartnerButton>MEET ME</PartnerButton></LinkR>
             </Container>
         </MainContainer>
       </div>

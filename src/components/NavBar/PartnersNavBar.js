@@ -44,7 +44,7 @@ const PartnersNavBar = ({ toggle }) => {
         <>
             <Nav scrollNavDown={scrollNavDown}>
                 <NavBarContainer >
-                    <NavLogo to="/" >Destiny Airlines</NavLogo>
+                    <NavLogo to="/HomeNoLoader" >Destiny Airlines</NavLogo>
                     <MobileIcon onClick={toggle}>
                         <SmartIcon />
                     </MobileIcon>
