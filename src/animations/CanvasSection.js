@@ -229,7 +229,7 @@ const LoaderVariants = {
         y: -1000,
         
         transition: {
-            delay: 10,
+            delay: 10.5,
             type: "spring",
             stiffness: 500,
             damping: 20

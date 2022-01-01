@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import "./style.css";
 
 const ProgressBar = styled.div`
@@ -60,18 +60,19 @@ export function ProgressCircle() {
         <Circle>
             <svg width="150" height="150">
                 <circle className="progress-circle" cx="75" cy="75" r="70" fill="transparent" stroke="aqua" strokeWidth="4px"/>
-                <text fill="aqua" x="75" y="75" text-anchor="middle" alignment-baseline="middle" fontSize="32px">50%</text>
+                <motion.text initial={{opacity: 0}} animate={{opacity:1 }} transition={{ delay: 9.5}} fill="aqua" x="45" y="85" text-anchor="middle" alignment-baseline="middle" fontSize="32px">GO!</motion.text>
             </svg>
         </Circle>
         <ProgressBar>
             <Progress>
+                <AnimatePresence>
                 <motion.h1 
                 className="text"
                 initial={{ opacity: 0}}
                 animate={{ opacity: 1}}
-                exit={{ opacity: 0}}
                 transition={{ duration: 2.5}} 
-                >Fetching Tickets...</motion.h1>
+                >Starting Engines...</motion.h1>
+                </AnimatePresence>
                 {/* <motion.h1 className="text">Starting Engines...</motion.h1>
                 <motion.h1 className="text">Fasten your seatbelts...</motion.h1>
                 <motion.h1 className="text">LAUNCH!!!</motion.h1> */}
