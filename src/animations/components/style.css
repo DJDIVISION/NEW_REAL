@@ -30,7 +30,7 @@
     border-radius: 30px;
 }
 
-@keyframes Arrow {
+@keyframes CircleProgress {
     from {
        stroke-dashoffset: 440;
      }
@@ -39,10 +39,33 @@
      }
    }
 
+@keyframes CircleProgressBack {
+from {
+    stroke-dashoffset: 0;
+    }
+    to {
+    stroke-dashoffset: 440;
+    }
+}
+
+
+
 .progress-circle {
     stroke-dasharray: 440;
     stroke-dashoffset: 0;
-    animation: Arrow 10s linear;
+    animation: CircleProgress 10s linear;
+}
+
+.progress-infinite {
+    stroke-dasharray: 440;
+    stroke-dashoffset: 0;
+    animation: CircleProgress 4s linear infinite;
+}
+
+.progress-infinite-back {
+    stroke-dasharray: 0;
+    stroke-dashoffset: 440;
+    animation: CircleProgressBack 4s linear infinite;
 }
 
 .text {
@@ -55,4 +78,5 @@
     right:0;
     margin: auto;
     text-align: center;
+    
 }

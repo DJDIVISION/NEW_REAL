@@ -1,7 +1,7 @@
 export const RoadData = [
     {
         id:1,
-        name:"1.- Contract Deploy on BSC Chain",
+        name:"Contract Deploy on BSC Chain",
         description:"It is build on top of the React JS, with styledComponents and GSAP for smooth scrolling animations.",
         tags:["BSC","DAIR","Binance"],
         
@@ -11,7 +11,7 @@ export const RoadData = [
     },
     {
         id:2,
-        name:"2.- Website and Socials Launch",
+        name:"Website and Socials Launch",
         description:"A Job listing website build in ReactJS. With searching and filtering functionalities.",
         tags:["react","sass"],
         
@@ -22,7 +22,7 @@ export const RoadData = [
     },
     {
         id:3,
-        name:"3.- Marketing Campaign",
+        name:"Marketing Campaign",
         description:"A clone of Dev.to build using ReactJS. With realtime fetching of articles from dev.to using API.",
         tags:["react","api","sass"],
         
@@ -32,7 +32,7 @@ export const RoadData = [
     },
     {
         id:4,
-        name:"4.- SEED and presale Launch",
+        name:"SEED and presale Launch",
         description:"A cool looking sidebar menu build using ReactJS and styledComponents.It has really smooth animations.",
         tags:["react","styledComponents","react-router"],
         
@@ -42,7 +42,7 @@ export const RoadData = [
        
     },{
         id:5,
-        name:"5.- Pancake Swap Launched",
+        name:"Pancake Swap Launched",
         description:"A todo app build using Redux-toolkit and framer-motion for smooth animations.",
         tags:["react","redux","framer-motion"],
         
@@ -53,7 +53,7 @@ export const RoadData = [
     },
     {
         id:6,
-        name:"6.- CMC & CoinGecko listings",
+        name:"CMC & CoinGecko listings",
         description:"A reponsive navbar menu component in ReactJS with react-router functionalities. Built from scratch.",
         tags:["react","react-router","css"],
         
@@ -64,7 +64,7 @@ export const RoadData = [
     },
     {
         id:7,
-        name:"7.- Giveaways / Competitions",
+        name:"Giveaways / Competitions",
         description:"A reponsive navbar menu component in ReactJS with react-router functionalities. Built from scratch.",
         tags:["react","react-router","css"],
         
@@ -75,7 +75,7 @@ export const RoadData = [
     },
     {
         id:8,
-        name:"8.- 5 to 10 Partnerships",
+        name:"5 to 10 Partnerships",
         description:"A reponsive navbar menu component in ReactJS with react-router functionalities. Built from scratch.",
         tags:["react","react-router","css"],
         

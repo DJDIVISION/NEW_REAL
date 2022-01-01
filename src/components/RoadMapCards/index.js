@@ -6,20 +6,22 @@ import { motion } from "framer-motion";
 
 const Box = styled(motion.li)`
     width: 20rem;
-    height: 40vh;
-    background-color: #f5f5f5;
-    color: black;
-    padding: 1.5rem 2rem;
+    height: 70vh;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    
+    padding: 20px 40px;
     margin-right: 8rem;
     border-radius:0 50px 0 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 2px solid color: #000080;
+    border: 2px solid ${props => props.theme.text};
     transition: all 0.1s ease;
-    margin-top: 3rem;
-    font-family: 'Julius Sans One', sans-serif;
+    margin-top: -50px;
+    
     box-shadow: 0 2px 15px 1px whitesmoke;
+    z-index: 999;
 
     &:hover {
        background-color: black;
@@ -35,10 +37,13 @@ const Box = styled(motion.li)`
 
 const Title = styled.h2`
     font-size: calc(1.3em + 0.5vw);
-    font-weight: bold;
-    font-family: 'Julius Sans One', sans-serif;
-    color: #000080;
+    
+    font-family: 'Alphacentauri';
+    color: ${props => props.theme.text};
     padding-top: 10px;
+    text-align: center;
+    line-height: 1.4;
+    font-size: 26px;
 `;
 
 const Description = styled.h2`

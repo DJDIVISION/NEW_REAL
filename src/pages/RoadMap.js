@@ -8,7 +8,7 @@ import RoadMapCards from "../components/RoadMapCards";
 import { motion } from "framer-motion";
 import { animationThree } from "../animations";
 import { NavLink } from "react-router-dom";
-import { FacebookIcon, YoutubeIcon, TwitterIcon, GithubIcon, TelegramIcon, PlanetIcon, IconQone, IconQtwo, IconQthree }  from '../components/AllSvg';
+import { FacebookIcon, YoutubeIcon, TwitterIcon, GithubIcon, TelegramIcon, DairSVG }  from '../components/AllSvg';
 import { RoadData } from "../components/data/RoadMapData" ;
 import { Link } from "react-scroll";
 import { animateScroll as scroll } from "react-scroll";
@@ -120,16 +120,11 @@ const Text = styled.h1`
     z-index:0;
 `;
 
-
-
-const BigTitle = (props) => {
-    return(
-        <Text top={props.top} left={props.left} right={props.right}>
-            {props.text}
-        </Text>
-    )
-}
-
+const Circle = styled.div`
+    width: 100vw;
+    height: 60vh;
+    
+`;
 
 const RoadMap = (props) => {
 
@@ -180,18 +175,36 @@ const RoadMap = (props) => {
         scroll.scrollMore(7730);
     }
 
+    const TextJourney = styled.h2`
+        color: aqua;
+    `;
+
     return (
         
         <motion.div initial="out" animate="end" exit="out" variants={animationThree}>
         
             {/* <RoadMapSidebar isOpen={isOpen} toggle={toggle}/>
             <RoadMapNavBar toggle={toggle}/> */}
-            
+               
               <Center click={click}>
-               <IconQone onClick={scrollToOne} width={click ? 60 : 80} height={click ? 60 : 80} color="white"/>
+              <Circle>
+                <svg width="150" height="150" onClick={scrollToOne}>
+                    <circle className="progress-infinite" cx="75" cy="75" r="40" fill="transparent" stroke="aqua" strokeWidth="4px"/>
+                    <motion.text  initial={{opacity: 0}} animate={{opacity:1}} transition={{duration: 4}} fill="aqua" x="55" y="85" text-anchor="middle" alignment-baseline="middle" fontSize="28px">1Q</motion.text>
+                </svg>
+                <svg width="150" height="150" onClick={scrollToTwo}>
+                    <circle className="progress-infinite" cx="75" cy="75" r="40" fill="transparent" stroke="aqua" strokeWidth="4px"/>
+                    <motion.text  initial={{opacity: 0}} animate={{opacity:1}} transition={{duration: 4}} fill="aqua" x="55" y="85" text-anchor="middle" alignment-baseline="middle" fontSize="28px">2Q</motion.text>
+                </svg>
+                <svg width="150" height="150" onClick={scrollToThree}>
+                    <circle className="progress-infinite" cx="75" cy="75" r="40" fill="transparent" stroke="aqua" strokeWidth="4px"/>
+                    <motion.text  initial={{opacity: 0}} animate={{opacity:1}} transition={{duration: 4}} fill="aqua" x="55" y="85" text-anchor="middle" alignment-baseline="middle" fontSize="28px">3Q</motion.text>
+                </svg>
+            </Circle>
+               {/* <IconQone onClick={scrollToOne} width={click ? 60 : 80} height={click ? 60 : 80} color="white"/>
                <IconQtwo onClick={scrollToTwo} width={click ? 60 : 80} height={click ? 60 : 80} color="white"/>
-               <IconQthree onClick={scrollToThree} width={click ? 60 : 80} height={click ? 60 : 80} color="white"/> 
-                <span>Start the Journey</span>
+               <IconQthree onClick={scrollToThree} width={click ? 60 : 80} height={click ? 60 : 80} color="white"/>  */}
+                
             </Center>  
             <Box>
             
@@ -204,9 +217,9 @@ const RoadMap = (props) => {
                 }
             </Main>
             <Rotate ref={planet}>
-                <PlanetIcon onClick={toggleHome} width={80} height={80} fill="white"/>
+                <DairSVG  onClick={toggleHome} width={80} height={80} fill="white"/>
             </Rotate>
-            <BigTitle text="2022" top='10%' right='10%' />
+            
             </Box>
         </motion.div>
         
