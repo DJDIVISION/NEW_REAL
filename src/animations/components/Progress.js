@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
+import { motion } from "framer-motion";
 import "./style.css";
 
 const ProgressBar = styled.div`
@@ -38,19 +39,7 @@ const texts = keyframes`
     100% { content: "Ready for Launchment"}
 `;
 
-const Text = styled.div`
-    color: aqua;
-    font-size: 24px;
-    position: absolute;
-    top:80px;
-    left:0;
-    bottom:0;
-    right:0;
-    margin: auto;
-    text-align: center;
-    
-    
-`;
+
 
 const Circle = styled.div`
     width: 150px;
@@ -76,7 +65,16 @@ export function ProgressCircle() {
         </Circle>
         <ProgressBar>
             <Progress>
-                <Text>LOADING</Text>
+                <motion.h1 
+                className="text"
+                initial={{ opacity: 0}}
+                animate={{ opacity: 1}}
+                exit={{ opacity: 0}}
+                transition={{ duration: 2.5}} 
+                >Fetching Tickets...</motion.h1>
+                {/* <motion.h1 className="text">Starting Engines...</motion.h1>
+                <motion.h1 className="text">Fasten your seatbelts...</motion.h1>
+                <motion.h1 className="text">LAUNCH!!!</motion.h1> */}
             </Progress>
         </ProgressBar>
         </div>
