@@ -6,9 +6,9 @@ import { Loader } from "../animations/CanvasSection"
 import { motion } from "framer-motion";
 import { animationOne, transition } from "../animations";
 import Footer from '../components/Footer';
-import SimpleSlider from "../components/Sections/Partners";
 import CanvasContainer from "../animations/Planet"
 import RoadMapSection from "../components/Sections/RoadMapSection";
+import PartnerSlider from "../components/Sections/PartnerSlider";
 
 
 
@@ -41,10 +41,9 @@ const Home = () => {
         <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
             <NavBar showMenu={showMenu} theme={theme} setTheme={setTheme} setShowMenu={setShowMenu}/>
             <CanvasContainer />
-            <Footer /> 
+            <PartnerSlider /> 
             <RoadMapSection /> 
             <RoadMapSection />
-            <SimpleSlider />
             <Footer /> 
         </motion.div>
         </ThemeProvider>
