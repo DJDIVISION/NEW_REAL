@@ -29,8 +29,12 @@ const MobileIcon3 = styled.div`
     color: gold;
     display: flex;
     align-items: center;
-    margin-right: 50px;
+    justify-content: center;
+    
     cursor: pointer;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
 `;
 
 
@@ -76,12 +80,9 @@ const Navbar = (props, show) => {
             <Nav scrollNavDown={scrollNavDown}>
                 <NavBarContainer >
                     <NavLogo to="/" >Destiny Airlines</NavLogo>
-                    <MobileIcon onClick={() => setShowMenu(!showMenu)}>
-                        <SmartIcon />
-                    </MobileIcon>
-                    <MobileIcon3 onClick={changeTheme}>
+                    <IconButton><MobileIcon3 onClick={changeTheme}>
                         {icon}
-                    </MobileIcon3>
+                    </MobileIcon3></IconButton>
                     <MobileIcon2 scrollNavDown={scrollNavDown}>
                         <IconButton onClick={toggleHome}>
                             <ScrollIcon />

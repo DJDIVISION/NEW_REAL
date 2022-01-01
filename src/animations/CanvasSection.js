@@ -7,6 +7,41 @@ import { MenuContext } from "./context";
 import { motion } from "framer-motion";
 import { ProgressCircle } from "./components/Progress";
 import { Link as LinkS} from "react-scroll";
+import NewspaperIcon from '@mui/icons-material/Newspaper';
+import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle';
+import GroupsIcon from '@mui/icons-material/Groups';
+import CasinoIcon from '@mui/icons-material/Casino';
+import ColorLensIcon from '@mui/icons-material/ColorLens';
+import MapIcon from '@mui/icons-material/Map';
+
+const RoadMapIcon = styled(MapIcon)`
+   color: ${props => props.theme.text};
+    margin-right: 10px;
+`;
+
+const NftIcon = styled(ColorLensIcon)`
+    color: ${props => props.theme.text};
+    margin-right: 10px;
+`;
+
+const GamingIcon = styled(CasinoIcon)`
+    color: ${props => props.theme.text};
+    margin-right: 10px;
+`;
+
+const TeamIcon = styled(GroupsIcon)`
+    color: ${props => props.theme.text};
+    margin-right: 10px;
+`;
+
+const PartnersIcon = styled(SupervisedUserCircleIcon)`
+    color: ${props => props.theme.text};
+    margin-right: 10px;
+`;
+const NewsIcon = styled(NewspaperIcon)`
+    color: ${props => props.theme.text};
+    margin-right: 10px;
+`;
 
 
 const BackIcon = styled(ArrowBackIosIcon)`
@@ -165,25 +200,25 @@ export function CanvasSectionTwo(props) {
                     <IconButton onClick={switchToOne}><BackIcon /></IconButton> 
                     </MenuItem>
                     <MenuItem>
-                        <LinkS>NEWS</LinkS>
+                        <LinkS><NewsIcon/>NEWS</LinkS>
                     </MenuItem>
                     <MenuItem>
-                        BSC
+                        <TeamIcon/>TEAM
                     </MenuItem>
                     <MenuItem>
-                        TEAM
+                        <NftIcon />NFT
                     </MenuItem>
                     <MenuItem>
-                        NFT
+                        <LinkS to="roadmap" smooth={true} duration={500} spy={true} exact="true"><RoadMapIcon/>ROADMAP</LinkS>
                     </MenuItem>
                     <MenuItem>
-                        <LinkS to="roadmap" smooth={true} duration={500} spy={true} exact="true">ROADMAP</LinkS>
-                    </MenuItem>
-                    <MenuItem>
-                        <LinkS to="partners" smooth={true} duration={500} spy={true} exact="true">PARTNERS</LinkS>
+                        <LinkS to="partners" smooth={true} duration={500} spy={true} exact="true"><PartnersIcon/>PARTNERS</LinkS>
                     </MenuItem>
                     <MenuItem>
                         TELOS
+                    </MenuItem>
+                    <MenuItem>
+                        BSC
                     </MenuItem>
                 </MenuOverview>
             </SectionContainerTwo>
