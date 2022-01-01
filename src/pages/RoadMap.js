@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme } from "../components/Themes";
+import { themes } from "../components/Themes";
 import styled, { keyframes } from "styled-components";
 import RoadMapSidebar from "../components/Sidebar/RoadMapSidebar";
 import RoadMapNavBar from "../components/NavBar/RoadMapNavBar";
@@ -181,11 +181,11 @@ const RoadMap = (props) => {
     }
 
     return (
-        <ThemeProvider theme={darkTheme}>
+        
         <motion.div initial="out" animate="end" exit="out" variants={animationThree}>
         
-            <RoadMapSidebar isOpen={isOpen} toggle={toggle}/>
-            <RoadMapNavBar toggle={toggle}/>
+            {/* <RoadMapSidebar isOpen={isOpen} toggle={toggle}/>
+            <RoadMapNavBar toggle={toggle}/> */}
             
               <Center click={click}>
                <IconQone onClick={scrollToOne} width={click ? 60 : 80} height={click ? 60 : 80} color="white"/>
@@ -209,7 +209,7 @@ const RoadMap = (props) => {
             <BigTitle text="2022" top='10%' right='10%' />
             </Box>
         </motion.div>
-        </ThemeProvider>
+        
     )
 }
 
