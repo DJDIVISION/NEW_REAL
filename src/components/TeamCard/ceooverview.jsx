@@ -49,7 +49,7 @@ export function CeoOverview(props){
         setActive("postview5");
       };
 
-      let animate = {};
+      let animate = {};  
     if (active === "overview5") animate = { x: 0 };
     else if (active === "postview5") animate = { x: -300 };
 

@@ -5,7 +5,6 @@ import NavBar from "../components/NavBar";
 import { Loader } from "../animations/CanvasSection"
 import { motion } from "framer-motion";
 import { animationOne, transition } from "../animations";
-import PartnersSection from "../components/Sections/PartnersSection";
 import Footer from '../components/Footer';
 import SimpleSlider from "../components/Sections/Partners";
 import CanvasContainer from "../animations/Planet"
@@ -45,7 +44,7 @@ const Home = () => {
             <Footer /> 
             <RoadMapSection /> 
             <RoadMapSection />
-            {/* <SimpleSlider /> */}
+            <SimpleSlider />
             <Footer /> 
         </motion.div>
         </ThemeProvider>

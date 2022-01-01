@@ -6,6 +6,7 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { MenuContext } from "./context";
 import { motion } from "framer-motion";
 import { ProgressCircle } from "./components/Progress";
+import { Link as LinkS} from "react-scroll";
 
 
 const BackIcon = styled(ArrowBackIosIcon)`
@@ -164,10 +165,10 @@ export function CanvasSectionTwo(props) {
                     <IconButton onClick={switchToOne}><BackIcon /></IconButton> 
                     </MenuItem>
                     <MenuItem>
-                        NEWS
+                        <LinkS>NEWS</LinkS>
                     </MenuItem>
                     <MenuItem>
-                        PARTNERS
+                        BSC
                     </MenuItem>
                     <MenuItem>
                         TEAM
@@ -176,10 +177,10 @@ export function CanvasSectionTwo(props) {
                         NFT
                     </MenuItem>
                     <MenuItem>
-                        ROADMAP
+                        <LinkS to="roadmap" smooth={true} duration={500} spy={true} exact="true">ROADMAP</LinkS>
                     </MenuItem>
                     <MenuItem>
-                        BSC
+                        <LinkS to="partners" smooth={true} duration={500} spy={true} exact="true">PARTNERS</LinkS>
                     </MenuItem>
                     <MenuItem>
                         TELOS
