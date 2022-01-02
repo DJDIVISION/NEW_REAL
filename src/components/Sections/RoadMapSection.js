@@ -219,13 +219,13 @@ const NewsSection = () => {
                     >Go to RoadMap</Button></LinkR>
                 </ColumnLeft>
                 <ColumnRight>
-                    <Image src={StarsBack} alt="planet" 
+                    {/* <Image src={StarsBack} alt="planet" 
                     
-                    /* whileTap={{scale: 0.8}} 
+                    whileTap={{scale: 0.8}} 
                     drag={true}
                     initial={{x: -0, y:0, scale: 0.5}}
-                    animate={{x: 120, y:50,  scale: 2.4, transition: { duration: 6}}} */ />
-                    <Image src={Planet3} alt="" />
+                    animate={{x: 120, y:50,  scale: 2.4, transition: { duration: 6}}} />
+                    <Image src={Planet3} alt="" /> */}
                 </ColumnRight>
             </Container>
         </Section>
