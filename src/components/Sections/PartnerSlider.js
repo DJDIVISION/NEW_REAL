@@ -21,7 +21,7 @@ import TstarterBack from "../../images/tstarter_background.png";
 import TstarterLogo from "../../images/tstarter_logo.png";
 import AnchorBack from "../../images/anchor_background.png";
 import AnchorLogo from "../../images/anchor_logo.png";
-import AreaXBack from "../../images/areax_background.jpg";
+import AreaXBack from "../../images/areax_background.png";
 import AreaXLogo from "../../images/areax_logo.jpg";
 import WayneLogo from "../../images/wayne.jpg";
 import WayneBack from "../../images/wayne_background.jpg";
@@ -179,9 +179,10 @@ const PartnerButton = styled(Button)`
         padding: 8px 20px;
         border-radius: 20px;
         font-family: "Alphacentauri";
-        margin-top: 30px;
+        margin-top: 10px;
         background: ${props => props.theme.text};
-        text-decoration: none;
+        
+        position: relative;
         
     }
 `;

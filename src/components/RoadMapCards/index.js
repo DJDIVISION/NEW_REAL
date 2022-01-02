@@ -1,18 +1,23 @@
-import React from 'react'
+import React,{useState} from 'react'
+import { themes } from "../Themes";
+import { ThemeProvider } from "styled-components";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { CrossIcon, TickIcon }  from '../AllSvg';
 import { motion } from "framer-motion";
 
+
+
+
 const Box = styled(motion.li)`
-    width: 20rem;
-    height: 70vh;
-    background: rgba(255, 255, 255, 0.15);
+    min-width: 280px;
+    min-height: 65vh;
     backdrop-filter: blur(5px);
-    
+    background: rgba(255, 255, 255, 0.15);
+
     padding: 20px 40px;
     margin-right: 8rem;
-    border-radius:0 50px 0 50px;
+    border-radius:20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -24,52 +29,54 @@ const Box = styled(motion.li)`
     z-index: 999;
 
     &:hover {
-       background-color: black;
-       color: whitesmoke;
-       border: 1px solid gold; 
+       filter: brightness(1.2);
     }
 
     @media screen and (min-width: 1100px){
         height: 50vh;
-        width: 22rem;
+        width: 16rem;
     }
 `;
 
 const Title = styled.h2`
-    font-size: calc(1.3em + 0.5vw);
-    
-    font-family: 'Alphacentauri';
+    font-size: calc(1.4em + 0.4vw);
     color: ${props => props.theme.text};
-    padding-top: 10px;
+    font-family: 'Julius Sans One';
+    color: ${props => props.theme.text};
+    padding-top: 5px;
     text-align: center;
-    line-height: 1.4;
-    font-size: 26px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #d3d3d3;
+    padding-bottom: 20px;
 `;
 
 const Description = styled.h2`
-    font-size: calc(1.1em + 0.8vw);
-    font-weight: bold;
-    font-family: 'Saira Extra Condensed', sans-serif;
-    line-height: 1.2;
+    font-size: calc(1em + 0.4vw);
+    font-weight: 100;
+    font-family: "Comfortaa";
+    line-height: 1.3;
+    text-align: center;
+    padding-bottom: 5px;
 `;
 
 const Tags = styled.div`
-    border-top: 2x solid black;
-    padding-top: 0.5rem;
+    border-top: 2px solid #d3d3d3;
+    
+    padding-top: 20px;
     display: flex;
     flex-wrap: wrap;
-    border-top: 2px solid black;
+    text-align: center;
     ${Box}:hover &{
-        border-top: 2px solid whitesmoke;
+        
     }
 `;
 
 const Tag = styled.span`
 margin-right: 1rem;
-font-size: calc(1em + 0.3vw);
-color: #000080;
-font-weight: bold;
-font-family: 'Saira Extra Condensed', sans-serif;
+font-size: calc(0.8em + 0.3vw);
+color: aqua;
+font-family: 'Julius', sans-serif;
 `;
 
 const Footer = styled.footer`
@@ -78,19 +85,21 @@ const Footer = styled.footer`
     align-items: center;
 `;
 
-const Link = styled(NavLink)`
-    background-color: black;
+const TimeStamp = styled.div`
+    background-color: ${props => props.theme.body};
     padding-top: 0.5rem;
-    color: whitesmoke;
+    font-weight: bold;
+    color: ${props => props.theme.text};
     text-decoration: none;
     padding: 0.5rem calc(2rem + 2vw);
-    border-radius:0 0 0 50px;
+    display: flex;
+    margin: auto;
+    border-radius: 10px;
+    border: 1px solid ${props => props.theme.text};
     font-size: calc(1em + 0.5vw);
 
     ${Box}:hover &{
-        background-color: whitesmoke;
-        color: black;
-        border: 1px solid gold;
+        
     }
 `; 
 
@@ -106,9 +115,12 @@ const Icon = styled.div`
 
 const RoadMapCards = (props) => {
 
+    const [theme, setTheme] = useState("dark");
+
     const {id, name, description, tags, demo, github, quarter, iconColor } = props.data;
 
     return (
+        <ThemeProvider theme={themes[theme]}>
         <Box id={id}>
            <Title>{name}</Title>
            <Description>{description}</Description>
@@ -120,15 +132,13 @@ const RoadMapCards = (props) => {
                }
            </Tags>
            <Footer>
-               <Link to={{pathname: `${demo}`}} target="blank">
+               <TimeStamp>
                    {quarter}
-               </Link>
-               <Icon >
-                   <CrossIcon width={40} height={40} fill={iconColor}/>
-                   <TickIcon width={30} height={30}  />
-               </Icon>
+               </TimeStamp>
+               
            </Footer>
         </Box>
+        </ThemeProvider>
     )
 }
 

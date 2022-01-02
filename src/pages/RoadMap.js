@@ -95,7 +95,7 @@ const Box = styled.div`
     overflow: hidden;
 
     @media screen and (max-width: 860px){
-        height: 1800vh;
+        height: 1600vh;
     }
 `;
 
@@ -186,11 +186,11 @@ const RoadMap = (props) => {
     }
     
     function scrollToTwo () {
-        scroll.scrollMore(4150);
+        scroll.scrollMore(3800);
     }
     
     function scrollToThree () {
-        scroll.scrollMore(7730);
+        scroll.scrollMore(7050);
     }
 
     const TextJourney = styled.h2`
@@ -201,8 +201,7 @@ const RoadMap = (props) => {
         
         <motion.div initial="out" animate="end" exit="out" variants={animationThree}>
         
-            {/* <RoadMapSidebar isOpen={isOpen} toggle={toggle}/>
-            <RoadMapNavBar toggle={toggle}/> */}
+            
                <Text>2022</Text>
                
               <Center click={click}>
@@ -220,8 +219,9 @@ const RoadMap = (props) => {
                     <circle className="progress-infinite" cx="75" cy="75" r="40" fill="transparent" stroke="aqua" strokeWidth="4px"/>
                     <motion.text  initial={{opacity: 0}} animate={{opacity:1}} transition={{duration: 5}} fill="aqua" x="55" y="85" text-anchor="middle" alignment-baseline="middle" fontSize="22px">3QT</motion.text>
                 </svg>
+                
             </Circle>
-            
+                
                {/* <IconQone onClick={scrollToOne} width={click ? 60 : 80} height={click ? 60 : 80} color="white"/>
                <IconQtwo onClick={scrollToTwo} width={click ? 60 : 80} height={click ? 60 : 80} color="white"/>
                <IconQthree onClick={scrollToThree} width={click ? 60 : 80} height={click ? 60 : 80} color="white"/>  */}
@@ -243,7 +243,7 @@ const RoadMap = (props) => {
             <NavLink to="/HomeNoLoader"><HomeIcon /></NavLink><HomeText>HOME</HomeText>
             
             </Box>
-            <TextJourney className="text">CHOOSE DESTINATION</TextJourney>
+            <TextJourney className="text2">CHOOSE DESTINATION</TextJourney>
         </motion.div>
         
     )
