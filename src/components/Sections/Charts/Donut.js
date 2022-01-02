@@ -8,7 +8,7 @@ class Donut extends Component {
 
     this.state = {
       options: {
-        labels: ['Sale', 'Liquidity', 'Advisors', 'CEX Reserve', 'Team', 'Giveaways', 'Play To Earn', 'Marketing'],
+        labels: ['SALE', 'LIQUIDITY', 'ADVISORS', 'CEX RESERVE', 'TEAM', 'GIVEAWAYS', 'PLAY TO EARN', 'MARKETING'],
         chart: {
             fontFamily: "Comfortaa", 
         },
@@ -16,10 +16,17 @@ class Donut extends Component {
             type: "gradient",
         },
         title: {
-            text: "TOKENOMICS", 
+            text: "TOTAL SUPPLY: 1,000,000,000,000", 
+            align: "center",
+            style: {
+                fontSize: '20px',
+                
+            }
         },
         legend: {
             position: "bottom",
+            fontSize: '16px',
+            fontWeight: 'bold',
         }
         
       },
@@ -32,7 +39,7 @@ class Donut extends Component {
 
     return (
       <div className="donut">
-        <Chart options={this.state.options} series={this.state.series}  type="donut" width="380" />
+        <Chart options={this.state.options} series={this.state.series}  type="donut" width="440" />
       </div>
     );
   }
