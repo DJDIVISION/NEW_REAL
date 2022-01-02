@@ -9,6 +9,7 @@ import Footer from '../components/Footer';
 import CanvasContainer from "../animations/Planet"
 import RoadMapSection from "../components/Sections/RoadMapSection";
 import PartnerSlider from "../components/Sections/PartnerSlider";
+import Tokenomics from "../components/Sections/Tokenomics";
 
 
 
@@ -42,7 +43,7 @@ const Home = () => {
             <NavBar showMenu={showMenu} theme={theme} setTheme={setTheme} setShowMenu={setShowMenu}/>
             <CanvasContainer />
             <PartnerSlider /> 
-            <RoadMapSection /> 
+            <Tokenomics /> 
             <RoadMapSection />
             <Footer /> 
         </motion.div>

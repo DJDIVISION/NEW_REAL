@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import { themes } from "../Themes";
 import { ThemeProvider } from "styled-components";
 import { NavLink } from "react-router-dom";
+
 import styled from "styled-components";
 import { CrossIcon, TickIcon }  from '../AllSvg';
 import { motion } from "framer-motion";
@@ -74,8 +75,9 @@ const Tags = styled.div`
 
 const Tag = styled.span`
 margin-right: 1rem;
-font-size: calc(0.8em + 0.3vw);
-color: aqua;
+font-size: calc(1em + 0.5vw);
+font-weight: 100;
+color: #5dadec;
 font-family: 'Julius', sans-serif;
 `;
 

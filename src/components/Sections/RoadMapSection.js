@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled from "styled-components";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import Planet1 from "../../images/planet3.png";
 import Astronaut from "../../images/astronaut21.png";
 import Planet3 from "../../images/planet11.png";
@@ -168,27 +169,53 @@ const ColumnRight = styled.div`
 
 const NewsSection = () => {
 
-    
+    const { ref, inView } = useInView({
+        threshold: 0.2
+    });
+
+    const animation = useAnimation();
+    const opacity = useAnimation();
+
+    useEffect(() => {
+        
+       console.log("use effect hook, inView = ", inView); 
+        if(inView){
+          animation.start({
+              x: 0, opacity: 1, 
+              transition: {
+                  type: "spring", duration: 3, bounce: 0.3
+              }
+          })
+          opacity.start({
+              opacity: 1, 
+              transition: {
+                  duration: 2.5
+              }
+          })  
+        }
+        if (!inView){
+          animation.start({
+              x: "-100vw",
+          })  
+          opacity.start({
+              opacity: 0
+          })
+        }
+    }, [inView]); 
 
     return(
         <Section id="roadmap">
-            <Container>
+            <Container ref={ref}>
                 <ColumnLeft>
                     <motion.h1
-                        initial={{ opacity: 0, x: 300}}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 3}}
+                        animate={ animation }
                     >Follow <br/>the RoadMap</motion.h1>
                     <motion.p
-                        initial={{ opacity: 0, x: 300}}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{duration: 3}}
+                        animate={ animation }
                     >that will take us beyond the moon</motion.p>
                     <LinkR to="/RoadMap"><Button 
-                    whileHover={{scale:1.05}} 
-                    whileTap={{backgroundColor:'gold', border: 'none', color: 'black' }}
-                    initial={{ opacity: 0, x: 300}}
-                    animate={{ opacity: 1, x:0, transition: { duration: 3 }}}
+                    
+                    animate={ opacity}
                     >Go to RoadMap</Button></LinkR>
                 </ColumnLeft>
                 <ColumnRight>

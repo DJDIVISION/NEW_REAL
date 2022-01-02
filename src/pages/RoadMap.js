@@ -2,13 +2,12 @@ import React, { useState, useRef, useEffect } from 'react';
 import { ThemeProvider } from "styled-components";
 import { themes } from "../components/Themes";
 import styled, { keyframes } from "styled-components";
-import RoadMapSidebar from "../components/Sidebar/RoadMapSidebar";
-import RoadMapNavBar from "../components/NavBar/RoadMapNavBar";
 import RoadMapCards from "../components/RoadMapCards";
 import { motion } from "framer-motion";
 import { animationThree } from "../animations";
 import { NavLink } from "react-router-dom";
-import { FacebookIcon, YoutubeIcon, TwitterIcon, GithubIcon, TelegramIcon, DairSVG }  from '../components/AllSvg';
+
+import { DairSVG }  from '../components/AllSvg';
 import { RoadData } from "../components/data/RoadMapData" ;
 import { Link } from "react-scroll";
 import { animateScroll as scroll } from "react-scroll";
@@ -190,7 +189,7 @@ const RoadMap = (props) => {
     }
     
     function scrollToThree () {
-        scroll.scrollMore(7050);
+        scroll.scrollMore(7070);
     }
 
     const TextJourney = styled.h2`
