@@ -135,7 +135,7 @@ const Tokenomics = () => {
         document.getElementById("placer").innerHTML = "10%";
         document.getElementById("ptearn").classList.add("graph-active");
         document.getElementById("ptearncir").classList.add("circle-active");
-        document.getElementById("supply").innerHTML = "PLAY TO EARN SUPPLY: 400,000,000,000";
+        document.getElementById("supply").innerHTML = "PLAY TO EARN SUPPLY: 100,000,000,000";
     }
 
     const onHoverMark = () => {
