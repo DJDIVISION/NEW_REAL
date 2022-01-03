@@ -88,6 +88,33 @@ const ListContainer = styled.div`
 
 const Tokenomics = () => {
 
+    const { ref, inView } = useInView({
+        threshold: 0.2
+    });
+
+    const animation = useAnimation();
+    
+
+    useEffect(() => {
+        
+       console.log("use effect hook, inView = ", inView); 
+        if(inView){
+          animation.start({
+              opacity: 1,
+              x: 0, 
+              transition: {
+                type: "spring", duration: 2, bounce: 0.5
+              }
+          })
+        }
+        if (!inView){
+          animation.start({
+            opacity: 0,
+            x: "-100vw",
+          })  
+        }
+    }, [inView]); 
+
     const onHoverSale = () => {
         document.getElementById("placer").innerHTML = "40%";
         document.getElementById("sale").classList.add("graph-active");
@@ -203,9 +230,10 @@ const Tokenomics = () => {
     }
 
     return (
-        <Background>
+        <Background ref={ref} id="tokenomics">
+            <motion.div animate={ animation } style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
             <Title id="supply">TOTAL SUPPLY: 1,000,000,000,000</Title>
-            <TitleTwo id="placer"></TitleTwo>
+            <TitleTwo id="placer">100%</TitleTwo>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
         <circle r="42.5" cx="50" cy="50" 
         fill="transparent" 
@@ -344,6 +372,7 @@ const Tokenomics = () => {
         </ListItem>
     </List>
     </ListContainer>
+    </motion.div>
     </Background>
     )
 }

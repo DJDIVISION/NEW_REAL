@@ -206,7 +206,7 @@ export function CanvasSectionTwo(props) {
                         <TeamIcon/>TEAM
                     </MenuItem>
                     <MenuItem>
-                        <NftIcon />NFT
+                    <LinkS to="tokenomics" smooth={true} duration={500} spy={true} exact="true"><NftIcon />TOKENOMICS</LinkS>
                     </MenuItem>
                     <MenuItem>
                         <LinkS to="roadmap" smooth={true} duration={500} spy={true} exact="true"><RoadMapIcon/>ROADMAP</LinkS>

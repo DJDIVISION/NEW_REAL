@@ -76,7 +76,7 @@ const Sidebar = ({ showMenu, setShowMenu, props}) => {
                          <SidebarLink to="team"  smooth={true} duration={500} spy={true} exact="true"><TeamIcon />Team</SidebarLink>
                          <SidebarLink to="partners"   duration={500} spy={true} exact="true"><PartnersIcon />Partners</SidebarLink>
                          <SidebarLink to="gaming"  smooth={true} duration={500} spy={true} exact="true"><GamingIcon />Gaming</SidebarLink>
-                         <SidebarLink to="nft"  smooth={true} duration={500} spy={true} exact="true"><NftIcon />NFTs</SidebarLink>
+                         <SidebarLink to="tokenomics"  smooth={true} duration={500} spy={true} exact="true"><NftIcon />TOKENOMICS</SidebarLink>
                          <SidebarLink to="roadmap"  smooth={true} duration={500} spy={true} exact="true"><RoadMapIcon />RoadMap</SidebarLink>
                          <SidebarLink to="telos"  smooth={true} duration={500} spy={true} exact="true">TELOS</SidebarLink>
                          <SidebarLink to="bsc"  smooth={true} duration={500} spy={true} exact="true">BSC</SidebarLink>
