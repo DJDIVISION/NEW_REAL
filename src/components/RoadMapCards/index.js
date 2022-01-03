@@ -53,7 +53,7 @@ const Title = styled.h2`
 `;
 
 const Description = styled.h2`
-    font-size: calc(1em + 0.4vw);
+    font-size: calc(0.8em + 0.4vw);
     font-weight: 100;
     font-family: "Comfortaa";
     line-height: 1.3;
@@ -75,7 +75,7 @@ const Tags = styled.div`
 
 const Tag = styled.span`
 margin-right: 1rem;
-font-size: calc(1em + 0.5vw);
+font-size: calc(0.6em + 0.5vw);
 font-weight: 100;
 color: #5dadec;
 font-family: 'Julius', sans-serif;
@@ -93,12 +93,12 @@ const TimeStamp = styled.div`
     font-weight: bold;
     color: ${props => props.theme.text};
     text-decoration: none;
-    padding: 0.5rem calc(2rem + 2vw);
+    padding: 0.5rem calc(1rem + 2vw);
     display: flex;
     margin: auto;
     border-radius: 10px;
     border: 1px solid ${props => props.theme.text};
-    font-size: calc(1em + 0.5vw);
+    font-size: calc(0.8em + 0.5vw);
 
     ${Box}:hover &{
         
