@@ -36,9 +36,9 @@ function GradientCard({ image, logo, name, type, desc, ctaButton, TelegramLink, 
                         <h6 className="card-name">{type}</h6>
                         <p className="desc">{desc}</p>
                         <div className="footer">
-                          <p><IconButton><Telegram onClick={event => window.open(TelegramLink, "_blank")}/></IconButton></p>
-                          <p><IconButton><Website onClick={event => window.open(WebsiteLink, "_blank")}/></IconButton></p>
-                          <p><IconButton><Twitter onClick={event => window.open(TwitterLink, "_blank")}/></IconButton></p>   
+                          <p><IconButton onClick={event => window.open(TelegramLink, "_blank")}><Telegram /></IconButton></p>
+                          <p><IconButton onClick={event => window.open(WebsiteLink, "_blank")}><Website /></IconButton></p>
+                          <p><IconButton onClick={event => window.open(TwitterLink, "_blank")}><Twitter /></IconButton></p>   
                         </div>
                     </div>
                 </div>

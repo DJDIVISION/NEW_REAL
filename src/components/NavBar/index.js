@@ -80,7 +80,7 @@ const Navbar = (props, show) => {
             <Nav scrollNavDown={scrollNavDown}>
                 <NavBarContainer >
                     <NavLogo to="/" >Destiny Airlines</NavLogo>
-                    <IconButton><MobileIcon3 onClick={changeTheme}>
+                    <IconButton onClick={changeTheme}><MobileIcon3 >
                         {icon}
                     </MobileIcon3></IconButton>
                     <MobileIcon2 scrollNavDown={scrollNavDown}>
