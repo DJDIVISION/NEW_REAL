@@ -50,7 +50,7 @@ export function Earth(props){
                 <sphereGeometry args={[1, 32, 32]}/>
                 <meshPhongMaterial specularMap={specularMap}  />  
                 <meshStandardMaterial map={colorMap} normalMap={normalMap} />
-                <OrbitControls enableZoom={true} enablePan={true} enableRotate={true} zommSpeed={0.6} panSpeed={0.5} rotateSpeed={0.4} metalness={0.8} roughness={0.7}/> 
+                {/* <OrbitControls enableZoom={true} enablePan={true} enableRotate={true} zommSpeed={0.6} panSpeed={0.5} rotateSpeed={0.4} metalness={0.8} roughness={0.7}/>  */}
             </mesh>
         </>
     )

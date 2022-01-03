@@ -20,18 +20,18 @@ const Background = styled.div`
 `;
 
 const Title = styled.h1`
-    font-size: 48px;
+    font-size: 32px;
     color: black;
     text-align: center;
     margin: 40px;
 
     @media screen and (max-width:860px){
-        font-size: 24px;
+        font-size: 22px;
     }
 `;
 
 const TitleTwo = styled.h1`
-    font-size: 48px;
+    font-size: 44px;
     color: black;
     position: fixed;
     margin-top: 235px;
@@ -62,12 +62,13 @@ const Section = styled.section`
 const List = styled.ul`
     display: flex;
     height: 40px;
+    padding: 0 10px 0 10px;
     
 `;
 
 const ListItem = styled.li`
     font-size: 20px;
-    padding: 1.2rem;
+    padding: 1rem;
     font-weight: bold;
     
 `;
@@ -91,6 +92,7 @@ const Tokenomics = () => {
         document.getElementById("placer").innerHTML = "40%";
         document.getElementById("sale").classList.add("graph-active");
         document.getElementById("salecir").classList.add("circle-active");
+        document.getElementById("supply").innerHTML = "SALE SUPPLY: 400,000,000,000";
         
     }
 
@@ -98,42 +100,49 @@ const Tokenomics = () => {
         document.getElementById("placer").innerHTML = "20%";
         document.getElementById("liquidity").classList.add("graph-active");
         document.getElementById("liquiditycir").classList.add("circle-active");
+        document.getElementById("supply").innerHTML = "LIQUIDITY SUPPLY: 200,000,000,000";
     }
 
     const onHoverAdvisors = () => {
         document.getElementById("placer").innerHTML = "3%";
         document.getElementById("advisors").classList.add("graph-active");
         document.getElementById("advisorscir").classList.add("circle-active");
+        document.getElementById("supply").innerHTML = "ADVISORS SUPPLY: 30,000,000,000";
     }
 
     const onHoverCEX = () => {
         document.getElementById("placer").innerHTML = "10%";
         document.getElementById("cex").classList.add("graph-active");
         document.getElementById("cexcir").classList.add("circle-active");
+        document.getElementById("supply").innerHTML = "CEX RESERVE SUPPLY: 100,000,000,000";
     }
 
     const onHoverTeam = () => {
         document.getElementById("placer").innerHTML = "10%";
         document.getElementById("team").classList.add("graph-active");
         document.getElementById("teamcir").classList.add("circle-active");
+        document.getElementById("supply").innerHTML = "TEAM SUPPLY: 100,000,000,000";
     }
 
     const onHoverGives = () => {
         document.getElementById("placer").innerHTML = "3%";
         document.getElementById("gives").classList.add("graph-active");
         document.getElementById("givescir").classList.add("circle-active");
+        document.getElementById("supply").innerHTML = "GIVEAWAYS SUPPLY: 30,000,000,000";
     }
 
     const onHoverPTearn = () => {
         document.getElementById("placer").innerHTML = "10%";
         document.getElementById("ptearn").classList.add("graph-active");
         document.getElementById("ptearncir").classList.add("circle-active");
+        document.getElementById("supply").innerHTML = "PLAY TO EARN SUPPLY: 400,000,000,000";
     }
 
     const onHoverMark = () => {
         document.getElementById("placer").innerHTML = "4%";
         document.getElementById("mark").classList.add("graph-active");
         document.getElementById("markcir").classList.add("circle-active");
+        document.getElementById("supply").innerHTML = "MARKETING SUPPLY: 40,000,000,000";
     }
 
 
@@ -141,55 +150,63 @@ const Tokenomics = () => {
         document.getElementById("placer").innerHTML = "";
         document.getElementById("sale").classList.remove("graph-active");
         document.getElementById("salecir").classList.remove("circle-active");
+        document.getElementById("supply").innerHTML = "TOTAL SUPPLY: 1000,000,000,000";
     }
 
     const onLeaveLiquidity = () => {
         document.getElementById("placer").innerHTML = "";
         document.getElementById("liquidity").classList.remove("graph-active");
         document.getElementById("liquiditycir").classList.remove("circle-active");
+        document.getElementById("supply").innerHTML = "TOTAL SUPPLY: 1000,000,000,000";
     }
 
     const onLeaveAdvisors = () => {
         document.getElementById("placer").innerHTML = "";
         document.getElementById("advisors").classList.remove("graph-active");
         document.getElementById("advisorscir").classList.remove("circle-active");
+        document.getElementById("supply").innerHTML = "TOTAL SUPPLY: 1000,000,000,000";
     }
 
     const onLeaveCEX = () => {
         document.getElementById("placer").innerHTML = "";
         document.getElementById("cex").classList.remove("graph-active");
         document.getElementById("cexcir").classList.remove("circle-active");
+        document.getElementById("supply").innerHTML = "TOTAL SUPPLY: 1000,000,000,000";
     }
 
     const onLeaveTeam = () => {
         document.getElementById("placer").innerHTML = "";
         document.getElementById("team").classList.remove("graph-active");
         document.getElementById("teamcir").classList.remove("circle-active");
+        document.getElementById("supply").innerHTML = "TOTAL SUPPLY: 1000,000,000,000";
     }
 
     const onLeaveGives = () => {
         document.getElementById("placer").innerHTML = "";
         document.getElementById("gives").classList.remove("graph-active");
         document.getElementById("givescir").classList.remove("circle-active");
+        document.getElementById("supply").innerHTML = "TOTAL SUPPLY: 1000,000,000,000";
     }
 
     const onLeavePtearn = () => {
         document.getElementById("placer").innerHTML = "";
         document.getElementById("ptearn").classList.remove("graph-active");
         document.getElementById("ptearncir").classList.remove("circle-active");
+        document.getElementById("supply").innerHTML = "TOTAL SUPPLY: 1000,000,000,000";
     }
 
     const onLeaveMark = () => {
         document.getElementById("placer").innerHTML = "";
         document.getElementById("mark").classList.remove("graph-active");
         document.getElementById("markcir").classList.remove("circle-active");
+        document.getElementById("supply").innerHTML = "TOTAL SUPPLY: 1000,000,000,000";
     }
 
     return (
         <Background>
-            <Title>SUPPLY: 1,000,000,000,000</Title>
+            <Title id="supply">TOTAL SUPPLY: 1,000,000,000,000</Title>
             <TitleTwo id="placer"></TitleTwo>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="250" height="250">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
         <circle r="42.5" cx="50" cy="50" 
         fill="transparent" 
         stroke="lightblue"   
@@ -295,33 +312,35 @@ const Tokenomics = () => {
     </svg>
     <ListContainer>
     <List>
-        <ListItem id="sale" style={{color: "#ff8c00" }} onClick={onHoverSale} onMouseEnter={onHoverSale} onMouseLeave={onLeaveSale}>
-            SALE 
+        <ListItem id="gives" style={{color: "#808080" }} onClick={onHoverGives} onMouseEnter={onHoverGives} onMouseLeave={onLeaveGives}>
+            GIVEAWAYS
         </ListItem>
         <ListItem id="liquidity" style={{color: "#ffd700" }} onClick={onHoverLiquidity} onMouseEnter={onHoverLiquidity} onMouseLeave={onLeaveLiquidity}>
             LIQUIDITY
-        </ListItem>
-        <ListItem id="advisors" style={{color: "#32cd32" }} onClick={onHoverAdvisors} onMouseEnter={onHoverAdvisors} onMouseLeave={onLeaveAdvisors}>
-            ADVISORS
         </ListItem>
     </List>
     <List>
         <ListItem id="cex"style={{color: "#4169e1" }} onClick={onHoverCEX} onMouseEnter={onHoverCEX} onMouseLeave={onLeaveCEX}>
             CEX RESERVE
         </ListItem>
-        <ListItem id="ptearn" style={{color: "#9b7653" }} onClick={onHoverPTearn} onMouseEnter={onHoverPTearn} onMouseLeave={onLeavePtearn}>
-            PLAY TO EARN
+        <ListItem id="sale" style={{color: "#ff8c00" }} onClick={onHoverSale} onMouseEnter={onHoverSale} onMouseLeave={onLeaveSale}>
+            SALE 
         </ListItem>
     </List>
     <List>
         <ListItem id="team" style={{color: "#800080" }} onClick={onHoverTeam} onMouseEnter={onHoverTeam} onMouseLeave={onLeaveTeam}>  
             TEAM
         </ListItem>
-        <ListItem id="gives" style={{color: "#808080" }} onClick={onHoverGives} onMouseEnter={onHoverGives} onMouseLeave={onLeaveGives}>
-            GIVEAWAYS
+        <ListItem id="ptearn" style={{color: "#9b7653" }} onClick={onHoverPTearn} onMouseEnter={onHoverPTearn} onMouseLeave={onLeavePtearn}>
+            PLAY TO EARN
         </ListItem>
+    </List>
+    <List>
         <ListItem id="mark" style={{color: "#ff0000" }} onClick={onHoverMark} onMouseEnter={onHoverMark} onMouseLeave={onLeaveMark}>
             MARKETING
+        </ListItem>
+        <ListItem id="advisors" style={{color: "#32cd32" }} onClick={onHoverAdvisors} onMouseEnter={onHoverAdvisors} onMouseLeave={onLeaveAdvisors}>
+            ADVISORS
         </ListItem>
     </List>
     </ListContainer>
