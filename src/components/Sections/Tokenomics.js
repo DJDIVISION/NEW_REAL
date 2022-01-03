@@ -11,7 +11,7 @@ import "./style.css";
 const Background = styled.div`
     width: 100vw;
     height: 100vh;
-    background: white;
+    background: ${props => props.theme.body};
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,18 +21,18 @@ const Background = styled.div`
 
 const Title = styled.h1`
     font-size: 32px;
-    color: black;
+    color: ${props => props.theme.text};
     text-align: center;
     margin: 40px;
 
     @media screen and (max-width:860px){
-        font-size: 22px;
+        font-size: 24px;
     }
 `;
 
 const TitleTwo = styled.h1`
     font-size: 44px;
-    color: black;
+    color: ${props => props.theme.text};
     position: fixed;
     margin-top: 235px;
 
@@ -147,56 +147,56 @@ const Tokenomics = () => {
 
 
     const onLeaveSale = () => {
-        document.getElementById("placer").innerHTML = "";
+        document.getElementById("placer").innerHTML = "100%";
         document.getElementById("sale").classList.remove("graph-active");
         document.getElementById("salecir").classList.remove("circle-active");
         document.getElementById("supply").innerHTML = "TOTAL SUPPLY: 1000,000,000,000";
     }
 
     const onLeaveLiquidity = () => {
-        document.getElementById("placer").innerHTML = "";
+        document.getElementById("placer").innerHTML = "100%";
         document.getElementById("liquidity").classList.remove("graph-active");
         document.getElementById("liquiditycir").classList.remove("circle-active");
         document.getElementById("supply").innerHTML = "TOTAL SUPPLY: 1000,000,000,000";
     }
 
     const onLeaveAdvisors = () => {
-        document.getElementById("placer").innerHTML = "";
+        document.getElementById("placer").innerHTML = "100%";
         document.getElementById("advisors").classList.remove("graph-active");
         document.getElementById("advisorscir").classList.remove("circle-active");
         document.getElementById("supply").innerHTML = "TOTAL SUPPLY: 1000,000,000,000";
     }
 
     const onLeaveCEX = () => {
-        document.getElementById("placer").innerHTML = "";
+        document.getElementById("placer").innerHTML = "100%";
         document.getElementById("cex").classList.remove("graph-active");
         document.getElementById("cexcir").classList.remove("circle-active");
         document.getElementById("supply").innerHTML = "TOTAL SUPPLY: 1000,000,000,000";
     }
 
     const onLeaveTeam = () => {
-        document.getElementById("placer").innerHTML = "";
+        document.getElementById("placer").innerHTML = "100%";
         document.getElementById("team").classList.remove("graph-active");
         document.getElementById("teamcir").classList.remove("circle-active");
         document.getElementById("supply").innerHTML = "TOTAL SUPPLY: 1000,000,000,000";
     }
 
     const onLeaveGives = () => {
-        document.getElementById("placer").innerHTML = "";
+        document.getElementById("placer").innerHTML = "100%";
         document.getElementById("gives").classList.remove("graph-active");
         document.getElementById("givescir").classList.remove("circle-active");
         document.getElementById("supply").innerHTML = "TOTAL SUPPLY: 1000,000,000,000";
     }
 
     const onLeavePtearn = () => {
-        document.getElementById("placer").innerHTML = "";
+        document.getElementById("placer").innerHTML = "100%";
         document.getElementById("ptearn").classList.remove("graph-active");
         document.getElementById("ptearncir").classList.remove("circle-active");
         document.getElementById("supply").innerHTML = "TOTAL SUPPLY: 1000,000,000,000";
     }
 
     const onLeaveMark = () => {
-        document.getElementById("placer").innerHTML = "";
+        document.getElementById("placer").innerHTML = "100%";
         document.getElementById("mark").classList.remove("graph-active");
         document.getElementById("markcir").classList.remove("circle-active");
         document.getElementById("supply").innerHTML = "TOTAL SUPPLY: 1000,000,000,000";
