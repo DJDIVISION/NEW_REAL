@@ -15,31 +15,31 @@ import PriceCheckIcon from '@mui/icons-material/PriceCheck';
 import MapIcon from '@mui/icons-material/Map';
 
 const RoadMapIcon = styled(MapIcon)`
-   color: ${props => props.theme.text};
+   color: white;
     margin-right: 10px;
 `;
 
 const TokenIcon = styled(PriceCheckIcon)`
-    color: ${props => props.theme.text};
+    color: white;
     margin-right: 10px;
 `;
 
 const GamingIcon = styled(CasinoIcon)`
-    color: ${props => props.theme.text};
+    color: white;
     margin-right: 10px;
 `;
 
 const TeamIcon = styled(GroupsIcon)`
-    color: ${props => props.theme.text};
+    color: white;
     margin-right: 10px;
 `;
 
 const PartnersIcon = styled(SupervisedUserCircleIcon)`
-    color: ${props => props.theme.text};
+    color: white;
     margin-right: 10px;
 `;
 const NewsIcon = styled(NewspaperIcon)`
-    color: ${props => props.theme.text};
+    color: white;
     margin-right: 10px;
 `;
 
@@ -138,7 +138,7 @@ const Slogan = styled.h4`
 
 const MenuItem = styled.li`
     height: 55px;
-    color: ${props => props.theme.text};
+    color: white;
     font-size: 24px;
     
     
@@ -169,7 +169,7 @@ const IconContainer = styled.ul`
 `;
 
 const LoaderText = styled(motion.h2)`
-    color: ${props => props.theme.text};
+    color: ${props => props.theme.body};
     font-size: 24px;
 `;
 

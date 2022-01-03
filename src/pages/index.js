@@ -43,7 +43,6 @@ const Home = () => {
         <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
             <NavBar showMenu={showMenu} theme={theme} setTheme={setTheme} setShowMenu={setShowMenu}/>
             <CanvasContainer />
-            <PartnerSlider /> 
             <Tokenomics /> 
             <Tokenomics2 />
             <RoadMapSection />
