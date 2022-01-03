@@ -2,7 +2,7 @@ import React, {useState, useContext} from "react";
 import styled from "styled-components";
 import MenuIcon from '@mui/icons-material/Menu';
 import { IconButton } from "@material-ui/core";
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import { MenuContext } from "./context";
 import { motion } from "framer-motion";
 import { ProgressCircle } from "./components/Progress";
@@ -11,7 +11,7 @@ import NewspaperIcon from '@mui/icons-material/Newspaper';
 import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle';
 import GroupsIcon from '@mui/icons-material/Groups';
 import CasinoIcon from '@mui/icons-material/Casino';
-import ColorLensIcon from '@mui/icons-material/ColorLens';
+import PriceCheckIcon from '@mui/icons-material/PriceCheck';
 import MapIcon from '@mui/icons-material/Map';
 
 const RoadMapIcon = styled(MapIcon)`
@@ -19,7 +19,7 @@ const RoadMapIcon = styled(MapIcon)`
     margin-right: 10px;
 `;
 
-const NftIcon = styled(ColorLensIcon)`
+const TokenIcon = styled(PriceCheckIcon)`
     color: ${props => props.theme.text};
     margin-right: 10px;
 `;
@@ -44,12 +44,12 @@ const NewsIcon = styled(NewspaperIcon)`
 `;
 
 
-const BackIcon = styled(ArrowBackIosIcon)`
+const BackIcon = styled(HighlightOffIcon)`
     display: none;
 
     @media screen and (max-width: 860px) {
         color: ${props => props.theme.text};
-        transform: scale(1.1);
+        transform: scale(1.3);
         margin-bottom: 15px;
         
         z-index: 500;
@@ -186,8 +186,8 @@ export function CanvasSectionTwo(props) {
     const { active , setActive } = useContext(MenuContext);
 
     let animate = {};
-    if(active === "menuOne") animate = { opacity: 0, y: 0, scale: 1 };
-    else if (active === "menuTwo") animate = { opacity: 1, y: -80, scale: 1.1};
+    if(active === "menuOne") animate = { opacity: 0, y: 0, scale: 1, };
+    else if (active === "menuTwo") animate = { opacity: 1, y: -80, scale: 1.1, };
 
     return(
             <SectionContainerTwo animate={animate} initial={{opacity: 0}}>
@@ -206,7 +206,7 @@ export function CanvasSectionTwo(props) {
                         <TeamIcon/>TEAM
                     </MenuItem>
                     <MenuItem>
-                    <LinkS to="tokenomics" smooth={true} duration={500} spy={true} exact="true"><NftIcon />TOKENOMICS</LinkS>
+                    <LinkS to="tokenomics" smooth={true} duration={500} spy={true} exact="true"><TokenIcon />TOKENOMICS</LinkS>
                     </MenuItem>
                     <MenuItem>
                         <LinkS to="roadmap" smooth={true} duration={500} spy={true} exact="true"><RoadMapIcon/>ROADMAP</LinkS>

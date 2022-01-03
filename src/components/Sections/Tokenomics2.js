@@ -7,7 +7,7 @@ import { useInView } from "react-intersection-observer";
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import { IconButton } from "@material-ui/core";
 import Donut  from "./Charts/Donut";
-
+import BuySellBars from "./Charts/BuySellBars";
 import "./style.css";
 
 
@@ -95,7 +95,7 @@ const ListContainer = styled.div`
 
 
 
-const Tokenomics = () => {
+const Tokenomics2 = () => {
 
     const { ref, inView } = useInView({
         threshold: 0.2
@@ -239,152 +239,13 @@ const Tokenomics = () => {
     }
 
     return (
-        <Background ref={ref} id="tokenomics">
-            <motion.div animate={ animation } style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
-            <Title id="supply">TOTAL SUPPLY: 1,000,000,000,000</Title>
-            <TitleTwo id="placer">100%</TitleTwo>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
-        <circle r="42.5" cx="50" cy="50" 
-        fill="transparent" 
-        stroke="lightblue"   
-        stroke-width="15px"
-        stroke-dasharray="calc(100 *(3.14152917 * 86)/100) calc(3.1416 * 86)"
-        transform="rotate(-90) translate(-100)"/>
-        <circle id="markcir" onMouseEnter={onHoverMark} onClick={onHoverMark} onMouseLeave={onLeaveMark} r="42.5" cx="50" cy="50" 
-        fill="transparent" 
-        stroke="red"   
-        stroke-width="15px"
-        stroke-dasharray="calc(99 *(3.14152917 * 86)/100) calc(3.1416 * 86)"
-        transform="rotate(-90) translate(-100)"/>
-        <circle r="42.5" cx="50" cy="50" 
-        fill="transparent" 
-        stroke="white"   
-        stroke-width="15px"
-        stroke-dasharray="calc(95 *(3.14152917 * 86)/100) calc(3.1416 * 86)"
-        transform="rotate(-90) translate(-100)"/>
-        <circle id="ptearncir" onMouseEnter={onHoverPTearn} onClick={onHoverPTearn} onMouseLeave={onLeavePtearn} r="42.5" cx="50" cy="50" 
-        fill="transparent" 
-        stroke="#808080"   
-        stroke-width="15px"
-        stroke-dasharray="calc(94.50 *(3.14152917 * 86)/100) calc(3.1416 * 86)"
-        transform="rotate(-90) translate(-100)"/>
-        <circle r="42.5" cx="50" cy="50" 
-        fill="transparent" 
-        stroke="white"   
-        stroke-width="15px"
-        stroke-dasharray="calc(83 *(3.14152917 * 86)/100) calc(3.1416 * 86)"
-        transform="rotate(-90) translate(-100)"/>
-        <circle id="givescir" onMouseEnter={onHoverGives} onClick={onHoverGives} onMouseLeave={onLeaveGives} r="42.5" cx="50" cy="50" 
-        fill="transparent" 
-        stroke="#9b7653"   
-        stroke-width="15px"
-        stroke-dasharray="calc(82.5 *(3.14152917 * 86)/100) calc(3.1416 * 86)"
-        transform="rotate(-90) translate(-100)"/>
-        <circle r="42.5" cx="50" cy="50" 
-        fill="transparent" 
-        stroke="white"   
-        stroke-width="15px"
-        stroke-dasharray="calc(79.50 *(3.14152917 * 86)/100) calc(3.1416 * 86)"
-        transform="rotate(-90) translate(-100)"/>
-        <circle id="teamcir" onMouseEnter={onHoverTeam} onClick={onHoverTeam} onMouseLeave={onLeaveTeam} r="42.5" cx="50" cy="50" 
-        fill="transparent" 
-        stroke="#800080"   
-        stroke-width="15px"
-        stroke-dasharray="calc(79 *(3.14152917 * 86)/100) calc(3.1416 * 86)"
-        transform="rotate(-90) translate(-100)"/>
-        <circle r="42.5" cx="50" cy="50" 
-        fill="transparent" 
-        stroke="white"   
-        stroke-width="15px"
-        stroke-dasharray="calc(70 *(3.14152917 * 86)/100) calc(3.1416 * 86)"
-        transform="rotate(-90) translate(-100)"/>
-        <circle id= "cexcir" onMouseEnter={onHoverCEX} onClick={onHoverCEX} onMouseLeave={onLeaveCEX} r="42.5" cx="50" cy="50" 
-        fill="transparent" 
-        stroke="#4169e1"   
-        stroke-width="15px"
-        stroke-dasharray="calc(69.50 *(3.14152917 * 86)/100) calc(3.1416 * 86)"
-        transform="rotate(-90) translate(-100)"/>
-        <circle r="42.5" cx="50" cy="50" 
-        fill="transparent" 
-        stroke="white"   
-        stroke-width="15px"
-        stroke-dasharray="calc(60.5 *(3.14152917 * 86)/100) calc(3.1416 * 86)"
-        transform="rotate(-90) translate(-100)"/>
-        <circle id="advisorscir" onMouseEnter={onHoverAdvisors} onClick={onHoverAdvisors} onMouseLeave={onLeaveAdvisors} r="42.5" cx="50" cy="50" 
-        fill="transparent" 
-        stroke="#32cd32"   
-        stroke-width="15px"
-        stroke-dasharray="calc(60 *(3.14152917 * 86)/100) calc(3.1416 * 86)"
-        transform="rotate(-90) translate(-100)"/>
-        <circle r="42.5" cx="50" cy="50" 
-        fill="transparent" 
-        stroke="white"   
-        stroke-width="15px"
-        stroke-dasharray="calc(57 *(3.14152917 * 86)/100) calc(3.1416 * 86)"
-        transform="rotate(-90) translate(-100)"/>
-        <circle id="liquiditycir" onMouseEnter={onHoverLiquidity} onClick={onHoverLiquidity} onMouseLeave={onLeaveLiquidity} r="42.5" cx="50" cy="50" 
-        fill="transparent" 
-        stroke="#ffd700"   
-        stroke-width="15px"
-        stroke-dasharray="calc(56.50 *(3.1416 * 86)/100) calc(3.1416 * 86)"
-        transform="rotate(-90) translate(-100)"/>
-        <circle r="42.5" cx="50" cy="50" 
-        fill="transparent" 
-        stroke="white"   
-        stroke-width="15px"
-        stroke-dasharray="calc(38 *(3.14152917 * 86)/100) calc(3.1416 * 86)"
-        transform="rotate(-90) translate(-100)"/>
-        <circle id="salecir" onMouseEnter={onHoverSale} onClick={onHoverSale} onMouseLeave={onLeaveSale} r="42.5" cx="50" cy="50" 
-        fill="transparent" 
-        stroke="#ff8c00"   
-        stroke-width="15px"
-        stroke-dasharray="calc(37.5 *(3.14152917 * 86)/100) calc(3.1416 * 86)"
-        transform="rotate(-90) translate(-100)"/>
-        <circle  r="42.5" cx="50" cy="50" 
-        fill="transparent" 
-        stroke="white"   
-        stroke-width="15px"
-        stroke-dasharray="calc(0.5 *(3.14152917 * 86)/100) calc(3.1416 * 86)"
-        transform="rotate(-90) translate(-100)"/>
-    </svg>
-    <ListContainer>
-    <List>
-        <ListItem id="gives" style={{color: "#808080" }} onClick={onHoverGives} onMouseEnter={onHoverGives} onMouseLeave={onLeaveGives}>
-            GIVEAWAYS
-        </ListItem>
-        <ListItem id="liquidity" style={{color: "#ffd700" }} onClick={onHoverLiquidity} onMouseEnter={onHoverLiquidity} onMouseLeave={onLeaveLiquidity}>
-            LIQUIDITY
-        </ListItem>
-    </List>
-    <List>
-        <ListItem id="cex"style={{color: "#4169e1" }} onClick={onHoverCEX} onMouseEnter={onHoverCEX} onMouseLeave={onLeaveCEX}>
-            CEX RESERVE
-        </ListItem>
-        <ListItem id="sale" style={{color: "#ff8c00" }} onClick={onHoverSale} onMouseEnter={onHoverSale} onMouseLeave={onLeaveSale}>
-            SALE 
-        </ListItem>
-    </List>
-    <List>
-        <ListItem id="team" style={{color: "#800080" }} onClick={onHoverTeam} onMouseEnter={onHoverTeam} onMouseLeave={onLeaveTeam}>  
-            TEAM
-        </ListItem>
-        <ListItem id="ptearn" style={{color: "#9b7653" }} onClick={onHoverPTearn} onMouseEnter={onHoverPTearn} onMouseLeave={onLeavePtearn}>
-            PLAY TO EARN
-        </ListItem>
-    </List>
-    <List>
-        <ListItem id="mark" style={{color: "#ff0000" }} onClick={onHoverMark} onMouseEnter={onHoverMark} onMouseLeave={onLeaveMark}>
-            MARKETING
-        </ListItem>
-        <ListItem id="advisors" style={{color: "#32cd32" }} onClick={onHoverAdvisors} onMouseEnter={onHoverAdvisors} onMouseLeave={onLeaveAdvisors}>
-            ADVISORS
-        </ListItem>
-    </List>
-    </ListContainer>
-    <LinkS to="tokenomics2" smooth={true} duration={500} spy={true} exact="true"><IconButton><DownIcon /></IconButton></LinkS>
+        <Background ref={ref} id="tokenomics2">
+            <motion.div  style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
+            <Title id="supply">BUY AND SELL TAXES (%)</Title>
+    <IconButton><DownIcon /></IconButton>
     </motion.div>
     </Background>
     )
 }
 
-export default Tokenomics
+export default Tokenomics2;

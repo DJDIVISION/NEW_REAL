@@ -10,6 +10,7 @@ import CanvasContainer from "../animations/Planet"
 import RoadMapSection from "../components/Sections/RoadMapSection";
 import PartnerSlider from "../components/Sections/PartnerSlider";
 import Tokenomics from "../components/Sections/Tokenomics";
+import Tokenomics2 from "../components/Sections/Tokenomics2";
 
 
 
@@ -44,6 +45,7 @@ const Home = () => {
             <CanvasContainer />
             <PartnerSlider /> 
             <Tokenomics /> 
+            <Tokenomics2 />
             <RoadMapSection />
             <PartnerSlider /> 
             <Footer /> 
