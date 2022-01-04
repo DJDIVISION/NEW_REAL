@@ -57,22 +57,7 @@ const TitleTwo = styled.h1`
 `;
 
 
-const Section = styled.section`
-    height: 90vh;
-    width: 95%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    justify-content: center;
-    background: whitesmoke;
-    border: 1px solid black;
-    border-radius: 20px;
-    
-    
-`;
+
 
 const List = styled.ul`
     display: flex;

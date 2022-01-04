@@ -170,7 +170,14 @@ const LinkList = styled.ul`
     margin-top: 30px;
 `;
 
-
+const ItemTitle = styled.h4`
+    font-size: 10px;
+    color: ${props => props.theme.text};
+    margin-right: auto;
+    margin-left: 40px;
+    height: 5px;
+    
+`;
 
 
 
@@ -209,6 +216,7 @@ const Tokenomics2 = () => {
         <Background  id="tokenomics2">
             <motion.div  style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
             <Title>BUY TAXES ( 10% )</Title>
+            <ItemTitle>BURNING</ItemTitle>
             <ProgressList>
                 <BurnIcon />
                 <BackDiv ref={ref}>
@@ -218,6 +226,7 @@ const Tokenomics2 = () => {
                 </BackDiv>
                 <Text>1%</Text>
             </ProgressList>
+            <ItemTitle>TEAM</ItemTitle>
             <ProgressList>
                 <TeamIcon />
                 <BackDiv ref={ref}>
@@ -227,6 +236,7 @@ const Tokenomics2 = () => {
                 </BackDiv>
                 <Text>1%</Text>
             </ProgressList>
+            <ItemTitle>BUYBACK</ItemTitle>
             <ProgressList>
                 <BuyBackIcon />
                 <BackDiv ref={ref}>
@@ -236,6 +246,7 @@ const Tokenomics2 = () => {
                 </BackDiv>
                 <Text>1%</Text>
             </ProgressList>
+            <ItemTitle>LIQUIDITY</ItemTitle>
             <ProgressList>
                 <LiquidityIcon />
                 <BackDiv ref={ref}>
@@ -245,6 +256,7 @@ const Tokenomics2 = () => {
                 </BackDiv>
                 <Text>1%</Text>
             </ProgressList>
+            <ItemTitle>BNB REFLECTIONS</ItemTitle>
             <ProgressList>
                 <ReflexionsIcon />
                 <BackDiv ref={ref}>
@@ -254,6 +266,7 @@ const Tokenomics2 = () => {
                 </BackDiv>
                 <Text>3%</Text>
             </ProgressList>
+            <ItemTitle>MARKETING</ItemTitle>
             <ProgressList>
                 <MarketingIcon />
                 <BackDiv ref={ref}>
@@ -264,6 +277,7 @@ const Tokenomics2 = () => {
                 <Text>3%</Text>
             </ProgressList>
             <Title >SELL TAXES ( 15% )</Title>
+            <ItemTitle>BURNING</ItemTitle>
             <ProgressList>
                 <BurnIcon />
                 <BackDiv ref={ref}>
@@ -273,6 +287,7 @@ const Tokenomics2 = () => {
                 </BackDiv>
                 <Text>1%</Text>
             </ProgressList>
+            <ItemTitle>TEAM</ItemTitle>
             <ProgressList>
                 <TeamIcon />
                 <BackDiv ref={ref}>
@@ -282,6 +297,7 @@ const Tokenomics2 = () => {
                 </BackDiv>
                 <Text>1%</Text>
             </ProgressList>
+            <ItemTitle>BUYBACK</ItemTitle>
             <ProgressList>
                 <BuyBackIcon />
                 <BackDiv ref={ref}>
@@ -291,6 +307,7 @@ const Tokenomics2 = () => {
                 </BackDiv>
                 <Text>2%</Text>
             </ProgressList>
+            <ItemTitle>LIQUIDITY</ItemTitle>
             <ProgressList>
                 <LiquidityIcon />
                 <BackDiv ref={ref}>
@@ -300,6 +317,7 @@ const Tokenomics2 = () => {
                 </BackDiv>
                 <Text>2%</Text>
             </ProgressList>
+            <ItemTitle>BNB REFLECTIONS</ItemTitle>
             <ProgressList>
                 <ReflexionsIcon />
                 <BackDiv ref={ref}>
@@ -309,6 +327,7 @@ const Tokenomics2 = () => {
                 </BackDiv>
                 <Text>4%</Text>
             </ProgressList>
+            <ItemTitle>MARKETING</ItemTitle>
             <ProgressList>
                 <MarketingIcon />
                 <BackDiv ref={ref}>
