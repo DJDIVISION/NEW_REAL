@@ -18,37 +18,37 @@ import AddBusinessIcon from '@mui/icons-material/AddBusiness';
 
 
 const BurnIcon = styled(LocalFireDepartmentIcon)`
-    transform: scale(1.1);
+    
     color: red;
     margin-right: 15px;
 `;
 
 const TeamIcon = styled(GroupsIcon)`
-    transform: scale(1.1);
+    
     color: orange;
     margin-right: 15px;
 `;
 
 const BuyBackIcon = styled(MonetizationOnIcon)`
-    transform: scale(1.1);
+    
     color: green;
     margin-right: 15px;
 `;
 
 const LiquidityIcon = styled(InvertColorsIcon)`
-    transform: scale(1.1);
+    
     color: blue;
     margin-right: 15px;
 `;
 
 const ReflexionsIcon = styled(ScreenShareIcon)`
-    transform: scale(1.1);
+    
     color: ${props => props.theme.text};
     margin-right: 18px;
 `;
 
 const MarketingIcon = styled(AddBusinessIcon)`
-    transform: scale(1.1);
+    
     color: purple;
     margin-right: 18px;
 `;
@@ -56,8 +56,8 @@ const MarketingIcon = styled(AddBusinessIcon)`
 
 const DownIcon = styled(KeyboardDoubleArrowDownIcon)`
     color: ${props => props.theme.text};
-    margin-top: 20px;
-    transform: scale(2);
+    margin-top: 15px;
+    transform: scale(1.5);
 `;
 
 const Background = styled.div`
@@ -84,7 +84,7 @@ const Title = styled.h3`
 
 const BackDiv = styled.div`
     width: 200px;
-    height: 10px;
+    height: 5px;
     background: aqua;
     border-radius: 0 15px 15px 0; 
     border-bottom: 1px solid black;
@@ -103,7 +103,7 @@ const ProgressList = styled.ul`
 
 const ProgressRedOne = styled.div`
     max-width: 40px;
-    height: 10px;
+    height: 5px;
     background: red;
     border-radius: 0 15px 15px 0;  
     
@@ -111,7 +111,7 @@ const ProgressRedOne = styled.div`
 
 const ProgressRedTwo = styled.div`
     max-width: 80px;
-    height: 10px;
+    height: 5px;
     background: red;
     border-radius: 0 15px 15px 0;  
     
@@ -119,7 +119,7 @@ const ProgressRedTwo = styled.div`
 
 const ProgressRedFour = styled.div`
     max-width: 160px;
-    height: 10px;
+    height: 5px;
     background: red;
     border-radius: 0 15px 15px 0;  
     
@@ -127,7 +127,7 @@ const ProgressRedFour = styled.div`
 
 const ProgressRedFive = styled.div`
     max-width: 200px;
-    height: 10px;
+    height: 5px;
     background: red;
     border-radius: 0 15px 15px 0;  
     
@@ -136,7 +136,7 @@ const ProgressRedFive = styled.div`
 const ProgressGreenOne = styled.div`
     
     max-width: 40px;
-    height: 10px;
+    height: 5px;
     background: green;
     border-radius: 0 15px 15px 0;
       
@@ -146,7 +146,7 @@ const ProgressGreenOne = styled.div`
 const ProgressGreenThree = styled.div`
     
     max-width: 120px;
-    height: 10px;
+    height: 5px;
     background: green;
     border-radius: 0 15px 15px 0;
      

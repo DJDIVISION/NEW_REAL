@@ -35,18 +35,18 @@ const Title = styled.h1`
     margin: 40px;
 
     @media screen and (max-width:860px){
-        font-size: 24px;
+        font-size: 22px;
     }
 `;
 
 const TitleTwo = styled.h1`
-    font-size: 44px;
+    font-size: 30px;
     color: ${props => props.theme.text};
     position: fixed;
-    margin-top: 235px;
+    margin-top: 185px;
 
     @media screen and (max-width:860px){
-        margin-top: 210px;
+        margin-top: 200px;
     }
 `;
 
@@ -70,14 +70,14 @@ const Section = styled.section`
 
 const List = styled.ul`
     display: flex;
-    height: 40px;
-    padding: 0 10px 0 10px;
+    height: 30px;
+    
     
 `;
 
 const ListItem = styled.li`
-    font-size: 20px;
-    padding: 1rem;
+    font-size: 16px;
+    padding: 0.4rem 0.8rem;
     font-weight: bold;
     
 `;
@@ -243,7 +243,7 @@ const Tokenomics = () => {
             <motion.div animate={ animation } style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
             <Title id="supply">TOTAL SUPPLY: 1,000,000,000,000</Title>
             <TitleTwo id="placer">100%</TitleTwo>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="175" height="175">
         <circle r="42.5" cx="50" cy="50" 
         fill="transparent" 
         stroke="lightblue"   

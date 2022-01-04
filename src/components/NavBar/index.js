@@ -57,7 +57,7 @@ const Navbar = (props, show) => {
     const [scrollNavDown, setScrollNavDown] = useState(false);
 
     const changeNavDown = () => {
-        if(window.scrollY >= 880) {
+        if(window.scrollY >= 500) {
             setScrollNavDown(true)
         } 
         else {
