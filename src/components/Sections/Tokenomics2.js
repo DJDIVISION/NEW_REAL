@@ -79,7 +79,7 @@ const Title = styled.h1`
     font-size: 32px;
     color: ${props => props.theme.text};
     text-align: center;
-    margin: 40px;
+    margin: 20px;
 
     @media screen and (max-width:860px){
         font-size: 24px;
@@ -88,7 +88,7 @@ const Title = styled.h1`
 
 const BackDiv = styled.div`
     width: 250px;
-    height: 20px;
+    height: 10px;
     background: aqua;
     border-radius: 0 15px 15px 0; 
     border-bottom: 1px solid black;
@@ -105,10 +105,33 @@ const ProgressList = styled.ul`
     
 `;
 
-const ProgressRed = styled.div`
-    max-width: 300px;
-    width: 50%;
-    height: 20px;
+const ProgressRedOne = styled.div`
+    max-width: 50px;
+    height: 10px;
+    background: red;
+    border-radius: 0 15px 15px 0;  
+    
+`;
+
+const ProgressRedTwo = styled.div`
+    max-width: 100px;
+    height: 10px;
+    background: red;
+    border-radius: 0 15px 15px 0;  
+    
+`;
+
+const ProgressRedFour = styled.div`
+    max-width: 200px;
+    height: 10px;
+    background: red;
+    border-radius: 0 15px 15px 0;  
+    
+`;
+
+const ProgressRedFive = styled.div`
+    max-width: 250px;
+    height: 10px;
     background: red;
     border-radius: 0 15px 15px 0;  
     
@@ -117,7 +140,7 @@ const ProgressRed = styled.div`
 const ProgressGreenOne = styled.div`
     
     max-width: 50px;
-    height: 20px;
+    height: 10px;
     background: green;
     border-radius: 0 15px 15px 0;
       
@@ -127,7 +150,7 @@ const ProgressGreenOne = styled.div`
 const ProgressGreenThree = styled.div`
     
     max-width: 150px;
-    height: 20px;
+    height: 10px;
     background: green;
     border-radius: 0 15px 15px 0;
      
@@ -156,7 +179,6 @@ const Tokenomics2 = () => {
     });
 
     const animation = useAnimation();
-    const longAnimation = useAnimation();
     
 
     useEffect(() => {
@@ -182,7 +204,7 @@ const Tokenomics2 = () => {
     return (
         <Background  id="tokenomics2">
             <motion.div  style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
-            <Title id="supply">BUY TAXES (%)</Title>
+            <Title>BUY TAXES ( 10% )</Title>
             <ProgressList>
                 <BurnIcon />
                 <BackDiv ref={ref}>
@@ -236,6 +258,61 @@ const Tokenomics2 = () => {
                     </motion.div>
                 </BackDiv>
                 <Text>3%</Text>
+            </ProgressList>
+            <Title >SELL TAXES ( 15% )</Title>
+            <ProgressList>
+                <BurnIcon />
+                <BackDiv ref={ref}>
+                    <motion.div animate={animation}>
+                    <ProgressRedOne />
+                    </motion.div>
+                </BackDiv>
+                <Text>1%</Text>
+            </ProgressList>
+            <ProgressList>
+                <TeamIcon />
+                <BackDiv ref={ref}>
+                    <motion.div animate={animation}>
+                    <ProgressRedOne />
+                    </motion.div>
+                </BackDiv>
+                <Text>1%</Text>
+            </ProgressList>
+            <ProgressList>
+                <BuyBackIcon />
+                <BackDiv ref={ref}>
+                    <motion.div animate={animation}>
+                    <ProgressRedTwo />
+                    </motion.div>
+                </BackDiv>
+                <Text>2%</Text>
+            </ProgressList>
+            <ProgressList>
+                <LiquidityIcon />
+                <BackDiv ref={ref}>
+                    <motion.div animate={animation}>
+                    <ProgressRedTwo />
+                    </motion.div>
+                </BackDiv>
+                <Text>2%</Text>
+            </ProgressList>
+            <ProgressList>
+                <ReflexionsIcon />
+                <BackDiv ref={ref}>
+                    <motion.div animate={animation}>
+                    <ProgressRedFour />
+                    </motion.div>
+                </BackDiv>
+                <Text>4%</Text>
+            </ProgressList>
+            <ProgressList>
+                <MarketingIcon />
+                <BackDiv ref={ref}>
+                    <motion.div animate={animation}>
+                    <ProgressRedFive />
+                    </motion.div>
+                </BackDiv>
+                <Text>5%</Text>
             </ProgressList>
     <IconButton><DownIcon /></IconButton>
     </motion.div>
