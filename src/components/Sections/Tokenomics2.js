@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import Chart from "react-apexcharts";
-import styled, {keyframes} from "styled-components";
-import { Link as LinkS } from "react-scroll";
+import React, { useEffect } from "react";
+
+import styled from "styled-components";
+
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
@@ -15,44 +15,40 @@ import AddBusinessIcon from '@mui/icons-material/AddBusiness';
 
 
 
-const move = keyframes`
-    0% { width: 0% }
-    
-    100% { width: 100% }
-`;
+
 
 const BurnIcon = styled(LocalFireDepartmentIcon)`
-    transform: scale(1.2);
+    transform: scale(1.1);
     color: red;
     margin-right: 15px;
 `;
 
 const TeamIcon = styled(GroupsIcon)`
-    transform: scale(1.2);
+    transform: scale(1.1);
     color: orange;
     margin-right: 15px;
 `;
 
 const BuyBackIcon = styled(MonetizationOnIcon)`
-    transform: scale(1.2);
+    transform: scale(1.1);
     color: green;
     margin-right: 15px;
 `;
 
 const LiquidityIcon = styled(InvertColorsIcon)`
-    transform: scale(1.3);
+    transform: scale(1.1);
     color: blue;
     margin-right: 15px;
 `;
 
 const ReflexionsIcon = styled(ScreenShareIcon)`
-    transform: scale(1.2);
+    transform: scale(1.1);
     color: ${props => props.theme.text};
     margin-right: 18px;
 `;
 
 const MarketingIcon = styled(AddBusinessIcon)`
-    transform: scale(1.2);
+    transform: scale(1.1);
     color: purple;
     margin-right: 18px;
 `;
@@ -75,19 +71,19 @@ const Background = styled.div`
 
 `;
 
-const Title = styled.h1`
+const Title = styled.h3`
     font-size: 32px;
     color: ${props => props.theme.text};
     text-align: center;
-    margin: 20px;
+    margin: 25px;
 
     @media screen and (max-width:860px){
-        font-size: 24px;
+        font-size: 20px;
     }
 `;
 
 const BackDiv = styled.div`
-    width: 250px;
+    width: 200px;
     height: 10px;
     background: aqua;
     border-radius: 0 15px 15px 0; 
@@ -101,12 +97,12 @@ const ProgressList = styled.ul`
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 40px;
+    height: 30px;
     
 `;
 
 const ProgressRedOne = styled.div`
-    max-width: 50px;
+    max-width: 40px;
     height: 10px;
     background: red;
     border-radius: 0 15px 15px 0;  
@@ -114,7 +110,7 @@ const ProgressRedOne = styled.div`
 `;
 
 const ProgressRedTwo = styled.div`
-    max-width: 100px;
+    max-width: 80px;
     height: 10px;
     background: red;
     border-radius: 0 15px 15px 0;  
@@ -122,7 +118,7 @@ const ProgressRedTwo = styled.div`
 `;
 
 const ProgressRedFour = styled.div`
-    max-width: 200px;
+    max-width: 160px;
     height: 10px;
     background: red;
     border-radius: 0 15px 15px 0;  
@@ -130,7 +126,7 @@ const ProgressRedFour = styled.div`
 `;
 
 const ProgressRedFive = styled.div`
-    max-width: 250px;
+    max-width: 200px;
     height: 10px;
     background: red;
     border-radius: 0 15px 15px 0;  
@@ -139,7 +135,7 @@ const ProgressRedFive = styled.div`
 
 const ProgressGreenOne = styled.div`
     
-    max-width: 50px;
+    max-width: 40px;
     height: 10px;
     background: green;
     border-radius: 0 15px 15px 0;
@@ -149,7 +145,7 @@ const ProgressGreenOne = styled.div`
 
 const ProgressGreenThree = styled.div`
     
-    max-width: 150px;
+    max-width: 120px;
     height: 10px;
     background: green;
     border-radius: 0 15px 15px 0;
@@ -158,7 +154,7 @@ const ProgressGreenThree = styled.div`
 `;
 
 const Text = styled.h6`
-    font-size: 18px;
+    font-size: 14px;
     margin-left: 20px;
     color: ${props => props.theme.text};
 
