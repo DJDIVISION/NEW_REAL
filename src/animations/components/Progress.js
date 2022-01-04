@@ -28,7 +28,7 @@ const Progress = styled.div`
     height: 100%;
     background-color: aqua;
     border-radius: 30px;
-    animation: ${move} 10s linear;
+    animation: ${move} 10s linear;   
 `;
 
 
