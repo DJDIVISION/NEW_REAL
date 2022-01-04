@@ -21,7 +21,7 @@ const CanvasContainer = styled.div`
 const Planet = () => {
     return (
         <motion.div>
-        <CanvasContainer >
+        <CanvasContainer id="planet">
             <Both />
             <Canvas>
                 <Suspense fallback={null}>

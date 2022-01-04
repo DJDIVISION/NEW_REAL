@@ -12,6 +12,7 @@ import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import InvertColorsIcon from '@mui/icons-material/InvertColors';
 import ScreenShareIcon from '@mui/icons-material/ScreenShare';
 import AddBusinessIcon from '@mui/icons-material/AddBusiness';
+import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 
 
 
@@ -56,8 +57,12 @@ const MarketingIcon = styled(AddBusinessIcon)`
 
 const DownIcon = styled(KeyboardDoubleArrowDownIcon)`
     color: ${props => props.theme.text};
-    margin-top: 15px;
-    transform: scale(1.5);
+    transform: scale(1.2);
+`;
+
+const UpIcon = styled(KeyboardDoubleArrowUpIcon)`
+    color: ${props => props.theme.text};
+    transform: scale(1.2);
 `;
 
 const Background = styled.div`
@@ -160,7 +165,10 @@ const Text = styled.h6`
 
 `;
 
-
+const LinkList = styled.ul`
+    display: inline-flex;
+    margin-top: 30px;
+`;
 
 
 
@@ -310,7 +318,10 @@ const Tokenomics2 = () => {
                 </BackDiv>
                 <Text>5%</Text>
             </ProgressList>
-    <LinkS to="roadmap"><IconButton><DownIcon /></IconButton></LinkS>
+            <LinkList>
+            <LinkS to="tokenomics" smooth={true} duration={500} spy={true} exact="true"><IconButton><UpIcon /></IconButton></LinkS>
+            <LinkS to="roadmap" smooth={true} duration={500} spy={true} exact="true"><IconButton><DownIcon /></IconButton></LinkS>
+            </LinkList>
     </motion.div>
     </Background>
     )

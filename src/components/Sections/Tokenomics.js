@@ -1,20 +1,26 @@
 import React, { useEffect, useState } from "react";
-import Chart from "react-apexcharts";
+
 import styled from "styled-components";
 import { Link as LinkS } from "react-scroll";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import { IconButton } from "@material-ui/core";
-import Donut  from "./Charts/Donut";
+import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 
-import "./style.css";
+const LinkList = styled.ul`
+    display: inline-flex;
+    margin-top: 30px;
+`;
+const UpIcon = styled(KeyboardDoubleArrowUpIcon)`
+    color: ${props => props.theme.text};
+    transform: scale(1.2);
+`;
 
 
 const DownIcon = styled(KeyboardDoubleArrowDownIcon)`
     color: ${props => props.theme.text};
-    margin-top: 20px;
-    transform: scale(2);
+    transform: scale(1.2);
 `;
 
 const Background = styled.div`
@@ -98,7 +104,7 @@ const ListContainer = styled.div`
 const Tokenomics = () => {
 
     const { ref, inView } = useInView({
-        threshold: 0.2
+        threshold: 0.5
     });
 
     const animation = useAnimation();
@@ -106,7 +112,7 @@ const Tokenomics = () => {
 
     useEffect(() => {
         
-       console.log("use effect hook, inView = ", inView); 
+       
         if(inView){
           animation.start({
               opacity: 1,
@@ -381,7 +387,10 @@ const Tokenomics = () => {
         </ListItem>
     </List>
     </ListContainer>
-    <LinkS to="tokenomics2" smooth={true} duration={500} spy={true} exact="true"><IconButton><DownIcon /></IconButton></LinkS>
+    <LinkList>
+            <LinkS to="planet" smooth={true} duration={500} spy={true} exact="true"><IconButton><UpIcon /></IconButton></LinkS>
+            <LinkS to="tokenomics2" smooth={true} duration={500} spy={true} exact="true"><IconButton><DownIcon /></IconButton></LinkS>
+            </LinkList>
     </motion.div>
     </Background>
     )

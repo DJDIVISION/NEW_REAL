@@ -2,12 +2,26 @@ import React, {useEffect} from 'react';
 import styled from "styled-components";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import Planet1 from "../../images/planet3.png";
-import Astronaut from "../../images/astronaut21.png";
-import Planet3 from "../../images/planet11.png";
-import StarsBack from "../../images/stars_back1.jpg";
+import { IconButton } from "@material-ui/core";
 import { Link as LinkR } from "react-router-dom";
+import { Link as LinkS } from "react-scroll"; 
+import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
+import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 
+const UpIcon = styled(KeyboardDoubleArrowUpIcon)`
+    color: ${props => props.theme.text};
+    transform: scale(1.2);
+`;
+
+const DownIcon = styled(KeyboardDoubleArrowDownIcon)`
+    color: ${props => props.theme.text};
+    transform: scale(1.2);
+`;
+
+const LinkList = styled.ul`
+    display: inline-flex;
+    margin-top: 30px;
+`;
 
 const Button = styled(motion.button)`
     padding: 0.50rem 1.5rem;
@@ -228,6 +242,10 @@ const NewsSection = () => {
                     <Image src={Planet3} alt="" /> */}
                 </ColumnRight>
             </Container>
+            <LinkList>
+            <LinkS to="tokenomics2" smooth={true} duration={500} spy={true} exact="true"><IconButton><UpIcon /></IconButton></LinkS>
+            <LinkS to="social" smooth={true} duration={500} spy={true} exact="true"><IconButton><DownIcon /></IconButton></LinkS>
+            </LinkList>
         </Section>
     )
 }
