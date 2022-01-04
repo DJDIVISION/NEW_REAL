@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-
+import { Link as LinkS } from "react-scroll";
 import styled from "styled-components";
 
 import { motion, useAnimation } from "framer-motion";
@@ -310,7 +310,7 @@ const Tokenomics2 = () => {
                 </BackDiv>
                 <Text>5%</Text>
             </ProgressList>
-    <IconButton><DownIcon /></IconButton>
+    <LinkS to="roadmap"><IconButton><DownIcon /></IconButton></LinkS>
     </motion.div>
     </Background>
     )

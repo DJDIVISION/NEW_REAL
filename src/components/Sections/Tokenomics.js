@@ -112,7 +112,7 @@ const Tokenomics = () => {
               opacity: 1,
               x: 0, 
               transition: {
-                type: "spring", duration: 2, bounce: 0.5
+                type: "spring", duration: 2, bounce: 0.3
               }
           })
         }
