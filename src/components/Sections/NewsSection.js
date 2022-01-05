@@ -227,7 +227,8 @@ const NewsSection = () => {
     function ShareTwitter(){
         if (navigator.share){
             navigator.share({
-                title: `Hello Mates!!!`,
+                title: `"Really happy this stage has launched, its a big step in our ecosystem with REES"`,
+                image: `${DWArticleImage}`,
                 url: `${url}`
             }).then(() => {
                 alert("Thanks for sharing")
