@@ -225,11 +225,16 @@ const NewsSection = () => {
     const url = window.document.location.href;
 
     function ShareTwitter(){
-        if (navigator.share) {
-            alert("There's share")
-        } else {
-            alert("NO SHARE")
+        if (navigator.share){
+            navigator.share({
+                title: `${title}`,
+                url: `${url}`
+            }).then(() => {
+                alert("Thanks for sharing")
+            })
+            .catch(console.error);
         }
+            
     }
 
     const settings = {
