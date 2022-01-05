@@ -227,7 +227,7 @@ const NewsSection = () => {
     function ShareTwitter(){
         if (navigator.share){
             navigator.share({
-                title: `${title}`,
+                title: `Hello Mates!!!`,
                 url: `${url}`
             }).then(() => {
                 alert("Thanks for sharing")
