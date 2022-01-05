@@ -15,20 +15,22 @@ import DWLogo from "../../images/dw_aqua_logo.jpg";
 import DWArticleImage from "../../images/dwArticleBack.jpg";
 
 const Carroussel = styled.div`
-    width: 100vw;
+    width: 90vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-top: 30px;
     
+    
+    
     .slick-arrow:before{
-        color: ${props => props.theme.text};
+        color: ${props => props.theme.body};
         font-size: 1.5rem;
     }
 
     .slick-dots button:before{
         color: ${props => props.theme.text};
-        font-size: 0.5rem;
+        font-size: 0.8rem;
         margin-top: 10px;
     }
     
@@ -52,13 +54,15 @@ const FaceIcon = styled(FacebookIcon)`
 `;
 
 const Container = styled.div`
-    height: 100vh;
+    height: 90vh;
     width: 90vw;
     background: ${props => props.theme.text};
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-left: -10px;
+    
 `;
 
 const Title = styled.h1`
@@ -206,7 +210,7 @@ const Section = styled.div`
     align-items: center;
     width: 100%;
     padding: 3rem 0;
-    background: ${props => props.theme.body};
+    background: ${props => props.theme.text};
     
 
 `;
@@ -243,7 +247,7 @@ const NewsSection = () => {
                         <ReadTime>6 min read</ReadTime> 
                     </TitleList>
                     <Subtitle>"Really happy this stage has launched, its a big step in our ecosystem with REES"</Subtitle>
-                    <ArticleText>The last years we have seen an increasing interest in blockchain technology and cryptocurrencies. The quest for wealth is not longer something that requires a Ph.D or knowledge of how to operate intrigue computer systems. More and more user friendly applications, games and use cases are developed and made available on various platforms. With this comes the greed and with greed comes the scams and malicious behaviour</ArticleText>
+                    <ArticleText>The last years we have seen an increasing interest in blockchain technology and cryptocurrencies. The quest for wealth is not longer something that requires a Ph.D or knowledge of how to operate intrigue computer systems. More and more user friendly applications, games and use cases are developed and made available on various platforms.</ArticleText>
                     
                     <ArticleButton>READ MORE</ArticleButton>
                     <IconList />
@@ -264,7 +268,7 @@ const NewsSection = () => {
                         <ReadTime>5 min read</ReadTime> 
                     </TitleList>
                     <Subtitle>"Really happy this stage has launched, its a big step in our ecosystem with REES"</Subtitle>
-                    <ArticleText>The last years we have seen an increasing interest in blockchain technology and cryptocurrencies. The quest for wealth is not longer something that requires a Ph.D or knowledge of how to operate intrigue computer systems. More and more user friendly applications, games and use cases are developed and made available on various platforms. With this comes the greed and with greed comes the scams and malicious behaviour</ArticleText>
+                    <ArticleText>The last years we have seen an increasing interest in blockchain technology and cryptocurrencies. The quest for wealth is not longer something that requires a Ph.D or knowledge of how to operate intrigue computer systems. More and more user friendly applications, games and use cases are developed and made available on various platforms.</ArticleText>
                     
                     <ArticleButton>READ MORE</ArticleButton>
                     <IconList />
@@ -285,7 +289,28 @@ const NewsSection = () => {
                         <ReadTime>6 min read</ReadTime> 
                     </TitleList>
                     <Subtitle>"Really happy this stage has launched, its a big step in our ecosystem with REES"</Subtitle>
-                    <ArticleText>The last years we have seen an increasing interest in blockchain technology and cryptocurrencies. The quest for wealth is not longer something that requires a Ph.D or knowledge of how to operate intrigue computer systems. More and more user friendly applications, games and use cases are developed and made available on various platforms. With this comes the greed and with greed comes the scams and malicious behaviour</ArticleText>
+                    <ArticleText>The last years we have seen an increasing interest in blockchain technology and cryptocurrencies. The quest for wealth is not longer something that requires a Ph.D or knowledge of how to operate intrigue computer systems. More and more user friendly applications, games and use cases are developed and made available on various platforms.</ArticleText>
+                    
+                    <ArticleButton>READ MORE</ArticleButton>
+                    <IconList />
+                </Container>
+                </div>
+                <div>
+                <Container>
+                    <Title>Fortis starts ICO Round 2</Title>
+                    <IconList>
+                    <IconButton><TwitIcon /></IconButton>
+                    <IconButton><FaceIcon /></IconButton>
+                    <IconButton><LinkIcon /></IconButton>
+                    </IconList>
+                    <TitleList>
+                        <Logo src={FortisLogo} alt=""/>
+                        <Writer>Jesus Sobredo</Writer>
+                        <Time>1 day ago</Time>
+                        <ReadTime>5 min read</ReadTime> 
+                    </TitleList>
+                    <Subtitle>"Really happy this stage has launched, its a big step in our ecosystem with REES"</Subtitle>
+                    <ArticleText>The last years we have seen an increasing interest in blockchain technology and cryptocurrencies. The quest for wealth is not longer something that requires a Ph.D or knowledge of how to operate intrigue computer systems. More and more user friendly applications, games and use cases are developed and made available on various platforms.</ArticleText>
                     
                     <ArticleButton>READ MORE</ArticleButton>
                     <IconList />
@@ -306,7 +331,7 @@ const NewsSection = () => {
                         <ReadTime>6 min read</ReadTime> 
                     </TitleList>
                     <Subtitle>"Really happy this stage has launched, its a big step in our ecosystem with REES"</Subtitle>
-                    <ArticleText>The last years we have seen an increasing interest in blockchain technology and cryptocurrencies. The quest for wealth is not longer something that requires a Ph.D or knowledge of how to operate intrigue computer systems. More and more user friendly applications, games and use cases are developed and made available on various platforms. With this comes the greed and with greed comes the scams and malicious behaviour</ArticleText>
+                    <ArticleText>The last years we have seen an increasing interest in blockchain technology and cryptocurrencies. The quest for wealth is not longer something that requires a Ph.D or knowledge of how to operate intrigue computer systems. More and more user friendly applications, games and use cases are developed and made available on various platforms.</ArticleText>
                     
                     <ArticleButton>READ MORE</ArticleButton>
                     <IconList />
@@ -314,41 +339,20 @@ const NewsSection = () => {
                 </div>
                 <div>
                 <Container>
-                    <Title>Destiny world launches mining</Title>
+                    <Title>Fortis starts ICO Round 2</Title>
                     <IconList>
                     <IconButton><TwitIcon /></IconButton>
                     <IconButton><FaceIcon /></IconButton>
                     <IconButton><LinkIcon /></IconButton>
                     </IconList>
                     <TitleList>
-                        <Logo src={DWLogo} alt=""/>
-                        <Writer>David R. Martin</Writer>
-                        <Time>5 hours ago</Time>
-                        <ReadTime>6 min read</ReadTime> 
+                        <Logo src={FortisLogo} alt=""/>
+                        <Writer>Jesus Sobredo</Writer>
+                        <Time>1 day ago</Time>
+                        <ReadTime>5 min read</ReadTime> 
                     </TitleList>
                     <Subtitle>"Really happy this stage has launched, its a big step in our ecosystem with REES"</Subtitle>
-                    <ArticleText>The last years we have seen an increasing interest in blockchain technology and cryptocurrencies. The quest for wealth is not longer something that requires a Ph.D or knowledge of how to operate intrigue computer systems. More and more user friendly applications, games and use cases are developed and made available on various platforms. With this comes the greed and with greed comes the scams and malicious behaviour</ArticleText>
-                    
-                    <ArticleButton>READ MORE</ArticleButton>
-                    <IconList />
-                </Container>
-                </div>
-                <div>
-                <Container>
-                    <Title>Destiny world launches mining</Title>
-                    <IconList>
-                    <IconButton><TwitIcon /></IconButton>
-                    <IconButton><FaceIcon /></IconButton>
-                    <IconButton><LinkIcon /></IconButton>
-                    </IconList>
-                    <TitleList>
-                        <Logo src={DWLogo} alt=""/>
-                        <Writer>David R. Martin</Writer>
-                        <Time>5 hours ago</Time>
-                        <ReadTime>6 min read</ReadTime> 
-                    </TitleList>
-                    <Subtitle>"Really happy this stage has launched, its a big step in our ecosystem with REES"</Subtitle>
-                    <ArticleText>The last years we have seen an increasing interest in blockchain technology and cryptocurrencies. The quest for wealth is not longer something that requires a Ph.D or knowledge of how to operate intrigue computer systems. More and more user friendly applications, games and use cases are developed and made available on various platforms. With this comes the greed and with greed comes the scams and malicious behaviour</ArticleText>
+                    <ArticleText>The last years we have seen an increasing interest in blockchain technology and cryptocurrencies. The quest for wealth is not longer something that requires a Ph.D or knowledge of how to operate intrigue computer systems. More and more user friendly applications, games and use cases are developed and made available on various platforms.</ArticleText>
                     
                     <ArticleButton>READ MORE</ArticleButton>
                     <IconList />
