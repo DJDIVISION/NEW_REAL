@@ -11,6 +11,7 @@ import RoadMapSection from "../components/Sections/RoadMapSection";
 import PartnerSlider from "../components/Sections/PartnerSlider";
 import Tokenomics from "../components/Sections/Tokenomics";
 import Tokenomics2 from "../components/Sections/Tokenomics2";
+import NewsSection from "../components/Sections/NewsSection";
 
 
 
@@ -43,6 +44,7 @@ const Home = () => {
         <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
             <NavBar showMenu={showMenu} theme={theme} setTheme={setTheme} setShowMenu={setShowMenu}/>
             <CanvasContainer />
+            <NewsSection />
             <Tokenomics /> 
             <Tokenomics2 />
             <RoadMapSection />

@@ -45,5 +45,12 @@ from {
 }
 
 
+#floated{
+    float: left;
+    width: 150px;
+    background: red;
+}
+
+
 
 
