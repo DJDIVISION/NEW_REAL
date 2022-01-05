@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import Slider from "react-slick";
 import { motion } from "framer-motion";
 import { Link as LinkR } from "react-router-dom";
 import {Button, IconButton} from "@material-ui/core";
@@ -12,6 +13,31 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FortisLogo from "../../images/fortis_logo.png";
 import DWLogo from "../../images/dw_aqua_logo.jpg";
 import DWArticleImage from "../../images/dwArticleBack.jpg";
+
+const Carroussel = styled.div`
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    
+    .slick-arrow:before{
+        color: ${props => props.theme.text};
+        font-size: 1.5rem;
+    }
+
+    .slick-dots button:before{
+        color: ${props => props.theme.text};
+        font-size: 0.5rem;
+        margin-top: 10px;
+    }
+    
+
+    @media screen and (max-width: 860px) {
+        width: 85%;
+    }
+         
+`;
 
 const LinkIcon = styled(LinkedInIcon)`
     color: #0A66C2;
@@ -27,7 +53,7 @@ const FaceIcon = styled(FacebookIcon)`
 
 const Container = styled.div`
     height: 100vh;
-    width: 100vw;
+    width: 90vw;
     background: ${props => props.theme.text};
     display: flex;
     flex-direction: column;
@@ -173,34 +199,164 @@ const ArticleButton = styled(Button)`
     }
 `;
 
+const Section = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 3rem 0;
+    background: ${props => props.theme.body};
+    
+
+`;
+
 
 
 
 
 const NewsSection = () => {
-
-    
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      };
 
     return(
-        <Container>
-            <Title>Destiny world launches mining</Title>
-            <IconList>
-               <IconButton><TwitIcon /></IconButton>
-               <IconButton><FaceIcon /></IconButton>
-               <IconButton><LinkIcon /></IconButton>
-            </IconList>
-            <TitleList>
-                <Logo src={DWLogo} alt=""/>
-                <Writer>David R. Martin</Writer>
-                <Time>5 hours ago</Time>
-                <ReadTime>6 min read</ReadTime> 
-            </TitleList>
-            <Subtitle>"Really happy this stage has launched, its a big step in our ecosystem with REES"</Subtitle>
-            <ArticleText>The last years we have seen an increasing interest in blockchain technology and cryptocurrencies. The quest for wealth is not longer something that requires a Ph.D or knowledge of how to operate intrigue computer systems. More and more user friendly applications, games and use cases are developed and made available on various platforms. With this comes the greed and with greed comes the scams and malicious behaviour</ArticleText>
-            
-            <ArticleButton>READ MORE</ArticleButton>
-            <IconList />
-        </Container>
+        <Section>
+        <Carroussel>
+            <Slider {...settings}>
+                <div>
+                <Container>
+                    <Title>Destiny world launches mining</Title>
+                    <IconList>
+                    <IconButton><TwitIcon /></IconButton>
+                    <IconButton><FaceIcon /></IconButton>
+                    <IconButton><LinkIcon /></IconButton>
+                    </IconList>
+                    <TitleList>
+                        <Logo src={DWLogo} alt=""/>
+                        <Writer>David R. Martin</Writer>
+                        <Time>5 hours ago</Time>
+                        <ReadTime>6 min read</ReadTime> 
+                    </TitleList>
+                    <Subtitle>"Really happy this stage has launched, its a big step in our ecosystem with REES"</Subtitle>
+                    <ArticleText>The last years we have seen an increasing interest in blockchain technology and cryptocurrencies. The quest for wealth is not longer something that requires a Ph.D or knowledge of how to operate intrigue computer systems. More and more user friendly applications, games and use cases are developed and made available on various platforms. With this comes the greed and with greed comes the scams and malicious behaviour</ArticleText>
+                    
+                    <ArticleButton>READ MORE</ArticleButton>
+                    <IconList />
+                </Container>
+                </div>
+                <div>
+                <Container>
+                    <Title>Fortis starts ICO Round 2</Title>
+                    <IconList>
+                    <IconButton><TwitIcon /></IconButton>
+                    <IconButton><FaceIcon /></IconButton>
+                    <IconButton><LinkIcon /></IconButton>
+                    </IconList>
+                    <TitleList>
+                        <Logo src={FortisLogo} alt=""/>
+                        <Writer>Jesus Sobredo</Writer>
+                        <Time>1 day ago</Time>
+                        <ReadTime>5 min read</ReadTime> 
+                    </TitleList>
+                    <Subtitle>"Really happy this stage has launched, its a big step in our ecosystem with REES"</Subtitle>
+                    <ArticleText>The last years we have seen an increasing interest in blockchain technology and cryptocurrencies. The quest for wealth is not longer something that requires a Ph.D or knowledge of how to operate intrigue computer systems. More and more user friendly applications, games and use cases are developed and made available on various platforms. With this comes the greed and with greed comes the scams and malicious behaviour</ArticleText>
+                    
+                    <ArticleButton>READ MORE</ArticleButton>
+                    <IconList />
+                </Container>
+                </div>
+                <div>
+                <Container>
+                    <Title>Destiny world launches mining</Title>
+                    <IconList>
+                    <IconButton><TwitIcon /></IconButton>
+                    <IconButton><FaceIcon /></IconButton>
+                    <IconButton><LinkIcon /></IconButton>
+                    </IconList>
+                    <TitleList>
+                        <Logo src={DWLogo} alt=""/>
+                        <Writer>David R. Martin</Writer>
+                        <Time>5 hours ago</Time>
+                        <ReadTime>6 min read</ReadTime> 
+                    </TitleList>
+                    <Subtitle>"Really happy this stage has launched, its a big step in our ecosystem with REES"</Subtitle>
+                    <ArticleText>The last years we have seen an increasing interest in blockchain technology and cryptocurrencies. The quest for wealth is not longer something that requires a Ph.D or knowledge of how to operate intrigue computer systems. More and more user friendly applications, games and use cases are developed and made available on various platforms. With this comes the greed and with greed comes the scams and malicious behaviour</ArticleText>
+                    
+                    <ArticleButton>READ MORE</ArticleButton>
+                    <IconList />
+                </Container>
+                </div>
+                <div>
+                <Container>
+                    <Title>Destiny world launches mining</Title>
+                    <IconList>
+                    <IconButton><TwitIcon /></IconButton>
+                    <IconButton><FaceIcon /></IconButton>
+                    <IconButton><LinkIcon /></IconButton>
+                    </IconList>
+                    <TitleList>
+                        <Logo src={DWLogo} alt=""/>
+                        <Writer>David R. Martin</Writer>
+                        <Time>5 hours ago</Time>
+                        <ReadTime>6 min read</ReadTime> 
+                    </TitleList>
+                    <Subtitle>"Really happy this stage has launched, its a big step in our ecosystem with REES"</Subtitle>
+                    <ArticleText>The last years we have seen an increasing interest in blockchain technology and cryptocurrencies. The quest for wealth is not longer something that requires a Ph.D or knowledge of how to operate intrigue computer systems. More and more user friendly applications, games and use cases are developed and made available on various platforms. With this comes the greed and with greed comes the scams and malicious behaviour</ArticleText>
+                    
+                    <ArticleButton>READ MORE</ArticleButton>
+                    <IconList />
+                </Container>
+                </div>
+                <div>
+                <Container>
+                    <Title>Destiny world launches mining</Title>
+                    <IconList>
+                    <IconButton><TwitIcon /></IconButton>
+                    <IconButton><FaceIcon /></IconButton>
+                    <IconButton><LinkIcon /></IconButton>
+                    </IconList>
+                    <TitleList>
+                        <Logo src={DWLogo} alt=""/>
+                        <Writer>David R. Martin</Writer>
+                        <Time>5 hours ago</Time>
+                        <ReadTime>6 min read</ReadTime> 
+                    </TitleList>
+                    <Subtitle>"Really happy this stage has launched, its a big step in our ecosystem with REES"</Subtitle>
+                    <ArticleText>The last years we have seen an increasing interest in blockchain technology and cryptocurrencies. The quest for wealth is not longer something that requires a Ph.D or knowledge of how to operate intrigue computer systems. More and more user friendly applications, games and use cases are developed and made available on various platforms. With this comes the greed and with greed comes the scams and malicious behaviour</ArticleText>
+                    
+                    <ArticleButton>READ MORE</ArticleButton>
+                    <IconList />
+                </Container>
+                </div>
+                <div>
+                <Container>
+                    <Title>Destiny world launches mining</Title>
+                    <IconList>
+                    <IconButton><TwitIcon /></IconButton>
+                    <IconButton><FaceIcon /></IconButton>
+                    <IconButton><LinkIcon /></IconButton>
+                    </IconList>
+                    <TitleList>
+                        <Logo src={DWLogo} alt=""/>
+                        <Writer>David R. Martin</Writer>
+                        <Time>5 hours ago</Time>
+                        <ReadTime>6 min read</ReadTime> 
+                    </TitleList>
+                    <Subtitle>"Really happy this stage has launched, its a big step in our ecosystem with REES"</Subtitle>
+                    <ArticleText>The last years we have seen an increasing interest in blockchain technology and cryptocurrencies. The quest for wealth is not longer something that requires a Ph.D or knowledge of how to operate intrigue computer systems. More and more user friendly applications, games and use cases are developed and made available on various platforms. With this comes the greed and with greed comes the scams and malicious behaviour</ArticleText>
+                    
+                    <ArticleButton>READ MORE</ArticleButton>
+                    <IconList />
+                </Container>
+                </div>
+            </Slider>
+        </Carroussel>
+        </Section>
     )
 }
 
