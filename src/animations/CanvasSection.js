@@ -186,7 +186,7 @@ export function CanvasSectionTwo(props) {
     const { active , setActive } = useContext(MenuContext);
 
     let animate = {};
-    if(active === "menuOne") animate = { opacity: 0, y: 0, scale: 1, };
+    if(active === "menuOne") animate = { opacity: 0, y: 0, scale: 1, display: "none"};
     else if (active === "menuTwo") animate = { opacity: 1, y: -80, scale: 1.1, };
 
     return(

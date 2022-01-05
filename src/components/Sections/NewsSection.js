@@ -220,6 +220,18 @@ const Section = styled.div`
 
 
 const NewsSection = () => {
+
+    const title = window.document.title;
+    const url = window.document.location.href;
+
+    function ShareTwitter(){
+        if (navigator.share) {
+            alert("There's share")
+        } else {
+            alert("NO SHARE")
+        }
+    }
+
     const settings = {
         dots: true,
         infinite: true,
@@ -236,9 +248,9 @@ const NewsSection = () => {
                 <Container>
                     <Title>Destiny world launches mining</Title>
                     <IconList>
-                    <IconButton><TwitIcon /></IconButton>
-                    <IconButton><FaceIcon /></IconButton>
-                    <IconButton><LinkIcon /></IconButton>
+                    <IconButton onClick={ShareTwitter}><TwitIcon /></IconButton>
+                    <IconButton id="facebook"><FaceIcon /></IconButton>
+                    <IconButton id="linkedin"><LinkIcon /></IconButton>
                     </IconList>
                     <TitleList>
                         <Logo src={DWLogo} alt=""/>

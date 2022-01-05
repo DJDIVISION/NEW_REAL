@@ -54,6 +54,10 @@ const SVGVariants = {
 }
 
 
+
+
+
+
 export function ProgressCircle() {
     return(
         <div>
