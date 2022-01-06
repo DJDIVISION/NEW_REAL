@@ -35,6 +35,8 @@ const Carroussel = styled.div`
         color: ${props => props.theme.text};
         font-size: 0.8rem;
         margin-top: 10px;
+        color: grey;
+        transform: scale(1.4);
     }
     
 
@@ -64,7 +66,8 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-left: -10px;
+    
+    
     
 `;
 
@@ -259,6 +262,108 @@ const NewsSection = () => {
         <Section>
         <Carroussel>
             <Slider {...settings}>
+                <div>
+                <Container>
+                    <Title>Destiny world launches mining</Title>
+                    <IconList>
+                        <ShareIcon />
+                    <TwitterShareButton url={shareurl} title={TwitterTitle} via={Via} hashtags={Hashtags} related={Related}>
+                        <TwitterIcon size={25} borderRadius={50}/>
+                    </TwitterShareButton>
+                    <FacebookShareButton url={shareurl} quote={TwitterTitle}>
+                        <FacebookIcon size={25} borderRadius={50}/>
+                    </FacebookShareButton>
+                    <LinkedinShareButton url={shareurl} >
+                        <LinkedinIcon size={25} borderRadius={50}/>
+                    </LinkedinShareButton>
+                    <EmailShareButton url={shareurl} >
+                        <EmailIcon size={25} borderRadius={50}/>
+                    </EmailShareButton>
+                    {/* <IconButton onClick={ShareTwitter}><TwitIcon /></IconButton>
+                    <IconButton id="facebook"><FaceIcon /></IconButton>
+                    <IconButton id="linkedin"><LinkIcon /></IconButton> */}
+                    </IconList>
+                    <TitleList>
+                        <Logo src={DWLogo} alt=""/>
+                        <Writer>David R. Martin</Writer>
+                        <Time>5 hours ago</Time>
+                        <ReadTime>6 min read</ReadTime> 
+                    </TitleList>
+                    <Subtitle>"Really happy this stage has launched, its a big step in our ecosystem with REES"</Subtitle>
+                    <ArticleText>The last years we have seen an increasing interest in blockchain technology and cryptocurrencies. The quest for wealth is not longer something that requires a Ph.D or knowledge of how to operate intrigue computer systems. More and more user friendly applications, games and use cases are developed and made available on various platforms.</ArticleText>
+                    
+                    <ArticleButton>READ MORE</ArticleButton>
+                    <IconList />
+                </Container>
+                </div>
+                <div>
+                <Container>
+                    <Title>Destiny world launches mining</Title>
+                    <IconList>
+                        <ShareIcon />
+                    <TwitterShareButton url={shareurl} title={TwitterTitle} via={Via} hashtags={Hashtags} related={Related}>
+                        <TwitterIcon size={25} borderRadius={50}/>
+                    </TwitterShareButton>
+                    <FacebookShareButton url={shareurl} quote={TwitterTitle}>
+                        <FacebookIcon size={25} borderRadius={50}/>
+                    </FacebookShareButton>
+                    <LinkedinShareButton url={shareurl} >
+                        <LinkedinIcon size={25} borderRadius={50}/>
+                    </LinkedinShareButton>
+                    <EmailShareButton url={shareurl} >
+                        <EmailIcon size={25} borderRadius={50}/>
+                    </EmailShareButton>
+                    {/* <IconButton onClick={ShareTwitter}><TwitIcon /></IconButton>
+                    <IconButton id="facebook"><FaceIcon /></IconButton>
+                    <IconButton id="linkedin"><LinkIcon /></IconButton> */}
+                    </IconList>
+                    <TitleList>
+                        <Logo src={DWLogo} alt=""/>
+                        <Writer>David R. Martin</Writer>
+                        <Time>5 hours ago</Time>
+                        <ReadTime>6 min read</ReadTime> 
+                    </TitleList>
+                    <Subtitle>"Really happy this stage has launched, its a big step in our ecosystem with REES"</Subtitle>
+                    <ArticleText>The last years we have seen an increasing interest in blockchain technology and cryptocurrencies. The quest for wealth is not longer something that requires a Ph.D or knowledge of how to operate intrigue computer systems. More and more user friendly applications, games and use cases are developed and made available on various platforms.</ArticleText>
+                    
+                    <ArticleButton>READ MORE</ArticleButton>
+                    <IconList />
+                </Container>
+                </div>
+                <div>
+                <Container>
+                    <Title>Destiny world launches mining</Title>
+                    <IconList>
+                        <ShareIcon />
+                    <TwitterShareButton url={shareurl} title={TwitterTitle} via={Via} hashtags={Hashtags} related={Related}>
+                        <TwitterIcon size={25} borderRadius={50}/>
+                    </TwitterShareButton>
+                    <FacebookShareButton url={shareurl} quote={TwitterTitle}>
+                        <FacebookIcon size={25} borderRadius={50}/>
+                    </FacebookShareButton>
+                    <LinkedinShareButton url={shareurl} >
+                        <LinkedinIcon size={25} borderRadius={50}/>
+                    </LinkedinShareButton>
+                    <EmailShareButton url={shareurl} >
+                        <EmailIcon size={25} borderRadius={50}/>
+                    </EmailShareButton>
+                    {/* <IconButton onClick={ShareTwitter}><TwitIcon /></IconButton>
+                    <IconButton id="facebook"><FaceIcon /></IconButton>
+                    <IconButton id="linkedin"><LinkIcon /></IconButton> */}
+                    </IconList>
+                    <TitleList>
+                        <Logo src={DWLogo} alt=""/>
+                        <Writer>David R. Martin</Writer>
+                        <Time>5 hours ago</Time>
+                        <ReadTime>6 min read</ReadTime> 
+                    </TitleList>
+                    <Subtitle>"Really happy this stage has launched, its a big step in our ecosystem with REES"</Subtitle>
+                    <ArticleText>The last years we have seen an increasing interest in blockchain technology and cryptocurrencies. The quest for wealth is not longer something that requires a Ph.D or knowledge of how to operate intrigue computer systems. More and more user friendly applications, games and use cases are developed and made available on various platforms.</ArticleText>
+                    
+                    <ArticleButton>READ MORE</ArticleButton>
+                    <IconList />
+                </Container>
+                </div>
                 <div>
                 <Container>
                     <Title>Destiny world launches mining</Title>
