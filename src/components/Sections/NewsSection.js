@@ -4,9 +4,10 @@ import Slider from "react-slick";
 import { motion } from "framer-motion";
 import { Link as LinkR } from "react-router-dom";
 import {Button, IconButton} from "@material-ui/core";
+import ShareIcon from '@mui/icons-material/Share';
 import "./style.css";
 
-import { TwitterShareButton, TwitterIcon} from "react-share";
+import { TwitterShareButton, TwitterIcon, FacebookShareButton, FacebookIcon, LinkedinIcon, LinkedinShareButton, EmailIcon, EmailShareButton} from "react-share";
 
 /* import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -85,6 +86,7 @@ const IconList = styled.ul`
     margin-left: auto;
     margin-right: auto;
     justify-content: space-between;
+    padding-top: 5px;
 
     @media screen and (min-width: 1100px) {
         width: 40%;
@@ -261,9 +263,19 @@ const NewsSection = () => {
                 <Container>
                     <Title>Destiny world launches mining</Title>
                     <IconList>
+                        <ShareIcon />
                     <TwitterShareButton url={shareurl} title={TwitterTitle} via={Via} hashtags={Hashtags} related={Related}>
-                        <TwitterIcon size={30} borderRadius={50}/>
+                        <TwitterIcon size={25} borderRadius={50}/>
                     </TwitterShareButton>
+                    <FacebookShareButton url={shareurl} quote={TwitterTitle}>
+                        <FacebookIcon size={25} borderRadius={50}/>
+                    </FacebookShareButton>
+                    <LinkedinShareButton url={shareurl} >
+                        <LinkedinIcon size={25} borderRadius={50}/>
+                    </LinkedinShareButton>
+                    <EmailShareButton url={shareurl} >
+                        <EmailIcon size={25} borderRadius={50}/>
+                    </EmailShareButton>
                     {/* <IconButton onClick={ShareTwitter}><TwitIcon /></IconButton>
                     <IconButton id="facebook"><FaceIcon /></IconButton>
                     <IconButton id="linkedin"><LinkIcon /></IconButton> */}
