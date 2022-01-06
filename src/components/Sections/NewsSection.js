@@ -26,13 +26,14 @@ const Carroussel = styled.div`
     
     
     
+    
     .slick-arrow:before{
-        color: ${props => props.theme.body};
+        color: ${props => props.theme.text};
         font-size: 1.5rem;
     }
 
     .slick-dots button:before{
-        color: ${props => props.theme.text};
+        color: ${props => props.theme.body};
         font-size: 0.8rem;
         margin-top: 10px;
         color: grey;
@@ -61,7 +62,7 @@ const FaceIcon = styled(FacebookIcon)`
 const Container = styled.div`
     height: 90vh;
     width: 90vw;
-    background: ${props => props.theme.text};
+    background: ${props => props.theme.body};
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,14 +77,14 @@ const Title = styled.h1`
     font-size: calc(1.8em + 0.4vw);
     margin-bottom: 10px;
     margin-top: 50px;
-    
+    color: ${props => props.theme.text};
     
 `;
 
 const IconList = styled.ul`
     margin-top: 20px;
     margin-bottom: 10px;
-    border-top: 1px solid black;
+    border-top: 1px solid ${props => props.theme.text};
     width: 60%;
     display: flex;
     margin-left: auto;
@@ -132,7 +133,7 @@ const Logo = styled.img`
 
 const Writer = styled.h4`
     font-size: 18px;
-    color: ${props => props.theme.body};
+    color: ${props => props.theme.text};
     font-family: "Comfortaa";
     margin-right: 2vw;
 
@@ -165,7 +166,7 @@ const ReadTime = styled.h4`
 `;
 
 const Subtitle = styled.h2`
-    color: ${props => props.theme.body};
+    color: ${props => props.theme.text};
     font-family: "Comfortaa";
     text-align: left;
     margin-left: 2vw;
@@ -184,6 +185,7 @@ const ArticleText = styled.h2`
     font-family: "Comfortaa";
     padding: 0 15%;
     text-align: justify;
+    color: ${props => props.theme.text};
 
     @media screen and (min-width: 1100px) {
         font-size: 20px;
@@ -193,13 +195,14 @@ const ArticleText = styled.h2`
 
 const ArticleButton = styled(Button)`
     &&& {
-        border: 1px solid black;
+        border: 1px solid ${props => props.theme.text};
         display: block;
         margin-left: auto;
         margin-right: auto;
         margin-top: 10px;
         transform: scale(0.8);
         font-weight: bold;
+        color: ${props => props.theme.text};
 
         @media screen and (min-width: 1100px) {
             transform: scale(1.2);
@@ -217,32 +220,18 @@ const Section = styled.div`
     align-items: center;
     width: 100%;
     padding: 3rem 0;
-    background: ${props => props.theme.text};
+    background: ${props => props.theme.body};
     
 
 `;
 
-
+const SharingButton = styled(ShareIcon)`
+    background: red;
+`;
 
 
 
 const NewsSection = () => {
-
-    const title = window.document.title;
-    const url = window.document.location.href;
-
-    function ShareTwitter(){
-        if (navigator.share){
-            navigator.share({
-                title: `Hello Mates!!!`,
-                url: `${url}`
-            }).then(() => {
-                alert("Thanks for sharing")
-            })
-            .catch(console.error);
-        }
-            
-    }
 
     const shareurl = "http://telos.destinyworld.net/";
     const TwitterTitle = "Destiny World Launches REES Mining ⛏ 🤩.   1 REES is pegged with DECO 10000 / 15. Don't miss it!!! 🥳🤑";
@@ -266,7 +255,7 @@ const NewsSection = () => {
                 <Container>
                     <Title>Destiny world launches mining</Title>
                     <IconList>
-                        <ShareIcon />
+                        <SharingButton />
                     <TwitterShareButton url={shareurl} title={TwitterTitle} via={Via} hashtags={Hashtags} related={Related}>
                         <TwitterIcon size={25} borderRadius={50}/>
                     </TwitterShareButton>
