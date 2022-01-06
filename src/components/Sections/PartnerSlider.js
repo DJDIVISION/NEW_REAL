@@ -30,7 +30,7 @@ import WayneBack from "../../images/wayne_background.jpg";
 
 const MainContainer = styled.section`
     width: 100vw;
-    height: 110vh;
+    height: 90vh;
     background-size: cover;
     background-repeat: no-repeat;
     

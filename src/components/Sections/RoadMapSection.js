@@ -46,7 +46,7 @@ const ButtonSection = styled.section`
 
 
 const Section = styled.section`
-    height: 110vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
