@@ -6,9 +6,11 @@ import { Link as LinkR } from "react-router-dom";
 import {Button, IconButton} from "@material-ui/core";
 import "./style.css";
 
-import TwitterIcon from '@mui/icons-material/Twitter';
+import { TwitterShareButton, TwitterIcon} from "react-share";
+
+/* import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import LinkedInIcon from '@mui/icons-material/LinkedIn'; */
 
 import FortisLogo from "../../images/fortis_logo.png";
 import DWLogo from "../../images/dw_aqua_logo.jpg";
@@ -41,7 +43,7 @@ const Carroussel = styled.div`
          
 `;
 
-const LinkIcon = styled(LinkedInIcon)`
+/* const LinkIcon = styled(LinkedInIcon)`
     color: #0A66C2;
 `;
 
@@ -51,7 +53,7 @@ const TwitIcon = styled(TwitterIcon)`
 
 const FaceIcon = styled(FacebookIcon)`
     color: #3b5998;
-`;
+`; */
 
 const Container = styled.div`
     height: 90vh;
@@ -227,8 +229,7 @@ const NewsSection = () => {
     function ShareTwitter(){
         if (navigator.share){
             navigator.share({
-                title: `"Really happy this stage has launched, its a big step in our ecosystem with REES"`,
-                image: `${DWArticleImage}`,
+                title: `Hello Mates!!!`,
                 url: `${url}`
             }).then(() => {
                 alert("Thanks for sharing")
@@ -237,6 +238,12 @@ const NewsSection = () => {
         }
             
     }
+
+    const shareurl = "http://telos.destinyworld.net/";
+    const TwitterTitle = "Destiny World Launches REES Mining ⛏ 🤩.   1 REES is pegged with DECO 10000 / 15. Don't miss it!!! 🥳🤑";
+    const Via = "VictorR65153076";
+    const Hashtags = ["DestinyWorld", "REES", "Telos"];
+    const Related = ["@VictorR65153076"];
 
     const settings = {
         dots: true,
@@ -254,120 +261,18 @@ const NewsSection = () => {
                 <Container>
                     <Title>Destiny world launches mining</Title>
                     <IconList>
-                    <IconButton onClick={ShareTwitter}><TwitIcon /></IconButton>
+                    <TwitterShareButton url={shareurl} title={TwitterTitle} via={Via} hashtags={Hashtags} related={Related}>
+                        <TwitterIcon size={30} borderRadius={50}/>
+                    </TwitterShareButton>
+                    {/* <IconButton onClick={ShareTwitter}><TwitIcon /></IconButton>
                     <IconButton id="facebook"><FaceIcon /></IconButton>
-                    <IconButton id="linkedin"><LinkIcon /></IconButton>
+                    <IconButton id="linkedin"><LinkIcon /></IconButton> */}
                     </IconList>
                     <TitleList>
                         <Logo src={DWLogo} alt=""/>
                         <Writer>David R. Martin</Writer>
                         <Time>5 hours ago</Time>
                         <ReadTime>6 min read</ReadTime> 
-                    </TitleList>
-                    <Subtitle>"Really happy this stage has launched, its a big step in our ecosystem with REES"</Subtitle>
-                    <ArticleText>The last years we have seen an increasing interest in blockchain technology and cryptocurrencies. The quest for wealth is not longer something that requires a Ph.D or knowledge of how to operate intrigue computer systems. More and more user friendly applications, games and use cases are developed and made available on various platforms.</ArticleText>
-                    
-                    <ArticleButton>READ MORE</ArticleButton>
-                    <IconList />
-                </Container>
-                </div>
-                <div>
-                <Container>
-                    <Title>Fortis starts ICO Round 2</Title>
-                    <IconList>
-                    <IconButton><TwitIcon /></IconButton>
-                    <IconButton><FaceIcon /></IconButton>
-                    <IconButton><LinkIcon /></IconButton>
-                    </IconList>
-                    <TitleList>
-                        <Logo src={FortisLogo} alt=""/>
-                        <Writer>Jesus Sobredo</Writer>
-                        <Time>1 day ago</Time>
-                        <ReadTime>5 min read</ReadTime> 
-                    </TitleList>
-                    <Subtitle>"Really happy this stage has launched, its a big step in our ecosystem with REES"</Subtitle>
-                    <ArticleText>The last years we have seen an increasing interest in blockchain technology and cryptocurrencies. The quest for wealth is not longer something that requires a Ph.D or knowledge of how to operate intrigue computer systems. More and more user friendly applications, games and use cases are developed and made available on various platforms.</ArticleText>
-                    
-                    <ArticleButton>READ MORE</ArticleButton>
-                    <IconList />
-                </Container>
-                </div>
-                <div>
-                <Container>
-                    <Title>Destiny world launches mining</Title>
-                    <IconList>
-                    <IconButton><TwitIcon /></IconButton>
-                    <IconButton><FaceIcon /></IconButton>
-                    <IconButton><LinkIcon /></IconButton>
-                    </IconList>
-                    <TitleList>
-                        <Logo src={DWLogo} alt=""/>
-                        <Writer>David R. Martin</Writer>
-                        <Time>5 hours ago</Time>
-                        <ReadTime>6 min read</ReadTime> 
-                    </TitleList>
-                    <Subtitle>"Really happy this stage has launched, its a big step in our ecosystem with REES"</Subtitle>
-                    <ArticleText>The last years we have seen an increasing interest in blockchain technology and cryptocurrencies. The quest for wealth is not longer something that requires a Ph.D or knowledge of how to operate intrigue computer systems. More and more user friendly applications, games and use cases are developed and made available on various platforms.</ArticleText>
-                    
-                    <ArticleButton>READ MORE</ArticleButton>
-                    <IconList />
-                </Container>
-                </div>
-                <div>
-                <Container>
-                    <Title>Fortis starts ICO Round 2</Title>
-                    <IconList>
-                    <IconButton><TwitIcon /></IconButton>
-                    <IconButton><FaceIcon /></IconButton>
-                    <IconButton><LinkIcon /></IconButton>
-                    </IconList>
-                    <TitleList>
-                        <Logo src={FortisLogo} alt=""/>
-                        <Writer>Jesus Sobredo</Writer>
-                        <Time>1 day ago</Time>
-                        <ReadTime>5 min read</ReadTime> 
-                    </TitleList>
-                    <Subtitle>"Really happy this stage has launched, its a big step in our ecosystem with REES"</Subtitle>
-                    <ArticleText>The last years we have seen an increasing interest in blockchain technology and cryptocurrencies. The quest for wealth is not longer something that requires a Ph.D or knowledge of how to operate intrigue computer systems. More and more user friendly applications, games and use cases are developed and made available on various platforms.</ArticleText>
-                    
-                    <ArticleButton>READ MORE</ArticleButton>
-                    <IconList />
-                </Container>
-                </div>
-                <div>
-                <Container>
-                    <Title>Destiny world launches mining</Title>
-                    <IconList>
-                    <IconButton><TwitIcon /></IconButton>
-                    <IconButton><FaceIcon /></IconButton>
-                    <IconButton><LinkIcon /></IconButton>
-                    </IconList>
-                    <TitleList>
-                        <Logo src={DWLogo} alt=""/>
-                        <Writer>David R. Martin</Writer>
-                        <Time>5 hours ago</Time>
-                        <ReadTime>6 min read</ReadTime> 
-                    </TitleList>
-                    <Subtitle>"Really happy this stage has launched, its a big step in our ecosystem with REES"</Subtitle>
-                    <ArticleText>The last years we have seen an increasing interest in blockchain technology and cryptocurrencies. The quest for wealth is not longer something that requires a Ph.D or knowledge of how to operate intrigue computer systems. More and more user friendly applications, games and use cases are developed and made available on various platforms.</ArticleText>
-                    
-                    <ArticleButton>READ MORE</ArticleButton>
-                    <IconList />
-                </Container>
-                </div>
-                <div>
-                <Container>
-                    <Title>Fortis starts ICO Round 2</Title>
-                    <IconList>
-                    <IconButton><TwitIcon /></IconButton>
-                    <IconButton><FaceIcon /></IconButton>
-                    <IconButton><LinkIcon /></IconButton>
-                    </IconList>
-                    <TitleList>
-                        <Logo src={FortisLogo} alt=""/>
-                        <Writer>Jesus Sobredo</Writer>
-                        <Time>1 day ago</Time>
-                        <ReadTime>5 min read</ReadTime> 
                     </TitleList>
                     <Subtitle>"Really happy this stage has launched, its a big step in our ecosystem with REES"</Subtitle>
                     <ArticleText>The last years we have seen an increasing interest in blockchain technology and cryptocurrencies. The quest for wealth is not longer something that requires a Ph.D or knowledge of how to operate intrigue computer systems. More and more user friendly applications, games and use cases are developed and made available on various platforms.</ArticleText>
