@@ -46,9 +46,7 @@ const Home = () => {
             <NavBar showMenu={showMenu} theme={theme} setTheme={setTheme} setShowMenu={setShowMenu}/>
             <CanvasContainer />
             <NewsSection />
-            <Tokenomics /> 
             <BuySellSection />
-            <RoadMapSection />
             <PartnerSlider /> 
             <Footer /> 
         </motion.div>
