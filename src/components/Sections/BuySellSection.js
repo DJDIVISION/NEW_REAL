@@ -11,6 +11,12 @@ import ScreenShareIcon from '@mui/icons-material/ScreenShare';
 import AddBusinessIcon from '@mui/icons-material/AddBusiness';
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 
+const move = keyframes`
+        0% {width: 0}
+        80% {width: 100%}
+        100%{width: 0, delay:1}
+    `;
+
 const Title = styled.h3`
     font-size: 32px;
     color: ${props => props.theme.text};
@@ -46,6 +52,7 @@ const ProgressRedOne = styled.div`
     height: 5px;
     background: red;
     border-radius: 0 15px 15px 0;  
+    animation: ${move} infinite 5s linear;
 
     @media screen and (min-width: 860px){
         max-width: 60px;
@@ -58,7 +65,8 @@ const ProgressRedTwo = styled.div`
     max-width: 80px;
     height: 5px;
     background: red;
-    border-radius: 0 15px 15px 0;  
+    border-radius: 0 15px 15px 0;
+    animation: ${move} infinite 5s linear;  
 
     @media screen and (min-width: 860px){
         max-width: 120px;
@@ -71,7 +79,8 @@ const ProgressRedFour = styled.div`
     max-width: 160px;
     height: 5px;
     background: red;
-    border-radius: 0 15px 15px 0;  
+    border-radius: 0 15px 15px 0;
+    animation: ${move} infinite 5s linear;  
 
     @media screen and (min-width: 860px){
         max-width: 240px;
@@ -84,7 +93,8 @@ const ProgressRedFive = styled.div`
     max-width: 200px;
     height: 5px;
     background: red;
-    border-radius: 0 15px 15px 0;  
+    border-radius: 0 15px 15px 0;
+    animation: ${move} infinite 5s linear;  
 
     @media screen and (min-width: 860px){
         max-width: 300px;
@@ -99,6 +109,7 @@ const ProgressGreenOne = styled.div`
     height: 5px;
     background: green;
     border-radius: 0 15px 15px 0;
+    animation: ${move} infinite 5s linear;
 
     @media screen and (min-width: 860px){
         max-width: 60px;
@@ -111,6 +122,7 @@ const ProgressGreenThree = styled.div`
     height: 5px;
     background: green;
     border-radius: 0 15px 15px 0;
+    animation: ${move} infinite 5s linear;
 
     @media screen and (min-width: 860px){
         max-width: 180px;
@@ -288,33 +300,6 @@ const Img = styled.img`
 
 const BuySellSection = () => {
 
-    const { ref, inView } = useInView({
-        threshold: 0.2
-    });
-
-    const animation = useAnimation();
-    
-
-    useEffect(() => {
-        
-       console.log("BUY TAXES = ", inView); 
-        if(inView){
-          animation.start({
-              width: "100%", 
-              transition: {
-                type: "spring", duration: 6, 
-              }
-          })
-        }
-        if (!inView){
-          animation.start({
-            width: 0,
-          })  
-        }
-    }, [inView]); 
-
-
-
     return(
         <>
           <Container >
@@ -327,8 +312,8 @@ const BuySellSection = () => {
                     <ItemTitle>BURNING</ItemTitle>
                         <ProgressList>
                             <BurnIcon />
-                            <BackDiv ref={ref}>
-                                <motion.div animate={animation}>
+                            <BackDiv >
+                                <motion.div>
                                 <ProgressGreenOne />
                                 </motion.div>
                             </BackDiv>
@@ -337,8 +322,8 @@ const BuySellSection = () => {
                         <ItemTitle>TEAM</ItemTitle>
                         <ProgressList>
                             <TeamIcon />
-                            <BackDiv ref={ref}>
-                                <motion.div animate={animation}>
+                            <BackDiv >
+                                <motion.div >
                                 <ProgressGreenOne />
                                 </motion.div>
                             </BackDiv>
@@ -347,8 +332,8 @@ const BuySellSection = () => {
                         <ItemTitle>BUYBACK</ItemTitle>
                         <ProgressList>
                             <BuyBackIcon />
-                            <BackDiv ref={ref}>
-                                <motion.div animate={animation}>
+                            <BackDiv >
+                                <motion.div>
                                 <ProgressGreenOne />
                                 </motion.div>
                             </BackDiv>
@@ -357,8 +342,8 @@ const BuySellSection = () => {
                         <ItemTitle>LIQUIDITY</ItemTitle>
                         <ProgressList>
                             <LiquidityIcon />
-                            <BackDiv ref={ref}>
-                                <motion.div animate={animation}>
+                            <BackDiv >
+                                <motion.div >
                                 <ProgressGreenOne />
                                 </motion.div>
                             </BackDiv>
@@ -367,8 +352,8 @@ const BuySellSection = () => {
                         <ItemTitle>BNB REFLECTIONS</ItemTitle>
                         <ProgressList>
                             <ReflexionsIcon />
-                            <BackDiv ref={ref}>
-                                <motion.div animate={animation}>
+                            <BackDiv >
+                                <motion.div>
                                 <ProgressGreenThree />
                                 </motion.div>
                             </BackDiv>
@@ -377,8 +362,8 @@ const BuySellSection = () => {
                         <ItemTitle>MARKETING</ItemTitle>
                         <ProgressList>
                             <MarketingIcon />
-                            <BackDiv ref={ref}>
-                                <motion.div animate={animation}>
+                            <BackDiv >
+                                <motion.div >
                                 <ProgressGreenThree />
                                 </motion.div>
                             </BackDiv>
@@ -392,8 +377,8 @@ const BuySellSection = () => {
                     <ItemTitle>BURNING</ItemTitle>
                         <ProgressList>
                             <BurnIcon />
-                            <BackDiv ref={ref}>
-                                <motion.div animate={animation}>
+                            <BackDiv >
+                                <motion.div >
                                 <ProgressRedOne />
                                 </motion.div>
                             </BackDiv>
@@ -402,8 +387,8 @@ const BuySellSection = () => {
                         <ItemTitle>TEAM</ItemTitle>
                         <ProgressList>
                             <TeamIcon />
-                            <BackDiv ref={ref}>
-                                <motion.div animate={animation}>
+                            <BackDiv >
+                                <motion.div>
                                 <ProgressRedOne />
                                 </motion.div>
                             </BackDiv>
@@ -412,8 +397,8 @@ const BuySellSection = () => {
                         <ItemTitle>BUYBACK</ItemTitle>
                         <ProgressList>
                             <BuyBackIcon />
-                            <BackDiv ref={ref}>
-                                <motion.div animate={animation}>
+                            <BackDiv >
+                                <motion.div >
                                 <ProgressRedTwo />
                                 </motion.div>
                             </BackDiv>
@@ -422,8 +407,8 @@ const BuySellSection = () => {
                         <ItemTitle>LIQUIDITY</ItemTitle>
                         <ProgressList>
                             <LiquidityIcon />
-                            <BackDiv ref={ref}>
-                                <motion.div animate={animation}>
+                            <BackDiv >
+                                <motion.div>
                                 <ProgressRedTwo />
                                 </motion.div>
                             </BackDiv>
@@ -432,8 +417,8 @@ const BuySellSection = () => {
                         <ItemTitle>BNB REFLECTIONS</ItemTitle>
                         <ProgressList>
                             <ReflexionsIcon />
-                            <BackDiv ref={ref}>
-                                <motion.div animate={animation}>
+                            <BackDiv >
+                                <motion.div >
                                 <ProgressRedFour />
                                 </motion.div>
                             </BackDiv>
@@ -442,8 +427,8 @@ const BuySellSection = () => {
                         <ItemTitle>MARKETING</ItemTitle>
                         <ProgressList>
                             <MarketingIcon />
-                            <BackDiv ref={ref}>
-                                <motion.div animate={animation}>
+                            <BackDiv >
+                                <motion.div>
                                 <ProgressRedFive />
                                 </motion.div>
                             </BackDiv>
