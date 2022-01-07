@@ -1,191 +1,460 @@
-import React from 'react';
-import styled from "styled-components";
-import { motion } from "framer-motion";
-import Planet1 from "../../images/planet4.png";
-import Astronaut from "../../images/astronaut3.png";
-import Planet3 from "../../images/planet11.png";
-import Planet4 from "../../images/planet4.png";
-import { Link as LinkR } from "react-router-dom";
+import React, {useState, useEffect} from 'react';
+import styled, {keyframes} from "styled-components";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
+import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
+import GroupsIcon from '@mui/icons-material/Groups';
+import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
+import InvertColorsIcon from '@mui/icons-material/InvertColors';
+import ScreenShareIcon from '@mui/icons-material/ScreenShare';
+import AddBusinessIcon from '@mui/icons-material/AddBusiness';
+import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 
-const Button = styled(motion.button)`
-    padding: 0.50rem 1.5rem;
-    font-size: 1rem;
-    border: 2px solid whitesmoke;
-    border-radius: 6px;
-    outline: none;
-    cursor: pointer;
-    background: transparent;
-    color: whitesmoke;
-    margin-bottom: 100px;
+const Title = styled.h3`
+    font-size: 32px;
+    color: ${props => props.theme.text};
+    text-align: center;
+    margin: 25px;
+
+    @media screen and (max-width:860px){
+        font-size: 20px;
+    }
+`;
+
+const ItemTitle = styled.h4`
+    font-size: calc(1rem + 0.5vw);
+    color: ${props => props.theme.text};
+    margin-right: auto;
+    margin-left: 40px;
+    height: 5px;
     
-
-
-`;
-const ButtonSection = styled.section`
-    width: 40vh;
-    margin-left: 110px;
-    margin-top: -50px;
 `;
 
+const Text = styled.h6`
+    font-size: 14px;
+    margin-left: 20px;
+    color: ${props => props.theme.text};
+
+    @media screen and (min-width: 860px){
+        font-size: 20px;
+    }
+`;
+
+const ProgressRedOne = styled.div`
+    max-width: 40px;
+    height: 5px;
+    background: red;
+    border-radius: 0 15px 15px 0;  
+
+    @media screen and (min-width: 860px){
+        max-width: 60px;
+        height: 10px;
+    }
+    
+`;
+
+const ProgressRedTwo = styled.div`
+    max-width: 80px;
+    height: 5px;
+    background: red;
+    border-radius: 0 15px 15px 0;  
+
+    @media screen and (min-width: 860px){
+        max-width: 120px;
+        height: 10px;
+    }
+    
+`;
+
+const ProgressRedFour = styled.div`
+    max-width: 160px;
+    height: 5px;
+    background: red;
+    border-radius: 0 15px 15px 0;  
+
+    @media screen and (min-width: 860px){
+        max-width: 240px;
+        height: 10px;
+    }
+    
+`;
+
+const ProgressRedFive = styled.div`
+    max-width: 200px;
+    height: 5px;
+    background: red;
+    border-radius: 0 15px 15px 0;  
+
+    @media screen and (min-width: 860px){
+        max-width: 300px;
+        height: 10px;
+    }
+    
+`;
 
 
-const Section = styled.section`
-    height: 80vh;
+const ProgressGreenOne = styled.div`
+    max-width: 40px;
+    height: 5px;
+    background: green;
+    border-radius: 0 15px 15px 0;
+
+    @media screen and (min-width: 860px){
+        max-width: 60px;
+        height: 10px;
+    }
+`;
+
+const ProgressGreenThree = styled.div`
+    max-width: 120px;
+    height: 5px;
+    background: green;
+    border-radius: 0 15px 15px 0;
+
+    @media screen and (min-width: 860px){
+        max-width: 180px;
+        height: 10px;
+    }
+`;
+
+const BackDiv = styled.div`
+    width: 200px;
+    height: 5px;
+    background: aqua;
+    border-radius: 0 15px 15px 0; 
+    border-bottom: 1px solid black;
+
+    @media screen and (min-width: 860px){
+        width: 300px;
+        height: 10px;
+    }
+    
+`;
+
+const BurnIcon = styled(LocalFireDepartmentIcon)`
+    
+    color: red;
+    margin-right: 15px;
+`;
+
+const TeamIcon = styled(GroupsIcon)`
+    
+    color: orange;
+    margin-right: 15px;
+`;
+
+const BuyBackIcon = styled(MonetizationOnIcon)`
+    
+    color: green;
+    margin-right: 15px;
+`;
+
+const LiquidityIcon = styled(InvertColorsIcon)`
+    
+    color: blue;
+    margin-right: 15px;
+`;
+
+const ReflexionsIcon = styled(ScreenShareIcon)`
+    
+    color: ${props => props.theme.text};
+    margin-right: 18px;
+`;
+
+const MarketingIcon = styled(AddBusinessIcon)`
+    
+    color: purple;
+    margin-right: 18px;
+`;
+
+const ProgressList = styled.ul`
     display: flex;
-    justify-content: center;
     align-items: center;
-    background: black;
-    height: 780px;
-    overflow: hidden;
+    justify-content: center;
+    height: 40px;
+
+    @media screen and (min-width: 860px){
+        width: 400px;
+    }
+    
 `;
+
+
 
 const Container = styled.div`
+    color: black;
+    background: white;
+
+    
+`;
+
+const InfoWrapper = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 80vh;
-    padding: 2rem calc(100vw - 1300px / 2 );
+    z-index: 1;
+    height: 860px;
+    width: 100%;
     
-    @media screen and (max-width: 768px) {
-        //grid-template-columns: 1fr;
-    }
-`;
-
-
-const ColumnLeft = styled.div`
-    display: flex;
-    color: whitesmoke;
-    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 24px;
     justify-content: center;
-    align-items: flex-start;
-    //padding: 6rem 1rem;
-    margin-top: 5rem;
-    z-index: 10;
-    
+    background: black;
 
-    @media screen and (max-width: 768px) {
-        align-items: left;
-        margin-left: 60px;
-    }
-
-    h1 {
-      
-      font-size: 3rem;  
-      text-shadow: -1px 1px 0 whitesmoke,
-                          4px 6px 0 black,
-                         1px -1px 0 #000,
-                        -1px -1px 0 #000;
-
-      @media screen and (max-width: 768px) {
-        font-size: 30px;
-        text-align: left;
-        
-        
-    }
-    }
-
-    p {
-        margin: 0.5rem 0;
-        font-size: 5rem;
-        width: 600px;
-        text-shadow: -1px 1px 0 whitesmoke,
-                          4px 6px 0 black,
-                         1px -1px 0 #000,
-                        -1px -1px 0 #000;
-
-        @media screen and (max-width: 768px) {
-        font-size: 48px;
-        text-align: left;
-        margin-bottom: 60px;
-        width: 250px;
-    }
+    @media screen and (max-width: 860px){
+        height: 1100px;
     }
 `;
 
-const Image = styled(motion.img)`
-    width: 150px;
-    height: 150px;
-    max-width: 250px;
-    max-height: 250px;
-    position: absolute;
-    z-index: 5;
-`;
-
-const ColumnRight = styled.div`
-    display: flex;
-    justify-content: center;
+const InfoRow = styled.div`
+    display: grid;
+    grid-auto-columns:minmax(auto, 1fr);
     align-items: center;
-    padding: 2rem;
-    position: relative;
+    grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
 
-    ${Image}:nth-child(1) {
-        top: 0;
-        right: 50px;
+    @media screen and (max-width: 768px) {
+        grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
     }
-    ${Image}:nth-child(2) {
-        
-    }
-    ${Image}:nth-child(3) {
-        
-        
-    }
-    ${Image}:nth-child(4) {
-        
-    }
-
-    @media screen and (max-width: 880px) {
-        ${Image}:nth-child(1) {
-        
-        }
-        ${Image}:nth-child(2) {
-            
-        }
-        ${Image}:nth-child(3) {
-          
-        }
-        ${Image}:nth-child(4) {
-            
-        }
-    }
-
 `;
 
+const Column1 = styled.div`
+   grid-area: col1; 
+   @media screen and (min-width: 860px){
+        margin-right: 150px;
+    }
+    
+    
+`;
 
+const Column2 = styled.div`
+    
+    grid-area: col2;
+    @media screen and (min-width: 860px){
+        margin-left: 100px;
+    }
+    
+`;
+
+const TextWrapper = styled.div`
+    max-width: 540px;
+    padding-top: 0;
+    padding-bottom: 60px;
+`;
+
+const TopLine = styled.p`
+    color: white;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    margin-bottom: 16px;
+`;
+
+const Heading = styled.h1`
+    margin-bottom: 24px;
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 600;
+    color: white;
+
+    @media screen and (max-width: 480px){
+        font-size: 32px;
+    }
+`;
+
+const Subtitle = styled.p`
+    max-width: 440px;
+    margin-bottom: 35px;
+    font-size: 18px;
+    line-height: 24px;
+    color: white;
+`;
+
+const BtnWrap = styled.div`
+    display: flex;
+    justify-content: flex-start;
+`;
+
+const ImgWrap = styled.div`
+    max-width: 555px;
+    height: 100%;
+`;
+
+const Img = styled.img`
+    width: 100%;
+    margin: 0 0 10px 0;
+    padding-right: 0;
+`;
 
 const NftSection = () => {
 
+    const { ref, inView } = useInView({
+        threshold: 0.2
+    });
+
+    const animation = useAnimation();
     
 
+    useEffect(() => {
+        
+       console.log("BUY TAXES = ", inView); 
+        if(inView){
+          animation.start({
+              width: "100%", 
+              transition: {
+                type: "spring", duration: 6, 
+              }
+          })
+        }
+        if (!inView){
+          animation.start({
+            width: 0,
+          })  
+        }
+    }, [inView]); 
+
+
+
     return(
-        <Section id="nft">
-            <Container>
-                <ColumnLeft>
-                    <motion.h1
-                        initial={{ opacity: 0, x: -300}}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 3}}
-                    >Enter into <br/> the NFT</motion.h1>
-                    <motion.p
-                        initial={{ opacity: 0, x: -300}}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{duration: 3}}
-                    >world by the hands of the best artists</motion.p>
-                    <LinkR to="/TeamPage"><Button 
-                    whileHover={{scale:1.05}} 
-                    whileTap={{backgroundColor:'gold', border: 'none', color: 'black' }}
-                    initial={{ opacity: 0, x: -300}}
-                    animate={{ opacity: 1, x:0, transition: { duration: 3 }}}
-                    >Our collections</Button></LinkR>
-                </ColumnLeft>
-                <ColumnRight>
-                    <Image src={Astronaut} alt="planet" 
-                    whileTap={{scale: 1.2}} 
-                    drag={true}
-                    initial={{x: -20, y:20, opacity: 0, scale: 1}}
-                    /* animate={{x: -20, y:80,  opacity: 1, scale: 2.6, transition: { duration: 9, repeat: Infinity,  repeatType: 'reverse'}}} */ />
-                </ColumnRight>
-            </Container>
-        </Section>
+        <>
+          <Container >
+            <InfoWrapper>
+                <InfoRow>
+                    <Column1>
+                    <div>
+                    <Title>BUY TAXES ( 10% )</Title>
+                    </div>
+                    <ItemTitle>BURNING</ItemTitle>
+                        <ProgressList>
+                            <BurnIcon />
+                            <BackDiv ref={ref}>
+                                <motion.div animate={animation}>
+                                <ProgressGreenOne />
+                                </motion.div>
+                            </BackDiv>
+                            <Text>1%</Text>
+                        </ProgressList>
+                        <ItemTitle>TEAM</ItemTitle>
+                        <ProgressList>
+                            <TeamIcon />
+                            <BackDiv ref={ref}>
+                                <motion.div animate={animation}>
+                                <ProgressGreenOne />
+                                </motion.div>
+                            </BackDiv>
+                            <Text>1%</Text>
+                        </ProgressList>
+                        <ItemTitle>BUYBACK</ItemTitle>
+                        <ProgressList>
+                            <BuyBackIcon />
+                            <BackDiv ref={ref}>
+                                <motion.div animate={animation}>
+                                <ProgressGreenOne />
+                                </motion.div>
+                            </BackDiv>
+                            <Text>1%</Text>
+                        </ProgressList>
+                        <ItemTitle>LIQUIDITY</ItemTitle>
+                        <ProgressList>
+                            <LiquidityIcon />
+                            <BackDiv ref={ref}>
+                                <motion.div animate={animation}>
+                                <ProgressGreenOne />
+                                </motion.div>
+                            </BackDiv>
+                            <Text>1%</Text>
+                        </ProgressList>
+                        <ItemTitle>BNB REFLECTIONS</ItemTitle>
+                        <ProgressList>
+                            <ReflexionsIcon />
+                            <BackDiv ref={ref}>
+                                <motion.div animate={animation}>
+                                <ProgressGreenThree />
+                                </motion.div>
+                            </BackDiv>
+                            <Text>3%</Text>
+                        </ProgressList>
+                        <ItemTitle>MARKETING</ItemTitle>
+                        <ProgressList>
+                            <MarketingIcon />
+                            <BackDiv ref={ref}>
+                                <motion.div animate={animation}>
+                                <ProgressGreenThree />
+                                </motion.div>
+                            </BackDiv>
+                            <Text>3%</Text>
+                        </ProgressList>
+                    </Column1>
+                    <Column2>
+                    <div>
+                    <Title >SELL TAXES ( 15% )</Title>
+                    </div>
+                    <ItemTitle>BURNING</ItemTitle>
+                        <ProgressList>
+                            <BurnIcon />
+                            <BackDiv ref={ref}>
+                                <motion.div animate={animation}>
+                                <ProgressRedOne />
+                                </motion.div>
+                            </BackDiv>
+                            <Text>1%</Text>
+                        </ProgressList>
+                        <ItemTitle>TEAM</ItemTitle>
+                        <ProgressList>
+                            <TeamIcon />
+                            <BackDiv ref={ref}>
+                                <motion.div animate={animation}>
+                                <ProgressRedOne />
+                                </motion.div>
+                            </BackDiv>
+                            <Text>1%</Text>
+                        </ProgressList>
+                        <ItemTitle>BUYBACK</ItemTitle>
+                        <ProgressList>
+                            <BuyBackIcon />
+                            <BackDiv ref={ref}>
+                                <motion.div animate={animation}>
+                                <ProgressRedTwo />
+                                </motion.div>
+                            </BackDiv>
+                            <Text>2%</Text>
+                        </ProgressList>
+                        <ItemTitle>LIQUIDITY</ItemTitle>
+                        <ProgressList>
+                            <LiquidityIcon />
+                            <BackDiv ref={ref}>
+                                <motion.div animate={animation}>
+                                <ProgressRedTwo />
+                                </motion.div>
+                            </BackDiv>
+                            <Text>2%</Text>
+                        </ProgressList>
+                        <ItemTitle>BNB REFLECTIONS</ItemTitle>
+                        <ProgressList>
+                            <ReflexionsIcon />
+                            <BackDiv ref={ref}>
+                                <motion.div animate={animation}>
+                                <ProgressRedFour />
+                                </motion.div>
+                            </BackDiv>
+                            <Text>4%</Text>
+                        </ProgressList>
+                        <ItemTitle>MARKETING</ItemTitle>
+                        <ProgressList>
+                            <MarketingIcon />
+                            <BackDiv ref={ref}>
+                                <motion.div animate={animation}>
+                                <ProgressRedFive />
+                                </motion.div>
+                            </BackDiv>
+                            <Text>5%</Text>
+                        </ProgressList>
+                    </Column2>    
+                </InfoRow>    
+            </InfoWrapper>      
+        </Container>  
+        </>
+        
     )
 }
 

@@ -12,6 +12,7 @@ import PartnerSlider from "../components/Sections/PartnerSlider";
 import Tokenomics from "../components/Sections/Tokenomics";
 import Tokenomics2 from "../components/Sections/Tokenomics2";
 import NewsSection from "../components/Sections/NewsSection";
+import NftSection from "../components/Sections/NftSection";
 
 
 
@@ -45,6 +46,7 @@ const Home = () => {
             <NavBar showMenu={showMenu} theme={theme} setTheme={setTheme} setShowMenu={setShowMenu}/>
             <CanvasContainer />
             <NewsSection />
+            <NftSection />
             <Tokenomics /> 
             <Tokenomics2 />
             <RoadMapSection />
