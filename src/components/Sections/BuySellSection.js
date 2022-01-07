@@ -286,7 +286,7 @@ const Img = styled.img`
     padding-right: 0;
 `;
 
-const NftSection = () => {
+const BuySellSection = () => {
 
     const { ref, inView } = useInView({
         threshold: 0.2
@@ -459,4 +459,4 @@ const NftSection = () => {
 }
 
 
-export default NftSection;
+export default BuySellSection;
