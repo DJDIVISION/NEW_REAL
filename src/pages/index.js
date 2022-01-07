@@ -12,7 +12,7 @@ import PartnerSlider from "../components/Sections/PartnerSlider";
 import Tokenomics from "../components/Sections/Tokenomics";
 import Tokenomics2 from "../components/Sections/Tokenomics2";
 import NewsSection from "../components/Sections/NewsSection";
-import BuySellSection from "../components/Sections/BuySellSectionlSection";
+import BuySellSection from "../components/Sections/BuySellSection";
 
 
 
