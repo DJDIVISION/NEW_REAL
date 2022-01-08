@@ -1,8 +1,7 @@
 import * as d3 from "d3";
-import { useInView } from "react-intersection-observer";
 
 const drawChart = (element, data) => {
-  const colors = ["#05BBD2", "#2070C4", "#EB80F1", "#F5C842", "#37D400", "grey", "purple", "white"];
+  const colors = ["#ffa500", "#2070C4", "#EB80F1", "#F5C842", "#37D400", "grey", "purple", "white"];
   const boxSize = 500;
 
   d3.select(element).select("svg").remove(); // Remove the old svg
@@ -23,13 +22,12 @@ const drawChart = (element, data) => {
     return 250 - (maxValue - d.value);
   });
 
-
-  
-
-
   const pieGenerator = d3.pie().value((d) => d.value);
 
   const arcs = svg.selectAll().data(pieGenerator(data)).enter();
+
+  
+
   arcs
     .append("path")
     .attr("d", arcGenerator)
@@ -64,6 +62,8 @@ const drawChart = (element, data) => {
     .transition() 
     .duration(1000)
     .style("font-size", "22px");  
+
+  
 };
 
 export default drawChart;

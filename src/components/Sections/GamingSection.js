@@ -2,9 +2,11 @@
 import React, {useState, useEffect} from 'react';
 import styled, {keyframes} from "styled-components";
 import ChartComponent from "./ChartComponent";
+import { Button } from "@material-ui/core";
 import Tokenomics from "./Tokenomics";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Link as LinkR } from "react-router-dom";
 
 const move = keyframes`
         0% {width: 0}
@@ -164,6 +166,12 @@ const TitleTwo = styled.h1`
     }
 `;
 
+const ButtonStytled = styled(Button)`
+    &&& {
+        color: ${props => props.theme.text};
+    }
+`;
+
 const BuySellSection = () => {
 
     const data = [
@@ -185,14 +193,16 @@ const BuySellSection = () => {
             <InfoWrapper>
                 <InfoRow>
                     <Column1>
-                        <TextWrapper>
-                            <TopLine>HELO MATES!!!</TopLine>
-                            <Heading>Best Donut Pie Ever</Heading>
-                            <Subtitle>VICTOR RULES!!!</Subtitle>
-                        </TextWrapper>
+                    <ChartComponent data={data} />
+                        
                     </Column1>
                     <Column2>
-                        <ChartComponent data={data} />
+                    <TextWrapper>
+                            <TopLine>DAIR</TopLine>
+                            <Heading>TOKENOMICS</Heading>
+                            <Subtitle>VICTOR RULES!!!</Subtitle>
+                            <LinkR to="/TokenomicsPage"><ButtonStytled>READ MORE</ButtonStytled></LinkR>
+                        </TextWrapper>
                     </Column2>
                 </InfoRow>    
             </InfoWrapper>      

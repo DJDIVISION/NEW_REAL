@@ -7,6 +7,7 @@ import HomeNoLoader  from "./pages/HomeNoLoader";
 import PartnersPage from "./pages/PartnersPage";
 import TeamPage from "./pages/TeamPage";
 import NewsPage from "./pages/NewsPage";
+import TokenomicsPage from "./pages/TokenomicsPage";
 import GamingPage from "./pages/GamingPage";
 import RoadMap from "./pages/RoadMap"; 
 import { AnimatePresence } from "framer-motion";
@@ -37,6 +38,7 @@ function App() {
                 <Route exact path="/gamingpage" element={<GamingPage />}/>
                 <Route exact path="/newspage" element={<NewsPage />}/>
                 <Route exact path="/roadmap" element={<RoadMap />}/> 
+                <Route exact path="/tokenomicspage" element={<TokenomicsPage />}/> 
               </Routes>
             </AnimatePresence>
       </ScrollToTop>
