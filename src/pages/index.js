@@ -80,7 +80,7 @@ function HomeLoader () {
     
     return (
         <div>
-            <Loader/>
+            {/* <Loader/> */}
             <Home/>
         </div>
     )
