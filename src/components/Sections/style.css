@@ -51,6 +51,43 @@ from {
     background: red;
 }
 
+.donut {
+    position: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.circle1{
+    stroke-dasharray: 502;
+    stroke-dashoffset: 0;
+}
+
+@keyframes CircleTwo {
+    from {
+        stroke-dasharray: 502;
+        }
+        to {
+        stroke-dasharray: 460;
+        }
+    }
+
+    @keyframes CircleTwo {
+        from {
+            stroke-dasharray: 460;
+            }
+            to {
+            stroke-dasharray: 400;
+            }
+        }
+
+.circle2{
+    stroke-dasharray: 460;
+    
+}
+
+.circle3{
+    stroke-dasharray: 400;
+    
+}
 
 

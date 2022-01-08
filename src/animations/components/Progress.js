@@ -3,6 +3,7 @@ import styled, { keyframes } from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
 import "./style.css";
 
+
 const ProgressBar = styled.div`
     width: 250px;
     height: 5px;
@@ -66,7 +67,7 @@ export function ProgressCircle() {
                 <circle className="progress-circle" cx="75" cy="75" r="70" fill="transparent" stroke="aqua" strokeWidth="4px"/>
                 <motion.text initial={{opacity: 0}} animate={{opacity:1 }} transition={{ delay: 9.5}} fill="aqua" x="45" y="85" text-anchor="middle" alignment-baseline="middle" fontSize="32px">GO!</motion.text>
             </svg>
-        </Circle>
+        </Circle> 
         <ProgressBar>
             <Progress>
                 <AnimatePresence>
