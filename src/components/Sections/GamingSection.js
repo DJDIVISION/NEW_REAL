@@ -16,10 +16,10 @@ const InfoWrapper = styled.div`
     width: 100%;
     justify-content: center;
     background: ${props => props.theme.body};
-    overflow: hidden;
+    
 
     @media screen and (max-width: 860px){
-        height: 900vh;
+        height: 90vh;
     }
 `;
 
