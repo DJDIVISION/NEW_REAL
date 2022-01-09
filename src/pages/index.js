@@ -48,7 +48,7 @@ const Home = () => {
             <NewsSection /> 
             <DonutSection />
             <BuySellSection />
-            {/* <PartnerSlider />  */}
+            <PartnerSlider />
             <Footer />
         </motion.div>
         </ThemeProvider>

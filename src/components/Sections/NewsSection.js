@@ -9,9 +9,7 @@ import "./style.css";
 
 import { TwitterShareButton, TwitterIcon, FacebookShareButton, FacebookIcon, LinkedinIcon, LinkedinShareButton, EmailIcon, EmailShareButton} from "react-share";
 
-/* import TwitterIcon from '@mui/icons-material/Twitter';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import LinkedInIcon from '@mui/icons-material/LinkedIn'; */
+
 
 import FortisLogo from "../../images/fortis_logo.png";
 import DWLogo from "../../images/dw_aqua_logo.jpg";
@@ -38,6 +36,7 @@ const Carroussel = styled.div`
         color: grey;
         transform: scale(1.4);
     }
+    
     
 
     @media screen and (max-width: 860px) {

@@ -3,9 +3,6 @@ import React, {useState, useEffect} from 'react';
 import styled, {keyframes} from "styled-components";
 import ChartComponent from "./ChartComponent";
 import { Button } from "@material-ui/core";
-import Tokenomics from "./Tokenomics";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import { Link as LinkR } from "react-router-dom";
 
 const StyledButton = styled(Button)`
