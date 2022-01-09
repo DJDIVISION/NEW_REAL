@@ -9,31 +9,9 @@ import Footer from '../components/Footer';
 import CanvasContainer from "../animations/Planet"
 import PartnerSlider from "../components/Sections/PartnerSlider";
 
-
 import NewsSection from "../components/Sections/NewsSection";
-import BuySellSection from "../components/Sections/BuySellSection";
-import GamingSection from "../components/Sections/GamingSection";
+import PieChartSection from "../components/Sections/GamingSection";
 
-const donutData = [
-    {name: "<5", value: 19},
-    {name: "5-9", value: 20},
-    {name: "10-14", value: 19},
-    {name: "15-19", value: 24},
-    {name: "20-24", value: 22},
-    {name: "25-29", value: 29},
-    {name: "30-34", value: 22},
-    {name: "35-39", value: 18},
-    {name: "40-44", value: 23},
-    {name: "45-49", value: 19},
-    {name: "50-54", value: 16},
-    {name: "55-59", value: 19},
-    {name: "60-64", value: 28},
-    {name: "65-69", value: 17},
-    {name: "70-74", value: 20},
-    {name: "75-79", value: 17},
-    {name: "80-84", value: 18},
-    {name: "≥85", value: 21}
-   ]
 
 
 
@@ -65,12 +43,12 @@ const Home = () => {
         <ThemeProvider theme={themes[theme]}>
         <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
             <NavBar showMenu={showMenu} theme={theme} setTheme={setTheme} setShowMenu={setShowMenu}/>
-            {/* <CanvasContainer /> */}
-            <NewsSection />
-            <GamingSection data={donutData}/>
-            <BuySellSection />
+            {/* <CanvasContainer />
+            <NewsSection /> */}
+            <PieChartSection />
+            {/* <BuySellSection />
             <PartnerSlider /> 
-            <Footer /> 
+            <Footer />  */}
         </motion.div>
         </ThemeProvider>
     );
@@ -80,7 +58,7 @@ function HomeLoader () {
     
     return (
         <div>
-            {/* <Loader/> */}
+            <Loader/>
             <Home/>
         </div>
     )
@@ -90,4 +68,4 @@ function HomeLoader () {
 
 
 
-export default HomeLoader;
+export default Home;

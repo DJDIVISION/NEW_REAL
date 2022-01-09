@@ -145,6 +145,8 @@ const Circle = styled.div`
 
 const RoadMap = (props) => {
 
+    const [theme, setTheme] = useState("dark");
+
     const ref = useRef(null);
 
     const planet = useRef(null);
@@ -197,14 +199,10 @@ const RoadMap = (props) => {
     `;
 
     return (
-        
+        <ThemeProvider theme={themes[theme]}>
         <motion.div initial="out" animate="end" exit="out" variants={animationThree}>
-        
-            
                <Text>2022</Text>
-               
               <Center click={click}>
-                
               <Circle>
                 <svg width="150" height="150" onClick={scrollToOne}>
                     <circle className="progress-infinite" cx="75" cy="75" r="40" fill="transparent" stroke="aqua" strokeWidth="4px"/>
@@ -218,13 +216,7 @@ const RoadMap = (props) => {
                     <circle className="progress-infinite" cx="75" cy="75" r="40" fill="transparent" stroke="aqua" strokeWidth="4px"/>
                     <motion.text  initial={{opacity: 0}} animate={{opacity:1}} transition={{duration: 5}} fill="aqua" x="55" y="85" text-anchor="middle" alignment-baseline="middle" fontSize="22px">3QT</motion.text>
                 </svg>
-                
             </Circle>
-                
-               {/* <IconQone onClick={scrollToOne} width={click ? 60 : 80} height={click ? 60 : 80} color="white"/>
-               <IconQtwo onClick={scrollToTwo} width={click ? 60 : 80} height={click ? 60 : 80} color="white"/>
-               <IconQthree onClick={scrollToThree} width={click ? 60 : 80} height={click ? 60 : 80} color="white"/>  */}
-                
             </Center>  
             <Box>
             
@@ -244,6 +236,7 @@ const RoadMap = (props) => {
             </Box>
             <TextJourney className="text2">CHOOSE DESTINATION</TextJourney>
         </motion.div>
+        </ThemeProvider>
         
     )
 }

@@ -8,48 +8,17 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Link as LinkR } from "react-router-dom";
 
-const move = keyframes`
-        0% {width: 0}
-        80% {width: 100%}
-        100%{width: 0, delay:1}
-    `;
-
-const Title = styled.h3`
-    font-size: 32px;
-    color: ${props => props.theme.text};
-    text-align: center;
-    margin: 25px;
-
-    @media screen and (max-width:860px){
-        font-size: 20px;
-    }
-`;
-
-
-
-
-
-const Container = styled.div`
-    color: black;
-    background: white;
-
-    
-`;
 
 const InfoWrapper = styled.div`
     display: grid;
     z-index: 1;
-    height: 860px;
+    height: 100vh;
     width: 100%;
-    
-    margin-right: auto;
-    margin-left: auto;
-    padding: 0 24px;
     justify-content: center;
-    background: black;
+    background: ${props => props.theme.body};
 
     @media screen and (max-width: 860px){
-        height: 1100px;
+        height: 100vh;
     }
 `;
 
@@ -57,6 +26,7 @@ const InfoRow = styled.div`
     display: grid;
     grid-auto-columns:minmax(auto, 1fr);
     align-items: center;
+    
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
 
     @media screen and (max-width: 768px) {
@@ -65,16 +35,18 @@ const InfoRow = styled.div`
 `;
 
 const Column1 = styled.div`
-   grid-area: col1; 
-   @media screen and (min-width: 860px){
-        margin-right: 150px;
+   grid-area: col1;
+   width: 400px;
+   height: 500px; 
+   @media screen and (max-width: 860px){
+        width: 300px;
+        height: 400px;
+        margin-top: 40px;
+        margin-left: 25px;
     }
-    
-    
 `;
 
 const Column2 = styled.div`
-    
     grid-area: col2;
     @media screen and (min-width: 860px){
         margin-left: 100px;
@@ -89,12 +61,15 @@ const TextWrapper = styled.div`
 `;
 
 const TopLine = styled.p`
-    color: white;
-    font-size: 16px;
+    color: ${props => props.theme.text};
+    font-size: 32px;
     line-height: 16px;
     font-weight: 700;
     letter-spacing: 1.4px;
     margin-bottom: 16px;
+    margin-top: 30px;
+
+    
 `;
 
 const Heading = styled.h1`
@@ -102,77 +77,91 @@ const Heading = styled.h1`
     font-size: 48px;
     line-height: 1.1;
     font-weight: 600;
-    color: white;
+    color: ${props => props.theme.text};
 
     @media screen and (max-width: 480px){
         font-size: 32px;
     }
 `;
 
-const Subtitle = styled.p`
-    max-width: 440px;
-    margin-bottom: 35px;
-    font-size: 18px;
-    line-height: 24px;
+const List = styled.ul`
+    max-width: 540px;
+    height: 30px;
+`;
+
+const ListItems = styled.li`
     color: white;
-`;
-
-const BtnWrap = styled.div`
-    display: flex;
-    justify-content: flex-start;
-`;
-
-const ImgWrap = styled.div`
-    max-width: 555px;
-    height: 100%;
-`;
-
-const Img = styled.img`
-    width: 100%;
-    margin: 0 0 10px 0;
-    padding-right: 0;
-`;
-
-const Background = styled.div`
-    width: 100%;
-    height: 100%;
-    background: ${props => props.theme.body};
-    display: flex;
-    flex-direction: column;
+    display: inline-flex;
     align-items: center;
-    position: relative;
+    margin-top: -50px;
+    
+`;
+
+const Type = styled.h4`
+    font-size: 18px;
+    margin-right: 10px;
 
 `;
 
-const TitleOne = styled.h1`
-    font-size: 32px;
-    color: ${props => props.theme.text};
-    text-align: center;
-    margin: 40px;
-
-    @media screen and (max-width:860px){
-        font-size: 22px;
-    }
+const Orange = styled.div`
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: orange;
+    margin-right: 5px;
+`;
+const Blue = styled.div`
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #2070C4;
+    margin-right: 5px;
+`;
+const Yellow = styled.div`
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: yellow;
+    margin-right: 5px;
+`;
+const Green = styled.div`
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: green;
+    margin-right: 5px;
+`;
+const Purple = styled.div`
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: purple;
+    margin-right: 5px;
+`;
+const Red = styled.div`
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: red;
+    margin-right: 5px;
+`;
+const Pink = styled.div`
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #EB80F1;
+    margin-right: 5px;
+`;
+const Grey = styled.div`
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: grey;
+    margin-right: 5px;
 `;
 
-const TitleTwo = styled.h1`
-    font-size: 30px;
-    color: ${props => props.theme.text};
-    position: fixed;
-    margin-top: 185px;
 
-    @media screen and (max-width:860px){
-        margin-top: 200px;
-    }
-`;
-
-const ButtonStytled = styled(Button)`
-    &&& {
-        color: ${props => props.theme.text};
-    }
-`;
-
-const BuySellSection = () => {
+const PieChartSection = () => {
 
     const data = [
         { value: 40, name: "SALE" },
@@ -189,28 +178,63 @@ const BuySellSection = () => {
 
     return(
         <>
-          <Container >
+          
             <InfoWrapper>
                 <InfoRow>
                     <Column1>
-                    <ChartComponent data={data} />
-                        
+                    <ChartComponent data={data} />=
                     </Column1>
                     <Column2>
-                    <TextWrapper>
+                        <List>
+                            <ListItems>
+                                <Orange />
+                                <Type>SALES</Type>
+                            </ListItems>
+                            <ListItems>
+                                <Blue />
+                                <Type>LIQUIDITY</Type>
+                            </ListItems>
+                            <ListItems>
+                                <Yellow />
+                                <Type>ADVISORS</Type>
+                            </ListItems>
+                        </List>
+                        <List>
+                            <ListItems>
+                                <Green />
+                                <Type>CEX RESERVE</Type>
+                            </ListItems>
+                            <ListItems>
+                                <Purple />
+                                <Type>TEAM</Type>
+                            </ListItems>
+                            <ListItems>
+                                <Red />
+                                <Type>GIVEAWAYS</Type>
+                            </ListItems>
+                        </List>
+                        <List>
+                            <ListItems>
+                                <Pink />
+                                <Type>PLAY TO EARN</Type>
+                            </ListItems>
+                            <ListItems>
+                                <Grey />
+                                <Type>MARKETING</Type>
+                            </ListItems>
+                        </List>
+                        <TextWrapper>
                             <TopLine>DAIR</TopLine>
                             <Heading>TOKENOMICS</Heading>
-                            <Subtitle>VICTOR RULES!!!</Subtitle>
-                            <LinkR to="/TokenomicsPage"><ButtonStytled>READ MORE</ButtonStytled></LinkR>
                         </TextWrapper>
                     </Column2>
                 </InfoRow>    
             </InfoWrapper>      
-        </Container>  
+       
         </>
         
     )
 }
 
 
-export default BuySellSection;
+export default PieChartSection;

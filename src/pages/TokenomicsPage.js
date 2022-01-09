@@ -1,6 +1,10 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import { motion } from "framer-motion";
+import { ThemeProvider } from "styled-components";
+import { themes } from "../components/Themes";
 import NavBar from "../components/NavBar";
 import GamingSection from "../components/Sections/GamingSection";
+import { animationThree } from "../animations";
 
 
 const donutData = [
@@ -25,10 +29,17 @@ const donutData = [
    ]
 
 const TokenomicsPage = () => {
+
+    const [theme, setTheme] = useState("dark");
+
     return (
         <>
-        <NavBar />
-        <GamingSection data={donutData}/>
+        <ThemeProvider theme={themes[theme]}>
+            <motion.div >
+                <NavBar />
+                <GamingSection data={donutData}/>
+            </motion.div>
+        </ThemeProvider>
         </>
     )
 }
