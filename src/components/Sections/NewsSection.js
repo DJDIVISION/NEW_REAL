@@ -28,8 +28,7 @@ const Carroussel = styled.div`
     
     
     .slick-arrow:before{
-        color: ${props => props.theme.text};
-        font-size: 1.5rem;
+        display: none;
     }
 
     .slick-dots button:before{
