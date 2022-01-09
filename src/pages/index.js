@@ -11,6 +11,7 @@ import PartnerSlider from "../components/Sections/PartnerSlider";
 
 import BuySellSection from "../components/Sections/BuySellSection";
 import DonutSection from "../components/Sections/DonutSection";
+import NewsSection from "../components/Sections/NewsSection";
 
 
 
@@ -43,11 +44,11 @@ const Home = () => {
         <ThemeProvider theme={themes[theme]}>
         <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
             <NavBar showMenu={showMenu} theme={theme} setTheme={setTheme} setShowMenu={setShowMenu}/>
-            {/* <CanvasContainer />
-            <NewsSection /> */}
+            {/* <CanvasContainer />*/}
+            <NewsSection /> 
             <DonutSection />
             <BuySellSection />
-            <PartnerSlider /> 
+            {/* <PartnerSlider />  */}
             <Footer />
         </motion.div>
         </ThemeProvider>
