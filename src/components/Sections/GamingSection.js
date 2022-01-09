@@ -16,9 +16,10 @@ const InfoWrapper = styled.div`
     width: 100%;
     justify-content: center;
     background: ${props => props.theme.body};
+    overflow: hidden;
 
     @media screen and (max-width: 860px){
-        height: 100vh;
+        height: 900vh;
     }
 `;
 
@@ -42,7 +43,7 @@ const Column1 = styled.div`
         width: 300px;
         height: 400px;
         margin-top: 40px;
-        margin-left: 25px;
+        margin-left: 20px;
     }
 `;
 
