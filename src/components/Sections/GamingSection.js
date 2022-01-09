@@ -100,6 +100,9 @@ const ListItems = styled.li`
 const Type = styled.h4`
     font-size: 18px;
     margin-right: 10px;
+    @media screen and (max-width: 860px){
+        font-size: 16px;
+    }
 
 `;
 
@@ -109,6 +112,10 @@ const Orange = styled.div`
     border-radius: 50%;
     background: orange;
     margin-right: 5px;
+    @media screen and (max-width: 860px){
+        width: 15px;
+        height: 15px;
+    }
 `;
 const Blue = styled.div`
     width: 20px;
@@ -116,6 +123,10 @@ const Blue = styled.div`
     border-radius: 50%;
     background: #2070C4;
     margin-right: 5px;
+    @media screen and (max-width: 860px){
+        width: 15px;
+        height: 15px;
+    }
 `;
 const Yellow = styled.div`
     width: 20px;
@@ -123,6 +134,10 @@ const Yellow = styled.div`
     border-radius: 50%;
     background: yellow;
     margin-right: 5px;
+    @media screen and (max-width: 860px){
+        width: 15px;
+        height: 15px;
+    }
 `;
 const Green = styled.div`
     width: 20px;
@@ -130,6 +145,10 @@ const Green = styled.div`
     border-radius: 50%;
     background: green;
     margin-right: 5px;
+    @media screen and (max-width: 860px){
+        width: 15px;
+        height: 15px;
+    }
 `;
 const Purple = styled.div`
     width: 20px;
@@ -137,6 +156,10 @@ const Purple = styled.div`
     border-radius: 50%;
     background: purple;
     margin-right: 5px;
+    @media screen and (max-width: 860px){
+        width: 15px;
+        height: 15px;
+    }
 `;
 const Red = styled.div`
     width: 20px;
@@ -144,6 +167,10 @@ const Red = styled.div`
     border-radius: 50%;
     background: red;
     margin-right: 5px;
+    @media screen and (max-width: 860px){
+        width: 15px;
+        height: 15px;
+    }
 `;
 const Pink = styled.div`
     width: 20px;
@@ -151,6 +178,10 @@ const Pink = styled.div`
     border-radius: 50%;
     background: #EB80F1;
     margin-right: 5px;
+    @media screen and (max-width: 860px){
+        width: 15px;
+        height: 15px;
+    }
 `;
 const Grey = styled.div`
     width: 20px;
@@ -158,6 +189,10 @@ const Grey = styled.div`
     border-radius: 50%;
     background: grey;
     margin-right: 5px;
+    @media screen and (max-width: 860px){
+        width: 15px;
+        height: 15px;
+    }
 `;
 
 
