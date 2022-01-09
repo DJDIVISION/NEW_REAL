@@ -3,17 +3,19 @@ import React, {useState, useEffect} from 'react';
 import styled, {keyframes} from "styled-components";
 import ChartComponent from "../components/Sections/ChartComponent";
 import { Button } from "@material-ui/core";
-
 import { motion } from "framer-motion";
 import { ThemeProvider } from "styled-components";
 import { themes } from "../components/Themes";
 import NavBar from "../components/NavBar";
 import BuySellSection from "../components/Sections/BuySellSection";
 import { animationThree } from "../animations";
-
-
-
 import { Link as LinkR } from "react-router-dom";
+
+const scale = keyframes`
+    0% { transform: scale(1)}
+    50% { transform: scale(1.5)}
+    100% { transform: scale(1)}
+`;
 
 const StyledButton = styled(Button)`
     &&& {
@@ -102,6 +104,7 @@ const Heading = styled.h1`
 const List = styled.ul`
     max-width: 540px;
     height: 30px;
+    
 `;
 
 const ListItems = styled.li`
@@ -109,6 +112,7 @@ const ListItems = styled.li`
     display: inline-flex;
     align-items: center;
     margin-top: -50px;
+    
     
     
 `;
@@ -128,6 +132,8 @@ const Orange = styled.div`
     border-radius: 50%;
     background: orange;
     margin-right: 5px;
+    animation: ${scale} 0.5s linear;
+    animation-delay: 1s;
     @media screen and (max-width: 860px){
         width: 15px;
         height: 15px;
@@ -139,6 +145,8 @@ const Blue = styled.div`
     border-radius: 50%;
     background: #2070C4;
     margin-right: 5px;
+    animation: ${scale} 0.5s linear;
+    animation-delay: 1s;
     @media screen and (max-width: 860px){
         width: 15px;
         height: 15px;
@@ -150,6 +158,8 @@ const Yellow = styled.div`
     border-radius: 50%;
     background: yellow;
     margin-right: 5px;
+    animation: ${scale} 0.5s linear;
+    animation-delay: 1s;
     @media screen and (max-width: 860px){
         width: 15px;
         height: 15px;
@@ -161,6 +171,8 @@ const Green = styled.div`
     border-radius: 50%;
     background: green;
     margin-right: 5px;
+    animation: ${scale} 0.5s linear;
+    animation-delay: 1.5s;
     @media screen and (max-width: 860px){
         width: 15px;
         height: 15px;
@@ -172,6 +184,8 @@ const Purple = styled.div`
     border-radius: 50%;
     background: purple;
     margin-right: 5px;
+    animation: ${scale} 0.5s linear;
+    animation-delay: 1.5s;
     @media screen and (max-width: 860px){
         width: 15px;
         height: 15px;
@@ -183,6 +197,8 @@ const Red = styled.div`
     border-radius: 50%;
     background: red;
     margin-right: 5px;
+    animation: ${scale} 0.5s linear;
+    animation-delay: 1.5s;
     @media screen and (max-width: 860px){
         width: 15px;
         height: 15px;
@@ -194,6 +210,8 @@ const Pink = styled.div`
     border-radius: 50%;
     background: #EB80F1;
     margin-right: 5px;
+    animation: ${scale} 0.5s linear;
+    animation-delay: 2s;
     @media screen and (max-width: 860px){
         width: 15px;
         height: 15px;
@@ -205,6 +223,8 @@ const Grey = styled.div`
     border-radius: 50%;
     background: grey;
     margin-right: 5px;
+    animation: ${scale} 0.5s linear;
+    animation-delay: 2s;
     @media screen and (max-width: 860px){
         width: 15px;
         height: 15px;
