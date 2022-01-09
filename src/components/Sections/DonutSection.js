@@ -98,7 +98,7 @@ const List = styled.ul`
 `;
 
 const ListItems = styled.li`
-    color: white;
+    color: ${props => props.theme.text};
     display: inline-flex;
     align-items: center;
     margin-top: -50px;

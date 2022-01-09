@@ -211,7 +211,7 @@ const InfoWrapper = styled.div`
     margin-left: auto;
     padding: 0 24px;
     justify-content: center;
-    background: black;
+    background: ${props => props.theme.body};;
 
     @media screen and (max-width: 860px){
         height: 1100px;

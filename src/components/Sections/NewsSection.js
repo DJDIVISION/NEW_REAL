@@ -226,7 +226,9 @@ const Section = styled.div`
 `;
 
 const SharingButton = styled(ShareIcon)`
-    background: red;
+    background: lightgrey;
+    border-radius: 50%;
+    transform: scale(0.9);
 `;
 
 
