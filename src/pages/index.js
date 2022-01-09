@@ -9,8 +9,8 @@ import Footer from '../components/Footer';
 import CanvasContainer from "../animations/Planet"
 import PartnerSlider from "../components/Sections/PartnerSlider";
 
-import NewsSection from "../components/Sections/NewsSection";
-import PieChartSection from "../components/Sections/GamingSection";
+import BuySellSection from "../components/Sections/BuySellSection";
+import DonutSection from "../components/Sections/DonutSection";
 
 
 
@@ -45,10 +45,10 @@ const Home = () => {
             <NavBar showMenu={showMenu} theme={theme} setTheme={setTheme} setShowMenu={setShowMenu}/>
             {/* <CanvasContainer />
             <NewsSection /> */}
-            <PieChartSection />
-            {/* <BuySellSection />
+            <DonutSection />
+            <BuySellSection />
             <PartnerSlider /> 
-            <Footer />  */}
+            <Footer />
         </motion.div>
         </ThemeProvider>
     );
