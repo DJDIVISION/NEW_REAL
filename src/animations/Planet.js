@@ -17,12 +17,18 @@ const CanvasContainer = styled.div`
     width: 100%;
     height: 800px;
     background-color: ${props => props.theme.body};
+
+    @media screen and (max-width: 860px){
+        height: 500px;
+        width: 100vw;
+    }
 `;
 
 const Planet = () => {
     return (
         <motion.div>
         <CanvasContainer id="planet">
+            <Both />
             <Canvas>
                 <Suspense fallback={null}>
                     <Earth />

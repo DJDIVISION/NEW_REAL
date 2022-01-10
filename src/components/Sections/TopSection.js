@@ -5,7 +5,7 @@ import CanvasContainer from "../../animations/Planet"
 
 const Container = styled.div`
     width: 100%;
-    height: 90vh;
+    height: 80vh;
     display: grid;
 
     @media screen and (min-width: 860px){
@@ -18,6 +18,15 @@ const ColumnLeft = styled.div`
 `;
 const ColumnRight = styled.div`
     background: black;
+    display: flex;
+    align-items: right;
+    justify-content: center;
+
+`;
+
+const Text = styled.h1`
+    font-size: 48px;
+    color: white;
 `;
 
 
@@ -29,7 +38,9 @@ const TopSection = () => {
             <ColumnLeft>
                 <CanvasContainer />
             </ColumnLeft>
-            <ColumnRight />
+            <ColumnRight>
+                
+            </ColumnRight>
         </Container>
     )
 }
