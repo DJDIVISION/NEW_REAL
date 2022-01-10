@@ -23,7 +23,6 @@ const Planet = () => {
     return (
         <motion.div>
         <CanvasContainer id="planet">
-            <Both />
             <Canvas>
                 <Suspense fallback={null}>
                     <Earth />

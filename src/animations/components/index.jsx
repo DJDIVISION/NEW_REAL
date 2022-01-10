@@ -28,14 +28,14 @@ export function Earth(props){
         <>
             {/* <ambientLight intensity={1} /> */}
             <pointLight color="whitesmoke" position={[1, 0, 5]} intensity={1.2} />
-            <Stars
+            {/* <Stars
                 radius={300}
                 depth={60}
                 count={20000}
                 factor={7}
                 saturation={0}
                 fade={true}
-            />
+            /> */}
             <mesh ref={cloudsRef} position={[0, 0, 3]}>
                 <sphereGeometry args={[1.005, 32, 32]} />
                 <meshPhongMaterial
@@ -50,6 +50,7 @@ export function Earth(props){
                 <sphereGeometry args={[1, 32, 32]}/>
                 <meshPhongMaterial specularMap={specularMap}  />  
                 <meshStandardMaterial map={colorMap} normalMap={normalMap} />
+                <OrbitControls enableRotate={true} />
                 {/* <OrbitControls enableZoom={true} enablePan={true} enableRotate={true} zommSpeed={0.6} panSpeed={0.5} rotateSpeed={0.4} metalness={0.8} roughness={0.7}/>  */}
             </mesh>
         </>
