@@ -44,10 +44,9 @@ const Column1 = styled.div`
    width: 400px;
    height: 500px; 
    @media screen and (max-width: 860px){
-        width: 300px;
-        height: 280px;
-        
-        margin-left: 20px;
+        width: 250px;
+        height: 250px;
+        margin-left: 30px;
     }
 `;
 

@@ -20,7 +20,7 @@ const HomeIcon = styled(DoubleArrowIcon)`
     transform: rotate(180deg) scale(2);
     position: absolute;
     margin-left: 15px;
-    margin-top: 72vh;
+    margin-top: 70vh;
     
 `;
 
@@ -28,7 +28,7 @@ const HomeText = styled.h2`
     color: white;
     position: absolute;
     margin-left: 50px;
-    margin-top: 72vh;
+    margin-top: 70vh;
 `;
 
 
@@ -241,10 +241,10 @@ const RoadMap = (props) => {
             <Rotate ref={planet}>
                 <DairSVG  onClick={toggleHome} width={110} height={110} x={10} fill="white"/>
             </Rotate>
-            <NavLink to="/HomeNoLoader"><HomeIcon /></NavLink><HomeText>HOME</HomeText>
+            <NavLink to="/"><HomeIcon /></NavLink><HomeText>HOME</HomeText>
             
             </Box>
-            <TextJourney className="text2">CHOOSE DESTINATION</TextJourney>
+            
         </motion.div>
         </ThemeProvider>
         
