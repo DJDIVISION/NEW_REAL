@@ -12,6 +12,7 @@ import { RoadData } from "../components/data/RoadMapData" ;
 import { Link } from "react-scroll";
 import { animateScroll as scroll } from "react-scroll";
 import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
+import Planet from "../images/planet20.png";
 
 
 const HomeIcon = styled(DoubleArrowIcon)`
@@ -92,9 +93,16 @@ const Box = styled.div`
     height: 1600vh;
     position: relative;
     overflow: hidden;
+    background-image: url(${Planet});
+    
+    
+    
+    
 
     @media screen and (max-width: 860px){
         height: 1600vh;
+        background-position: center;
+        
     }
 `;
 

@@ -248,11 +248,11 @@ const TokenomicsPage = () => {
         { value: 4, name: "MARKETING" }
       ];
 
-    const [theme, setTheme] = useState("dark");
+    
 
     return (
         <>
-        <ThemeProvider theme={themes[theme]}>
+            
             <motion.div >
                 <NavBar />
                 <InfoWrapper>
@@ -310,7 +310,7 @@ const TokenomicsPage = () => {
             </InfoWrapper>
                 <BuySellSection />
             </motion.div>
-        </ThemeProvider>
+        
         </>
     )
 }
