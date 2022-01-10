@@ -12,7 +12,7 @@ import { RoadData } from "../components/data/RoadMapData" ;
 import { Link } from "react-scroll";
 import { animateScroll as scroll } from "react-scroll";
 import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
-import Planet from "../images/planet20.png";
+import Planet from "../images/back2.png";
 
 
 const HomeIcon = styled(DoubleArrowIcon)`
@@ -94,6 +94,8 @@ const Box = styled.div`
     position: relative;
     overflow: hidden;
     background-image: url(${Planet});
+    
+    background-size: contain;
     
     
     
