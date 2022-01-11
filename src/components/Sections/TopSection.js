@@ -151,7 +151,7 @@ const MenuContainer = styled(motion.div)`
     border-radius: 20px;
     margin-top: -75vh;
     z-index: 200;
-    left: 12.5%;
+    left: 37.5%;
     
     
 
@@ -159,6 +159,7 @@ const MenuContainer = styled(motion.div)`
         margin-top: -80vh;
         width: 85vw;
         height: 70vh;
+        left: 12.5%;
     }
 `;
 
