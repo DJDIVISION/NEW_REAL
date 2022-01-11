@@ -5,6 +5,8 @@ import { IconButton } from "@material-ui/core";
 import { Link as LinkS } from "react-scroll";
 import { MenuContext } from "./context";
 
+import Moon from "../../images/MoonDivide.png";
+
 
 import CanvasContainer from "../../animations/Planet";
 import MenuIcon from '@mui/icons-material/Menu';
@@ -73,12 +75,13 @@ const ColumnLeft = styled.div`
     width: 50%;
     height: 700px;
     @media screen and (min-width: 1100px){
-        
+        padding-left: 100px;
     }
 
-    @media screen and (max-width: 900px){
+    @media screen and (max-width: 1100px){
         width: 100%;
         transform: scale(0.85);
+        margin-left: 15px;
         
     }
 `;
@@ -89,13 +92,14 @@ const ColumnRight = styled.div`
     align-items: center;
     justify-content: center;
     text-align: right;
-    
+    padding-right: 150px;
     
     width: 50%;
     height: 700px;
     @media screen and (max-width: 900px){
         width: 100%;
         margin-top: -500px;
+        padding-right: 0;
     }
 
 `;
@@ -218,6 +222,46 @@ const IconContainer = styled.div`
     }
 `;
 
+const Section = styled.div`
+    background-image: url(${Moon});
+    height: 240px;
+    width: 100%;
+    
+    z-index: 100;
+    
+    background-size: cover;
+    background-color: ${props => props.theme.body};
+    @media screen and (max-width: 1000px){
+        height: 50px;
+    }
+
+    
+    
+`;
+const TitleSection = styled.div`
+    height: 200px;
+    width: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: 1000px){
+        height: 60px;
+    }
+`;
+
+const Text = styled.h2`
+    font-size: 140px;
+    color: black;
+    display: flex;
+    font-family: "Alphacentauri";
+    @media screen and (max-width: 1100px){
+        font-size: 48px;
+    }
+    
+`;
+
 const DropDownMenu = () => {
 
     const { active , setActive } = useContext(MenuContext);
@@ -232,6 +276,7 @@ const DropDownMenu = () => {
     else if (active === "menuTwo") animate = { opacity: 1, y: -20, scale: 1.1, };
 
     return(
+        <>
         <MenuContainer animate={animate} initial={{opacity: 0}}>
             <MenuOverview >
                     <MenuItem>
@@ -260,6 +305,11 @@ const DropDownMenu = () => {
                     </MenuItem>
                 </MenuOverview>
         </MenuContainer>
+        <Section />
+        <TitleSection>
+        <Text>DAIR</Text>
+        </TitleSection>
+        </>
     )
 }
 

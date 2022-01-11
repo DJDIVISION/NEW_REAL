@@ -48,7 +48,6 @@ const Home = (props) => {
             <NavBar showMenu={showMenu} theme={theme} setTheme={setTheme} setShowMenu={setShowMenu}/>
             
             <SectionMenu />
-            <TempSection />
             {/* <NewsSection />
             <DonutSection />
             <BuySellSection />

@@ -4,7 +4,7 @@ import Moon from "../../images/MoonDivider.png"
 
 const Section = styled.div`
     background-image: url(${Moon});
-    height: 200px;
+    height: 400px;
     width: 100%;
     
     z-index: 100;
@@ -14,15 +14,32 @@ const Section = styled.div`
     @media screen and (max-width: 1000px){
         height: 90px;
     }
+
+    
     
 `;
 const TitleSection = styled.div`
-    height: 100px;
+    height: 200px;
     width: 100%;
     background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     @media screen and (max-width: 1000px){
         height: 60px;
     }
+`;
+
+const Text = styled.h2`
+    font-size: 140px;
+    color: black;
+    display: flex;
+    font-family: "Alphacentauri";
+    @media screen and (max-width: 1100px){
+        font-size: 48px;
+    }
+    
 `;
 
 
@@ -32,7 +49,9 @@ const TempSection = (props) => {
     return (
         <>
         <Section />
-        <TitleSection />
+        <TitleSection>
+        <Text>DAIR</Text>
+        </TitleSection>
         </>
             
         
