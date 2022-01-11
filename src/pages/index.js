@@ -19,7 +19,7 @@ import TempSection from "../components/Sections/TempSection";
 
 
 
-const Home = () => {
+const Home = (props) => {
 
     const [theme, setTheme] = useState("dark");
 
