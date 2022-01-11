@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from "styled-components";
-import { AnimatePresence } from "framer-motion";
+import { Link as LinkS } from "react-scroll";
+import { motion, AnimatePresence } from "framer-motion";
 import { Nav, NavBarContainer, NavLogo, NavMenu, NavItem, NavbarLink, HiddenNav, MobileIcon2 } from "./Elements";
 import MenuIcon from '@mui/icons-material/Menu';
 import { IconButton } from "@material-ui/core";
@@ -10,8 +11,50 @@ import Sidebar from "../Sidebar";
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import NewspaperIcon from '@mui/icons-material/Newspaper';
+import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle';
+import GroupsIcon from '@mui/icons-material/Groups';
+import PriceCheckIcon from '@mui/icons-material/PriceCheck';
+import MapIcon from '@mui/icons-material/Map';
+import HighlightOffIcon from '@mui/icons-material/HighlightOff';
+
+const RoadMapIcon = styled(MapIcon)`
+   color: white;
+    margin-right: 10px;
+`;
+
+const TokenIcon = styled(PriceCheckIcon)`
+    color: white;
+    margin-right: 10px;
+`;
 
 
+
+const TeamIcon = styled(GroupsIcon)`
+    color: white;
+    margin-right: 10px;
+`;
+
+const PartnersIcon = styled(SupervisedUserCircleIcon)`
+    color: white;
+    margin-right: 10px;
+`;
+const NewsIcon = styled(NewspaperIcon)`
+    color: white;
+    margin-right: 10px;
+`;
+
+
+const BackIcon = styled(HighlightOffIcon)`
+    display: none;
+
+    @media screen and (max-width: 860px) {
+        color: ${props => props.theme.text};
+        transform: scale(1.3);
+        margin-bottom: 15px;
+        
+        z-index: 500;
+}
+`;
 
 
 
@@ -28,15 +71,11 @@ const SwitchIcon = styled.div`
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    
-    
     &:hover{
        transform: scale(1.2);
        transition: 0.4s all ease;
    }
 `;
-
-
 
 const StyledMenuIcon = styled(MenuIcon)`
     &&&{
@@ -46,6 +85,79 @@ const StyledMenuIcon = styled(MenuIcon)`
         }
     }
 `;
+
+const MenuContainer = styled(motion.div)`
+    position: absolute;
+    width: 90vw;
+    height: 400px;
+    border-radius: 20px;
+    background-color: #1756dd21;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    z-index: 99;
+    margin-top: 80px;
+    margin-left: 15px;
+`;
+
+const MenuOverview = styled.ul`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    margin-top: 120px;
+    backdrop-filter: blur(5px);
+    width: 90%;
+    padding-top: 30px;
+    border: 1px solid ${props => props.theme.text};
+    border-radius: 20px;
+    box-shadow: 0 2px 15px 1px ${props => props.theme.text};
+    
+`;
+
+const MenuItem = styled.li`
+    height: 55px;
+    color: white;
+    font-size: 24px;
+    
+    
+`;
+
+const DropDownMenu = () => {
+    return(
+        <MenuContainer>
+            <MenuOverview >
+                    <MenuItem>
+                    <IconButton ><BackIcon /></IconButton> 
+                    </MenuItem>
+                    <MenuItem>
+                        <LinkS to="#"><NewsIcon/>NEWS</LinkS>
+                    </MenuItem>
+                    <MenuItem>
+                        <TeamIcon/>TEAM
+                    </MenuItem>
+                    <MenuItem>
+                    <LinkS to="tokenomics" smooth={true} duration={500} spy={true} exact="true"><TokenIcon />TOKENOMICS</LinkS>
+                    </MenuItem>
+                    <MenuItem>
+                        <LinkS to="roadmap" smooth={true} duration={500} spy={true} exact="true"><RoadMapIcon/>ROADMAP</LinkS>
+                    </MenuItem>
+                    <MenuItem>
+                        <LinkS to="partners" smooth={true} duration={500} spy={true} exact="true"><PartnersIcon/>PARTNERS</LinkS>
+                    </MenuItem>
+                    <MenuItem>
+                        TELOS
+                    </MenuItem>
+                    <MenuItem>
+                        BSC
+                    </MenuItem>
+                </MenuOverview>
+        </MenuContainer>
+    )
+}
 
 
 
@@ -88,7 +200,7 @@ const Navbar = (props, show) => {
         <>
             
             <Nav scrollNavDown={scrollNavDown}>
-                
+                    
                     <NavLogo to="/" >Destiny Airlines</NavLogo>
                    
                     <IconButton onClick={changeTheme}><SwitchIcon >
@@ -132,7 +244,7 @@ const Navbar = (props, show) => {
                     </NavMenu>
                 
             </Nav>
-            <Sidebar showMenu={showMenu}/>
+            
             
         </>
     );

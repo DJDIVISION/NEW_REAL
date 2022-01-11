@@ -10,7 +10,6 @@ import { Link as LinkS} from "react-scroll";
 import NewspaperIcon from '@mui/icons-material/Newspaper';
 import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle';
 import GroupsIcon from '@mui/icons-material/Groups';
-import CasinoIcon from '@mui/icons-material/Casino';
 import PriceCheckIcon from '@mui/icons-material/PriceCheck';
 import MapIcon from '@mui/icons-material/Map';
 
@@ -24,10 +23,7 @@ const TokenIcon = styled(PriceCheckIcon)`
     margin-right: 10px;
 `;
 
-const GamingIcon = styled(CasinoIcon)`
-    color: white;
-    margin-right: 10px;
-`;
+
 
 const TeamIcon = styled(GroupsIcon)`
     color: white;
@@ -173,7 +169,6 @@ const LoaderText = styled(motion.h2)`
 
 
 export function CanvasSectionTwo(props) {
-
     
 
     const switchToOne = () => {
@@ -198,7 +193,7 @@ export function CanvasSectionTwo(props) {
                     <IconButton onClick={switchToOne}><BackIcon /></IconButton> 
                     </MenuItem>
                     <MenuItem>
-                        <LinkS><NewsIcon/>NEWS</LinkS>
+                        <LinkS to="#"><NewsIcon/>NEWS</LinkS>
                     </MenuItem>
                     <MenuItem>
                         <TeamIcon/>TEAM

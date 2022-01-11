@@ -13,6 +13,7 @@ import { ProgressCircle } from "./components/Progress";
 
 
 
+
 const CanvasContainer = styled.div`
     width: 100%;
     height: 700px;
