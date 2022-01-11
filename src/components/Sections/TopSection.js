@@ -18,41 +18,37 @@ import MapIcon from '@mui/icons-material/Map';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 
 const BackIcon = styled(HighlightOffIcon)`
-    display: none;
-
-    @media screen and (max-width: 860px) {
-        color: ${props => props.theme.text};
-        transform: scale(1.3);
-        margin-bottom: 15px;
-        
-        z-index: 500;
-    }
+    color: ${props => props.theme.text};
+    transform: scale(1.3);
+    margin-bottom: 15px;
+    
+    z-index: 500;
 `;
 
 
 const RoadMapIcon = styled(MapIcon)`
-   color: white;
+   color: ${props => props.theme.text};
     margin-right: 10px;
 `;
 
 const TokenIcon = styled(PriceCheckIcon)`
-    color: white;
+    color: ${props => props.theme.text};
     margin-right: 10px;
 `;
 
 
 
 const TeamIcon = styled(GroupsIcon)`
-    color: white;
+    color: ${props => props.theme.text};
     margin-right: 10px;
 `;
 
 const PartnersIcon = styled(SupervisedUserCircleIcon)`
-    color: white;
+    color: ${props => props.theme.text};
     margin-right: 10px;
 `;
 const NewsIcon = styled(NewspaperIcon)`
-    color: white;
+    color: ${props => props.theme.text};
     margin-right: 10px;
 `;
 
@@ -153,7 +149,7 @@ const MenuContainer = styled(motion.div)`
     width: 90vw;
     height: 400px;
     border-radius: 20px;
-    background-color: #1756dd21;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -180,25 +176,26 @@ const MenuOverview = styled.ul`
     
 `;
 
+const IconContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    height: 50px;
+    width: 50px;
+`;
+
 const MenuItem = styled.li`
     height: 55px;
-    color: white;
+    color: ${props => props.theme.text};
     font-size: 24px;
+    font-weight: bold;
 `;
 
 const Burguer = styled(MenuIcon)`
-    &&&{
-        display: none;
-    }
-    &&&{
-        
-        @media screen and (max-width: 860px){
-            color: ${props => props.theme.text};
-            margin-top: -550px;
-            transform: scale(1.4);
-            margin-left: 22vw;
-        }
-    }
+    color: ${props => props.theme.text};
+    
+    transform: scale(1.4);
+    
     
     
 `;
@@ -273,9 +270,11 @@ const TopSection = () => {
                 <CanvasContainer /> 
             </ColumnLeft>
             <ColumnRight animate={animate}>
-            <IconButton onClick={swicthToTwo}><Burguer /></IconButton>
-                <TextWrapper>
                 
+                <TextWrapper>
+                <IconContainer>
+                <IconButton onClick={swicthToTwo}><Burguer /></IconButton>
+                </IconContainer>
                     <Title>DESTINY</Title>
                     <Title>AIRLINES</Title>
                     <TopLine>WE TAKE YOU</TopLine>
