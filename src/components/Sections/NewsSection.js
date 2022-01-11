@@ -16,7 +16,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn'; */
 
 import FortisLogo from "../../images/fortis_logo.png";
 import DWLogo from "../../images/dw_aqua_logo.jpg";
-import DWArticleImage from "../../images/dwArticleBack.jpg";
+
 
 const Carroussel = styled.div`
     width: 90vw;
