@@ -53,6 +53,7 @@ const Title = styled.h1`
     z-index: 100;
     @media screen and (max-width: 860px){
         font-size: 52px;
+        margin-left: 10px;
     }
 
     
@@ -66,7 +67,7 @@ const TopLine = styled.h1`
     margin-bottom: 10px;
     @media screen and (max-width: 860px){
         text-align: center;
-        margin-left: 20vw;
+        margin-left: 22vw;
     }
 `;
 const Subtitle = styled.h3`
@@ -75,7 +76,7 @@ const Subtitle = styled.h3`
     text-align: right;
     @media screen and (max-width: 860px){
         text-align: center;
-        margin-left: 20vw;
+        margin-left: 22vw;
         font-size: 38px;
     }
 `;
