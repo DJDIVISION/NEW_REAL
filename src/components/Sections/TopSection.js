@@ -84,13 +84,16 @@ const ColumnRight = styled.div`
     background: ${props => props.theme.body};
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
     
     
     width: 50%;
     height: 700px;
     @media screen and (max-width: 900px){
         width: 100%;
-        margin-top: -350px;
+        margin-top: -500px;
     }
 
 `;
@@ -98,10 +101,9 @@ const ColumnRight = styled.div`
 const TextWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    padding-right: 20vw;
-    margin-top: 30vh;
+    
     @media screen and (max-width: 860px){
-        margin-top: 20vh;
+       text-align: center; 
     } 
 `;
 
@@ -113,7 +115,7 @@ const Title = styled.h1`
     z-index: 100;
     @media screen and (max-width: 860px){
         font-size: 52px;
-        margin-left: 10px;
+        text-align: center;
     }
 
     
@@ -123,12 +125,11 @@ const TopLine = styled.h1`
     font-size: 28px;
     color: ${props => props.theme.text};
     text-align: right;
-    margin-top: 15px;
-    margin-bottom: 10px;
+   
     z-index: 100;
     @media screen and (max-width: 860px){
         text-align: center;
-        margin-left: 22vw;
+        
     }
 `;
 const Subtitle = styled.h3`
@@ -138,7 +139,7 @@ const Subtitle = styled.h3`
     z-index: 100;
     @media screen and (max-width: 860px){
         text-align: center;
-        margin-left: 22vw;
+        
         font-size: 38px;
     }
 `;
@@ -188,17 +189,25 @@ const MenuItem = styled.li`
 
 const Burguer = styled(MenuIcon)`
     color: ${props => props.theme.text};
-    margin-bottom: 20px;
-    margin-left: 200px;
+    
     transform: scale(1.4);
+    
 
     @media screen and (max-width: 860px){
-        margin-left: 60px;
-        margin-top: -50vh;
+        
     }
     
-    
-    
+`;
+
+const IconContainer = styled.div`
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3vh;
+    @media screen and (max-width: 860px){
+        margin-bottom: 100px;
+    }
 `;
 
 const DropDownMenu = () => {
@@ -270,11 +279,10 @@ const TopSection = () => {
                 <CanvasContainer /> 
             </ColumnLeft>
             <ColumnRight animate={animate}>
-                
                 <TextWrapper>
-                
+                    <IconContainer>
                 <IconButton onClick={swicthToTwo}><Burguer /></IconButton>
-                
+                </IconContainer>
                     <Title>DESTINY</Title>
                     <Title>AIRLINES</Title>
                     <TopLine>WE TAKE YOU</TopLine>
