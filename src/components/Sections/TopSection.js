@@ -78,6 +78,7 @@ const ColumnLeft = styled.div`
 
     @media screen and (max-width: 900px){
         width: 100%;
+        transform: scale(0.9);
     }
 `;
 const ColumnRight = styled.div`
