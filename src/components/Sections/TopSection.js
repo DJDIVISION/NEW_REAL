@@ -52,14 +52,7 @@ const NewsIcon = styled(NewspaperIcon)`
     margin-right: 10px;
 `;
 
-const StyledMenuIcon = styled(MenuIcon)`
-    &&&{
-        color: gold;
-        @media screen and (min-width: 1100px){
-            display: none;
-        }
-    }
-`;
+
 
 
 const Container = styled.div`
@@ -89,11 +82,15 @@ const ColumnLeft = styled.div`
 `;
 const ColumnRight = styled.div`
     background: ${props => props.theme.body};
+    display: flex;
+    flex-direction: column;
+    
+    
     width: 50%;
     height: 700px;
     @media screen and (max-width: 900px){
         width: 100%;
-        margin-top: -300px;
+        margin-top: -350px;
     }
 
 `;
@@ -128,6 +125,7 @@ const TopLine = styled.h1`
     text-align: right;
     margin-top: 15px;
     margin-bottom: 10px;
+    z-index: 100;
     @media screen and (max-width: 860px){
         text-align: center;
         margin-left: 22vw;
@@ -137,6 +135,7 @@ const Subtitle = styled.h3`
     font-size: 48px;
     color: ${props => props.theme.text};
     text-align: right;
+    z-index: 100;
     @media screen and (max-width: 860px){
         text-align: center;
         margin-left: 22vw;
@@ -176,13 +175,7 @@ const MenuOverview = styled.ul`
     
 `;
 
-const IconContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: right;
-    height: 50px;
-    width: 50px;
-`;
+
 
 const MenuItem = styled.li`
     height: 55px;
@@ -193,8 +186,14 @@ const MenuItem = styled.li`
 
 const Burguer = styled(MenuIcon)`
     color: ${props => props.theme.text};
-    
+    margin-bottom: 20px;
+    margin-left: 200px;
     transform: scale(1.4);
+
+    @media screen and (max-width: 860px){
+        margin-left: 60px;
+        margin-top: -50vh;
+    }
     
     
     
@@ -272,9 +271,9 @@ const TopSection = () => {
             <ColumnRight animate={animate}>
                 
                 <TextWrapper>
-                <IconContainer>
+                
                 <IconButton onClick={swicthToTwo}><Burguer /></IconButton>
-                </IconContainer>
+                
                     <Title>DESTINY</Title>
                     <Title>AIRLINES</Title>
                     <TopLine>WE TAKE YOU</TopLine>

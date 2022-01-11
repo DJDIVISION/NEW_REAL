@@ -146,7 +146,7 @@ const DropDownMenu = () => {
                         <LinkS to="roadmap" smooth={true} duration={500} spy={true} exact="true"><RoadMapIcon/>ROADMAP</LinkS>
                     </MenuItem>
                     <MenuItem>
-                        <LinkS to="partners" smooth={true} duration={500} spy={true} exact="true"><PartnersIcon/>PARTNERS</LinkS>
+                        <LinkS to="partners" smooth={true} duration={1000} spy={true} exact="true"><PartnersIcon/>PARTNERS</LinkS>
                     </MenuItem>
                     <MenuItem>
                         TELOS
@@ -224,7 +224,7 @@ const Navbar = (props, show) => {
                             <NavbarLink to="gaming" smooth={true} duration={500} spy={true} exact="true" >Gaming</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="partners" smooth={true} duration={500} spy={true} exact="true" >Partners</NavbarLink>
+                            <NavbarLink to="partners" smooth={true} duration={2000} spy={true} exact="true" >Partners</NavbarLink>
                         </NavItem>
                         <NavItem>
                             <NavbarLink to="nft" smooth={true} duration={500} spy={true} exact="true" >NFTs</NavbarLink>
@@ -239,7 +239,7 @@ const Navbar = (props, show) => {
                             <NavbarLink to="bsc" smooth={true} duration={500} spy={true} exact="true" >BSC</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="social" smooth={true} duration={500} spy={true} exact="true">Social Media</NavbarLink>
+                            <NavbarLink to="social" smooth={true} duration={2000} spy={true} exact="true">Social Media</NavbarLink>
                         </NavItem>
                     </NavMenu>
                 

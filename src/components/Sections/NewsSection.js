@@ -6,6 +6,7 @@ import { Link as LinkR } from "react-router-dom";
 import {Button, IconButton} from "@material-ui/core";
 import ShareIcon from '@mui/icons-material/Share';
 import "./style.css";
+import Divider from "../../images/divide.png";
 
 import { TwitterShareButton, TwitterIcon, FacebookShareButton, FacebookIcon, LinkedinIcon, LinkedinShareButton, EmailIcon, EmailShareButton} from "react-share";
 
@@ -23,7 +24,8 @@ const Carroussel = styled.div`
     flex-direction: column;
     justify-content: center;
     margin-top: 30px;
-    
+    background-image: url(${Divider});
+    background-size: contain;
     
     
     
