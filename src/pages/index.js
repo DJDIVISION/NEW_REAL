@@ -13,6 +13,7 @@ import BuySellSection from "../components/Sections/BuySellSection";
 import DonutSection from "../components/Sections/DonutSection";
 import NewsSection from "../components/Sections/NewsSection";
 import TopSection from "../components/Sections/TopSection";
+import TempSection from "../components/Sections/TempSection";
 
 
 
@@ -45,12 +46,13 @@ const Home = () => {
         <ThemeProvider theme={themes[theme]}>
         <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
             <NavBar showMenu={showMenu} theme={theme} setTheme={setTheme} setShowMenu={setShowMenu}/>
+            
             <TopSection />
-            <NewsSection />
+            {/* <NewsSection />
             <DonutSection />
             <BuySellSection />
             <PartnerSlider /> 
-            <Footer />
+            <Footer /> */}
         </motion.div>
         </ThemeProvider>
     );

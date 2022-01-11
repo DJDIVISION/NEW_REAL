@@ -75,9 +75,7 @@ const SectionContainer = styled(motion.div)`
     left: 0;
     background-color: #1756dd21;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
+    flex-direction: column
     z-index: 99;
     margin-top: 80px;
 
@@ -120,7 +118,7 @@ const SectionContainerThree = styled(motion.div)`
 
 
 const Logo = styled.h1`
-    margin-top: 30vh;
+    
     color: ${props => props.theme.text};
     font-weight: 700;
     font-family: "Alphacentauri";

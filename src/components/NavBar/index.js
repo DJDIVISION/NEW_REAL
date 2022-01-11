@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from "styled-components";
 import { AnimatePresence } from "framer-motion";
-import { Nav, NavBarContainer, NavLogo, NavMenu, NavItem, NavbarLink, MobileIcon, MobileIcon2 } from "./Elements";
+import { Nav, NavBarContainer, NavLogo, NavMenu, NavItem, NavbarLink, HiddenNav, MobileIcon2 } from "./Elements";
 import MenuIcon from '@mui/icons-material/Menu';
 import { IconButton } from "@material-ui/core";
 import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
@@ -13,28 +13,38 @@ import NewspaperIcon from '@mui/icons-material/Newspaper';
 
 
 
-const SmartIcon = styled(MenuIcon)`
-     color: gold;
-`;
+
+
 
 const ScrollIcon = styled(ArrowCircleUpIcon)`
     color: gold;
     transition: 0.8s all ease;
-    
-
     top: 600px;
 `;
 
-const MobileIcon3 = styled.div`
+const SwitchIcon = styled.div`
     color: gold;
     display: flex;
     align-items: center;
     justify-content: center;
-    
     cursor: pointer;
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
+    
+    
+    &:hover{
+       transform: scale(1.2);
+       transition: 0.4s all ease;
+   }
+`;
+
+
+
+const StyledMenuIcon = styled(MenuIcon)`
+    &&&{
+        color: gold;
+        @media screen and (min-width: 1100px){
+            display: none;
+        }
+    }
 `;
 
 
@@ -78,11 +88,14 @@ const Navbar = (props, show) => {
         <>
             
             <Nav scrollNavDown={scrollNavDown}>
-                <NavBarContainer >
+                
                     <NavLogo to="/" >Destiny Airlines</NavLogo>
-                    <IconButton onClick={changeTheme}><MobileIcon3 >
+                   
+                    <IconButton onClick={changeTheme}><SwitchIcon >
                         {icon}
-                    </MobileIcon3></IconButton>
+                    </SwitchIcon></IconButton>
+                    <IconButton><StyledMenuIcon /></IconButton>
+              
                     <MobileIcon2 scrollNavDown={scrollNavDown}>
                         <IconButton onClick={toggleHome}>
                             <ScrollIcon />
@@ -117,7 +130,7 @@ const Navbar = (props, show) => {
                             <NavbarLink to="social" smooth={true} duration={500} spy={true} exact="true">Social Media</NavbarLink>
                         </NavItem>
                     </NavMenu>
-                </NavBarContainer>
+                
             </Nav>
             <Sidebar showMenu={showMenu}/>
             

@@ -7,51 +7,43 @@ import { Link as LinkS } from "react-scroll";
 export const Nav = styled.nav`
     background: ${props =>   props.theme.body};
     height: 80px;
-    
+    width: 100vw;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    font-size: 1rem;
+    
     position: sticky;
     top: ${({ scrollNavDown }) => (scrollNavDown ? "-100px" : "0")};
-    z-index: 10;
+    z-index: 500;
     transition: 0.8s all ease;
     @media screen and (max-width: 960px) {
         transition: 0.8s all ease;
+        padding-right: 10px;
     }
 `;
 
-export const NavBarContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    height: 80px;
-    z-index: 1;
-    width: 100%;
-    padding: 0 24px;
-    max-width: 1100px;
-    
-`;
+
+
  
 export const NavLogo = styled(LinkR)`
    color: gold;
-   justify-self: flex-start;
    cursor: pointer;
    display: flex;
    font-size: 1.5rem;
    align-items: center;
-   margin-left: 0px;
+   justify-content: center;
+   margin-left: 40px;
    font-weight: bold;
    text-decoration: none;
    font-family: 'Alphacentauri';
 
-   &:hover{
-       transform: scale(1.05);
-       transition: 0.2s ease-out;
-       color: ${props => props.theme.text}
+   @media screen and (max-width: 860px){
+       margin-left: 20px;
    }
 
-   @media screen and (min-width: 1100px){
-       margin-left: -140px;
+   &:hover{
+       transform: scale(1.05);
+       transition: 0.2s all ease;
    }
 `;
 
@@ -60,20 +52,7 @@ export const Logo = styled(LinkS)`
 
 `;
 
-export const MobileIcon = styled.div`
-    display: none;
 
-    @media screen and (max-width: 860px){
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translate(-100%, 80%);
-        font-size: 1.8rem;
-        cursor: pointer;
-        color: whitesmoke;
-    }
-`;
 
 export const MobileIcon2 = styled.div`
     display: block;
@@ -91,11 +70,11 @@ export const NavMenu = styled.ul`
     align-items: center;
     list-style: none;
     text-align: center;
-    margin-right: -22px;
+    margin-right: 50px;
 
     
 
-    @media screen and (max-width: 860px){
+    @media screen and (max-width: 1100px){
        display: none; 
     }
 
@@ -116,7 +95,7 @@ export const NavbarLink = styled(LinkS)`
    height: 100%;
    cursor: pointer;
    font-weight: bold;
-   font-size: 10px;
+   font-size: 18px;
 
    &:hover{
        transform: scale(1.1);
