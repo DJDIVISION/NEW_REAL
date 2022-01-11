@@ -136,7 +136,7 @@ const Subtitle = styled.h3`
     font-size: 48px;
     color: ${props => props.theme.text};
     text-align: right;
-    z-index: 100;
+    z-index: 50;
     @media screen and (max-width: 860px){
         text-align: center;
         
@@ -146,19 +146,19 @@ const Subtitle = styled.h3`
 
 const MenuContainer = styled(motion.div)`
     position: absolute;
-    width: 90vw;
-    height: 400px;
+    width: 400px;
+    height: 500px;
     border-radius: 20px;
-    margin-top: -70vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 150;
-    margin-left: 15px;
+    margin-top: -75vh;
+    z-index: 200;
+    left: 12.5%;
+    
+    
 
     @media screen and (max-width: 860px){
-        margin-top: -75vh;
+        margin-top: -80vh;
+        width: 85vw;
+        height: 70vh;
     }
 `;
 
@@ -168,9 +168,10 @@ const MenuOverview = styled.ul`
     align-items: center;
     list-style: none;
     text-align: center;
-    
+    padding-top: 30px;
     backdrop-filter: blur(5px);
     width: 90%;
+    
     
     border: 1px solid ${props => props.theme.text};
     border-radius: 20px;
