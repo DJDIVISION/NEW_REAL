@@ -70,6 +70,7 @@ const Container = styled.div`
     display: flex;
     width: 100vw;
     height: 90vh;
+    background: ${props => props.theme.body};
 
     @media screen and (max-width: 900px){
         flex-direction: column;
@@ -80,9 +81,12 @@ const ColumnLeft = styled.div`
     flex-shrink: 0;
     flex-basis: 50%;
     background: ${props => props.theme.body};
-    background: red;
     width: 50%;
     height: 700px;
+    @media screen and (min-width: 1100px){
+        padding-left: 100px;
+    }
+
     @media screen and (max-width: 900px){
         width: 100%;
     }
@@ -183,12 +187,17 @@ const MenuItem = styled.li`
 `;
 
 const Burguer = styled(MenuIcon)`
-    display: none;
-    @media screen and (max-width: 860px){
-        color: white;
-        margin-top: -550px;
-        transform: scale(1.4);
-        margin-left: 22vw;
+    &&&{
+        display: none;
+    }
+    &&&{
+        
+        @media screen and (max-width: 860px){
+            color: ${props => props.theme.text};
+            margin-top: -550px;
+            transform: scale(1.4);
+            margin-left: 22vw;
+        }
     }
     
     
@@ -264,9 +273,9 @@ const TopSection = () => {
                 <CanvasContainer /> 
             </ColumnLeft>
             <ColumnRight animate={animate}>
-            
+            <IconButton onClick={swicthToTwo}><Burguer /></IconButton>
                 <TextWrapper>
-                <IconButton onClick={swicthToTwo}><Burguer /></IconButton>
+                
                     <Title>DESTINY</Title>
                     <Title>AIRLINES</Title>
                     <TopLine>WE TAKE YOU</TopLine>

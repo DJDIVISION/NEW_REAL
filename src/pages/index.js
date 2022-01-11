@@ -48,11 +48,12 @@ const Home = () => {
             <NavBar showMenu={showMenu} theme={theme} setTheme={setTheme} setShowMenu={setShowMenu}/>
             
             <SectionMenu />
-            {/* <NewsSection />
+            <TempSection />
+            <NewsSection />
             <DonutSection />
             <BuySellSection />
             <PartnerSlider /> 
-            <Footer /> */}
+            <Footer />
         </motion.div>
         </ThemeProvider>
     );
