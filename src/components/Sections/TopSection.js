@@ -113,6 +113,8 @@ const Title = styled.h1`
     text-align: right;
     font-family:  "Alphacentauri";
     z-index: 100;
+    padding-bottom: 10px;
+    
     @media screen and (max-width: 860px){
         font-size: 52px;
         text-align: center;
@@ -122,25 +124,27 @@ const Title = styled.h1`
 `;
 
 const TopLine = styled.h1`
-    font-size: 28px;
+    font-size: 42px;
     color: ${props => props.theme.text};
     text-align: right;
-   
+    padding-bottom: 10px;
+    
     z-index: 100;
     @media screen and (max-width: 860px){
         text-align: center;
+        font-size: 26px;
         
     }
 `;
 const Subtitle = styled.h3`
-    font-size: 48px;
+    font-size: 50px;
     color: ${props => props.theme.text};
     text-align: right;
     z-index: 50;
     @media screen and (max-width: 860px){
         text-align: center;
         
-        font-size: 38px;
+        font-size: 34px;
     }
 `;
 
@@ -156,7 +160,7 @@ const MenuContainer = styled(motion.div)`
     
 
     @media screen and (max-width: 860px){
-        margin-top: -80vh;
+        margin-top: -82.5vh;
         width: 85vw;
         height: 70vh;
         left: 12.5%;
@@ -208,7 +212,7 @@ const IconContainer = styled.div`
     margin-right: auto;
     margin-bottom: 3vh;
     @media screen and (max-width: 860px){
-        margin-bottom: 100px;
+        margin-bottom: 250px;
     }
 `;
 
@@ -265,8 +269,8 @@ const TopSection = () => {
     const { active, setActive } = useContext(MenuContext);
 
     let animate = {};
-    if(active === "menuOne") animate = { opacity: 1 };
-    else if (active === "menuTwo") animate = { opacity: 0};
+    if(active === "menuOne") animate = { opacity: 0.2 };
+    else if (active === "menuTwo") animate = { opacity: 1};
     
 
     const swicthToTwo = () => {
@@ -280,7 +284,7 @@ const TopSection = () => {
             <ColumnLeft>
                 <CanvasContainer /> 
             </ColumnLeft>
-            <ColumnRight animate={animate}>
+            <ColumnRight animate={animate} initial={{opacity: 0}}>
                 <TextWrapper>
                     <IconContainer>
                 <IconButton onClick={swicthToTwo}><Burguer /></IconButton>
