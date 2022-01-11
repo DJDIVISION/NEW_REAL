@@ -148,15 +148,17 @@ const MenuContainer = styled(motion.div)`
     width: 90vw;
     height: 400px;
     border-radius: 20px;
-    
+    margin-top: -70vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 20px;
     z-index: 150;
-    margin-top: 80px;
     margin-left: 15px;
+
+    @media screen and (max-width: 860px){
+        margin-top: -75vh;
+    }
 `;
 
 const MenuOverview = styled.ul`
@@ -168,7 +170,7 @@ const MenuOverview = styled.ul`
     
     backdrop-filter: blur(5px);
     width: 90%;
-    padding-top: 30px;
+    
     border: 1px solid ${props => props.theme.text};
     border-radius: 20px;
     box-shadow: 0 2px 15px 1px ${props => props.theme.text};
@@ -219,19 +221,19 @@ const DropDownMenu = () => {
                     <IconButton onClick={switchToOne}><BackIcon /></IconButton> 
                     </MenuItem>
                     <MenuItem>
-                        <LinkS to="#"><NewsIcon/>NEWS</LinkS>
+                        <LinkS to="#" onClick={switchToOne}><NewsIcon/>NEWS</LinkS>
                     </MenuItem>
                     <MenuItem>
                         <TeamIcon/>TEAM
                     </MenuItem>
                     <MenuItem>
-                    <LinkS to="tokenomics" smooth={true} duration={500} spy={true} exact="true"><TokenIcon />TOKENOMICS</LinkS>
+                    <LinkS to="tokenomics" smooth={true} duration={1500} spy={true} exact="true" onClick={switchToOne}><TokenIcon />TOKENOMICS</LinkS>
                     </MenuItem>
                     <MenuItem>
-                        <LinkS to="roadmap" smooth={true} duration={500} spy={true} exact="true"><RoadMapIcon/>ROADMAP</LinkS>
+                        <LinkS to="roadmap" smooth={true} duration={1500} spy={true} exact="true" onClick={switchToOne}><RoadMapIcon/>ROADMAP</LinkS>
                     </MenuItem>
                     <MenuItem>
-                        <LinkS to="partners" smooth={true} duration={500} spy={true} exact="true"><PartnersIcon/>PARTNERS</LinkS>
+                        <LinkS to="partners" smooth={true} duration={2000} spy={true} exact="true" onClick={switchToOne}><PartnersIcon />PARTNERS</LinkS>
                     </MenuItem>
                     <MenuItem>
                         TELOS
@@ -264,7 +266,6 @@ const TopSection = () => {
     return (
         
         <Container>
-            <DropDownMenu />
             <ColumnLeft>
                 <CanvasContainer /> 
             </ColumnLeft>

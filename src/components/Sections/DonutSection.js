@@ -268,7 +268,7 @@ const DonutSection = () => {
                             <Heading>TOKENOMICS</Heading>
                             
                         </TextWrapper>
-                        <LinkR to="RoadMap"><StyledButton>LEARN MORE</StyledButton></LinkR>
+                        <LinkR to="TokenomicsPage"><StyledButton>LEARN MORE</StyledButton></LinkR>
                     </Column2>
                 </InfoRow>    
             </InfoWrapper>      

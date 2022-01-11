@@ -122,6 +122,7 @@ const MenuItem = styled.li`
     height: 55px;
     color: white;
     font-size: 24px;
+    cursor: pointer;
     
     
 `;
@@ -134,16 +135,16 @@ const DropDownMenu = () => {
                     <IconButton ><BackIcon /></IconButton> 
                     </MenuItem>
                     <MenuItem>
-                        <LinkS to="#"><NewsIcon/>NEWS</LinkS>
+                        <LinkS to="news" smooth={true} duration={1000} spy={true} exact="true"><NewsIcon/>NEWS</LinkS>
                     </MenuItem>
                     <MenuItem>
                         <TeamIcon/>TEAM
                     </MenuItem>
                     <MenuItem>
-                    <LinkS to="tokenomics" smooth={true} duration={500} spy={true} exact="true"><TokenIcon />TOKENOMICS</LinkS>
+                    <LinkS to="tokenomics" smooth={true} duration={1000} spy={true} exact="true"><TokenIcon />TOKENOMICS</LinkS>
                     </MenuItem>
                     <MenuItem>
-                        <LinkS to="roadmap" smooth={true} duration={500} spy={true} exact="true"><RoadMapIcon/>ROADMAP</LinkS>
+                        <LinkS to="roadmap" smooth={true} duration={1000} spy={true} exact="true"><RoadMapIcon/>ROADMAP</LinkS>
                     </MenuItem>
                     <MenuItem>
                         <LinkS to="partners" smooth={true} duration={1000} spy={true} exact="true"><PartnersIcon/>PARTNERS</LinkS>
