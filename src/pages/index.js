@@ -49,11 +49,11 @@ const Home = (props) => {
             
             <SectionMenu />
             <TempSection />
-            <NewsSection />
+            {/* <NewsSection />
             <DonutSection />
             <BuySellSection />
             <PartnerSlider /> 
-            <Footer />
+            <Footer /> */}
         </motion.div>
         </ThemeProvider>
     );
