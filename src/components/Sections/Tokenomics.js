@@ -31,6 +31,9 @@ const BackgroundText = styled.div`
 
     @media screen and (max-width: 860px){
         height: 200px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 `;
 
