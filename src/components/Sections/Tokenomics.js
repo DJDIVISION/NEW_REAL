@@ -7,20 +7,30 @@ import { useInView } from "react-intersection-observer";
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import { IconButton } from "@material-ui/core";
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
-import Back from "../../images/dair_back.jpg";
+import Back from "../../images/TokenomicsDivider.png";
 
 const Section = styled.div`
-    height: 200px;
+    height: 400px;
+
+    @media screen and (max-width: 860px){
+        height: 200px;
+        width: 100vw;
+    }
     
 `;
 
 const BackgroundText = styled.div`
-    height: 200px;
+    height: 400px;
+    width: 100vw;
     background-image: url(${Back});
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-color: ${props => props.theme.body};
+
+    @media screen and (max-width: 860px){
+        height: 200px;
+    }
 `;
 
 

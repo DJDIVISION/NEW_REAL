@@ -49,12 +49,13 @@ const Home = (props) => {
             <NavBar showMenu={showMenu} theme={theme} setTheme={setTheme} setShowMenu={setShowMenu}/>
             
             <SectionMenu />
-            <Tokenomics />
-            <NewsSection />
+            
+            {/* <NewsSection /> */}
             <DonutSection />
             <BuySellSection />
-            {/* <PartnerSlider /> 
-            <Footer /> */}
+            <Tokenomics />
+            <PartnerSlider /> 
+            <Footer />
         </motion.div>
         </ThemeProvider>
     );

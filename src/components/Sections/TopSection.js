@@ -5,7 +5,8 @@ import { IconButton } from "@material-ui/core";
 import { Link as LinkS } from "react-scroll";
 import { MenuContext } from "./context";
 
-import Moon from "../../images/MoonDivide.png";
+import Moon from "../../images/TokenomicsDivider.png";
+import Moon2 from "../../images/TokenomicsDivider3.png";
 
 
 import CanvasContainer from "../../animations/Planet";
@@ -224,7 +225,7 @@ const IconContainer = styled.div`
 
 const Section = styled.div`
     background-image: url(${Moon});
-    height: 240px;
+    height: 860px;
     width: 100%;
     
     z-index: 100;
@@ -232,7 +233,9 @@ const Section = styled.div`
     background-size: cover;
     background-color: ${props => props.theme.body};
     @media screen and (max-width: 1000px){
-        height: 50px;
+        height: 300px;
+        background-position: center;
+        background-image: url(${Moon2});
     }
 
     
@@ -306,9 +309,6 @@ const DropDownMenu = () => {
                 </MenuOverview>
         </MenuContainer>
         <Section />
-        <TitleSection>
-        <Text>DAIR</Text>
-        </TitleSection>
         </>
     )
 }
