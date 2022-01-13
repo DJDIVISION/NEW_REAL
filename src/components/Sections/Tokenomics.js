@@ -23,8 +23,9 @@ const BackgroundText = styled.div`
     height: 400px;
     width: 100vw;
     background-image: url(${Back});
-    background-size: cover;
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     background-color: ${props => props.theme.body};
 

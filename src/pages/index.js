@@ -54,7 +54,8 @@ const Home = (props) => {
             <DonutSection />
             <BuySellSection />
             <Tokenomics />
-            <PartnerSlider /> 
+            <DonutSection />
+            {/* <PartnerSlider />  */}
             <Footer />
         </motion.div>
         </ThemeProvider>
