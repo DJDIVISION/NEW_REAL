@@ -232,9 +232,10 @@ const Section = styled.div`
     
     background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
     background-color: ${props => props.theme.body};
     @media screen and (max-width: 1000px){
-        height: 300px;
+        height: 200px;
         
         background-image: url(${Moon2});
     }
