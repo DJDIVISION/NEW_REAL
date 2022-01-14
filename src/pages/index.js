@@ -52,7 +52,7 @@ const Home = (props) => {
             
             {/* <NewsSection /> */}
             <DonutSection />
-            <BuySellSection />
+            {/* <BuySellSection /> */}
             <Tokenomics />
             <DonutSection />
             {/* <PartnerSlider />  */}

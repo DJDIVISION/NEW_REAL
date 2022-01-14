@@ -4,6 +4,7 @@ import styled, {keyframes} from "styled-components";
 import ChartComponent from "./ChartComponent";
 import { Button } from "@material-ui/core";
 import { Link as LinkR } from "react-router-dom";
+import Rocket from "../../images/BestTokenomicsDivider.png";
 
 const StyledButton = styled(Button)`
     &&& {
@@ -15,7 +16,7 @@ const StyledButton = styled(Button)`
 const InfoWrapper = styled.div`
     display: grid;
     z-index: 1;
-    height: 100vh;
+    height: 150vh;
     width: 100%;
     justify-content: center;
     background: ${props => props.theme.body};
@@ -200,6 +201,27 @@ const Grey = styled.div`
     }
 `;
 
+const Image = styled.img`
+    width: 100vw;
+    height: auto;
+    display: flex;
+`;
+
+const SectionImage = styled.div`
+    height: 150px;
+    background-color: ${props => props.theme.body};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: 1000px){
+        height: 300px;
+        img{
+            width: 80vw;
+        }
+    }
+`;
+
 
 const DonutSection = () => {
 
@@ -218,11 +240,13 @@ const DonutSection = () => {
 
     return(
         <>
-          
+            <SectionImage>
+            <Image src={Rocket} alt="" />
+            </SectionImage>
             <InfoWrapper>
                 <InfoRow>
                     <Column1>
-                    <ChartComponent data={data} />=
+                    <ChartComponent data={data} />
                     </Column1>
                     <Column2>
                         <List>

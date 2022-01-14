@@ -5,7 +5,7 @@ import { IconButton } from "@material-ui/core";
 import { Link as LinkS } from "react-scroll";
 import { MenuContext } from "./context";
 
-import Moon from "../../images/TokenomicsDivider.png";
+import Moon from "../../images/BestTokenomicsDivider.png";
 import Moon2 from "../../images/TokenomicsDivider3.png";
 
 
@@ -223,9 +223,9 @@ const IconContainer = styled.div`
     }
 `;
 
-const Section = styled.div`
+/* const Section = styled.div`
     background-image: url(${Moon});
-    height: 860px;
+    height: 500px;
     width: 100%;
     
     z-index: 100;
@@ -242,7 +242,19 @@ const Section = styled.div`
 
     
     
+`; */
+
+const Section = styled.div`
+    height: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
 `;
+
+const Image = styled.img`
+    width: 80%;
+`;
+
 const TitleSection = styled.div`
     height: 200px;
     width: 100%;
@@ -310,7 +322,7 @@ const DropDownMenu = () => {
                     </MenuItem>
                 </MenuOverview>
         </MenuContainer>
-        <Section />
+        
         </>
     )
 }

@@ -7,7 +7,7 @@ import { useInView } from "react-intersection-observer";
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import { IconButton } from "@material-ui/core";
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
-import Back from "../../images/TokenomicsDivider.png";
+import Back from "../../images/BestTokenomicsDivider.png";
 
 const Section = styled.div`
     height: 400px;
