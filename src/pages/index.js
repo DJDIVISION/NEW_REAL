@@ -14,7 +14,7 @@ import DonutSection from "../components/Sections/DonutSection";
 import NewsSection from "../components/Sections/NewsSection";
 import SectionMenu from "../components/Sections/TopSection";
 import Tokenomics from "../components/Sections/Tokenomics";
-import TempSection from "../components/Sections/TempSection";
+import TeamSection from "../components/Sections/TeamSection";
 
 
 
@@ -52,9 +52,10 @@ const Home = (props) => {
             
             {/* <NewsSection /> */}
             <DonutSection />
+            <TeamSection />
             {/* <BuySellSection /> */}
             <Tokenomics />
-            <DonutSection />
+            {/* <DonutSection /> */}
             {/* <PartnerSlider />  */}
             <Footer />
         </motion.div>

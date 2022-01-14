@@ -1,191 +1,251 @@
-import React from 'react';
-import styled from "styled-components";
-import { motion } from "framer-motion";
-import Planet1 from "../../images/planet4.png";
-import Astronaut from "../../images/astronaut3.png";
-import Planet3 from "../../images/planet11.png";
-import Planet4 from "../../images/planet4.png";
+
+import React, {useState, useEffect} from 'react';
+import styled, {keyframes} from "styled-components";
+import ChartComponent from "./ChartComponent";
+import { Button } from "@material-ui/core";
 import { Link as LinkR } from "react-router-dom";
+import Rocket from "../../images/BestTeamDivider.png";
 
-
-const Button = styled(motion.button)`
-    padding: 0.50rem 1.5rem;
-    font-size: 1rem;
-    border: 2px solid whitesmoke;
-    border-radius: 6px;
-    outline: none;
-    cursor: pointer;
-    background: transparent;
-    color: whitesmoke;
-    margin-bottom: 100px;
-    
-
-
+const StyledButton = styled(Button)`
+    &&& {
+        color: ${props => props.theme.text};
+        border: 1px solid ${props => props.theme.text};
+        margin-bottom: 30px;
+    }
 `;
-const ButtonSection = styled.section`
-    width: 40vh;
-    margin-left: 110px;
-    margin-top: -50px;
-`;
-
-
-
-const Section = styled.section`
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: black;
-    height: 780px;
-    overflow: hidden;
-`;
-
-const Container = styled.div`
+const InfoWrapper = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 80vh;
-    padding: 2rem calc(100vw - 1300px / 2 );
-    
-    @media screen and (max-width: 768px) {
-        //grid-template-columns: 1fr;
-    }
-`;
-
-
-const ColumnLeft = styled.div`
-    display: flex;
-    color: whitesmoke;
-    flex-direction: column;
+    z-index: 1;
+    height: 150vh;
+    width: 100%;
     justify-content: center;
-    align-items: flex-start;
-    //padding: 6rem 1rem;
-    margin-top: 5rem;
-    z-index: 10;
+    background: ${props => props.theme.body};
+    overflow: hidden;
     
 
-    @media screen and (max-width: 768px) {
-        align-items: left;
-        margin-left: 60px;
-    }
-
-    h1 {
-      
-      font-size: 3rem;  
-      text-shadow: -1px 1px 0 whitesmoke,
-                          4px 6px 0 black,
-                         1px -1px 0 #000,
-                        -1px -1px 0 #000;
-
-      @media screen and (max-width: 768px) {
-        font-size: 30px;
-        text-align: left;
-        
-        
-    }
-    }
-
-    p {
-        margin: 0.5rem 0;
-        font-size: 5rem;
-        width: 600px;
-        text-shadow: -1px 1px 0 whitesmoke,
-                          4px 6px 0 black,
-                         1px -1px 0 #000,
-                        -1px -1px 0 #000;
-
-        @media screen and (max-width: 768px) {
-        font-size: 48px;
-        text-align: left;
-        margin-bottom: 60px;
-        width: 250px;
-    }
+    @media screen and (max-width: 860px){
+        height: 100vh;
     }
 `;
 
-const Image = styled(motion.img)`
-    width: 150px;
-    height: 150px;
-    max-width: 250px;
-    max-height: 250px;
-    position: absolute;
-    z-index: 5;
-`;
-
-const ColumnRight = styled.div`
-    display: flex;
-    justify-content: center;
+const InfoRow = styled.div`
+    display: grid;
+    grid-auto-columns:minmax(auto, 1fr);
     align-items: center;
-    padding: 2rem;
-    position: relative;
+    
+    grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
 
-    ${Image}:nth-child(1) {
-        top: 0;
-        right: 50px;
+    @media screen and (max-width: 768px) {
+        grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
     }
-    ${Image}:nth-child(2) {
-        
-    }
-    ${Image}:nth-child(3) {
-        
-        
-    }
-    ${Image}:nth-child(4) {
-        
-    }
+`;
 
-    @media screen and (max-width: 880px) {
-        ${Image}:nth-child(1) {
-        
-        }
-        ${Image}:nth-child(2) {
-            
-        }
-        ${Image}:nth-child(3) {
-          
-        }
-        ${Image}:nth-child(4) {
-            
-        }
+const Column1 = styled.div`
+   grid-area: col1;
+   width: 400px;
+   height: 500px; 
+   @media screen and (max-width: 860px){
+        width: 250px;
+        height: 250px;
+        margin-left: 30px;
+    }
+`;
+
+const Column2 = styled.div`
+    grid-area: col2;
+    @media screen and (min-width: 860px){
+        margin-left: 100px;
+    }
+    
+`;
+
+const TextWrapper = styled.div`
+    max-width: 540px;
+    padding-top: 0;
+    padding-bottom: 20px;
+`;
+
+const TopLine = styled.p`
+    color: ${props => props.theme.text};
+    font-size: 32px;
+    line-height: 16px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    margin-bottom: 16px;
+    margin-top: 30px;
+
+    
+`;
+
+const Heading = styled.h1`
+    
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 600;
+    color: ${props => props.theme.text};
+
+    @media screen and (max-width: 480px){
+        font-size: 32px;
+    }
+`;
+
+const List = styled.ul`
+    max-width: 540px;
+    height: 30px;
+`;
+
+const ListItems = styled.li`
+    color: ${props => props.theme.text};
+    display: inline-flex;
+    align-items: center;
+    margin-top: -50px;
+    
+    
+`;
+
+const Type = styled.h4`
+    font-size: 18px;
+    margin-right: 10px;
+    @media screen and (max-width: 860px){
+        font-size: 16px;
     }
 
 `;
 
+const Orange = styled.div`
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: orange;
+    margin-right: 5px;
+    @media screen and (max-width: 860px){
+        width: 15px;
+        height: 15px;
+    }
+`;
+const Blue = styled.div`
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #2070C4;
+    margin-right: 5px;
+    @media screen and (max-width: 860px){
+        width: 15px;
+        height: 15px;
+    }
+`;
+const Yellow = styled.div`
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: yellow;
+    margin-right: 5px;
+    @media screen and (max-width: 860px){
+        width: 15px;
+        height: 15px;
+    }
+`;
+const Green = styled.div`
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: green;
+    margin-right: 5px;
+    @media screen and (max-width: 860px){
+        width: 15px;
+        height: 15px;
+    }
+`;
+const Purple = styled.div`
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: purple;
+    margin-right: 5px;
+    @media screen and (max-width: 860px){
+        width: 15px;
+        height: 15px;
+    }
+`;
+const Red = styled.div`
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: red;
+    margin-right: 5px;
+    @media screen and (max-width: 860px){
+        width: 15px;
+        height: 15px;
+    }
+`;
+const Pink = styled.div`
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #EB80F1;
+    margin-right: 5px;
+    @media screen and (max-width: 860px){
+        width: 15px;
+        height: 15px;
+    }
+`;
+const Grey = styled.div`
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: grey;
+    margin-right: 5px;
+    @media screen and (max-width: 860px){
+        width: 15px;
+        height: 15px;
+    }
+`;
+
+const Image = styled.img`
+    width: 100vw;
+    height: auto;
+    display: flex;
+`;
+
+const SectionImage = styled.div`
+    height: 150px;
+    background-color: ${props => props.theme.body};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: 1000px){
+        height: 300px;
+        img{
+            width: 80vw;
+        }
+    }
+`;
 
 
 const TeamSection = () => {
 
     
 
+
     return(
-        <Section id="team">
-            <Container>
-                <ColumnLeft>
-                    <motion.h1
-                        initial={{ opacity: 0, x: -300}}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 3}}
-                    >This is <br/> the team</motion.h1>
-                    <motion.p
-                        initial={{ opacity: 0, x: -300}}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{duration: 3}}
-                    >that will take you to Outer Space</motion.p>
-                    <LinkR to="/TeamPage"><Button 
-                    whileHover={{scale:1.05}} 
-                    whileTap={{backgroundColor:'gold', border: 'none', color: 'black' }}
-                    initial={{ opacity: 0, x: -300}}
-                    animate={{ opacity: 1, x:0, transition: { duration: 3 }}}
-                    >Meet the Team</Button></LinkR>
-                </ColumnLeft>
-                <ColumnRight>
-                    <Image src={Astronaut} alt="planet" 
-                    whileTap={{scale: 1.2}} 
-                    drag={true}
-                    initial={{x: -20, y:20, opacity: 0, scale: 1}}
-                    animate={{x: -20, y:80,  opacity: 1, scale: 2.6, transition: { duration: 9, repeat: Infinity,  repeatType: 'reverse'}}} />
-                </ColumnRight>
-            </Container>
-        </Section>
+        <>
+            <SectionImage>
+            <Image src={Rocket} alt="" />
+            </SectionImage>
+            <InfoWrapper>
+                <InfoRow>
+                    <Column1>
+                    
+                    </Column1>
+                    <Column2>
+                        
+                    </Column2>
+                </InfoRow>    
+            </InfoWrapper>      
+       
+        </>
+        
     )
 }
 
