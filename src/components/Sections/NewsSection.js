@@ -82,7 +82,13 @@ const Title = styled.h1`
     padding: 0 20px;
     margin-bottom: 10px;
     
+    
     color: ${props => props.theme.text};
+
+    @media screen and (max-width: 1000px){
+        font-size: 24px;
+        margin-top: 15px;
+    }
     
 `;
 
@@ -114,7 +120,7 @@ const TitleList = styled.ul`
 
     @media screen and (min-width: 1100px) {
         align-items: center;
-        justify-content: left;
+        
         margin-top: 10px;
     }
     
