@@ -24,7 +24,7 @@ const Carroussel = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 30px;
+    
     
     background-size: contain;
     
@@ -63,7 +63,7 @@ const FaceIcon = styled(FacebookIcon)`
 `; */
 
 const Container = styled.div`
-    height: 90vh;
+    height: 80vh;
     width: 90vw;
     background: ${props => props.theme.body};
     display: flex;
@@ -76,10 +76,12 @@ const Container = styled.div`
 `;
 
 const Title = styled.h1`
+    display: flex;
     text-align: center;
-    font-size: calc(1.8em + 0.4vw);
+    font-size: 42px;
+    padding: 0 20px;
     margin-bottom: 10px;
-    margin-top: 50px;
+    
     color: ${props => props.theme.text};
     
 `;
@@ -251,7 +253,7 @@ const SectionImage = styled.div`
         height: 500px;
         
         img{
-            width: 80vw;
+            width: 70vw;
         }
     }
 `;
