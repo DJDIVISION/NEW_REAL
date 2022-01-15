@@ -8,6 +8,7 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { IconButton, Button } from "@material-ui/core";
 import "../../../node_modules/slick-carousel/slick/slick.css";
 import "../../../node_modules/slick-carousel/slick/slick-theme.css";
+import PartnersImage from "../../images/BestPartnersDivider.png";
 
 import FortisBack from "../../images/fortisbackground.jpg";
 import FortisLogo from "../../images/fortis_logo.png";
@@ -186,6 +187,28 @@ const PartnerButton = styled(Button)`
     }
 `;
 
+const Image = styled.img`
+    width: 100vw;
+    height: auto;
+    display: flex;
+`;
+
+const SectionImage = styled.div`
+    height: 150px;
+    background-color: ${props => props.theme.body};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: 1000px){
+        height: 500px;
+        
+        img{
+            width: 70vw;
+        }
+    }
+`;
+
 const PartnerSlider = () => {
     const settings = {
         dots: true,
@@ -195,8 +218,11 @@ const PartnerSlider = () => {
         slidesToScroll: 1
       };
     return(
+        <>
+        <SectionImage id="news">
+            <Image src={PartnersImage} alt="" />
+            </SectionImage>
         <Section>
-            <Title> OUR PARTNERS </Title>
             <Carroussel>
             <Slider {...settings}>
       <div id="partners">
@@ -322,6 +348,7 @@ const PartnerSlider = () => {
     </Slider>
             </Carroussel>
         </Section>
+        </>
     )
 }
 

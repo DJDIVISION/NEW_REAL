@@ -57,7 +57,7 @@ const Home = (props) => {
             {/* <BuySellSection /> */}
             {/* <Tokenomics /> */}
             {/* <DonutSection /> */}
-            {/* <PartnerSlider />  */}
+            <PartnerSlider />
             <Footer />
         </motion.div>
         </ThemeProvider>
