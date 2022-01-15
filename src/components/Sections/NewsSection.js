@@ -6,6 +6,7 @@ import { Link as LinkR } from "react-router-dom";
 import {Button, IconButton} from "@material-ui/core";
 import ShareIcon from '@mui/icons-material/Share';
 import "./style.css";
+import NewsImage from "../../images/BestNewsDivider.png";
 
 
 import { TwitterShareButton, TwitterIcon, FacebookShareButton, FacebookIcon, LinkedinIcon, LinkedinShareButton, EmailIcon, EmailShareButton} from "react-share";
@@ -233,6 +234,28 @@ const SharingButton = styled(ShareIcon)`
     transform: scale(0.9);
 `;
 
+const Image = styled.img`
+    width: 100vw;
+    height: auto;
+    display: flex;
+`;
+
+const SectionImage = styled.div`
+    height: 150px;
+    background-color: ${props => props.theme.body};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: 1000px){
+        height: 500px;
+        
+        img{
+            width: 80vw;
+        }
+    }
+`;
+
 
 
 const NewsSection = () => {
@@ -252,7 +275,11 @@ const NewsSection = () => {
       };
 
     return(
-        <Section>
+        <>
+        <SectionImage id="news">
+            <Image src={NewsImage} alt="" />
+            </SectionImage>
+        <Section id="news">
         <Carroussel>
             <Slider {...settings}>
                 <div>
@@ -394,6 +421,7 @@ const NewsSection = () => {
             </Slider>
         </Carroussel>
         </Section>
+        </>
     )
 }
 

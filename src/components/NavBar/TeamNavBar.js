@@ -51,7 +51,7 @@ const StyledMenuIcon = styled(MenuIcon)`
 
 
 
-const Navbar = (props) => {
+const TeamNavbar = (props) => {
 
     function changeTheme() {
         if(props.theme === "light") {
@@ -103,31 +103,19 @@ const Navbar = (props) => {
                     </MobileIcon2> 
                     <NavMenu>
                         <NavItem>
-                            <NavbarLink to="news" smooth={true} duration={500} spy={true} exact="true" >News</NavbarLink>
+                            <NavbarLink to="ceo" smooth={true} duration={500} spy={true} exact="true" >DAVID</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="team" smooth={true} duration={500} spy={true} exact="true" >Team</NavbarLink>
+                            <NavbarLink to="cio" smooth={true} duration={500} spy={true} exact="true" >FILIP</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="gaming" smooth={true} duration={500} spy={true} exact="true" >Gaming</NavbarLink>
+                            <NavbarLink to="dev1" smooth={true} duration={500} spy={true} exact="true" >VICTOR</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="partners" smooth={true} duration={2000} spy={true} exact="true" >Partners</NavbarLink>
+                            <NavbarLink to="dev2" smooth={true} duration={2000} spy={true} exact="true" >BASHKAR</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="nft" smooth={true} duration={500} spy={true} exact="true" >NFTs</NavbarLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavbarLink to="roadmap" smooth={true} duration={500} spy={true} exact="true" >RoadMap</NavbarLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavbarLink to="tokenomics" smooth={true} duration={2000} spy={true} exact="true">Tokenomics</NavbarLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavbarLink to="telos" smooth={true} duration={500} spy={true} exact="true" >Telos</NavbarLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavbarLink to="bsc" smooth={true} duration={500} spy={true} exact="true" >BSC</NavbarLink>
+                            <NavbarLink to="dev3" smooth={true} duration={500} spy={true} exact="true" >ABHIK</NavbarLink>
                         </NavItem>
                     </NavMenu>
                 
@@ -138,4 +126,4 @@ const Navbar = (props) => {
     );
 };
 
-export default Navbar;
+export default TeamNavbar;

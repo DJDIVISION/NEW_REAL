@@ -168,7 +168,7 @@ const LoaderText = styled(motion.h2)`
 `;
 
 
-export function CanvasSectionTwo(props) {
+export function CanvasSectionTwo(props) { 
     
 
     const switchToOne = () => {
@@ -196,7 +196,7 @@ export function CanvasSectionTwo(props) {
                         <LinkS to="#"><NewsIcon/>NEWS</LinkS>
                     </MenuItem>
                     <MenuItem>
-                        <TeamIcon/>TEAM
+                    <LinkS to="team" smooth={true} duration={500} spy={true} exact="true"><TeamIcon />TEAM</LinkS>
                     </MenuItem>
                     <MenuItem>
                     <LinkS to="tokenomics" smooth={true} duration={500} spy={true} exact="true"><TokenIcon />TOKENOMICS</LinkS>

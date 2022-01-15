@@ -345,7 +345,7 @@ const TopSection = () => {
     }
     
     return (
-        
+         
         <Container>
             <ColumnLeft>
                 <CanvasContainer /> 

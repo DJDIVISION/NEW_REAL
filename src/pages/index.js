@@ -20,6 +20,7 @@ import TeamSection from "../components/Sections/TeamSection";
 
 
 
+
 const Home = (props) => {
 
     const [theme, setTheme] = useState("dark");
@@ -50,11 +51,11 @@ const Home = (props) => {
             
             <SectionMenu />
             
-            {/* <NewsSection /> */}
+            <NewsSection />
             <DonutSection />
             <TeamSection />
             {/* <BuySellSection /> */}
-            <Tokenomics />
+            {/* <Tokenomics /> */}
             {/* <DonutSection /> */}
             {/* <PartnerSlider />  */}
             <Footer />

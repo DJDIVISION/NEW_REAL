@@ -217,7 +217,7 @@ const SectionImage = styled.div`
     @media screen and (min-width: 1000px){
         height: 300px;
         img{
-            width: 80vw;
+            width: 70vw;
         }
     }
 `;
@@ -240,7 +240,7 @@ const DonutSection = () => {
 
     return(
         <>
-            <SectionImage>
+            <SectionImage id="tokenomics">
             <Image src={Rocket} alt="" />
             </SectionImage>
             <InfoWrapper>
@@ -290,7 +290,6 @@ const DonutSection = () => {
                         <TextWrapper>
                             <TopLine>DAIR</TopLine>
                             <Heading>TOKENOMICS</Heading>
-                            
                         </TextWrapper>
                         <LinkR to="TokenomicsPage"><StyledButton>LEARN MORE</StyledButton></LinkR>
                     </Column2>
