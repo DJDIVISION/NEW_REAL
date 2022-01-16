@@ -117,7 +117,7 @@ const StyledButton = styled(Button)`
 const NftSection = () => {
     return (
          
-        <Container id="gaming">
+        <Container id="nft">
             <ColumnLeft>
                 <SectionImage >
                 <Image src={NftImage} alt="" />
@@ -126,7 +126,7 @@ const NftSection = () => {
             <ColumnRight>
             
                 <TopLine>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</TopLine>
-                <Heading>TRY YOUR LUCK</Heading>
+                <Heading>TO THE GALLERY</Heading>
            
             <LinkR to="TokenomicsPage"><StyledButton>LEARN MORE</StyledButton></LinkR>
             </ColumnRight>

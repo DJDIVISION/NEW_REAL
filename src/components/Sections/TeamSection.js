@@ -123,7 +123,7 @@ const TeamSection = () => {
 
     return(
         <>
-            <Container id="gaming">
+            <Container id="team">
             <ColumnLeft>
                 <SectionImage >
                 <Image src={TeamImage} alt="" />

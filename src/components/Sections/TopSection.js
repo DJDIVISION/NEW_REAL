@@ -300,10 +300,10 @@ const DropDownMenu = () => {
                     <IconButton onClick={switchToOne}><BackIcon /></IconButton> 
                     </MenuItem>
                     <MenuItem>
-                        <LinkS to="#" onClick={switchToOne}><NewsIcon/>NEWS</LinkS>
+                    <LinkS to="news" smooth={true} duration={1500} spy={true} exact="true" onClick={switchToOne}><NewsIcon />NEWS</LinkS>
                     </MenuItem>
                     <MenuItem>
-                        <TeamIcon/>TEAM
+                    <LinkS to="team" smooth={true} duration={1500} spy={true} exact="true" onClick={switchToOne}><TeamIcon />TEAM</LinkS>
                     </MenuItem>
                     <MenuItem>
                     <LinkS to="tokenomics" smooth={true} duration={1500} spy={true} exact="true" onClick={switchToOne}><TokenIcon />TOKENOMICS</LinkS>

@@ -121,7 +121,7 @@ const Navbar = (props) => {
                             <NavbarLink to="roadmap" smooth={true} duration={500} spy={true} exact="true" >RoadMap</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="tokenomics" smooth={true} duration={2000} spy={true} exact="true">Tokenomics</NavbarLink>
+                            <NavbarLink to="tokenomics" smooth={true} duration={1000} spy={true} exact="true">Tokenomics</NavbarLink>
                         </NavItem>
                         <NavItem>
                             <NavbarLink to="telos" smooth={true} duration={500} spy={true} exact="true" >Telos</NavbarLink>

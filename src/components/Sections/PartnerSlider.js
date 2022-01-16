@@ -219,13 +219,13 @@ const PartnerSlider = () => {
       };
     return(
         <>
-        <SectionImage id="news">
+        <SectionImage id="partners">
             <Image src={PartnersImage} alt="" />
             </SectionImage>
-        <Section>
+        <Section >
             <Carroussel>
             <Slider {...settings}>
-      <div id="partners">
+      <div>
       <MainContainer style={{backgroundImage: `url(${FortisBack})`}}>
             <Container>
                 <LogoContainer>
