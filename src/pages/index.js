@@ -15,6 +15,7 @@ import NewsSection from "../components/Sections/NewsSection";
 import SectionMenu from "../components/Sections/TopSection";
 import Tokenomics from "../components/Sections/Tokenomics";
 import TeamSection from "../components/Sections/TeamSection";
+import GamingSection from "../components/Sections/GamingSection";
 
 
 
@@ -54,6 +55,7 @@ const Home = (props) => {
             <NewsSection />
             <DonutSection />
             <TeamSection />
+            <GamingSection />
             {/* <BuySellSection /> */}
             {/* <Tokenomics /> */}
             {/* <DonutSection /> */}

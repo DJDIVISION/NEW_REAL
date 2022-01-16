@@ -5,25 +5,24 @@ import { motion } from "framer-motion";
 import { Link as LinkR } from "react-router-dom";
 
 
-import TeamImage from "../../images/BestTeamDivider.png";
+import GamingImage from "../../images/BestGamingDivider.png";
 
 
 const Container = styled.div`
     display: flex;
     width: 100vw;
     height: 100vh;
-    background: ${props => props.theme.text};
+    background: white;
 
     @media screen and (max-width: 1100px){
         flex-direction: column;
-        
     }
 `;
 
 const ColumnLeft = styled.div`
     flex-shrink: 0;
     flex-basis: 50%;
-    background: ${props => props.theme.body};
+    background: white;
     width: 50%;
     height: 100vh;
     display: flex;
@@ -34,14 +33,14 @@ const ColumnLeft = styled.div`
     }
 
     @media screen and (max-width: 1100px){
-        width: 100vw;
         
+        width: 100vw;
         
         
     }
 `;
 const ColumnRight = styled.div`
-    background: ${props => props.theme.body};
+    background: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,7 +81,7 @@ const SectionImage = styled.div`
 
 
 const TopLine = styled.p`
-    color: ${props => props.theme.text};
+    color: black;
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 30px;
@@ -98,7 +97,7 @@ const TopLine = styled.p`
 const Heading = styled.h1`
     font-size: 48px;
     font-weight: 600;
-    color: ${props => props.theme.text};
+    color: black;
     margin-bottom: 30px;
 
     @media screen and (max-width: 480px){
@@ -110,38 +109,30 @@ const Heading = styled.h1`
 const StyledButton = styled(Button)`
     &&& {
         color: black;
-        border: 1px solid ${props => props.theme.text};
+        border: 1px solid black;
         margin-bottom: 30px;
     }
 `;
 
-
-const TeamSection = () => {
-
-    
-
-
-    return(
-        <>
-            <Container id="gaming">
+const GamingSection = () => {
+    return (
+         
+        <Container id="gaming">
             <ColumnLeft>
                 <SectionImage >
-                <Image src={TeamImage} alt="" />
+                <Image src={GamingImage} alt="" />
                 </SectionImage>
             </ColumnLeft>
             <ColumnRight>
             
                 <TopLine>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</TopLine>
-                <Heading>MEET THE TEAM</Heading>
+                <Heading>TRY YOUR LUCK</Heading>
            
-            <LinkR to="TokenomicsPage"><StyledButton>GO!!!</StyledButton></LinkR>
+            <LinkR to="TokenomicsPage"><StyledButton>LEARN MORE</StyledButton></LinkR>
             </ColumnRight>
-        </Container> 
-       
-        </>
+        </Container>
         
     )
 }
 
-
-export default TeamSection;
+export default GamingSection;

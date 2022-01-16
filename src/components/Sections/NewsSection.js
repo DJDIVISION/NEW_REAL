@@ -287,7 +287,7 @@ const NewsSection = () => {
         <SectionImage id="news">
             <Image src={NewsImage} alt="" />
             </SectionImage>
-        <Section id="news">
+        <Section>
         <Carroussel>
             <Slider {...settings}>
                 <div>
