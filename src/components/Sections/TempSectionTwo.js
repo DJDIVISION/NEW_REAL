@@ -3,12 +3,12 @@ import styled from "styled-components"
 import Image from "../../images/BestGamingDivider.png"
 
 const Section = styled.div`
-    background-image: url(${Image});
+    background: url(${Image}) no-repeat;
     height: 400px;
     width: 100%;
     background-attachment: fixed;
     background-size: cover;
-    
+    overflow: hidden;
     z-index: 100;
     
     
@@ -17,7 +17,7 @@ const Section = styled.div`
         height: 200px;
         background-size: 300px;
         background-position: center;
-        background-repeat: no-repeat;
+        
     }
 
     

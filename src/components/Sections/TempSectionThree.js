@@ -3,12 +3,12 @@ import styled from "styled-components"
 import Image from "../../images/BestTeamDivider.png"
 
 const Section = styled.div`
-    background-image: url(${Image});
+    background: url(${Image}) no-repeat;
     height: 400px;
     width: 100%;
     background-attachment: fixed;
     background-size: cover;
-    
+    overflow: hidden;
     z-index: 100;
     
     
