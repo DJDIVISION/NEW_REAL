@@ -15,13 +15,11 @@ const Section = styled.div`
     background-color: black;
     @media screen and (max-width: 1000px){
         height: 200px;
-        background-size: contain;
+        background-size: 300px;
         background-position: center;
         background-repeat: no-repeat;
 
-        img {
-            width: 80%;
-        }
+        
     }
 
     
