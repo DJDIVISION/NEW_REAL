@@ -19,6 +19,8 @@ import GroupsIcon from '@mui/icons-material/Groups';
 import PriceCheckIcon from '@mui/icons-material/PriceCheck';
 import MapIcon from '@mui/icons-material/Map';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
+import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+import PaletteIcon from '@mui/icons-material/Palette';
 
 const BackIcon = styled(HighlightOffIcon)`
     color: ${props => props.theme.text};
@@ -26,6 +28,16 @@ const BackIcon = styled(HighlightOffIcon)`
     margin-bottom: 15px;
     
     z-index: 500;
+`;
+
+const NftIcon = styled(PaletteIcon)`
+   color: ${props => props.theme.text};
+    margin-right: 10px;
+`;
+
+const GamingIcon = styled(SportsEsportsIcon)`
+   color: ${props => props.theme.text};
+    margin-right: 10px;
 `;
 
 
@@ -194,7 +206,7 @@ const MenuOverview = styled.ul`
 
 
 const MenuItem = styled.li`
-    height: 55px;
+    height: 45px;
     color: ${props => props.theme.text};
     font-size: 24px;
     font-weight: bold;
@@ -303,10 +315,16 @@ const DropDownMenu = () => {
                     <LinkS to="news" smooth={true} duration={1500} spy={true} exact="true" onClick={switchToOne}><NewsIcon />NEWS</LinkS>
                     </MenuItem>
                     <MenuItem>
+                    <LinkS to="tokenomics" smooth={true} duration={1500} spy={true} exact="true" onClick={switchToOne}><TokenIcon />TOKENOMICS</LinkS>
+                    </MenuItem>
+                    <MenuItem>
                     <LinkS to="team" smooth={true} duration={1500} spy={true} exact="true" onClick={switchToOne}><TeamIcon />TEAM</LinkS>
                     </MenuItem>
                     <MenuItem>
-                    <LinkS to="tokenomics" smooth={true} duration={1500} spy={true} exact="true" onClick={switchToOne}><TokenIcon />TOKENOMICS</LinkS>
+                    <LinkS to="gaming" smooth={true} duration={1500} spy={true} exact="true" onClick={switchToOne}><GamingIcon />GAMING</LinkS>
+                    </MenuItem>
+                    <MenuItem>
+                    <LinkS to="tokenomics" smooth={true} duration={1500} spy={true} exact="true" onClick={switchToOne}><NftIcon />NFTS</LinkS>
                     </MenuItem>
                     <MenuItem>
                         <LinkS to="roadmap" smooth={true} duration={1500} spy={true} exact="true" onClick={switchToOne}><RoadMapIcon/>ROADMAP</LinkS>

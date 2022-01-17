@@ -70,9 +70,9 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 80px;
+    
     border-radius: 20px;
-    padding: 0 20px;
+    
     
     
     
@@ -81,9 +81,10 @@ const Container = styled.div`
 const Title = styled.h1`
     display: flex;
     text-align: center;
-    font-size: 42px;
+    font-size: 92px;
     padding: 0 20px;
     margin-bottom: 10px;
+    
     
     
     color: ${props => props.theme.text};
@@ -118,7 +119,7 @@ const TitleList = styled.ul`
     align-items: center;
     text-justify: center;
     justify-content: center;
-    width: 90vw;
+    width: 100vw;
     
 
     @media screen and (min-width: 1100px) {
@@ -240,7 +241,7 @@ const Section = styled.div`
 `;
 
 const SharingButton = styled(ShareIcon)`
-    background: lightgrey;
+    
     border-radius: 50%;
     transform: scale(0.9);
 `;
