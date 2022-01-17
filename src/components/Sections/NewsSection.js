@@ -24,7 +24,7 @@ const Carroussel = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 3vw;
+    
     
     background-size: contain;
     
@@ -116,10 +116,10 @@ const IconList = styled.ul`
 const TitleList = styled.ul`
     display: flex;
     align-items: center;
-    
+    text-justify: center;
     justify-content: center;
     width: 90vw;
-    margin-left: -20px;
+    
 
     @media screen and (min-width: 1100px) {
         align-items: center;
@@ -134,12 +134,12 @@ const Logo = styled.img`
     width: 50px;
     border-radius: 50%;
     border: 1px solid ${props => props.theme.body};
-    margin-left: 5vw;
-    margin-right: 1vw;
+    margin-left: -10px;
+    margin-right: 10px;
     padding: 2px;
 
     @media screen and (min-width: 1100px) {
-        margin-left: 12vw;
+        
     }
 
     
@@ -149,7 +149,7 @@ const Writer = styled.h4`
     font-size: 18px;
     color: ${props => props.theme.text};
     font-family: "Comfortaa";
-    margin-right: 2vw;
+    
 
     @media screen and (max-width: 860px){
         font-size: 12px;
@@ -161,7 +161,7 @@ const Time = styled.h4`
    font-size: 16px;
     color: grey;
     font-family: "Comfortaa";
-    margin-right: 2vw;
+    
 
     @media screen and (max-width: 860px){
         font-size: 10px;
@@ -182,7 +182,7 @@ const ReadTime = styled.h4`
 const Subtitle = styled.h2`
     color: ${props => props.theme.text};
     font-family: "Comfortaa";
-    text-align: left;
+    text-align: center;
     margin-left: 2vw;
     padding: 2vh 10vw;
     font-size: 14px;
@@ -317,8 +317,8 @@ const NewsSection = () => {
                     <TitleList>
                         <Logo src={DWLogo} alt=""/>
                         <Writer>David R. Martin</Writer>
-                        <Time>5 hours ago</Time>
-                        <ReadTime>6 min read</ReadTime> 
+                        <Time></Time>
+                        <ReadTime></ReadTime> 
                     </TitleList>
                     <Subtitle>"Really happy this stage has launched, its a big step in our ecosystem with REES"</Subtitle>
                     <ArticleText>The last years we have seen an increasing interest in blockchain technology and cryptocurrencies. The quest for wealth is not longer something that requires a Ph.D or knowledge of how to operate intrigue computer systems. More and more user friendly applications, games and use cases are developed and made available on various platforms.</ArticleText>
@@ -351,8 +351,8 @@ const NewsSection = () => {
                     <TitleList>
                         <Logo src={DWLogo} alt=""/>
                         <Writer>David R. Martin</Writer>
-                        <Time>5 hours ago</Time>
-                        <ReadTime>6 min read</ReadTime> 
+                        <Time></Time>
+                        <ReadTime></ReadTime> 
                     </TitleList>
                     <Subtitle>"Really happy this stage has launched, its a big step in our ecosystem with REES"</Subtitle>
                     <ArticleText>The last years we have seen an increasing interest in blockchain technology and cryptocurrencies. The quest for wealth is not longer something that requires a Ph.D or knowledge of how to operate intrigue computer systems. More and more user friendly applications, games and use cases are developed and made available on various platforms.</ArticleText>
@@ -385,8 +385,8 @@ const NewsSection = () => {
                     <TitleList>
                         <Logo src={DWLogo} alt=""/>
                         <Writer>David R. Martin</Writer>
-                        <Time>5 hours ago</Time>
-                        <ReadTime>6 min read</ReadTime> 
+                        <Time></Time>
+                        <ReadTime></ReadTime> 
                     </TitleList>
                     <Subtitle>"Really happy this stage has launched, its a big step in our ecosystem with REES"</Subtitle>
                     <ArticleText>The last years we have seen an increasing interest in blockchain technology and cryptocurrencies. The quest for wealth is not longer something that requires a Ph.D or knowledge of how to operate intrigue computer systems. More and more user friendly applications, games and use cases are developed and made available on various platforms.</ArticleText>
@@ -419,8 +419,8 @@ const NewsSection = () => {
                     <TitleList>
                         <Logo src={DWLogo} alt=""/>
                         <Writer>David R. Martin</Writer>
-                        <Time>5 hours ago</Time>
-                        <ReadTime>6 min read</ReadTime> 
+                        <Time></Time>
+                        <ReadTime></ReadTime> 
                     </TitleList>
                     <Subtitle>"Really happy this stage has launched, its a big step in our ecosystem with REES"</Subtitle>
                     <ArticleText>The last years we have seen an increasing interest in blockchain technology and cryptocurrencies. The quest for wealth is not longer something that requires a Ph.D or knowledge of how to operate intrigue computer systems. More and more user friendly applications, games and use cases are developed and made available on various platforms.</ArticleText>
