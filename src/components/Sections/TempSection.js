@@ -8,7 +8,7 @@ const Section = styled.div`
     width: 100%;
     background-attachment: fixed;
     background-size: cover;
-    
+
     z-index: 100;
     
     
