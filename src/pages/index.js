@@ -18,6 +18,9 @@ import TeamSection from "../components/Sections/TeamSection";
 import GamingSection from "../components/Sections/GamingSection";
 import NftSection from "../components/Sections/NftSection";
 import RoadMapSection from "../components/Sections/RoadMapSection";
+import TempSection from "../components/Sections/TempSection";
+import TempSectionTwo from "../components/Sections/TempSectionTwo";
+import TempSectionThree from "../components/Sections/TempSectionThree";
 
 
 
@@ -55,8 +58,11 @@ const Home = (props) => {
             <SectionMenu />
             
             <NewsSection />
+            <TempSection />
             <DonutSection />
+            <TempSectionThree />
             <TeamSection />
+            <TempSectionTwo />
             <GamingSection />
             <NftSection />
             <RoadMapSection />

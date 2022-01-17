@@ -324,7 +324,7 @@ const DropDownMenu = () => {
                     <LinkS to="gaming" smooth={true} duration={1500} spy={true} exact="true" onClick={switchToOne}><GamingIcon />GAMING</LinkS>
                     </MenuItem>
                     <MenuItem>
-                    <LinkS to="tokenomics" smooth={true} duration={1500} spy={true} exact="true" onClick={switchToOne}><NftIcon />NFTS</LinkS>
+                    <LinkS to="nft" smooth={true} duration={1500} spy={true} exact="true" onClick={switchToOne}><NftIcon />NFTS</LinkS>
                     </MenuItem>
                     <MenuItem>
                         <LinkS to="roadmap" smooth={true} duration={1500} spy={true} exact="true" onClick={switchToOne}><RoadMapIcon/>ROADMAP</LinkS>

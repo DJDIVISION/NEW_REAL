@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
-import Image from "../../images/BestTokenomicsDivider.png"
+import Image from "../../images/BestGamingDivider.png"
 
 const Section = styled.div`
     background-image: url(${Image});
@@ -30,7 +30,7 @@ const Section = styled.div`
 
 
 
-const TempSection = () => {
+const TempSectionTwo = () => {
     return (
         <>
         <Section />
@@ -40,4 +40,4 @@ const TempSection = () => {
     )
 }
 
-export default TempSection
+export default TempSectionTwo
