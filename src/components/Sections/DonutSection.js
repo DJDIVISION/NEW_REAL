@@ -33,6 +33,7 @@ const ColumnLeft = styled.div`
     @media screen and (max-width: 1100px){
         background: ${props => props.theme.verticalRed};
         width: 100vw;
+        padding-bottom: 100px;
         
         
     }
@@ -52,8 +53,9 @@ const ColumnRight = styled.div`
         width: 100vw;
         align-items: center;
         justify-content: center;
-        padding: 10px 20px;
+        padding: 0px 0px;
         background: ${props => props.theme.verticalRed};
+        padding-bottom: 100px;
     }
 
 `;
@@ -82,7 +84,7 @@ const StyledButton = styled(Button)`
     &&& {
         color: ${props => props.theme.text};
         border: 1px solid ${props => props.theme.text};
-        margin-bottom: 30px;
+        margin-bottom: 60px;
     }
 `;
 
@@ -101,7 +103,10 @@ const TopLine = styled.p`
     margin-bottom: 16px;
     margin-top: 30px;
 
-    
+    @media screen and (max-width: 1100px){
+        font-size: 16px;
+        line-height: 1px;
+    }
 `;
 
 const Heading = styled.h1`
@@ -113,6 +118,10 @@ const Heading = styled.h1`
 
     @media screen and (max-width: 480px){
         font-size: 32px;
+    }
+    @media screen and (max-width: 1100px){
+        font-size: 18px;
+        line-height: 1px;
     }
 `;
 
@@ -134,7 +143,7 @@ const Type = styled.h4`
     font-size: 18px;
     margin-right: 10px;
     @media screen and (max-width: 860px){
-        font-size: 16px;
+        font-size: 14px;
     }
 
 `;
