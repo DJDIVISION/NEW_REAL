@@ -126,13 +126,11 @@ const TeamSection = () => {
     return(
         <>
             <Container id="team">
-            <ColumnRight>
-            
-                <TopLine>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</TopLine>
-                <Heading>MEET THE TEAM</Heading>
-           
-            <LinkR to="TokenomicsPage"><StyledButton>GO!!!</StyledButton></LinkR>
-            </ColumnRight>
+            <ColumnLeft>
+                <SectionImage >
+                <Image src={TeamImage} alt="" />
+                </SectionImage>
+            </ColumnLeft>
             <ColumnRight>
             
                 <TopLine>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</TopLine>

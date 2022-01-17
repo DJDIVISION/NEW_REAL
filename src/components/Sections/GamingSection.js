@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Link as LinkR } from "react-router-dom";
 
 
-import GamingImage from "../../images/GamingPhone.png";
+import GamingImage from "../../images/BestGamingDivider.png";
 
 
 const Container = styled.div`
@@ -70,11 +70,11 @@ const SectionImage = styled.div`
     align-items: center;
 
     img {
-        width: 150px;
+        width: 100%;
     }
     @media screen and (min-width: 1000px){
         img{
-           width: 150px;
+           width: 50vw;
         }
     }
 `;

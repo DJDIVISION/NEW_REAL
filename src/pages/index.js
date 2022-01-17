@@ -58,11 +58,8 @@ const Home = (props) => {
             <SectionMenu />
             
             <NewsSection />
-            <TempSection />
             <DonutSection />
-            <TempSectionThree />
             <TeamSection />
-            <TempSectionTwo />
             <GamingSection />
             <NftSection />
             <RoadMapSection />
