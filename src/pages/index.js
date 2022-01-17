@@ -17,6 +17,7 @@ import Tokenomics from "../components/Sections/Tokenomics";
 import TeamSection from "../components/Sections/TeamSection";
 import GamingSection from "../components/Sections/GamingSection";
 import NftSection from "../components/Sections/NftSection";
+import RoadMapSection from "../components/Sections/RoadMapSection";
 
 
 
@@ -58,6 +59,7 @@ const Home = (props) => {
             <TeamSection />
             <GamingSection />
             <NftSection />
+            <RoadMapSection />
             {/* <BuySellSection /> */}
             {/* <Tokenomics /> */}
             {/* <DonutSection /> */}

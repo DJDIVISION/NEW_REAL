@@ -12,7 +12,7 @@ const Container = styled.div`
     display: flex;
     width: 100vw;
     height: 100vh;
-    background: white;
+    background: ${props => props.theme.body};
 
     @media screen and (max-width: 1100px){
         flex-direction: column;
@@ -22,7 +22,7 @@ const Container = styled.div`
 const ColumnLeft = styled.div`
     flex-shrink: 0;
     flex-basis: 50%;
-    background: white;
+    background: ${props => props.theme.body};
     width: 50%;
     height: 100vh;
     display: flex;
@@ -40,7 +40,7 @@ const ColumnLeft = styled.div`
     }
 `;
 const ColumnRight = styled.div`
-    background: white;
+    background: ${props => props.theme.body};
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,7 +81,7 @@ const SectionImage = styled.div`
 
 
 const TopLine = styled.p`
-    color: black;
+    color: ${props => props.theme.text};
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 30px;
@@ -97,7 +97,7 @@ const TopLine = styled.p`
 const Heading = styled.h1`
     font-size: 48px;
     font-weight: 600;
-    color: black;
+    color: ${props => props.theme.text};
     margin-bottom: 30px;
 
     @media screen and (max-width: 480px){
@@ -108,8 +108,8 @@ const Heading = styled.h1`
 
 const StyledButton = styled(Button)`
     &&& {
-        color: black;
-        border: 1px solid black;
+        color: ${props => props.theme.text};
+        border: 1px solid ${props => props.theme.text};
         margin-bottom: 30px;
     }
 `;

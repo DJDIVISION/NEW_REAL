@@ -6,57 +6,84 @@ import { Button } from "@material-ui/core";
 import { Link as LinkR } from "react-router-dom";
 import Rocket from "../../images/BestTokenomicsDivider.png";
 
+const Container = styled.div`
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background: ${props => props.theme.body};
+
+    @media screen and (max-width: 1100px){
+        flex-direction: column;
+    }
+`;
+
+const ColumnLeft = styled.div`
+    flex-shrink: 0;
+    flex-basis: 50%;
+    background: ${props => props.theme.body};
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and (min-width: 1100px){
+        
+    }
+
+    @media screen and (max-width: 1100px){
+        
+        width: 100vw;
+        
+        
+    }
+`;
+const ColumnRight = styled.div`
+    background: ${props => props.theme.body};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100vh;
+    padding: 10px 100px;
+    text-align: center;
+    @media screen and (max-width: 1100px){
+        height: 50vh;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 20px;
+        
+    }
+
+`;
+
+const Image = styled.img`
+    display: flex;
+`;
+
+const SectionImage = styled.div`
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 100%;
+    }
+    @media screen and (min-width: 1000px){
+        img{
+           width: 50vw;
+        }
+    }
+`;
+
+
+
 const StyledButton = styled(Button)`
     &&& {
         color: ${props => props.theme.text};
         border: 1px solid ${props => props.theme.text};
         margin-bottom: 30px;
     }
-`;
-const InfoWrapper = styled.div`
-    display: grid;
-    z-index: 1;
-    height: 150vh;
-    width: 100%;
-    justify-content: center;
-    background: ${props => props.theme.body};
-    overflow: hidden;
-    
-
-    @media screen and (max-width: 860px){
-        height: 100vh;
-    }
-`;
-
-const InfoRow = styled.div`
-    display: grid;
-    grid-auto-columns:minmax(auto, 1fr);
-    align-items: center;
-    
-    grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
-
-    @media screen and (max-width: 768px) {
-        grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
-    }
-`;
-
-const Column1 = styled.div`
-   grid-area: col1;
-   width: 400px;
-   height: 500px; 
-   @media screen and (max-width: 860px){
-        width: 250px;
-        height: 250px;
-        margin-left: 30px;
-    }
-`;
-
-const Column2 = styled.div`
-    grid-area: col2;
-    @media screen and (min-width: 860px){
-        margin-left: 100px;
-    }
-    
 `;
 
 const TextWrapper = styled.div`
@@ -201,26 +228,7 @@ const Grey = styled.div`
     }
 `;
 
-const Image = styled.img`
-    width: 100vw;
-    height: auto;
-    display: flex;
-`;
 
-const SectionImage = styled.div`
-    height: 150px;
-    background-color: ${props => props.theme.body};
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @media screen and (min-width: 1000px){
-        height: 300px;
-        img{
-            width: 70vw;
-        }
-    }
-`;
 
 
 const DonutSection = () => {
@@ -240,15 +248,15 @@ const DonutSection = () => {
 
     return(
         <>
-            <SectionImage id="tokenomics">
-            <Image src={Rocket} alt="" />
-            </SectionImage>
-            <InfoWrapper>
-                <InfoRow>
-                    <Column1>
+            
+            <Container id="tokenomics">
+                    <ColumnLeft>
+                    <SectionImage id="tokenomics">
+                    <Image src={Rocket} alt="" />
+                    </SectionImage>
+                    </ColumnLeft>
+                    <ColumnRight>
                     <ChartComponent data={data} />
-                    </Column1>
-                    <Column2>
                         <List>
                             <ListItems>
                                 <Orange />
@@ -288,13 +296,12 @@ const DonutSection = () => {
                             </ListItems>
                         </List>
                         <TextWrapper>
-                            <TopLine>DAIR</TopLine>
-                            <Heading>TOKENOMICS</Heading>
+                            <TopLine>DAIR. total supply:</TopLine>
+                            <Heading>1,000,000,000,000</Heading>
                         </TextWrapper>
                         <LinkR to="TokenomicsPage"><StyledButton>LEARN MORE</StyledButton></LinkR>
-                    </Column2>
-                </InfoRow>    
-            </InfoWrapper>      
+                    </ColumnRight>
+                    </Container> 
        
         </>
         

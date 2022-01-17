@@ -106,28 +106,28 @@ const Navbar = (props) => {
                             <NavbarLink to="news" smooth={true} duration={500} spy={true} exact="true" >News</NavbarLink>
                         </NavItem>
                         <NavItem>
+                            <NavbarLink to="tokenomics" smooth={true} duration={500} spy={true} exact="true">Tokenomics</NavbarLink>
+                        </NavItem>
+                        <NavItem>
                             <NavbarLink to="team" smooth={true} duration={500} spy={true} exact="true" >Team</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="gaming" smooth={true} duration={500} spy={true} exact="true" >Gaming</NavbarLink>
+                            <NavbarLink to="gaming" smooth={true} duration={1000} spy={true} exact="true" >Gaming</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="partners" smooth={true} duration={2000} spy={true} exact="true" >Partners</NavbarLink>
+                            <NavbarLink to="nft" smooth={true} duration={1000} spy={true} exact="true" >NFTs</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="nft" smooth={true} duration={500} spy={true} exact="true" >NFTs</NavbarLink>
+                            <NavbarLink to="roadmap" smooth={true} duration={1000} spy={true} exact="true" >RoadMap</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="roadmap" smooth={true} duration={500} spy={true} exact="true" >RoadMap</NavbarLink>
+                            <NavbarLink to="partners" smooth={true} duration={1500} spy={true} exact="true" >Partners</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="tokenomics" smooth={true} duration={1000} spy={true} exact="true">Tokenomics</NavbarLink>
+                            <NavbarLink to="telos" smooth={true} duration={1500} spy={true} exact="true" >Telos</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="telos" smooth={true} duration={500} spy={true} exact="true" >Telos</NavbarLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavbarLink to="bsc" smooth={true} duration={500} spy={true} exact="true" >BSC</NavbarLink>
+                            <NavbarLink to="bsc" smooth={true} duration={1500} spy={true} exact="true" >BSC</NavbarLink>
                         </NavItem>
                     </NavMenu>
                 

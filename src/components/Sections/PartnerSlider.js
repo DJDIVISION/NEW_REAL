@@ -201,10 +201,10 @@ const SectionImage = styled.div`
     align-items: center;
 
     @media screen and (min-width: 1000px){
-        height: 500px;
+        height: 350px;
         
         img{
-            width: 70vw;
+            width: 50vw;
         }
     }
 `;
