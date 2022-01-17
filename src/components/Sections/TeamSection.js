@@ -111,7 +111,7 @@ const Heading = styled.h1`
 
 const StyledButton = styled(Button)`
     &&& {
-        color: black;
+        color: ${props => props.theme.text};
         border: 1px solid ${props => props.theme.text};
         margin-bottom: 30px;
     }

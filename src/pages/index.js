@@ -87,4 +87,4 @@ function HomeLoader () {
 
 
 
-export default Home;
+export default HomeLoader;

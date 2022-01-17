@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect } from "react";
 import { useLocation } from "react-router";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/index.js";
+import HomeLoader from "./pages/index.js";
 import HomeNoLoader  from "./pages/HomeNoLoader";
 import PartnersPage from "./pages/PartnersPage";
 import TeamPage from "./pages/TeamPage";
@@ -31,7 +31,7 @@ function App() {
         <GlobalStyle />
             <AnimatePresence exitBeforeEnter>
               <Routes>
-                <Route exact path="/" element={<Home />}/>
+                <Route exact path="/" element={<HomeLoader />}/>
                 <Route exact path="/partnerspage" element={<PartnersPage />}/>
                 <Route exact path="/homenoloader" element={<HomeNoLoader />}/>
                 <Route exact path="/teampage" element={<TeamPage />}/>

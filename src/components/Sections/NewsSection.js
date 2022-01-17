@@ -81,7 +81,7 @@ const Container = styled.div`
 const Title = styled.h1`
     display: flex;
     text-align: center;
-    font-size: 92px;
+    font-size: 46px;
     padding: 0 20px;
     margin-bottom: 10px;
     
