@@ -24,7 +24,7 @@ const Carroussel = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+    padding: 0 3vw;
     
     background-size: contain;
     
@@ -65,11 +65,14 @@ const FaceIcon = styled(FacebookIcon)`
 const Container = styled.div`
     height: 80vh;
     width: 90vw;
-    background: ${props => props.theme.body};
+    background: ${props => props.theme.horizontalGrey};
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 80px;
+    border-radius: 20px;
+    padding: 0 20px;
     
     
     

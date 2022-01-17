@@ -20,7 +20,7 @@ const Container = styled.div`
 const ColumnLeft = styled.div`
     flex-shrink: 0;
     flex-basis: 50%;
-    background: ${props => props.theme.body};
+    background: ${props => props.theme.horizontalRed};
     width: 50%;
     height: 100vh;
     display: flex;
@@ -31,14 +31,14 @@ const ColumnLeft = styled.div`
     }
 
     @media screen and (max-width: 1100px){
-        
+        background: ${props => props.theme.verticalRed};
         width: 100vw;
         
         
     }
 `;
 const ColumnRight = styled.div`
-    background: ${props => props.theme.body};
+    background: ${props => props.theme.horizontalRed};
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,7 +53,7 @@ const ColumnRight = styled.div`
         align-items: center;
         justify-content: center;
         padding: 10px 20px;
-        
+        background: ${props => props.theme.verticalRed};
     }
 
 `;

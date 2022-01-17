@@ -14,6 +14,7 @@ const Container = styled.div`
     height: 100vh;
     background: ${props => props.theme.text};
 
+
     @media screen and (max-width: 1100px){
         flex-direction: column;
         
@@ -23,32 +24,31 @@ const Container = styled.div`
 const ColumnLeft = styled.div`
     flex-shrink: 0;
     flex-basis: 50%;
-    background: ${props => props.theme.body};
+    background: ${props => props.theme.horizontalGrey};
     width: 50%;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    @media screen and (min-width: 1100px){
-        
-    }
+    
 
     @media screen and (max-width: 1100px){
         width: 100vw;
+        background: ${props => props.theme.verticalGrey};
         
         
         
     }
 `;
 const ColumnRight = styled.div`
-    background: ${props => props.theme.body};
+    background: ${props => props.theme.horizontalGrey};
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 50%;
     height: 100vh;
-    padding: 10px 100px;
+    padding: 10px 150px;
     text-align: center;
     @media screen and (max-width: 1100px){
         height: 50vh;
@@ -56,8 +56,10 @@ const ColumnRight = styled.div`
         align-items: center;
         justify-content: center;
         padding: 10px 20px;
+        background: ${props => props.theme.verticalGrey};
         
     }
+    
 
 `;
 
