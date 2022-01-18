@@ -136,13 +136,13 @@ const Logo = styled.div`
 
 const Title = styled.h1`
     font-family: "Alphacentauri";
-    font-size: 24px;
+    font-size: 20px;
     color: ${props => props.theme.body};
     position: absolute;
     transform: translate(0%, -375%);
     @media screen and (min-width: 1100px){
-        font-size: 32px;
-        transform: translate(0%, -325%);
+        font-size: 28px;
+        transform: translate(0%, -375%);
     }
 `;
 
