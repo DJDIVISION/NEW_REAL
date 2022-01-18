@@ -62,7 +62,7 @@ const Carroussel = styled.div`
     
 
     @media screen and (max-width: 1100px) {
-        width: 90vw;
+        width: 75vw;
         height: 60vh;
         margin-top: 40px;
 
@@ -79,10 +79,12 @@ const MainContainer = styled.section`
     height: 60vh;
     background-size: contain;
     display: flex;
+    align-items: center;
+    
     background-repeat: no-repeat;
 
     @media screen and (max-width: 1100px) {
-        width: 90vw;
+        width: 75vw;
         height: 60vh; 
         background-size: cover;
         background-position: center;
