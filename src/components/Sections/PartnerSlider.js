@@ -44,9 +44,9 @@ const Carroussel = styled.div`
     height: 60vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     margin-top: 80px;
     margin-bottom: 40px;
+    
     
     
     .slick-arrow:before{
@@ -60,14 +60,15 @@ const Carroussel = styled.div`
         transform: scale(1.2);
     }
     
+    
 
     @media screen and (max-width: 1100px) {
         width: 75vw;
         height: 60vh;
-        margin-top: 40px;
-
+        margin-top: 20px;
+        border-radius: 20px;
         .slick-arrow:before{
-            display: none;
+            
         }
     }
          
@@ -75,22 +76,116 @@ const Carroussel = styled.div`
 
 const MainContainer = styled.section`
     
-    width: 70vw;
+    width: 100%;
     height: 60vh;
     background-size: contain;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     
     background-repeat: no-repeat;
+    
+
 
     @media screen and (max-width: 1100px) {
         width: 75vw;
         height: 60vh; 
         background-size: cover;
         background-position: center;
-        
+        border-radius: 20px;
     }
     
+`;
+
+const Card = styled.div`
+    height: 45vh;
+    width: 175px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 ${props => props.theme.text};
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    color: ${props => props.theme.body};
+    border: 2px solid gold;
+
+    @media screen and (min-width: 1100px){
+        width: 225px;
+    }
+`;
+
+const Logo = styled.div`
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    border: 3px solid gold;
+    transform: translate(0%, -240%);
+    z-index: 100;
+    position: absolute;
+
+    @media screen and (max-width: 1100px){
+        
+        height: 60px;
+        width: 60px;
+    }
+`;
+
+const Title = styled.h1`
+    font-family: "Alphacentauri";
+    font-size: 24px;
+    color: ${props => props.theme.body};
+    position: absolute;
+    transform: translate(0%, -375%);
+    @media screen and (min-width: 1100px){
+        font-size: 32px;
+        transform: translate(0%, -325%);
+    }
+`;
+
+const Type = styled.div`
+    height: 30px;
+    width: 100px;
+    border: 2px solid gold;
+    border-radius: 20px;
+    text-align: center;
+    color: ${props => props.theme.text};
+    font-size: 18px;
+    padding-top: 3px;
+    position: absolute;
+    transform: translate(0%, -140%);
+`;
+
+const Description = styled.h2`
+    font-size: 14px;
+    color: ${props => props.theme.text};
+    text-align: center;
+    margin-top: 110px;
+
+    @media screen and (min-width: 1100px){
+        padding: 0 20px;
+        font-size: 16px;
+        margin-top: 150px;
+        
+    }
+
+`;
+
+const Link = styled(LinkR)`
+    font-size: 12px;
+    border: 1px solid ${props => props.theme.text};
+    margin-top: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: ${props => props.theme.text};
+    font-weight: bold;
+    @media screen and (min-width: 1100px){
+        margin-top: 20px;
+        
+    }
 `;
 
 
@@ -137,7 +232,14 @@ const PartnerSlider = () => {
                 <Slider {...settings}>
                     <div>
                     <MainContainer style={{backgroundImage: `url(${FortisBack})`}}>
-                            
+                       <Card>
+                            <Logo style={{backgroundImage: `url(${FortisLogo})`, backgroundSize: "cover"}} />   
+                            <Title>FORTIS</Title>
+                            <Type>PARTNER</Type> 
+                            <Description>Fortis is a decentralised, open, digital money. This means that everyone can use it and and transfer money to anyone they want</Description>
+                            <Link to="PartnersPage">MEET ME</Link>
+                        </Card> 
+                           
                     </MainContainer>
                     </div>
                     <div>
