@@ -153,8 +153,8 @@ const Type = styled.div`
     border-radius: 20px;
     text-align: center;
     color: ${props => props.theme.text};
-    font-size: 18px;
-    padding-top: 3px;
+    font-size: 13px;
+    padding-top: 7px;
     position: absolute;
     transform: translate(0%, -140%);
 `;
@@ -236,45 +236,86 @@ const PartnerSlider = () => {
                             <Logo style={{backgroundImage: `url(${FortisLogo})`, backgroundSize: "cover"}} />   
                             <Title>FORTIS</Title>
                             <Type>PARTNER</Type> 
-                            <Description>Fortis is a decentralised, open, digital money. This means that everyone can use it and and transfer money to anyone they want</Description>
+                            <Description>Fortis is a decentralised, open, digital money. This means that everyone can use it and transfer money to anyone they want</Description>
                             <Link to="PartnersPage">MEET ME</Link>
                         </Card> 
-                           
                     </MainContainer>
                     </div>
                     <div>
                     <MainContainer style={{backgroundImage: `url(${TelosBack})`}}>
-                            
+                        <Card>
+                            <Logo style={{backgroundImage: `url(${TelosLogo})`, backgroundSize: "cover"}} />   
+                            <Title>TELOS</Title>
+                            <Type>BLOCKCHAIN</Type> 
+                            <Description>Fortis is a decentralised, open, digital money. This means that everyone can use it and transfer money to anyone they want</Description>
+                            <Link to="PartnersPage">MEET ME</Link>
+                        </Card>      
                     </MainContainer>
                     </div>
                     <div>
                     <MainContainer style={{backgroundImage: `url(${NftfyBack})`}}>
-                            
+                        <Card>
+                            <Logo style={{backgroundImage: `url(${NftfyLogo})`, backgroundSize: "cover"}} />   
+                            <Title>NFTFY</Title>
+                            <Type>PARTNER</Type> 
+                            <Description>Fortis is a decentralised, open, digital money. This means that everyone can use it and transfer money to anyone they want</Description>
+                            <Link to="PartnersPage">MEET ME</Link>
+                        </Card>    
                     </MainContainer>
                     </div>
                     <div>
                     <MainContainer style={{backgroundImage: `url(${WombatBack})`}}>
-                            
+                        <Card>
+                            <Logo style={{backgroundImage: `url(${WombatLogo})`, backgroundSize: "cover"}} />   
+                            <Title>WOMBAT</Title>
+                            <Type>WALLET</Type> 
+                            <Description>Fortis is a decentralised, open, digital money. This means that everyone can use it and transfer money to anyone they want</Description>
+                            <Link to="PartnersPage">MEET ME</Link>
+                        </Card>    
                     </MainContainer>
                     </div>
                     <div>
                     <MainContainer style={{backgroundImage: `url(${TstarterBack})`}}>
-                            
+                        <Card>
+                            <Logo style={{backgroundImage: `url(${TstarterLogo})`, backgroundSize: "cover"}} />   
+                            <Title>T-STARTER</Title>
+                            <Type>LAUNCHPAD</Type> 
+                            <Description>Fortis is a decentralised, open, digital money. This means that everyone can use it and transfer money to anyone they want</Description>
+                            <Link to="PartnersPage">MEET ME</Link>
+                        </Card>    
                     </MainContainer>
                     </div>
                     <div>
                     <MainContainer style={{backgroundImage: `url(${AnchorBack})`}}>
-                        
+                        <Card>
+                            <Logo style={{backgroundImage: `url(${AnchorLogo})`, backgroundSize: "cover"}} />   
+                            <Title>ANCHOR</Title>
+                            <Type>WALLET</Type> 
+                            <Description>Fortis is a decentralised, open, digital money. This means that everyone can use it and transfer money to anyone they want</Description>
+                            <Link to="PartnersPage">MEET ME</Link>
+                        </Card>
                     </MainContainer>
                     </div>
                     <div>
                     <MainContainer style={{backgroundImage: `url(${AreaXBack})`}}>
-                        
-                        </MainContainer>
+                        <Card>
+                            <Logo style={{backgroundImage: `url(${AreaXLogo})`, backgroundSize: "cover"}} />   
+                            <Title>AREA X</Title>
+                            <Type>PARTNER</Type> 
+                            <Description>Fortis is a decentralised, open, digital money. This means that everyone can use it and transfer money to anyone they want</Description>
+                            <Link to="PartnersPage">MEET ME</Link>
+                        </Card>    
+                    </MainContainer>
                     </div>
                     <div>
                     <MainContainer style={{backgroundImage: `url(${WayneBack})`}}>
-                            
+                        <Card>
+                            <Logo style={{backgroundImage: `url(${WayneLogo})`, backgroundSize: "cover"}} />   
+                            <Title>WAYNE</Title>
+                            <Type>PARTNER</Type> 
+                            <Description>Fortis is a decentralised, open, digital money. This means that everyone can use it and transfer money to anyone they want</Description>
+                            <Link to="PartnersPage">MEET ME</Link>
+                        </Card>   
                     </MainContainer>
                     </div>
                 </Slider>
