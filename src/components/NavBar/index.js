@@ -23,10 +23,12 @@ import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 const ScrollIcon = styled(ArrowCircleUpIcon)`
     color: ${props => props.theme.text};
     transition: 0.8s all ease;
-    
-    transform: scale(1.5);
-    margin-top: 40px;
-    margin-right: 40px;
+    top: 600px;
+    transform: scale(1.4);
+
+    @media screen and (max-width: 1100px){
+        transform: scale(1.2);
+    }
 `;
 
 const SwitchIcon = styled.div`
