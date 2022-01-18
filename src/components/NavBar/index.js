@@ -21,9 +21,12 @@ import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 
 
 const ScrollIcon = styled(ArrowCircleUpIcon)`
-    color: gold;
+    color: ${props => props.theme.text};
     transition: 0.8s all ease;
-    top: 600px;
+    
+    transform: scale(1.5);
+    margin-top: 40px;
+    margin-right: 40px;
 `;
 
 const SwitchIcon = styled.div`
@@ -45,6 +48,17 @@ const StyledMenuIcon = styled(MenuIcon)`
             display: none;
         }
     }
+`;
+
+const HiddenContainer = styled.div`
+    height: 80px;
+    width: 50vw;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
 `;
 
 
@@ -89,13 +103,13 @@ const Navbar = (props) => {
         <>
             
             <Nav scrollNavDown={scrollNavDown}>
-                    
+            
                     <NavLogo to="/" >Destiny Airlines</NavLogo>
                    
                     <IconButton onClick={changeTheme}><SwitchIcon >
                         {icon}
                     </SwitchIcon></IconButton>
-              
+                    
                     <MobileIcon2 scrollNavDown={scrollNavDown}>
                         <IconButton onClick={toggleHome}>
                             <ScrollIcon />
