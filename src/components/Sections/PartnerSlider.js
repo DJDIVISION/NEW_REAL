@@ -137,38 +137,38 @@ const Logo = styled.div`
 const Title = styled.h1`
     font-family: "Alphacentauri";
     font-size: 20px;
-    color: ${props => props.theme.body};
-    position: absolute;
-    transform: translate(0%, -375%);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
     @media screen and (min-width: 1100px){
-        font-size: 28px;
-        transform: translate(0%, -375%);
+        font-size: 24px; 
+        margin-top: 90px;
     }
 `;
 
 const Type = styled.div`
-    height: 30px;
+    height: 25px;
     width: 100px;
     border: 2px solid gold;
     border-radius: 20px;
     text-align: center;
     color: ${props => props.theme.text};
-    font-size: 13px;
-    padding-top: 7px;
-    position: absolute;
-    transform: translate(0%, -140%);
+    font-size: 12px;
+    padding-top: 5px;
+    
+    
 `;
 
 const Description = styled.h2`
     font-size: 14px;
     color: ${props => props.theme.text};
     text-align: center;
-    margin-top: 110px;
+    padding-top: 15px;
+    
 
     @media screen and (min-width: 1100px){
         padding: 0 20px;
         font-size: 16px;
-        margin-top: 150px;
         
     }
 
@@ -278,7 +278,7 @@ const PartnerSlider = () => {
                     <MainContainer style={{backgroundImage: `url(${TstarterBack})`}}>
                         <Card>
                             <Logo style={{backgroundImage: `url(${TstarterLogo})`, backgroundSize: "cover"}} />   
-                            <Title>T-STARTER</Title>
+                            <Title >T-STARTER</Title>
                             <Type>LAUNCHPAD</Type> 
                             <Description>Fortis is a decentralised, open, digital money. This means that everyone can use it and transfer money to anyone they want</Description>
                             <Link to="PartnersPage">MEET ME</Link>
@@ -311,7 +311,7 @@ const PartnerSlider = () => {
                     <MainContainer style={{backgroundImage: `url(${WayneBack})`}}>
                         <Card>
                             <Logo style={{backgroundImage: `url(${WayneLogo})`, backgroundSize: "cover"}} />   
-                            <Title>WAYNE</Title>
+                            <Title>WAYNE SHEPPARD</Title>
                             <Type>PARTNER</Type> 
                             <Description>Fortis is a decentralised, open, digital money. This means that everyone can use it and transfer money to anyone they want</Description>
                             <Link to="PartnersPage">MEET ME</Link>
