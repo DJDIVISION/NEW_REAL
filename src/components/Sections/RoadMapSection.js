@@ -106,11 +106,17 @@ const Heading = styled.h1`
     }
 `;
 
-const StyledButton = styled(Button)`
+const StyledButton = styled(LinkR)`
     &&& {
         color: ${props => props.theme.text};
         border: 1px solid ${props => props.theme.text};
+        height: 40px;
+        width: 150px;
         margin-bottom: 30px;
+        text-decoration: none;
+        font-size: 18px;
+        border-radius: 10px;
+        padding: 10px 10px;
     }
 `;
 
@@ -128,7 +134,7 @@ const RoadMapSection = () => {
                 <TopLine>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</TopLine>
                 <Heading>FOLLOW THE ROADMAP</Heading>
            
-            <LinkR to="/RoadMap"><StyledButton>LEARN MORE</StyledButton></LinkR>
+            <StyledButton to="/RoadMap">LEARN MORE</StyledButton>
             </ColumnRight>
         </Container>
         

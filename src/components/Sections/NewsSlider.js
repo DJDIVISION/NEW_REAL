@@ -46,7 +46,7 @@ const Section = styled.div`
 
 const Carroussel = styled.div`
     width: 50vw;
-    height: 500px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     
@@ -81,7 +81,7 @@ const Carroussel = styled.div`
 const MainContainer = styled.section`
     
     width: 100%;
-    height: 500px;
+    height: 600px;
     background-size: contain;
     display: flex;
     flex-direction: column;
@@ -120,6 +120,7 @@ const Card = styled.div`
     @media screen and (min-width: 1100px){
         width: 600px;
         height: 400px;
+        margin-top: -100px;
     }
 `;
 

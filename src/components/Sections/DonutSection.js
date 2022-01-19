@@ -80,11 +80,17 @@ const SectionImage = styled.div`
 
 
 
-const StyledButton = styled(Button)`
+const StyledButton = styled(LinkR)`
     &&& {
         color: ${props => props.theme.text};
         border: 1px solid ${props => props.theme.text};
-        margin-bottom: 60px;
+        height: 40px;
+        width: 150px;
+        margin-bottom: 30px;
+        text-decoration: none;
+        font-size: 18px;
+        border-radius: 10px;
+        padding: 10px 10px;
     }
 `;
 
@@ -260,7 +266,7 @@ const DonutSection = () => {
             
             <Container id="tokenomics">
                     <ColumnLeft>
-                    <SectionImage id="tokenomics">
+                    <SectionImage >
                     <Image src={Rocket} alt="" />
                     </SectionImage>
                     </ColumnLeft>
@@ -308,7 +314,7 @@ const DonutSection = () => {
                             <TopLine>DAIR. total supply:</TopLine>
                             <Heading>1,000,000,000,000</Heading>
                         </TextWrapper>
-                        <LinkR to="/TokenomicsPage"><StyledButton>LEARN MORE</StyledButton></LinkR>
+                        <StyledButton to="/TokenomicsPage">LEARN MORE</StyledButton>
                     </ColumnRight>
                     </Container> 
        

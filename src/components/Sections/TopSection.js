@@ -210,6 +210,7 @@ const MenuItem = styled.li`
     color: ${props => props.theme.text};
     font-size: 24px;
     font-weight: bold;
+    cursor: pointer;
 `;
 
 const Burguer = styled(MenuIcon)`
@@ -218,8 +219,10 @@ const Burguer = styled(MenuIcon)`
     transform: scale(1.4);
     
 
-    @media screen and (max-width: 860px){
-        
+    @media screen and (min-width: 1100px){
+        &&&{
+            display: none;
+        }
     }
     
 `;

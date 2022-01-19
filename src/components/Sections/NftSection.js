@@ -23,7 +23,7 @@ const ColumnLeft = styled.div`
     flex-shrink: 0;
     flex-basis: 50%;
     background: ${props => props.theme.horizontalGrey};
-    width: 50%;
+    width: 50vw;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -45,7 +45,7 @@ const ColumnRight = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    width: 50vw;
     height: 100vh;
     padding: 10px 100px;
     text-align: center;
@@ -106,11 +106,17 @@ const Heading = styled.h1`
     }
 `;
 
-const StyledButton = styled(Button)`
+const StyledButton = styled(LinkR)`
     &&& {
         color: ${props => props.theme.text};
         border: 1px solid ${props => props.theme.text};
+        height: 40px;
+        width: 150px;
         margin-bottom: 30px;
+        text-decoration: none;
+        font-size: 18px;
+        border-radius: 10px;
+        padding: 10px 10px;
     }
 `;
 
@@ -128,7 +134,7 @@ const NftSection = () => {
                 <TopLine>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</TopLine>
                 <Heading>TO THE GALLERY</Heading>
            
-            <LinkR to="TokenomicsPage"><StyledButton>LEARN MORE</StyledButton></LinkR>
+            <StyledButton to="/TeamPage">LEARN MORE</StyledButton>
             </ColumnRight>
         </Container>
         
