@@ -89,6 +89,7 @@ export const NavMenu = styled.ul`
 export const NavItem = styled.li`
     height: 80px;
     
+    
 `;
 
 export const NavbarLink = styled(LinkS)`
@@ -100,7 +101,7 @@ export const NavbarLink = styled(LinkS)`
    height: 100%;
    cursor: pointer;
    font-weight: bold;
-   font-size: 18px;
+   font-size: 16px;
 
    &:hover{
        transform: scale(1.1);

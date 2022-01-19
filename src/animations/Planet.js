@@ -16,7 +16,7 @@ import { ProgressCircle } from "./components/Progress";
 
 const CanvasContainer = styled.div`
     width: 100%;
-    height: 700px;
+    height: 600px;
     background-color: ${props => props.theme.body};
 
     @media screen and (max-width: 860px){

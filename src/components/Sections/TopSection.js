@@ -86,7 +86,7 @@ const ColumnLeft = styled.div`
     flex-basis: 50%;
     background: ${props => props.theme.body};
     width: 50%;
-    height: 700px;
+    height: 90vh;
     @media screen and (min-width: 1100px){
         padding-left: 100px;
     }
@@ -108,7 +108,7 @@ const ColumnRight = styled.div`
     padding-right: 150px;
     
     width: 50%;
-    height: 700px;
+    height: 90vh;
     @media screen and (max-width: 900px){
         width: 100%;
         margin-top: -500px;
@@ -127,7 +127,7 @@ const TextWrapper = styled.div`
 `;
 
 const Title = styled.h1`
-    font-size: 74px;
+    font-size: 58px;
     color: ${props => props.theme.text};
     text-align: right;
     font-family:  "Alphacentauri";
@@ -143,7 +143,7 @@ const Title = styled.h1`
 `;
 
 const TopLine = styled.h1`
-    font-size: 42px;
+    font-size: 36px;
     color: ${props => props.theme.text};
     text-align: right;
     padding-bottom: 10px;
@@ -156,7 +156,7 @@ const TopLine = styled.h1`
     }
 `;
 const Subtitle = styled.h3`
-    font-size: 50px;
+    font-size: 42px;
     color: ${props => props.theme.text};
     text-align: right;
     z-index: 50;
