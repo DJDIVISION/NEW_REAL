@@ -1,12 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import styled from "styled-components";
 import TeamNavBar from "../components/NavBar/TeamNavBar";
 import MenuIcon from '@mui/icons-material/Menu';
 import { IconButton } from "@material-ui/core";
-
+import { Link as LinkS } from "react-scroll";
 import { TeamCards } from "../components/TeamCard";
 import { motion } from "framer-motion";
 import { animationThree } from "../animations";
+import { MenuContext } from "./context";
+import { ThemeProvider } from "styled-components";
+import { themes } from "../components/Themes";
+import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 
 const Container = styled.div`
     display: flex;
@@ -49,7 +53,7 @@ const ColumnRight = styled.div`
     height: 700px;
     @media screen and (max-width: 900px){
         width: 100%;
-        margin-top: -500px;
+        margin-top: -300px;
         padding-right: 0;
     }
 
@@ -71,7 +75,7 @@ const IconContainer = styled.div`
     margin-right: auto;
     margin-bottom: 3vh;
     @media screen and (max-width: 860px){
-        margin-bottom: 250px;
+        
     }
 `;
 
@@ -118,19 +122,128 @@ const Subtitle = styled.h3`
 
 const Burguer = styled(MenuIcon)`
     color: ${props => props.theme.text};
-    
     transform: scale(1.4);
+
+    @media screen and (min-width: 1100px){
+        &&&{
+            display: none;
+        }
+    }
+    
+`;
+
+const MenuContainer = styled(motion.div)`
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    border-radius: 20px;
+    margin-top: -75vh;
+    z-index: 200;
+    left: 37.5%;
+    
     
 
     @media screen and (max-width: 860px){
-        
+        margin-top: -82.5vh;
+        width: 85vw;
+        height: 70vh;
+        left: 12.5%;
     }
+`;
+
+const MenuOverview = styled.ul`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    padding-top: 30px;
+    backdrop-filter: blur(7.5px);
+    width: 90%;
+    
+    
+    border: 1px solid ${props => props.theme.text};
+    border-radius: 20px;
+    box-shadow: 0 2px 15px 1px ${props => props.theme.text};
     
 `;
 
 
 
+const MenuItem = styled.li`
+    height: 60px;
+    color: ${props => props.theme.text};
+    font-size: 24px;
+    font-weight: bold;
+    
+`;
+
+const BackIcon = styled(HighlightOffIcon)`
+    color: ${props => props.theme.text};
+    transform: scale(1.3);
+    margin-bottom: 15px;
+    
+    z-index: 500;
+`;
+
+const DropDownMenu = () => {
+
+    const { active , setActive } = useContext(MenuContext);
+
+    const switchToOne = () => {
+        setActive("menuOne");
+        console.log("CLICK");
+    }
+
+    let animate = {};
+    if(active === "menuOne") animate = { opacity: 0, y: 30, scale: 0.9, display: "none"};
+    else if (active === "menuTwo") animate = { opacity: 1, y: -20, scale: 1.1, };
+
+    return(
+        <>
+        <MenuContainer animate={animate} initial={{opacity: 0}}>
+            <MenuOverview >
+                    <MenuItem>
+                    <IconButton onClick={switchToOne}><BackIcon /></IconButton> 
+                    </MenuItem>
+                    <MenuItem>
+                    <LinkS to="ceo" smooth={true} duration={1500} spy={true} exact="true" onClick={switchToOne}>DAVID</LinkS>
+                    </MenuItem>
+                    <MenuItem>
+                    <LinkS to="cio" smooth={true} duration={1500} spy={true} exact="true" onClick={switchToOne}>FILIP</LinkS>
+                    </MenuItem>
+                    <MenuItem>
+                    <LinkS to="dev1" smooth={true} duration={1500} spy={true} exact="true" onClick={switchToOne}>VICTOR</LinkS>
+                    </MenuItem>
+                    <MenuItem>
+                    <LinkS to="dev2" smooth={true} duration={1500} spy={true} exact="true" onClick={switchToOne}>BASHKAR</LinkS>
+                    </MenuItem>
+                    <MenuItem>
+                    <LinkS to="dev3" smooth={true} duration={1500} spy={true} exact="true" onClick={switchToOne}>ABHIK</LinkS>
+                    </MenuItem>
+                </MenuOverview>
+        </MenuContainer>
+        
+        </>
+    )
+}
+
+
 export function TeamSection(props) {
+
+    const { active, setActive } = useContext(MenuContext);
+
+    let animate = {};
+    if(active === "menuOne") animate = { opacity: 0.2 };
+    else if (active === "menuTwo") animate = { opacity: 1};
+    
+
+    const swicthToTwo = () => {
+        setActive("menuTwo");
+        console.log("CLICK");
+    }
+
+    
     return(
         <Container>
             <ColumnLeft>
@@ -139,7 +252,7 @@ export function TeamSection(props) {
             <ColumnRight >
                 <TextWrapper>
                     <IconContainer>
-                <IconButton ><Burguer /></IconButton>
+                <IconButton onClick={swicthToTwo}><Burguer /></IconButton>
                 </IconContainer>
                     <Title>MEET</Title>
                     <Title>THE TEAM</Title>
@@ -153,17 +266,25 @@ export function TeamSection(props) {
 
 
 
-const TeamPage = () => {
+const TeamPage = (props) => {
 
+    const [theme, setTheme] = useState("dark");
+
+    const [active, setActive] = useState("menuTwo");
+    const contextValue = { active, setActive };
     
 
     return (
+        <ThemeProvider theme={themes[theme]}>
+            <MenuContext.Provider value={contextValue}>
         <motion.div initial="out" animate="end" exit="out" variants={animationThree}>
-            <TeamNavBar/>
+            <TeamNavBar theme={theme} setTheme={setTheme}/>
             <TeamSection />
-            
+            <DropDownMenu />
             <TeamCards/>
         </motion.div>
+        </MenuContext.Provider>
+        </ThemeProvider>
     )
 }
 

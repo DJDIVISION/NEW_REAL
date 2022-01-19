@@ -37,7 +37,7 @@ const Title = styled.h1`
   font-size: 40px;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 290px;
+  margin-bottom: 300px;
 `;
 
 const IconContainer = styled.div`

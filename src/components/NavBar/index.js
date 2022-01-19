@@ -69,7 +69,7 @@ const HiddenContainer = styled.div`
 
 const Navbar = (props) => {
 
-    function changeTheme() {
+    function changeTheme() {  
         if(props.theme === "light") {
             props.setTheme("dark");
         } else {

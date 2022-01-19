@@ -235,61 +235,7 @@ const IconContainer = styled.div`
     }
 `;
 
-/* const Section = styled.div`
-    background-image: url(${Moon});
-    height: 500px;
-    width: 100%;
-    
-    z-index: 100;
-    
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: ${props => props.theme.body};
-    @media screen and (max-width: 1000px){
-        height: 200px;
-        
-        background-image: url(${Moon2});
-    }
 
-    
-    
-`; */
-
-const Section = styled.div`
-    height: 0;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-`;
-
-const Image = styled.img`
-    width: 80%;
-`;
-
-const TitleSection = styled.div`
-    height: 200px;
-    width: 100%;
-    background: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    @media screen and (max-width: 1000px){
-        height: 60px;
-    }
-`;
-
-const Text = styled.h2`
-    font-size: 140px;
-    color: black;
-    display: flex;
-    font-family: "Alphacentauri";
-    @media screen and (max-width: 1100px){
-        font-size: 48px;
-    }
-    
-`;
 
 const DropDownMenu = () => {
 

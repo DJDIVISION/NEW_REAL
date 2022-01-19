@@ -17,9 +17,9 @@ const OverviewContainer = styled(motion.div)`
   align-items: center;
   background: url(${ImageDev}) center;
   background-size: cover;
-  
   border-radius: 28px;
   padding-bottom: -2em;
+  
   z-index: 10;
 `;
 
@@ -28,16 +28,17 @@ const TitleContainer = styled.div`
   flex-direction: column;
   line-height: 1.2;
   margin-bottom: 1.8em;
+  
 `;
 
 
 const Title = styled.h1`
   margin: 0;
-  color: whitesmoke;
+  color: ${props => props.theme.text};
   font-size: 40px;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 290px;
+  margin-bottom: 280px;
 `;
 
 

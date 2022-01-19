@@ -33,11 +33,11 @@ const TitleContainer = styled.div`
 
 const Title = styled.h1`
   margin: 0;
-  color: whitesmoke;
+  color: ${props => props.theme.text};
   font-size: 40px;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 290px;
+  margin-bottom: 280px;
 `;
 
 

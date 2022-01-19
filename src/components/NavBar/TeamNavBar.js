@@ -53,6 +53,8 @@ const StyledMenuIcon = styled(MenuIcon)`
 
 const TeamNavbar = (props) => {
 
+    const [theme, setTheme] = useState("dark");
+
     function changeTheme() {
         if(props.theme === "light") {
             props.setTheme("dark");

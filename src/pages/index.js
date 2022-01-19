@@ -18,14 +18,14 @@ import NewsSlider from "../components/Sections/NewsSlider";
 
 
 
-
+ 
 
 
 const Home = (props) => {
 
     const [theme, setTheme] = useState("dark");
 
-    const [showMenu, setShowMenu] = useState(false);
+    const [showMenu, setShowMenu] = useState(false);  
 
 
 
