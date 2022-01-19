@@ -41,7 +41,7 @@ const Section = styled.div`
 
 const Carroussel = styled.div`
     width: 50vw;
-    height: 60vh;
+    height: 500px;
     display: flex;
     flex-direction: column;
     margin-top: 80px;
@@ -77,7 +77,7 @@ const Carroussel = styled.div`
 const MainContainer = styled.section`
     
     width: 100%;
-    height: 60vh;
+    height: 500px;
     background-size: contain;
     display: flex;
     flex-direction: column;
