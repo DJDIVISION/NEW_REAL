@@ -70,6 +70,7 @@ const Carroussel = styled.div`
         width: 75vw;
         height: 60vh;
         border-radius: 20px;
+        margin-top: -100px;
         .slick-arrow:before{
             
         }
