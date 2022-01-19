@@ -63,6 +63,11 @@ export const MobileIcon2 = styled.div`
     
     cursor: pointer;
     color: gold;
+
+    @media screen and (min-width: 1100px) {
+        margin-right: 30px;
+        margin-top: 20px;
+    }
 `;
 
 export const NavMenu = styled.ul`

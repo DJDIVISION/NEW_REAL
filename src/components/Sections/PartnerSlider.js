@@ -115,7 +115,7 @@ const Card = styled.div`
 
     @media screen and (min-width: 1100px){
         width: 225px;
-        height: 400px;
+        height: 350px;
     }
 `;
 
