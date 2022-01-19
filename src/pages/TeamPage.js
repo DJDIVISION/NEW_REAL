@@ -191,13 +191,13 @@ const DropDownMenu = () => {
     const { active , setActive } = useContext(MenuContext);
 
     const switchToOne = () => {
-        setActive("menuOne");
+        setActive("menuTwo");
         console.log("CLICK");
     }
 
     let animate = {};
-    if(active === "menuOne") animate = { opacity: 0, y: 30, scale: 0.9, display: "none"};
-    else if (active === "menuTwo") animate = { opacity: 1, y: -20, scale: 1.1, };
+    if(active === "menuTwo") animate = { opacity: 0, y: 30, scale: 0.9, display: "none"};
+    else if (active === "menuOne") animate = { opacity: 1, y: -20, scale: 1.1, };
 
     return(
         <>
@@ -239,7 +239,7 @@ export function TeamSection(props) {
     
 
     const swicthToTwo = () => {
-        setActive("menuTwo");
+        setActive("menuOne");
         console.log("CLICK");
     }
 
