@@ -115,24 +115,25 @@ const Card = styled.div`
 
     @media screen and (min-width: 1100px){
         width: 200px;
-        height: 350px;
+        height: 325px;
+        margin-top: -100px;
         
     }
 `;
 
 const Logo = styled.div`
-    height: 75px;
-    width: 75px;
+    height: 60px;
+    width: 60px;
     border-radius: 50%;
     border: 3px solid gold;
     transform: translate(0%, -240%);
     z-index: 100;
     position: absolute;
 
-    @media screen and (max-width: 1100px){
-        
-        height: 60px;
-        width: 60px;
+    @media screen and (min-width: 1100px){
+        transform: translate(0%, -210%);
+        height: 75px;
+        width: 75px;
     }
 `;
 
@@ -190,7 +191,7 @@ const Link = styled(LinkR)`
     color: ${props => props.theme.text};
     font-weight: bold;
     @media screen and (min-width: 1100px){
-        margin-top: 20px;
+        
         
     }
 `;
