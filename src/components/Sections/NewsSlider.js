@@ -280,7 +280,7 @@ const NewsSlider = () => {
       };
     return(
         <>
-        <SectionImage id="partners">
+        <SectionImage id="news">
             <Image src={NewsImage} alt="" />
             </SectionImage>
         <Section >
