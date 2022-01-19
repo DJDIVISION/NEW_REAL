@@ -55,7 +55,7 @@ const ColumnRight = styled.div`
         justify-content: center;
         padding: 0px 0px;
         background: ${props => props.theme.verticalRed};
-        padding-bottom: 100px;
+        padding-bottom: 150px;
     }
 
 `;
@@ -86,11 +86,12 @@ const StyledButton = styled(LinkR)`
         border: 1px solid ${props => props.theme.text};
         height: 40px;
         width: 150px;
-        margin-bottom: 30px;
+        
         text-decoration: none;
         font-size: 18px;
         border-radius: 10px;
         padding: 10px 10px;
+        margin-bottom: 50px;
     }
 `;
 
@@ -103,37 +104,37 @@ const TextWrapper = styled.div`
 const TopLine = styled.p`
     color: ${props => props.theme.text};
     font-size: 32px;
-    line-height: 16px;
+    
     font-weight: 700;
     letter-spacing: 1.4px;
-    margin-bottom: 16px;
-    margin-top: 30px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 
     @media screen and (max-width: 1100px){
         font-size: 16px;
-        line-height: 1px;
+        
     }
 `;
 
 const Heading = styled.h1`
     
-    font-size: 48px;
+    font-size: 24px;
     line-height: 1.1;
     font-weight: 600;
     color: ${props => props.theme.text};
 
     @media screen and (max-width: 480px){
-        font-size: 32px;
+        font-size: 18px;
     }
     @media screen and (max-width: 1100px){
         font-size: 18px;
-        line-height: 1px;
+        
     }
 `;
 
 const List = styled.ul`
     max-width: 540px;
-    height: 30px;
+    height: 50px;
 `;
 
 const ListItems = styled.li`
