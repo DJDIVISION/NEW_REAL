@@ -136,7 +136,7 @@ const TeamSection = () => {
                 <TopLine>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</TopLine>
                 <Heading>MEET THE TEAM</Heading>
            
-            <LinkR to="TokenomicsPage"><StyledButton>GO!!!</StyledButton></LinkR>
+            <LinkR to="/TeamPage"><StyledButton>GO!!!</StyledButton></LinkR>
             </ColumnRight>
         </Container> 
        

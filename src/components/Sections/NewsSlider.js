@@ -40,14 +40,16 @@ const Section = styled.div`
     height: 90vh;
     padding: 3rem 10rem;
     background: ${props => props.theme.body};
+
+    
 `;
 
 const Carroussel = styled.div`
     width: 50vw;
-    height: 70vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
-    margin-top: -80px;
+    
     
     
     
@@ -78,7 +80,7 @@ const Carroussel = styled.div`
 const MainContainer = styled.section`
     
     width: 100%;
-    height: 70vh;
+    height: 60vh;
     background-size: contain;
     display: flex;
     flex-direction: column;
@@ -115,7 +117,8 @@ const Card = styled.div`
     border: 2px solid gold;
 
     @media screen and (min-width: 1100px){
-        width: 450px;
+        width: 600px;
+        height: 50vh;
     }
 `;
 
@@ -207,7 +210,7 @@ const Subtitle = styled.h2`
     
     @media screen and (min-width: 1100px) {
         font-size: 24px;
-        margin-top: 3vh;
+        margin-bottom: 20px;
     }
 `;
 
@@ -220,7 +223,7 @@ const Description = styled.h2`
     font-weight: 100;
     @media screen and (min-width: 1100px){
         padding: 0 20px;
-        font-size: 16px;
+        font-size: 18px;
         
     }
 

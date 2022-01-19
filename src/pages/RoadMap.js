@@ -241,7 +241,7 @@ const RoadMap = (props) => {
             <Rotate ref={planet}>
                 <DairSVG  onClick={toggleHome} width={110} height={110} x={10} fill="white"/>
             </Rotate>
-            <NavLink to="/"><HomeIcon /></NavLink><HomeText>HOME</HomeText>
+            <NavLink to="/HomeNoLoader"><HomeIcon /></NavLink><HomeText>HOME</HomeText>
             
             </Box>
             

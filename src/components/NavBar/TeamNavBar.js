@@ -90,7 +90,7 @@ const TeamNavbar = (props) => {
             
             <Nav scrollNavDown={scrollNavDown}>
                     
-                    <NavLogo to="/" >Destiny Airlines</NavLogo>
+                    <NavLogo to="/HomeNoLoader" >Destiny Airlines</NavLogo>
                    
                     <IconButton onClick={changeTheme}><SwitchIcon >
                         {icon}

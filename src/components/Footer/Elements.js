@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 
 export const FooterContainer = styled.footer`
-    background-color: darkblue;
+    background-color: ${props => props.theme.body};
 `;
 
 export const FooterWrapper = styled.div`
@@ -52,7 +52,7 @@ export const FooterLinkItems = styled.div`
 `;
 
 export const FooterLinkTitle = styled.h1`
-    color: whitesmoke;
+    color: ${props => props.theme.text};
     text-decoration: none;
     margin-bottom: 0.5rem;
     font-size: 14px;
@@ -61,7 +61,7 @@ export const FooterLinkTitle = styled.h1`
 `;
 
 export const FooterLink = styled(Link)`
-    color: whitesmoke;
+    color: ${props => props.theme.text};
     text-decoration: none;
     margin-bottom: 0.5rem;
     font-size: 14px;
@@ -90,7 +90,7 @@ export const SocialWrapper = styled.div`
 `;
 
 export const SocialLogo = styled(Link)`
-    color: whitesmoke;
+    color: ${props => props.theme.text};
     justify-self: start;
     cursor: pointer;
     text-decoration: none;
@@ -102,7 +102,7 @@ export const SocialLogo = styled(Link)`
 `;
 
 export const WebsiteRights = styled.small`
-    color: whitesmoke;
+    color: ${props => props.theme.text};
     margin-bottom: 26px;
     margin-top: 10px;
 
@@ -116,7 +116,7 @@ export const SocialIcons = styled.div`
 `;
 
 export const SocialIconLink = styled.a`
-    color: whitesmoke;
+    color: ${props => props.theme.text};
     font-size: 24px;
 `;
 

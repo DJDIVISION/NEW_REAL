@@ -141,8 +141,8 @@ const Title = styled.h1`
     margin-bottom: 20px;
     text-align: center;
     @media screen and (min-width: 1100px){
-        font-size: 24px; 
-        margin-top: 90px;
+        font-size: 28px; 
+        margin-top: 40px;
     }
 `;
 
@@ -155,6 +155,10 @@ const Type = styled.div`
     color: ${props => props.theme.text};
     font-size: 12px;
     padding-top: 5px;
+
+    @media screen and (min-width: 1100px){
+        margin-bottom: 5px;
+    }
     
     
 `;
@@ -167,8 +171,9 @@ const Description = styled.h2`
     
 
     @media screen and (min-width: 1100px){
-        padding: 0 20px;
+        padding: 20px;
         font-size: 16px;
+        
         
     }
 

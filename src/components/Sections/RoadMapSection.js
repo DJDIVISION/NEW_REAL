@@ -128,7 +128,7 @@ const RoadMapSection = () => {
                 <TopLine>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</TopLine>
                 <Heading>FOLLOW THE ROADMAP</Heading>
            
-            <LinkR to="TokenomicsPage"><StyledButton>LEARN MORE</StyledButton></LinkR>
+            <LinkR to="/RoadMap"><StyledButton>LEARN MORE</StyledButton></LinkR>
             </ColumnRight>
         </Container>
         

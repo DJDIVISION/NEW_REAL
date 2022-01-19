@@ -308,7 +308,7 @@ const DonutSection = () => {
                             <TopLine>DAIR. total supply:</TopLine>
                             <Heading>1,000,000,000,000</Heading>
                         </TextWrapper>
-                        <LinkR to="TokenomicsPage"><StyledButton>LEARN MORE</StyledButton></LinkR>
+                        <LinkR to="/TokenomicsPage"><StyledButton>LEARN MORE</StyledButton></LinkR>
                     </ColumnRight>
                     </Container> 
        

@@ -6,21 +6,13 @@ import { Loader } from "../animations/CanvasSection"
 import { motion } from "framer-motion";
 import { animationOne, transition } from "../animations";
 import Footer from '../components/Footer';
-import CanvasContainer from "../animations/Planet"
 import PartnerSlider from "../components/Sections/PartnerSlider";
-
-import BuySellSection from "../components/Sections/BuySellSection";
 import DonutSection from "../components/Sections/DonutSection";
-import NewsSection from "../components/Sections/NewsSection";
 import SectionMenu from "../components/Sections/TopSection";
-import Tokenomics from "../components/Sections/Tokenomics";
 import TeamSection from "../components/Sections/TeamSection";
 import GamingSection from "../components/Sections/GamingSection";
 import NftSection from "../components/Sections/NftSection";
 import RoadMapSection from "../components/Sections/RoadMapSection";
-import TempSection from "../components/Sections/TempSection";
-import TempSectionTwo from "../components/Sections/TempSectionTwo";
-import TempSectionThree from "../components/Sections/TempSectionThree";
 import NewsSlider from "../components/Sections/NewsSlider";
 
 
@@ -64,9 +56,6 @@ const Home = (props) => {
             <GamingSection />
             <NftSection />
             <RoadMapSection />
-            {/* <BuySellSection /> */}
-            {/* <Tokenomics /> */}
-            {/* <DonutSection /> */}
             <PartnerSlider />
             <Footer />
         </motion.div>
