@@ -24,11 +24,19 @@ const GlobalStyle = createGlobalStyle`
 
    .gradient-cards-con{
        display: grid;
-       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-       
-       
+       grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+
+       @media screen and (max-width: 860px){
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
+       }
        
    }
+
+   .card-content {
+       text-align: center;
+   }
 `;
+
+
 
 export default GlobalStyle;

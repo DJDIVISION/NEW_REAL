@@ -23,9 +23,7 @@ function PartCards () {
     return (
         <PartCardsStyled>
             <SectionStyled>
-                <div className="title-con">
-                    <MainTitle title={"OUR PARTNERS"} subtitle={"Destiny Airlines relies on many parters from different locations all around the world"} />
-                </div>
+                
                 <div class="gradient-cards-con">
                    <GradientCard image={FortisBack} logo={FortisLogo} name={"FORTIS"} type={"PARTNER"} desc={" Fortis is a decentralised, open, digital money. This means that everyone can use it and transfer money to anyone they want, without having to worry about arbitrary limitations like borders or censorship’s. You don’t have to trust any person or organization in order to handle our token and platform. You are the person in control."} TelegramLink={"https://t.me/FortisCoin"} WebsiteLink={"http://fortisfinance.io"} TwitterLink={"https://twitter.com/Fortis_Coin?t=A9acSmKjK5uNO3qWbRvtCw&s=09"}/> 
                    <GradientCard image={TelosBack} logo={TelosLogo} name={"TELOS"} type={"BLOCKCHAIN"} desc={"Telos is the ideal network for real world use across multiple industries .Telos based Tokens NFT’s and Smart Contracts are already used for DeFi, Gaming, Social Media amongst a backdrop of almost unlimited real world use cases. There are over 100 projects already building on Telos."} TelegramLink={"https://t.me/HelloTelos"} WebsiteLink={"https://www.telos.net/"} TwitterLink={"https://twitter.com/HelloTelos?t=alSFFeyYG2ieRPaXidx2NQ&s=09"}/> 
@@ -37,7 +35,7 @@ function PartCards () {
                    <GradientCard image={AreaXBack} logo={AreaxLogo} name={"AREAX NFT"} type={"PARTNER"} desc={"AreaX NFT is an NFT marketplace based on Marble Standard.Enjoy AreaX NFT and Telos blockchain features"} TelegramLink={"https://t.me/areax_en"} WebsiteLink={"https://sheppard.areaxnft.com/"} TwitterLink={"https://twitter.com/AreaxNft?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"}/>  
                 </div>
             </SectionStyled> 
-        </PartCardsStyled>
+        </PartCardsStyled> 
     )
 }
 

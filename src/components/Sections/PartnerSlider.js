@@ -245,7 +245,7 @@ const PartnerSlider = () => {
                             <Title>FORTIS</Title>
                             <Type>PARTNER</Type> 
                             <Description>Fortis is a decentralised, open, digital money. This means that everyone can use it and transfer money to anyone they want</Description>
-                            <Link to="PartnersPage">MEET ME</Link>
+                            <Link to="/PartnersPage">MEET ME</Link>
                         </Card> 
                     </MainContainer>
                     </div>
@@ -256,7 +256,7 @@ const PartnerSlider = () => {
                             <Title>TELOS</Title>
                             <Type>BLOCKCHAIN</Type> 
                             <Description>Fortis is a decentralised, open, digital money. This means that everyone can use it and transfer money to anyone they want</Description>
-                            <Link to="PartnersPage">MEET ME</Link>
+                            <Link to="/PartnersPage">MEET ME</Link>
                         </Card>      
                     </MainContainer>
                     </div>
@@ -267,7 +267,7 @@ const PartnerSlider = () => {
                             <Title>NFTFY</Title>
                             <Type>PARTNER</Type> 
                             <Description>Fortis is a decentralised, open, digital money. This means that everyone can use it and transfer money to anyone they want</Description>
-                            <Link to="PartnersPage">MEET ME</Link>
+                            <Link to="/PartnersPage">MEET ME</Link>
                         </Card>    
                     </MainContainer>
                     </div>
@@ -278,7 +278,7 @@ const PartnerSlider = () => {
                             <Title>WOMBAT</Title>
                             <Type>WALLET</Type> 
                             <Description>Fortis is a decentralised, open, digital money. This means that everyone can use it and transfer money to anyone they want</Description>
-                            <Link to="PartnersPage">MEET ME</Link>
+                            <Link to="/PartnersPage">MEET ME</Link>
                         </Card>    
                     </MainContainer>
                     </div>
@@ -289,7 +289,7 @@ const PartnerSlider = () => {
                             <Title >T-STARTER</Title>
                             <Type>LAUNCHPAD</Type> 
                             <Description>Fortis is a decentralised, open, digital money. This means that everyone can use it and transfer money to anyone they want</Description>
-                            <Link to="PartnersPage">MEET ME</Link>
+                            <Link to="/PartnersPage">MEET ME</Link>
                         </Card>    
                     </MainContainer>
                     </div>
@@ -300,7 +300,7 @@ const PartnerSlider = () => {
                             <Title>ANCHOR</Title>
                             <Type>WALLET</Type> 
                             <Description>Fortis is a decentralised, open, digital money. This means that everyone can use it and transfer money to anyone they want</Description>
-                            <Link to="PartnersPage">MEET ME</Link>
+                            <Link to="/PartnersPage">MEET ME</Link>
                         </Card>
                     </MainContainer>
                     </div>
@@ -311,7 +311,7 @@ const PartnerSlider = () => {
                             <Title>AREA X</Title>
                             <Type>PARTNER</Type> 
                             <Description>Fortis is a decentralised, open, digital money. This means that everyone can use it and transfer money to anyone they want</Description>
-                            <Link to="PartnersPage">MEET ME</Link>
+                            <Link to="/PartnersPage">MEET ME</Link>
                         </Card>    
                     </MainContainer>
                     </div>
@@ -322,7 +322,7 @@ const PartnerSlider = () => {
                             <Title>WAYNE SHEPPARD</Title>
                             <Type>PARTNER</Type> 
                             <Description>Fortis is a decentralised, open, digital money. This means that everyone can use it and transfer money to anyone they want</Description>
-                            <Link to="PartnersPage">MEET ME</Link>
+                            <Link to="/PartnersPage">MEET ME</Link>
                         </Card>   
                     </MainContainer>
                     </div>

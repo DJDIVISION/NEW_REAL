@@ -27,9 +27,9 @@ function GradientCard({ image, logo, name, type, desc, ctaButton, TelegramLink, 
                 <div className="inner-content">
                     <div className="image">
                         <img src={image} alt="" />
-                        <div className="name">
+                        <div className="cardname">
                             <img src={logo} alt="" />
-                            <p className="text">{name}</p>
+                            <p className="cardtext">{name}</p>
                         </div>
                     </div>
                     <div className="card-content">
@@ -62,6 +62,7 @@ const GradientCardStyled = styled.div`
            box-shadow: 0 2px 15px 1px whitesmoke;
            border: 1px solid darkblue;
            transition: all .4s ease-in-out;
+           
            &:hover{
                transform: scale(1.05);
                box-shadow: 0 2px 15px 1px gold;
@@ -78,7 +79,7 @@ const GradientCardStyled = styled.div`
                   
                }
 
-               .name{
+               .cardname{
                    position: absolute;
                    left: 50%;
                    bottom: -26px;
@@ -93,6 +94,8 @@ const GradientCardStyled = styled.div`
                    text-align: center;
                    font-size: 24px;
                    border-radius: 50px;
+
+                   
                    
                    
                    
@@ -105,12 +108,13 @@ const GradientCardStyled = styled.div`
                        margin-right: 2rem;
                    }
 
-                   .text{
-                       margin-left: -15px;
+                   .cardtext{
+                       
                        font-size: 22px;
 
                        @media screen and (max-width:880px) {
-                            margin-left: 10px;
+                            font-size: 18px;
+                            margin-left: -10px;
                        }
                    }
                }
@@ -123,6 +127,10 @@ const GradientCardStyled = styled.div`
                 color: whitesmoke;
                 text-align: center;
                 font-size: 48px;
+
+                @media screen and (max-width: 860px) {
+                       font-size: 18px;
+                   }
                }
 
                .desc{
