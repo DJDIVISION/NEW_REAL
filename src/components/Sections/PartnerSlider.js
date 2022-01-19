@@ -99,7 +99,7 @@ const MainContainer = styled.section`
 `;
 
 const Card = styled.div`
-    height: 45vh;
+    height: 300px;
     width: 175px;
     display: flex;
     flex-direction: column;
@@ -115,6 +115,7 @@ const Card = styled.div`
 
     @media screen and (min-width: 1100px){
         width: 225px;
+        height: 400px;
     }
 `;
 
