@@ -141,7 +141,7 @@ const ListItems = styled.li`
     display: inline-flex;
     align-items: center;
     margin-top: -50px;
-    
+    cursor: pointer;
     
 `;
 
@@ -259,8 +259,80 @@ const DonutSection = () => {
         { value: 4, name: "MARKETING" }
       ];
 
+      const SalesFunctionIn = () => {
+          document.getElementById("supply").innerHTML = "400,000,000,000";
+          document.getElementById("title-supply").innerHTML = "SALES SUPPLY";
 
+      }
+      const SalesFunctionOut = () => {
+        document.getElementById("supply").innerHTML = "1,000,000,000,000";
+        document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY";
+      }
 
+      const LiquidityFunctionIn = () => {
+        document.getElementById("supply").innerHTML = "200,000,000,000";
+        document.getElementById("title-supply").innerHTML = "LIQUIDITY SUPPLY";
+
+      }
+    const LiquidityFunctionOut = () => {
+    document.getElementById("supply").innerHTML = "1,000,000,000,000";
+    document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY";
+    }
+    const AdvisorsFunctionIn = () => {
+        document.getElementById("supply").innerHTML = "30,000,000,000";
+        document.getElementById("title-supply").innerHTML = "ADVISORS SUPPLY";
+
+      }
+    const AdvisorsFunctionOut = () => {
+    document.getElementById("supply").innerHTML = "1,000,000,000,000";
+    document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY";
+    }
+    const CexFunctionIn = () => {
+        document.getElementById("supply").innerHTML = "100,000,000,000";
+        document.getElementById("title-supply").innerHTML = "CEX RESERVE SUPPLY";
+
+      }
+    const CexFunctionOut = () => {
+    document.getElementById("supply").innerHTML = "1,000,000,000,000";
+    document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY";
+    }
+    const TeamFunctionIn = () => {
+        document.getElementById("supply").innerHTML = "100,000,000,000";
+        document.getElementById("title-supply").innerHTML = "TEAM SUPPLY";
+
+      }
+    const TeamFunctionOut = () => {
+    document.getElementById("supply").innerHTML = "1,000,000,000,000";
+    document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY";
+    }
+    const GiveAwaysFunctionIn = () => {
+        document.getElementById("supply").innerHTML = "30,000,000,000";
+        document.getElementById("title-supply").innerHTML = "GIVEAWAYS SUPPLY";
+
+      }
+    const GiveAwaysFunctionOut = () => {
+    document.getElementById("supply").innerHTML = "1,000,000,000,000";
+    document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY";
+    }
+    const PTEarnFunctionIn = () => {
+        document.getElementById("supply").innerHTML = "100,000,000,000";
+        document.getElementById("title-supply").innerHTML = "PLAY TO EARN SUPPLY";
+
+      }
+    const PTEarnFunctionOut = () => {
+    document.getElementById("supply").innerHTML = "1,000,000,000,000";
+    document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY";
+    }
+    const MarketingFunctionIn = () => {
+        document.getElementById("supply").innerHTML = "40,000,000,000";
+        document.getElementById("title-supply").innerHTML = "MARKETING SUPPLY";
+
+      }
+    const MarketingFunctionOut = () => {
+    document.getElementById("supply").innerHTML = "1,000,000,000,000";
+    document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY";
+    }
+    
     return(
         <>
             
@@ -273,46 +345,47 @@ const DonutSection = () => {
                     <ColumnRight>
                     <ChartComponent data={data} />
                         <List>
-                            <ListItems>
+                            <ListItems onMouseEnter={SalesFunctionIn} onMouseLeave={SalesFunctionOut}>
                                 <Orange />
-                                <Type>SALES</Type>
+                                <Type >SALES</Type>
                             </ListItems>
-                            <ListItems>
+                            <ListItems onMouseEnter={LiquidityFunctionIn} onMouseLeave={LiquidityFunctionOut}>
                                 <Blue />
                                 <Type>LIQUIDITY</Type>
                             </ListItems>
-                            <ListItems>
+                            <ListItems onMouseEnter={AdvisorsFunctionIn} onMouseLeave={AdvisorsFunctionOut}>
                                 <Yellow />
                                 <Type>ADVISORS</Type>
                             </ListItems>
                         </List>
                         <List>
-                            <ListItems>
+                            <ListItems onMouseEnter={CexFunctionIn} onMouseLeave={CexFunctionOut}>
                                 <Green />
                                 <Type>CEX RESERVE</Type>
                             </ListItems>
-                            <ListItems>
+                            <ListItems onMouseEnter={TeamFunctionIn} onMouseLeave={TeamFunctionOut}>
                                 <Purple />
                                 <Type>TEAM</Type>
                             </ListItems>
-                            <ListItems>
+                            <ListItems onMouseEnter={GiveAwaysFunctionIn} onMouseLeave={GiveAwaysFunctionOut}>
                                 <Red />
                                 <Type>GIVEAWAYS</Type>
                             </ListItems>
                         </List>
                         <List>
-                            <ListItems>
+                            <ListItems onMouseEnter={PTEarnFunctionIn} onMouseLeave={PTEarnFunctionOut}>
                                 <Pink />
                                 <Type>PLAY TO EARN</Type>
                             </ListItems>
-                            <ListItems>
+                            <ListItems onMouseEnter={MarketingFunctionIn} onMouseLeave={MarketingFunctionOut}>
                                 <Grey />
                                 <Type>MARKETING</Type>
                             </ListItems>
                         </List>
                         <TextWrapper>
-                            <TopLine>DAIR. total supply:</TopLine>
-                            <Heading>1,000,000,000,000</Heading>
+                            <TopLine>DAIR</TopLine>
+                            <TopLine id="title-supply">TOTAL SUPPLY</TopLine>
+                            <Heading id="supply">1,000,000,000,000</Heading>
                         </TextWrapper>
                         <StyledButton to="/TokenomicsPage">LEARN MORE</StyledButton>
                     </ColumnRight>
