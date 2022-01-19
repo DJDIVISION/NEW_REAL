@@ -114,7 +114,7 @@ const Card = styled.div`
     border: 2px solid gold;
 
     @media screen and (min-width: 1100px){
-        width: 225px;
+        width: 200px;
         height: 350px;
         margin-top: -50px;
     }
@@ -174,7 +174,7 @@ const Description = styled.h2`
 
     @media screen and (min-width: 1100px){
         padding: 20px;
-        font-size: 16px;
+        font-size: 14px;
         
         
     }
