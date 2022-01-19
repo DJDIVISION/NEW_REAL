@@ -209,7 +209,7 @@ const Subtitle = styled.h2`
 
     
     @media screen and (min-width: 1100px) {
-        font-size: 24px;
+        font-size: 20px;
         margin-bottom: 20px;
     }
 `;
@@ -223,7 +223,7 @@ const Description = styled.h2`
     font-weight: 100;
     @media screen and (min-width: 1100px){
         padding: 0 20px;
-        font-size: 18px;
+        font-size: 16px;
         
     }
 
@@ -278,7 +278,7 @@ const NewsSlider = () => {
       };
     return(
         <>
-        <SectionImage id="partners">
+        <SectionImage id="news">
             <Image src={NewsImage} alt="" />
             </SectionImage>
         <Section >
