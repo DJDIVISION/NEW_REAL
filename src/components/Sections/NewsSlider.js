@@ -46,10 +46,10 @@ const Section = styled.div`
 
 const Carroussel = styled.div`
     width: 50vw;
-    height: 600px;
+    height: 70vh;
     display: flex;
     flex-direction: column;
-    
+    margin-top: -80px;
     
     
     
@@ -70,7 +70,6 @@ const Carroussel = styled.div`
         width: 75vw;
         height: 60vh;
         border-radius: 20px;
-        margin-top: -100px;
         .slick-arrow:before{
             
         }
@@ -81,7 +80,7 @@ const Carroussel = styled.div`
 const MainContainer = styled.section`
     
     width: 100%;
-    height: 600px;
+    height: 70vh;
     background-size: contain;
     display: flex;
     flex-direction: column;
@@ -103,7 +102,7 @@ const MainContainer = styled.section`
 `;
 
 const Card = styled.div`
-    height: 450px;
+    height: 65vh;
     width: 225px;
     display: flex;
     flex-direction: column;
@@ -119,7 +118,7 @@ const Card = styled.div`
 
     @media screen and (min-width: 1100px){
         width: 600px;
-        height: 400px;
+        height: 350px;
         margin-top: -100px;
     }
 `;
@@ -212,7 +211,8 @@ const Subtitle = styled.h2`
     
     @media screen and (min-width: 1100px) {
         font-size: 20px;
-        margin-bottom: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 `;
 
@@ -280,7 +280,7 @@ const NewsSlider = () => {
       };
     return(
         <>
-        <SectionImage id="news">
+        <SectionImage id="partners">
             <Image src={NewsImage} alt="" />
             </SectionImage>
         <Section >
@@ -293,16 +293,16 @@ const NewsSlider = () => {
                             <IconList>
                                 <ShareIcon />
                             <TwitterShareButton url={shareurl} title={TwitterTitle} via={Via} hashtags={Hashtags} related={Related}>
-                                <TwitterIcon size={25} borderRadius={50}/>
+                                <TwitterIcon size={20} borderRadius={50}/>
                             </TwitterShareButton>
                             <FacebookShareButton url={shareurl} quote={TwitterTitle}>
-                                <FacebookIcon size={25} borderRadius={50}/>
+                                <FacebookIcon size={20} borderRadius={50}/>
                             </FacebookShareButton>
                             <LinkedinShareButton url={shareurl} >
-                                <LinkedinIcon size={25} borderRadius={50}/>
+                                <LinkedinIcon size={20} borderRadius={50}/>
                             </LinkedinShareButton>
                             <EmailShareButton url={shareurl} >
-                                <EmailIcon size={25} borderRadius={50}/>
+                                <EmailIcon size={20} borderRadius={50}/>
                             </EmailShareButton>
                             </IconList>
                             <TitleList>
