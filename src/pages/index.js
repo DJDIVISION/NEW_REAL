@@ -21,6 +21,7 @@ import RoadMapSection from "../components/Sections/RoadMapSection";
 import TempSection from "../components/Sections/TempSection";
 import TempSectionTwo from "../components/Sections/TempSectionTwo";
 import TempSectionThree from "../components/Sections/TempSectionThree";
+import NewsSlider from "../components/Sections/NewsSlider";
 
 
 
@@ -57,8 +58,7 @@ const Home = (props) => {
             <NavBar showMenu={showMenu} theme={theme} setTheme={setTheme} setShowMenu={setShowMenu}/>
             
             <SectionMenu />
-            
-            <NewsSection />
+            <NewsSlider />
             <DonutSection />
             <TeamSection />
             <GamingSection />

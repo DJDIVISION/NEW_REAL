@@ -6,7 +6,7 @@ import { Link as LinkR } from "react-router-dom";
 import {Button, IconButton} from "@material-ui/core";
 import ShareIcon from '@mui/icons-material/Share';
 import "./style.css";
-import NewsImage from "../../images/BestNewsDivider.png";
+import NewsImage from "../../images/BestNewsDivider.png"; 
 
 
 import { TwitterShareButton, TwitterIcon, FacebookShareButton, FacebookIcon, LinkedinIcon, LinkedinShareButton, EmailIcon, EmailShareButton} from "react-share";
