@@ -46,7 +46,7 @@ const ColumnLeft = styled.div`
     align-items: center;
     justify-content: center;
 
-    
+
 
     @media screen and (min-width: 1100px){
         padding-left: 100px;
@@ -56,6 +56,7 @@ const ColumnLeft = styled.div`
     @media screen and (max-width: 1100px){
         background: ${props => props.theme.verticalRed};
         width: 100vw;
+         
         
         
         
@@ -77,8 +78,8 @@ const ColumnRight = styled.div`
         width: 100vw;
         align-items: center;
         justify-content: center;
-        padding: 10px 20px;
-        padding-top: 100px;
+        padding: 10px 40px;
+        padding-top: 50px;
         background: ${props => props.theme.verticalRed};
         
     }
