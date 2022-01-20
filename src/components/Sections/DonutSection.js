@@ -21,7 +21,7 @@ const Container = styled.div`
 
     @media screen and (max-width: 1100px){
         flex-direction: column;
-        height: 120vh;
+        
     }
 `;
 
@@ -41,6 +41,7 @@ const ColumnLeft = styled.div`
     @media screen and (max-width: 1100px){
         background: ${props => props.theme.verticalRed};
         width: 100vw;
+        padding-bottom: 100px;
         
         
         
@@ -57,7 +58,7 @@ const ColumnRight = styled.div`
     padding: 10px 100px;
     text-align: center;
     @media screen and (max-width: 1100px){
-        height: 60vh;
+        height: 50vh;
         width: 100vw;
         align-items: center;
         justify-content: center;
@@ -164,19 +165,21 @@ const Type = styled.h4`
 `;
 
 const Header = styled.div`
-    width: 150px;
-    height: 50px;
-    background: ${props => props.theme.horizontalRed};
-    border: 2px solid ${props => props.theme.horizontalRed};
+    width: 50px;
+    height: 150px;
+    background: ${props => props.theme.verticalRed};
+    border: 2px solid ${props => props.theme.verticalRed};
     position: absolute;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-left: 5vw;
-    margin-top: 30px;
+    margin-top: 50%;
+    
     border-radius: 20px;
     border: 1px solid grey;
-    margin-left: 100px;
+    
 `;
 
 const Orange = styled.div`
@@ -282,6 +285,7 @@ const DonutSection = () => {
         console.log("use effect hook, inView = ", inView);
         if(inView){
             animation.start({
+                y: -250,
                 scale: 1,
                 opacity: 1,
                 transition: {
@@ -291,8 +295,9 @@ const DonutSection = () => {
         }
         if(!inView){
             animation.start({
-                scale: 0.5,
-                opacity: 0.5,
+                
+                scale: 0,
+                opacity: 0,
             })
         }
     }, [inView]);
@@ -384,7 +389,15 @@ const DonutSection = () => {
     
     return(
         <>
-            <div ref={ref}>
+            
+            <Container id="tokenomics">
+                
+                    <ColumnLeft>
+                    <SectionImage >
+                    <Image src={Rocket} alt="" />
+                    </SectionImage>
+                    </ColumnLeft>
+                    <div ref={ref}>
             <motion.div
             animate={animation}>
                     <Header>
@@ -394,13 +407,6 @@ const DonutSection = () => {
                     </Header>
                 </motion.div>
             </div>
-            <Container id="tokenomics">
-                
-                    <ColumnLeft>
-                    <SectionImage >
-                    <Image src={Rocket} alt="" />
-                    </SectionImage>
-                    </ColumnLeft>
                     <ColumnRight>
                     <ChartComponent data={data} />
                         <List>

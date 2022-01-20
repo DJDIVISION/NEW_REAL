@@ -14,18 +14,21 @@ import {useInView} from "react-intersection-observer";
 import TeamImage from "../../images/BestTeamDivider.png";
 
 const Header = styled.div`
-    width: 150px;
-    height: 50px;
-    background: ${props => props.theme.horizontalGrey};
+    width: 50px;
+    height: 150px;
+    background: ${props => props.theme.verticalGrey};
+    border: 2px solid ${props => props.theme.verticalGrey};
     position: absolute;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-left: 5vw;
-    margin-top: 30px;
+    margin-top: 50%;
+    
     border-radius: 20px;
     border: 1px solid grey;
-    margin-left: 100px;
+    
 `;
 
 
@@ -38,7 +41,7 @@ const Container = styled.div`
 
     @media screen and (max-width: 1100px){
         flex-direction: column;
-        height: 120vh;
+        height: 100vh;
         
     }
 `;
@@ -73,7 +76,7 @@ const ColumnRight = styled.div`
     padding: 10px 150px;
     text-align: center;
     @media screen and (max-width: 1100px){
-        height: 60vh;
+        height: 50vh;
         width: 100vw;
         align-items: center;
         justify-content: center;
@@ -155,6 +158,7 @@ const TeamSection = () => {
         console.log("use effect hook, inView = ", inView);
         if(inView){
             animation.start({
+                y: -250,
                 scale: 1,
                 opacity: 1,
                 transition: {
@@ -164,8 +168,9 @@ const TeamSection = () => {
         }
         if(!inView){
             animation.start({
-                scale: 0.5,
-                opacity: 0.5,
+                
+                scale: 0,
+                opacity: 0,
             })
         }
     }, [inView]);
@@ -173,6 +178,13 @@ const TeamSection = () => {
 
     return(
         <> 
+            
+            <Container id="team">
+            <ColumnLeft>
+                <SectionImage >
+                <Image src={TeamImage} alt="" />
+                </SectionImage>
+            </ColumnLeft>
             <div ref={ref}>
             <motion.div
             animate={animation}>
@@ -183,18 +195,12 @@ const TeamSection = () => {
                     </Header>
                 </motion.div>
             </div>
-            <Container id="team">
-            <ColumnLeft>
-                <SectionImage >
-                <Image src={TeamImage} alt="" />
-                </SectionImage>
-            </ColumnLeft>
             <ColumnRight>
             
                 <TopLine>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</TopLine>
                 <Heading>MEET THE TEAM</Heading>
            
-            <StyledButton to="/TeamPage">GO!!!</StyledButton>
+            
             </ColumnRight>
         </Container> 
        
