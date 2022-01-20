@@ -21,6 +21,7 @@ const Container = styled.div`
 
     @media screen and (max-width: 1100px){
         flex-direction: column;
+        height: 120vh;
     }
 `;
 
@@ -56,13 +57,13 @@ const ColumnRight = styled.div`
     padding: 10px 100px;
     text-align: center;
     @media screen and (max-width: 1100px){
-        height: 50vh;
+        height: 60vh;
         width: 100vw;
         align-items: center;
         justify-content: center;
         padding: 0px 0px;
         background: ${props => props.theme.verticalRed};
-        padding-bottom: 100px;
+        padding-bottom: 200px;
     }
 
 `;
@@ -165,7 +166,8 @@ const Type = styled.h4`
 const Header = styled.div`
     width: 150px;
     height: 50px;
-    background: ${props => props.theme.horizontalGrey};
+    background: ${props => props.theme.horizontalRed};
+    border: 2px solid ${props => props.theme.horizontalRed};
     position: absolute;
     display: flex;
     align-items: center;
@@ -272,7 +274,7 @@ const Grey = styled.div`
 const DonutSection = () => {
 
     const {ref, inView} = useInView({
-        threshold: 0.05
+        threshold: 1
     });
     const animation = useAnimation();
       
@@ -283,7 +285,7 @@ const DonutSection = () => {
                 scale: 1,
                 opacity: 1,
                 transition: {
-                    type: 'spring', duration: 1, bounce: 0.3
+                    type: 'spring', duration: 1.5, bounce: 0.5
                 }
             });
         }

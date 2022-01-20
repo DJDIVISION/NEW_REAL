@@ -38,6 +38,7 @@ const Container = styled.div`
 
     @media screen and (max-width: 1100px){
         flex-direction: column;
+        height: 120vh;
         
     }
 `;
@@ -72,7 +73,7 @@ const ColumnRight = styled.div`
     padding: 10px 150px;
     text-align: center;
     @media screen and (max-width: 1100px){
-        height: 50vh;
+        height: 60vh;
         width: 100vw;
         align-items: center;
         justify-content: center;
@@ -157,7 +158,7 @@ const TeamSection = () => {
                 scale: 1,
                 opacity: 1,
                 transition: {
-                    type: 'spring', duration: 1, bounce: 0.3
+                    type: 'spring', duration: 1.5, bounce: 0.5
                 }
             });
         }
