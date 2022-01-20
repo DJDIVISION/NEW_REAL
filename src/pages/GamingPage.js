@@ -57,15 +57,15 @@ const ColumnLeft = styled.div`
         background: ${props => props.theme.verticalRed};
         width: 100vw;
         ${Image}:nth-child(1) {
-        
-            width: 150px;
+            width: 160px;
         
         }
         ${Image}:nth-child(2) {
-            width: 150px;
+            width: 160px;
+            
         }
         ${Image}:nth-child(3) {
-            width: 150px;
+            width: 170px;
             
         }
         
