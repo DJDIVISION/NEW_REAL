@@ -51,6 +51,7 @@ const ColumnLeft = styled.div`
     @media screen and (min-width: 1100px){
         padding-left: 100px;
         padding-bottom: 200px;
+        padding-top: 50px;
     }
 
     @media screen and (max-width: 1100px){
@@ -95,6 +96,7 @@ const ColumnRight = styled.div`
     }
     @media screen and (min-width: 1100px){
         padding-right: 200px;
+        padding-top: 50px;
         
     }
 `;
@@ -178,9 +180,10 @@ const Telegram = styled(TelegramIcon)`
 
 
 
+
 const GamingPage = () => {
 
-    const [theme, setTheme] = useState("dark");
+    const [theme, setTheme] = useState("light");
 
     const TelegramBotLink = "https://t.me/PredictCryptoBot";
     const TelegramGroupLink = "https://t.me/dwbetsandpredictions";
@@ -188,8 +191,8 @@ const GamingPage = () => {
     return (
         <ThemeProvider theme={themes[theme]}>
         <motion.div initial="out" animate="end" exit="out" variants={animationThree}>
-            <GamingNavBar />
-            <Container >
+            <GamingNavBar theme={theme} setTheme={setTheme}/>
+            <Container id="bot">
             <ColumnLeft>
                 <Image src={BotPhone3} alt="planet" 
                 whileHover={{scale: 1.5, zIndex: 100}}
@@ -210,7 +213,7 @@ const GamingPage = () => {
                 </IconContainer>
             </ColumnRight>
         </Container>
-        <Container >
+        <Container id="group">
             <ColumnLeft>
                 <Image src={GamingPhone1} alt="planet" 
                 whileHover={{scale: 1.5, zIndex: 100}}

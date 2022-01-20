@@ -29,7 +29,7 @@ const ScrollIcon = styled(ArrowCircleUpIcon)`
     @media screen and (max-width: 1100px){
         transform: scale(1.2);
     }
-`;
+`; 
 
 const SwitchIcon = styled.div`
     color: gold;

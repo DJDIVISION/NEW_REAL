@@ -21,9 +21,14 @@ import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 
 
 const ScrollIcon = styled(ArrowCircleUpIcon)`
-    color: gold;
+    color: ${props => props.theme.text};
     transition: 0.8s all ease;
     top: 600px;
+    transform: scale(1.4);
+
+    @media screen and (max-width: 1100px){
+        transform: scale(1.2);
+    }
 `;
 
 const SwitchIcon = styled.div`
@@ -53,7 +58,7 @@ const StyledMenuIcon = styled(MenuIcon)`
 
 const GamingNavbar = (props) => {
 
-    const [theme, setTheme] = useState("dark");
+    const [theme, setTheme] = useState("light");
 
     function changeTheme() {
         if(props.theme === "light") {
@@ -105,19 +110,16 @@ const GamingNavbar = (props) => {
                     </MobileIcon2> 
                     <NavMenu>
                         <NavItem>
-                            <NavbarLink to="ceo" smooth={true} duration={500} spy={true} exact="true" >DAVID</NavbarLink>
+                            <NavbarLink to="bot" smooth={true} duration={500} spy={true} exact="true" >TELEGRAM BOT</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="cio" smooth={true} duration={500} spy={true} exact="true" >FILIP</NavbarLink>
+                            <NavbarLink to="group" smooth={true} duration={500} spy={true} exact="true" >TELEGRAM GROUP</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="dev1" smooth={true} duration={500} spy={true} exact="true" >VICTOR</NavbarLink>
+                            <NavbarLink to="website" smooth={true} duration={500} spy={true} exact="true" >WEBSITE</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="dev2" smooth={true} duration={2000} spy={true} exact="true" >BASHKAR</NavbarLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavbarLink to="dev3" smooth={true} duration={500} spy={true} exact="true" >ABHIK</NavbarLink>
+                            <NavbarLink to="metaverse" smooth={true} duration={2000} spy={true} exact="true" >METAVERSE</NavbarLink>
                         </NavItem>
                     </NavMenu>
                 
