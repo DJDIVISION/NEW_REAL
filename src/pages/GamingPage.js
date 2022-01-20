@@ -203,12 +203,15 @@ const GamingPage = () => {
             <ColumnLeft>
                 <Image src={BotPhone3} alt="planet" 
                 whileHover={{scale: 1.5, zIndex: 100}}
+                whileTap={{scale: 1.5, zIndex: 100}}
                 initial={{x: 100, y:40}} /> 
                 <Image src={BotPhone2} alt="planet" 
                 whileHover={{scale: 1.5, zIndex: 100}}
+                whileTap={{scale: 1.5, zIndex: 100}}
                 initial={{x: -100, y:40}} /> 
                 <Image src={BotPhone1} alt="planet" 
                 whileHover={{scale: 1.5, zIndex: 100}}
+                whileTap={{scale: 1.5, zIndex: 100}}
                 initial={{x: 0, y:40, scale:1.2}} /> 
             </ColumnLeft>
             <ColumnRight>
