@@ -3,9 +3,9 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import Planet1 from "../../images/planet1.png";
 import Planet2 from "../../images/planet6.png";
-import Phone1 from "../../images/gaming1.png";
-import Phone2 from "../../images/gaming2.png";
-import Phone3 from "../../images/gaming3.png";
+import Phone1 from "../../images/BotPhone1.png";
+import Phone2 from "../../images/BotPhone2.png";
+import Phone3 from "../../images/BotPhone3.png";
 import Planet4 from "../../images/planet4.png";
 import { Link as LinkR } from "react-router-dom";
 
@@ -102,8 +102,10 @@ const ColumnRight = styled.div`
     position: relative;
 
     ${Image}:nth-child(1) {
-        top: 10;
-        left: 20;
+        top: 30px;
+        left: 20px;
+        width: 300px;
+        
     }
     ${Image}:nth-child(2) {
         top: 10;
@@ -165,18 +167,15 @@ const AnimatedSection = () => {
                 <ColumnRight>
                     <Image src={Phone1} alt="planet" 
                     whileTap={{scale: 1.1}} 
-                    drag={true}
-                    initial={{x: 0, y:0, scale: 3}}
+                    initial={{x: 0, y:0}}
                     /* animate={{x: 300, y:-50, scale: 1.9, transition: { duration: 20}}} */ /> 
                  <Image src={Phone2} alt="planet" 
                     whileTap={{scale: 1.1}} 
-                    drag={true}
-                    initial={{x: 0, y:0, scale: 3}}
+                    initial={{x: 0, y:0}}
                     /* animate={{x: -100, y:0, scale: 4.1, transition: { duration: 2, repeat: Infinity, repeatType: 'reverse'}}} *//>  
                     <Image src={Phone3} alt="planet" 
                     whileTap={{scale: 1.1}} 
-                    drag={true}
-                    initial={{x: 0, y:0, scale: 3}}
+                    initial={{x: 0, y:0}}
                     /* animate={{x: -40, y:0,  scale: 2, transition: { duration: 6, repeat: Infinity, repeatType: 'reverse'}}} */ />
                    {/*  <Image src={Planet4} alt="planet" 
                     whileTap={{scale: 1.3}} 
