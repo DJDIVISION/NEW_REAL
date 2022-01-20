@@ -121,7 +121,7 @@ const SectionImage = styled.div`
 
 
 const TopLine = styled.p`
-    color: ${props => props.theme.body};
+    color: ${props => props.theme.bodyBlue};
     font-size: 25px;
     font-weight: 700;
     margin-bottom: 30px;
@@ -141,7 +141,7 @@ const TopLine = styled.p`
 const Heading = styled.h1`
     font-size: 48px;
     font-weight: 600;
-    color: ${props => props.theme.body};
+    color: ${props => props.theme.bodyBlue};
     text-shadow: 1px 2px 4px ${props => props.theme.text},
                           1px -1px 0 #000,
                          1px -1px 0 #000,
@@ -216,7 +216,7 @@ const GamingPage = () => {
             </ColumnLeft>
             <ColumnRight>
             
-                <TopLine>Join our Telegram Bot and put your crypto into play. Sport Bets, Casino and Dice Games, BTC and ETH price predictions, and many more</TopLine>
+                <TopLine>Join our Telegram Bot and put your crypto into play. Sport Bets, Casino and Dice Games, BTC and ETH price predictions, and many more!!!</TopLine>
                 <Heading>TELEGRAM BOT</Heading>
                 <IconContainer>
                 <IconButton onClick={event => window.open(TelegramBotLink, "_blank")}><Telegram /></IconButton>
@@ -237,7 +237,7 @@ const GamingPage = () => {
             </ColumnLeft>
             <ColumnRight>
             
-                <TopLine>Keep track of your bet results in our Telegram Sports Group, or simply discuss about sports. Live Results, Sport Latest News, Videos, and many more</TopLine>
+                <TopLine>Keep track of your bet results in our Telegram Group, or simply discuss about sports. Live Results, Latest News, Videos, and many more!!!</TopLine>
                 <Heading>TELEGRAM SPORTS GROUP</Heading>
                 <IconContainer>
                 <IconButton onClick={event => window.open(TelegramGroupLink, "_blank")}><Telegram /></IconButton>
