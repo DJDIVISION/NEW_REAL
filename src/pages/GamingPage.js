@@ -190,6 +190,10 @@ const Telegram = styled(TelegramIcon)`
 
 const GamingPage = () => {
 
+    const Alert = () => {
+        alert("Want to Visit Our Telegram Group?");
+    }
+
     const [theme, setTheme] = useState("dark");
 
     const TelegramBotLink = "https://t.me/PredictCryptoBot";
@@ -201,15 +205,15 @@ const GamingPage = () => {
             <GamingNavBar theme={theme} setTheme={setTheme}/>
             <Container id="bot">
             <ColumnLeft>
-                <Image src={BotPhone3} alt="planet" 
+                <Image src={BotPhone3} alt="planet" onClick={Alert}
                 whileHover={{scale: 1.5, zIndex: 100}}
                 whileTap={{scale: 1.5, zIndex: 100}}
                 initial={{x: 100, y:40}} /> 
-                <Image src={BotPhone2} alt="planet" 
+                <Image src={BotPhone2} alt="planet" onClick={Alert}
                 whileHover={{scale: 1.5, zIndex: 100}}
                 whileTap={{scale: 1.5, zIndex: 100}}
                 initial={{x: -100, y:40}} /> 
-                <Image src={BotPhone1} alt="planet" 
+                <Image src={BotPhone1} alt="planet" onClick={Alert}
                 whileHover={{scale: 1.5, zIndex: 100}}
                 whileTap={{scale: 1.5, zIndex: 100}}
                 initial={{x: 0, y:40, scale:1.2}} /> 
