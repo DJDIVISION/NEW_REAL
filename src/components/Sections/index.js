@@ -3,7 +3,9 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import Planet1 from "../../images/planet1.png";
 import Planet2 from "../../images/planet6.png";
-import Planet3 from "../../images/planet3.png";
+import Phone1 from "../../images/gaming1.png";
+import Phone2 from "../../images/gaming2.png";
+import Phone3 from "../../images/gaming3.png";
 import Planet4 from "../../images/planet4.png";
 import { Link as LinkR } from "react-router-dom";
 
@@ -96,18 +98,20 @@ const ColumnRight = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    
     position: relative;
 
     ${Image}:nth-child(1) {
-        top: 100px;
-        right: 50px;
+        top: 10;
+        left: 20;
     }
     ${Image}:nth-child(2) {
-        
+        top: 10;
+        left: 20;
     }
     ${Image}:nth-child(3) {
-        
+        top: 10;
+        left: 20;
         
     }
     ${Image}:nth-child(4) {
@@ -141,7 +145,7 @@ const AnimatedSection = () => {
         <Section>
             <Container>
                 <ColumnLeft>
-                    <motion.h1
+                    {/* <motion.h1
                         initial={{ opacity: 0, x: 300}}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 3}}
@@ -150,7 +154,7 @@ const AnimatedSection = () => {
                         initial={{ opacity: 0, x: 300}}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{duration: 3}}
-                    >that will take you to Outer Space</motion.p>
+                    >that will take you to Outer Space</motion.p> */}
                     {/* <LinkR to="/TeamPage"><Button 
                     whileHover={{scale:1.05}} 
                     whileTap={{backgroundColor:'gold', border: 'none', color: 'black' }}
@@ -159,20 +163,20 @@ const AnimatedSection = () => {
                     >Learn more</Button></LinkR> */}
                 </ColumnLeft>
                 <ColumnRight>
-                    {/* <Image src={Planet1} alt="planet" 
-                    whileTap={{scale: 1.3}} 
+                    <Image src={Phone1} alt="planet" 
+                    whileTap={{scale: 1.1}} 
                     drag={true}
-                    initial={{x: -700, y:275, scale: 0.7}}
-                    animate={{x: 300, y:-50, scale: 1.9, transition: { duration: 20}}}/> */}
-                    {/* <Image src={StarsBack1} alt="planet" 
-                    whileTap={{scale: 1.3}} 
+                    initial={{x: 0, y:0, scale: 3}}
+                    /* animate={{x: 300, y:-50, scale: 1.9, transition: { duration: 20}}} */ /> 
+                 <Image src={Phone2} alt="planet" 
+                    whileTap={{scale: 1.1}} 
                     drag={true}
-                    initial={{x: -100, y:0, scale: 4}}
-                    animate={{x: -100, y:0, scale: 4.1, transition: { duration: 2, repeat: Infinity, repeatType: 'reverse'}}}/>  */}
-                    <Image src={Planet3} alt="planet" 
-                    whileTap={{scale: 0.8}} 
+                    initial={{x: 0, y:0, scale: 3}}
+                    /* animate={{x: -100, y:0, scale: 4.1, transition: { duration: 2, repeat: Infinity, repeatType: 'reverse'}}} *//>  
+                    <Image src={Phone3} alt="planet" 
+                    whileTap={{scale: 1.1}} 
                     drag={true}
-                    initial={{x: 10, y:0, scale: 1}}
+                    initial={{x: 0, y:0, scale: 3}}
                     /* animate={{x: -40, y:0,  scale: 2, transition: { duration: 6, repeat: Infinity, repeatType: 'reverse'}}} */ />
                    {/*  <Image src={Planet4} alt="planet" 
                     whileTap={{scale: 1.3}} 
