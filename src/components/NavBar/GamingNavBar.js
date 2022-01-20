@@ -58,7 +58,7 @@ const StyledMenuIcon = styled(MenuIcon)`
 
 const GamingNavbar = (props) => {
 
-    const [theme, setTheme] = useState("light");
+    const [theme, setTheme] = useState("dark");
 
     function changeTheme() {
         if(props.theme === "light") {
@@ -75,7 +75,7 @@ const GamingNavbar = (props) => {
     const [scrollNavDown, setScrollNavDown] = useState(false);
 
     const changeNavDown = () => {
-        if(window.scrollY >= 50) {
+        if((window.scrollY >= 50) || (window.scrollY = 400)) {
             setScrollNavDown(true)
         } 
         else {

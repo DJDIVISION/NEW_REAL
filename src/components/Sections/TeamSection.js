@@ -1,11 +1,32 @@
-import React, {useState, useContext} from 'react';
+import React, {useState, useEffect} from 'react';
 import styled from "styled-components";
 import { Button } from "@material-ui/core";
-import { motion } from "framer-motion";
+import { Link as LinkS} from "react-scroll";
 import { Link as LinkR } from "react-router-dom";
+import { motion, useAnimation } from "framer-motion";
+import { IconButton } from "@material-ui/core";
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import {useInView} from "react-intersection-observer";
 
 
 import TeamImage from "../../images/BestTeamDivider.png";
+
+const Header = styled.div`
+    width: 150px;
+    height: 50px;
+    background: ${props => props.theme.horizontalGrey};
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5vw;
+    margin-top: 30px;
+    border-radius: 20px;
+    border: 1px solid grey;
+    margin-left: 100px;
+`;
 
 
 const Container = styled.div`
@@ -126,11 +147,41 @@ const StyledButton = styled(LinkR)`
 
 const TeamSection = () => {
 
-    
+    const {ref, inView} = useInView();
+    const animation = useAnimation();
+      
+    useEffect(() => {
+        console.log("use effect hook, inView = ", inView);
+        if(inView){
+            animation.start({
+                scale: 1,
+                opacity: 1,
+                transition: {
+                    type: 'spring', duration: 1, bounce: 0.3
+                }
+            });
+        }
+        if(!inView){
+            animation.start({
+                scale: 0.5,
+                opacity: 0.5,
+            })
+        }
+    }, [inView]);
 
 
     return(
-        <>
+        <> 
+            <div ref={ref}>
+            <motion.div
+            animate={animation}>
+                    <Header>
+                        <LinkS to="tokenomics" smooth={true} duration={500} spy={true} exact="true"><IconButton><ArrowUpwardIcon /></IconButton></LinkS>
+                        <LinkS to="gaming" smooth={true} duration={500} spy={true} exact="true"><IconButton><ArrowDownwardIcon /></IconButton></LinkS>
+                        <LinkR to="/TeamPage"><IconButton><ArrowForwardIcon /></IconButton></LinkR>
+                    </Header>
+                </motion.div>
+            </div>
             <Container id="team">
             <ColumnLeft>
                 <SectionImage >
