@@ -121,11 +121,15 @@ const SectionImage = styled.div`
 
 
 const TopLine = styled.p`
-    color: ${props => props.theme.text};
-    font-size: 20px;
+    color: ${props => props.theme.body};
+    font-size: 25px;
     font-weight: 700;
     margin-bottom: 30px;
     font-family: "Comfortaa";
+    text-shadow: 1px 2px 4px ${props => props.theme.text},
+                          1px -1px 0 #000,
+                         1px -1px 0 #000,
+                        -1px -1px 0 #000;
     @media screen and (max-width: 768px){
         font-size: 18px;
         margin-bottom: 20px;
@@ -137,8 +141,11 @@ const TopLine = styled.p`
 const Heading = styled.h1`
     font-size: 48px;
     font-weight: 600;
-    color: ${props => props.theme.text};
-    
+    color: ${props => props.theme.body};
+    text-shadow: 1px 2px 4px ${props => props.theme.text},
+                          1px -1px 0 #000,
+                         1px -1px 0 #000,
+                        -1px -1px 0 #000;
 
     @media screen and (max-width: 480px){
         font-size: 32px;
@@ -183,7 +190,7 @@ const Telegram = styled(TelegramIcon)`
 
 const GamingPage = () => {
 
-    const [theme, setTheme] = useState("light");
+    const [theme, setTheme] = useState("dark");
 
     const TelegramBotLink = "https://t.me/PredictCryptoBot";
     const TelegramGroupLink = "https://t.me/dwbetsandpredictions";
