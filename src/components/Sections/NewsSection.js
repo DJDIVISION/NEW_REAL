@@ -24,7 +24,7 @@ const Carroussel = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+    border-radius: 20px;
     
     background-size: contain;
     
@@ -50,18 +50,6 @@ const Carroussel = styled.div`
          
 `;
 
-/* const LinkIcon = styled(LinkedInIcon)`
-    color: #0A66C2;
-`;
-
-const TwitIcon = styled(TwitterIcon)`
-   color: #0084b4; 
-`;
-
-const FaceIcon = styled(FacebookIcon)`
-    color: #3b5998;
-`; */
-
 const Container = styled.div`
     height: 80vh;
     width: 90vw;
@@ -70,10 +58,7 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
     border-radius: 20px;
-    
-    
     
     
 `;
@@ -84,9 +69,6 @@ const Title = styled.h1`
     font-size: 46px;
     padding: 0 20px;
     margin-bottom: 10px;
-    
-    
-    
     color: ${props => props.theme.text};
 
     @media screen and (max-width: 1000px){
@@ -250,6 +232,7 @@ const Image = styled.img`
     width: 100vw;
     height: auto;
     display: flex;
+    
 `;
 
 const SectionImage = styled.div`
@@ -258,13 +241,11 @@ const SectionImage = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    
     @media screen and (min-width: 1000px){
-        height: 350px;
+        height: 250px;
         
-        img{
-            width: 50vw;
-        }
+        
     }
 `;
 

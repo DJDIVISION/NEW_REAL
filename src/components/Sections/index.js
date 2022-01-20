@@ -172,8 +172,8 @@ const AnimatedSection = () => {
                     <Image src={Planet3} alt="planet" 
                     whileTap={{scale: 0.8}} 
                     drag={true}
-                    initial={{x: 10, y:0, scale: 0.2}}
-                    animate={{x: -40, y:0,  scale: 2, transition: { duration: 6, repeat: Infinity, repeatType: 'reverse'}}} />
+                    initial={{x: 10, y:0, scale: 1}}
+                    /* animate={{x: -40, y:0,  scale: 2, transition: { duration: 6, repeat: Infinity, repeatType: 'reverse'}}} */ />
                    {/*  <Image src={Planet4} alt="planet" 
                     whileTap={{scale: 1.3}} 
                     drag={true}

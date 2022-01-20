@@ -262,76 +262,76 @@ const DonutSection = () => {
 
       const SalesFunctionIn = () => {
           document.getElementById("supply").innerHTML = "400,000,000,000";
-          document.getElementById("title-supply").innerHTML = "SALES SUPPLY";
+          document.getElementById("title-supply").innerHTML = "SALES SUPPLY:";
 
       }
       const SalesFunctionOut = () => {
         document.getElementById("supply").innerHTML = "1,000,000,000,000";
-        document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY";
+        document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY:";
       }
 
       const LiquidityFunctionIn = () => {
         document.getElementById("supply").innerHTML = "200,000,000,000";
-        document.getElementById("title-supply").innerHTML = "LIQUIDITY SUPPLY";
+        document.getElementById("title-supply").innerHTML = "LIQUIDITY SUPPLY:";
 
       }
     const LiquidityFunctionOut = () => {
     document.getElementById("supply").innerHTML = "1,000,000,000,000";
-    document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY";
+    document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY:";
     }
     const AdvisorsFunctionIn = () => {
         document.getElementById("supply").innerHTML = "30,000,000,000";
-        document.getElementById("title-supply").innerHTML = "ADVISORS SUPPLY";
+        document.getElementById("title-supply").innerHTML = "ADVISORS SUPPLY:";
 
       }
     const AdvisorsFunctionOut = () => {
     document.getElementById("supply").innerHTML = "1,000,000,000,000";
-    document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY";
+    document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY:";
     }
     const CexFunctionIn = () => {
         document.getElementById("supply").innerHTML = "100,000,000,000";
-        document.getElementById("title-supply").innerHTML = "CEX RESERVE SUPPLY";
+        document.getElementById("title-supply").innerHTML = "CEX RESERVE SUPPLY:";
 
       }
     const CexFunctionOut = () => {
     document.getElementById("supply").innerHTML = "1,000,000,000,000";
-    document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY";
+    document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY:";
     }
     const TeamFunctionIn = () => {
         document.getElementById("supply").innerHTML = "100,000,000,000";
-        document.getElementById("title-supply").innerHTML = "TEAM SUPPLY";
+        document.getElementById("title-supply").innerHTML = "TEAM SUPPLY:";
 
       }
     const TeamFunctionOut = () => {
     document.getElementById("supply").innerHTML = "1,000,000,000,000";
-    document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY";
+    document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY:";
     }
     const GiveAwaysFunctionIn = () => {
         document.getElementById("supply").innerHTML = "30,000,000,000";
-        document.getElementById("title-supply").innerHTML = "GIVEAWAYS SUPPLY";
+        document.getElementById("title-supply").innerHTML = "GIVEAWAYS SUPPLY:";
 
       }
     const GiveAwaysFunctionOut = () => {
     document.getElementById("supply").innerHTML = "1,000,000,000,000";
-    document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY";
+    document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY:";
     }
     const PTEarnFunctionIn = () => {
         document.getElementById("supply").innerHTML = "100,000,000,000";
-        document.getElementById("title-supply").innerHTML = "PLAY TO EARN SUPPLY";
+        document.getElementById("title-supply").innerHTML = "PLAY TO EARN SUPPLY:";
 
       }
     const PTEarnFunctionOut = () => {
     document.getElementById("supply").innerHTML = "1,000,000,000,000";
-    document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY";
+    document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY:";
     }
     const MarketingFunctionIn = () => {
         document.getElementById("supply").innerHTML = "40,000,000,000";
-        document.getElementById("title-supply").innerHTML = "MARKETING SUPPLY";
+        document.getElementById("title-supply").innerHTML = "MARKETING SUPPLY:";
 
       }
     const MarketingFunctionOut = () => {
     document.getElementById("supply").innerHTML = "1,000,000,000,000";
-    document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY";
+    document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY:";
     }
     
     return(
@@ -385,7 +385,7 @@ const DonutSection = () => {
                         </List>
                         <TextWrapper>
                             <TopLine>DAIR</TopLine>
-                            <TopLine id="title-supply">TOTAL SUPPLY</TopLine>
+                            <TopLine id="title-supply">TOTAL SUPPLY:</TopLine>
                             <Heading id="supply">1,000,000,000,000</Heading>
                         </TextWrapper>
                         <StyledButton to="/TokenomicsPage">LEARN MORE</StyledButton>

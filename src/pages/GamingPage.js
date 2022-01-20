@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import GamingSidebar from "../components/Sidebar/GamingSidebar";
 
 import AnimatedSection from "../components/Sections";
 import { motion } from "framer-motion";
@@ -17,7 +16,7 @@ const GamingPage = () => {
 
     return (
         <motion.div initial="out" animate="end" exit="out" variants={animationThree}>
-            <GamingSidebar isOpen={isOpen} toggle={toggle}/>
+            
             
             <AnimatedSection />
         </motion.div>
