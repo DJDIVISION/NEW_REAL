@@ -158,17 +158,19 @@ const TeamSection = () => {
         console.log("use effect hook, inView = ", inView);
         if(inView){
             animation.start({
-                y: -250,
+                x: 0,
+                y: -275,
                 scale: 1,
                 opacity: 1,
                 transition: {
-                    type: 'spring', duration: 1.5, bounce: 0.5
+                    type: 'spring', duration: 1.5, bounce: 0.3
                 }
             });
         }
         if(!inView){
             animation.start({
-                
+                x: -150,
+                y: -50,
                 scale: 0,
                 opacity: 0,
             })
