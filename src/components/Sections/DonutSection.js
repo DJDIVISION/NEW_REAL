@@ -6,12 +6,6 @@ import { Button } from "@material-ui/core";
 import { Link as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
 import Rocket from "../../images/BestTokenomicsDivider.png";
-import { motion, useAnimation } from "framer-motion";
-import { IconButton } from "@material-ui/core";
-import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import {useInView} from "react-intersection-observer";
 
 const Container = styled.div`
     display: flex;
@@ -64,7 +58,7 @@ const ColumnRight = styled.div`
         justify-content: center;
         padding: 0px 0px;
         background: ${props => props.theme.verticalRed};
-        padding-bottom: 200px;
+        padding-bottom: 100px;
     }
 
 `;
@@ -164,23 +158,7 @@ const Type = styled.h4`
 
 `;
 
-const Header = styled.div`
-    width: 50px;
-    height: 150px;
-    background: ${props => props.theme.verticalRed};
-    border: 2px solid ${props => props.theme.verticalRed};
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-left: 5vw;
-    margin-top: 50%;
-    
-    border-radius: 20px;
-    border: 1px solid grey;
-    
-`;
+
 
 const Orange = styled.div`
     width: 20px;
@@ -275,34 +253,8 @@ const Grey = styled.div`
 
 
 const DonutSection = () => {
-
-    const {ref, inView} = useInView({
-        threshold: 1
-    });
-    const animation = useAnimation();
       
-    useEffect(() => {
-        console.log("use effect hook, inView = ", inView);
-        if(inView){
-            animation.start({
-                x: 0,
-                y: -275,
-                scale: 1,
-                opacity: 1,
-                transition: {
-                    type: 'spring', duration: 1.5, bounce: 0.3
-                }
-            });
-        }
-        if(!inView){
-            animation.start({
-                x: -150,
-                y: -50,
-                scale: 0,
-                opacity: 0,
-            })
-        }
-    }, [inView]);
+    
 
     const data = [
         { value: 40, name: "SALE" },
@@ -399,16 +351,6 @@ const DonutSection = () => {
                     <Image src={Rocket} alt="" />
                     </SectionImage>
                     </ColumnLeft>
-                    <div ref={ref}>
-            <motion.div
-            animate={animation}>
-                    <Header>
-                        <LinkS to="news" smooth={true} duration={500} spy={true} exact="true"><IconButton><ArrowUpwardIcon /></IconButton></LinkS>
-                        <LinkS to="team" smooth={true} duration={500} spy={true} exact="true"><IconButton><ArrowDownwardIcon /></IconButton></LinkS>
-                        <LinkR to="/TokenomicsPage"><IconButton><ArrowForwardIcon /></IconButton></LinkR>
-                    </Header>
-                </motion.div>
-            </div>
                     <ColumnRight>
                     <ChartComponent data={data} />
                         <List>
@@ -454,7 +396,7 @@ const DonutSection = () => {
                             <TopLine id="title-supply">TOTAL SUPPLY:</TopLine>
                             <Heading id="supply">1,000,000,000,000</Heading>
                         </TextWrapper>
-                        
+                        <StyledButton to="/TokenoimcsPage">LEARN MORE</StyledButton>
                     </ColumnRight>
                     </Container> 
        
