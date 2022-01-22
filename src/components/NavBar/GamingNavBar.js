@@ -75,7 +75,7 @@ const GamingNavbar = (props) => {
     const [scrollNavDown, setScrollNavDown] = useState(false);
 
     const changeNavDown = () => {
-        if((window.scrollY >= 50) || (window.scrollY = 400)) {
+        if(window.scrollY >= 50) {
             setScrollNavDown(true)
         } 
         else {

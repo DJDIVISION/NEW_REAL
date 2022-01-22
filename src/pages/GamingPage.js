@@ -16,6 +16,8 @@ import BotPhone3 from "../images/BotPhone3.png";
 import GamingPhone1 from "../images/GroupPhone1.png";
 import GamingPhone2 from "../images/GroupPhone2.png";
 import GamingPhone3 from "../images/GroupPhone3.png";
+import DAIRPORT from "../images/DAIRPORT.png";
+import DWGamesPhone from "../images/DWGamesPhone.png";
 
 
 const Container = styled.div`
@@ -107,15 +109,44 @@ const SectionImage = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 80px;
 
     img {
-        width: 50%;
+        width: 100vw;
     }
     @media screen and (min-width: 1000px){
+        margin-top: 100px;
+        margin-left: 100px;
+        img{
+           width: 75vw;
+        }
+    }
+`;
+
+const SectionTopImage = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 80px;
+
+    img {
+        width: 100vw;
+    }
+    @media screen and (min-width: 1000px){
+        margin-top: 100px;
+        margin-left: 100px;
         img{
            width: 25vw;
         }
     }
+`;
+
+const BigImage = styled.img`
+    display: flex;
+`;
+
+const TopImage = styled.img`
+    display: flex;
 `;
 
 
@@ -242,6 +273,34 @@ const GamingPage = () => {
                 <IconContainer>
                 <IconButton onClick={event => window.open(TelegramGroupLink, "_blank")}><Telegram /></IconButton>
                 </IconContainer>
+            
+            </ColumnRight>
+        </Container>
+        <Container id="website">
+        <ColumnLeft>
+            <SectionTopImage >
+                <TopImage src={DWGamesPhone} alt="" />
+            </SectionTopImage>
+            </ColumnLeft>
+            <ColumnRight>
+            
+                <TopLine>The Destiny World Gaming Website is under construction. Stay tuned!!!</TopLine>
+                <Heading>destinyworld.games</Heading>
+            
+            </ColumnRight>
+        </Container>
+        <Container id="group">
+            <ColumnLeft>
+            <SectionImage >
+                <BigImage src={DAIRPORT} alt="" />
+            </SectionImage>
+                
+            </ColumnLeft>
+            <ColumnRight>
+            
+                <TopLine>The Destiny Airlines Metaverse is under construction. Stay tuned!!!</TopLine>
+                <Heading>METAVERSE</Heading>
+                
             
             </ColumnRight>
         </Container>
