@@ -116,9 +116,9 @@ const SectionImage = styled.div`
     }
     @media screen and (min-width: 1000px){
         margin-top: 100px;
-        margin-left: 100px;
+        
         img{
-           width: 75vw;
+           width: 50vw;
         }
     }
 `;
@@ -127,14 +127,15 @@ const SectionTopImage = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 80px;
+    
 
     img {
-        width: 100vw;
+        width: 250px;
     }
     @media screen and (min-width: 1000px){
         margin-top: 100px;
         margin-left: 100px;
+        margin-right: 80px;
         img{
            width: 25vw;
         }
