@@ -55,7 +55,7 @@ const Home = (props) => {
             <TeamSection />
             <GamingSection />
             <NftSection />
-            <RoadMapSection />
+            <RoadMapSection /> 
             <PartnerSlider />
             <Footer />
         </motion.div>

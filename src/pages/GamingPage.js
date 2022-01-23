@@ -290,7 +290,7 @@ const GamingPage = () => {
             
             </ColumnRight>
         </Container>
-        <Container id="group">
+        <Container id="metaverse">
             <ColumnLeft>
             <SectionImage >
                 <BigImage src={DAIRPORT} alt="" />

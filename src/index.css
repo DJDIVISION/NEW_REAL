@@ -33,7 +33,61 @@ code {
   margin-top: 50px;
 }
 
+.centermode {
+  width: 100vw;
+  padding-top: 30px;
+  height: 550px;
+}
 
+.slide img{
+  width: 250px;
+  
+  margin: 0 auto;
+}
 
+.slide {
+  transform: scale(0.4);
+  transition: transform 300ms;
+  opacity: 0.5;
+}
 
+.activeSlide {
+  transform: scale(1.2);
+  opacity: 1;
+  
+}
 
+.arrow {
+  
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.next {
+  right: 30%;
+  top: 40%;
+}
+
+.prev {
+  left: 30%;
+  top: 40%;
+}
+
+@media only screen and (max-width: 1100px){
+  .slide img {
+    width: 30vw;
+   
+  }
+  
+  .next {
+    right: 30%;
+    top: 25%;
+  }
+  
+  .prev {
+    left: 30%;
+    top: 25%;
+  }
+  
+}
