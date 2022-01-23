@@ -81,13 +81,13 @@ code {
   }
   
   .next {
-    right: 30%;
-    top: 25%;
+    right: 20%;
+    top: 30%;
   }
   
   .prev {
-    left: 30%;
-    top: 25%;
+    left: 20%;
+    top: 30%;
   }
   
 }

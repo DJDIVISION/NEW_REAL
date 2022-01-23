@@ -110,10 +110,13 @@ const NFTNavBar = (props) => {
                     </MobileIcon2> 
                     <NavMenu>
                         <NavItem>
-                            <NavbarLink to="areax" smooth={true} duration={500} spy={true} exact="true" >AREA X</NavbarLink>
+                            <NavbarLink to="genesis" smooth={true} duration={500} spy={true} exact="true" >GENESIS</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="nftfy" smooth={true} duration={500} spy={true} exact="true" >NFTFY</NavbarLink>
+                            <NavbarLink to="spaceoutart" smooth={true} duration={500} spy={true} exact="true" >SPACEOUTART</NavbarLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavbarLink to="frames" smooth={true} duration={500} spy={true} exact="true" >FRAMES</NavbarLink>
                         </NavItem>
                     </NavMenu>
                 

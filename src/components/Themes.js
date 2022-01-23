@@ -18,6 +18,8 @@ export const darkTheme = {
     bodyShadow: "#59CBE8",
     horizontalGrey: "linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(168,168,177,1) 50%, rgba(0,0,0,1) 100%)",
     verticalGrey: "linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(168,168,177,1) 50%, rgba(0,0,0,1) 100%)",
+    horizontalGold: "linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(244,176,15,1) 50%, rgba(0,0,0,1) 100%)",
+    verticalGold: "linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(244,176,15,1) 50%, rgba(0,0,0,1) 100%)",
     horizontalRed: "linear-gradient(180deg, #000000, #b82e1f, #000000)",
     verticalRed: "linear-gradient(90deg, #000000, #b82e1f, #000000)",
     text: "#FCF6F4",
