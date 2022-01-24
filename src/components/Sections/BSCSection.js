@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Link as LinkR } from "react-router-dom";
 
 
-import NftImage from "../../images/BestNftDivider.png";
+import BSCImage from "../../images/bsc_logo.png";
 
 
 const Container = styled.div`
@@ -22,8 +22,8 @@ const Container = styled.div`
 const ColumnLeft = styled.div`
     flex-shrink: 0;
     flex-basis: 50%;
-    background: ${props => props.theme.horizontalGold};
-    width: 50vw;
+    background: ${props => props.theme.horizontalYellow};
+    width: 50%;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -33,19 +33,19 @@ const ColumnLeft = styled.div`
     }
 
     @media screen and (max-width: 1100px){
-        background: ${props => props.theme.verticalGold};
+        background: ${props => props.theme.verticalYellow};
         width: 100vw;
         
         
     }
 `;
 const ColumnRight = styled.div`
-    background: ${props => props.theme.horizontalGold};
+    background: ${props => props.theme.horizontalYellow};
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 50vw;
+    width: 50%;
     height: 100vh;
     padding: 10px 100px;
     text-align: center;
@@ -55,7 +55,8 @@ const ColumnRight = styled.div`
         align-items: center;
         justify-content: center;
         padding: 10px 20px;
-        background: ${props => props.theme.verticalGold};
+        background: ${props => props.theme.verticalYellow};
+        
     }
 
 `;
@@ -69,11 +70,13 @@ const SectionImage = styled.div`
     align-items: center;
 
     img {
-        width: 100%;
+        width: 150px;
     }
     @media screen and (min-width: 1000px){
+
         img{
-           width: 50vw;
+           width: 350px;
+           margin-bottom: 100px;
         }
     }
 `;
@@ -118,27 +121,30 @@ const StyledButton = styled(LinkR)`
         border-radius: 10px;
         padding: 10px 10px;
     }
+    &:hover{
+        transform: scale(1.2);
+    }
 `;
 
-const NftSection = () => {
+const GamingSection = () => {
     return (
          
-        <Container id="nft">
+        <Container id="bsc">
             <ColumnLeft>
                 <SectionImage >
-                <Image src={NftImage} alt="" />
+                <Image src={BSCImage} alt="" />
                 </SectionImage>
             </ColumnLeft>
             <ColumnRight>
             
                 <TopLine>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</TopLine>
-                <Heading>TO THE GALLERY</Heading>
+                <Heading>DAIR ON BSC</Heading>
            
-            <StyledButton to="/NFTPage">LEARN MORE</StyledButton>
+            <StyledButton to="/GamingPage">LEARN MORE</StyledButton>
             </ColumnRight>
         </Container>
         
     )
 }
 
-export default NftSection;
+export default GamingSection;

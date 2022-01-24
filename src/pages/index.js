@@ -12,6 +12,8 @@ import SectionMenu from "../components/Sections/TopSection";
 import TeamSection from "../components/Sections/TeamSection";
 import GamingSection from "../components/Sections/GamingSection";
 import NftSection from "../components/Sections/NftSection";
+import TelosSection from "../components/Sections/TelosSection";
+import BSCSection from "../components/Sections/BSCSection";
 import RoadMapSection from "../components/Sections/RoadMapSection";
 import NewsSlider from "../components/Sections/NewsSlider";
 
@@ -56,6 +58,8 @@ const Home = (props) => {
             <GamingSection />
             <NftSection />
             <RoadMapSection /> 
+            <TelosSection />
+            <BSCSection />
             <PartnerSlider />
             <Footer />
         </motion.div>

@@ -40,11 +40,12 @@ const InfoWrapper = styled.div`
     height: 100vh;
     width: 100%;
     justify-content: center;
-    background: ${props => props.theme.body};
+    background: ${props => props.theme.horizontalGreen};
     overflow: hidden;
     
 
-    @media screen and (max-width: 860px){
+    @media screen and (max-width: 1100px){
+        background: ${props => props.theme.verticalGreen};
         height: 100vh;
     }
 `;

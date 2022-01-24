@@ -22,7 +22,7 @@ const Container = styled.div`
 const ColumnLeft = styled.div`
     flex-shrink: 0;
     flex-basis: 50%;
-    background: ${props => props.theme.horizontalRed};
+    background: ${props => props.theme.horizontalGreen};
     width: 50%;
     height: 100vh;
     display: flex;
@@ -33,7 +33,7 @@ const ColumnLeft = styled.div`
     }
 
     @media screen and (max-width: 1100px){
-        background: ${props => props.theme.verticalRed};
+        background: ${props => props.theme.verticalGreen};
         width: 100vw;
         padding-bottom: 100px;
         
@@ -42,7 +42,7 @@ const ColumnLeft = styled.div`
     }
 `;
 const ColumnRight = styled.div`
-    background: ${props => props.theme.horizontalRed};
+    background: ${props => props.theme.horizontalGreen};
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,7 +57,7 @@ const ColumnRight = styled.div`
         align-items: center;
         justify-content: center;
         padding: 0px 0px;
-        background: ${props => props.theme.verticalRed};
+        background: ${props => props.theme.verticalGreen};
         padding-bottom: 100px;
     }
 
