@@ -150,6 +150,7 @@ const WrapperTop = styled.div`
     width: 100%;
     position: absolute;
    transform: rotate(180deg);
+   margin-top: -50px;
 
     @media screen and (max-width: 768px){
         
@@ -182,7 +183,7 @@ const Wrapper = styled.div`
     height: 200px;
     width: 100%;
     position: absolute;
-    margin-top: 450px;
+    margin-top: 500px;
 
     @media screen and (max-width: 768px){
         margin-top: 730px;
