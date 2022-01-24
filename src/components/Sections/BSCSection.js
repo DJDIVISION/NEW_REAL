@@ -29,13 +29,13 @@ const ColumnLeft = styled.div`
     align-items: center;
     justify-content: center;
     @media screen and (min-width: 1100px){
-        
+        padding-top: 75px;
     }
 
     @media screen and (max-width: 1100px){
         background: ${props => props.theme.verticalYellow};
         width: 100vw;
-        
+        padding-top: 50px;
         
     }
 `;
@@ -56,6 +56,7 @@ const ColumnRight = styled.div`
         justify-content: center;
         padding: 10px 20px;
         background: ${props => props.theme.verticalYellow};
+        padding-bottom: 130px;
         
     }
 
