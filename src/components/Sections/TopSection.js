@@ -282,10 +282,10 @@ const DropDownMenu = () => {
                         <LinkS to="partners" smooth={true} duration={2000} spy={true} exact="true" onClick={switchToOne}><PartnersIcon />PARTNERS</LinkS>
                     </MenuItem>
                     <MenuItem>
-                        TELOS
+                    <LinkS to="telos" smooth={true} duration={2000} spy={true} exact="true" onClick={switchToOne}><PartnersIcon />TELOS</LinkS>
                     </MenuItem>
                     <MenuItem>
-                        BSC
+                    <LinkS to="bsc" smooth={true} duration={2000} spy={true} exact="true" onClick={switchToOne}><PartnersIcon />BSC</LinkS>
                     </MenuItem>
                 </MenuOverview>
         </MenuContainer>
