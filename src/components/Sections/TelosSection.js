@@ -190,7 +190,7 @@ const Wrapper = styled.div`
     }
 
     @media screen and (max-width: 600px){
-        margin-top: 510px;
+        margin-top: 530px;
     }
 
     svg path{
