@@ -1,5 +1,5 @@
 import React, {useState, useContext} from 'react';
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 import { Button } from "@material-ui/core";
 import { motion } from "framer-motion";
 import { Link as LinkR } from "react-router-dom";
@@ -29,12 +29,13 @@ const ColumnLeft = styled.div`
     align-items: center;
     justify-content: center;
     @media screen and (min-width: 1100px){
-        
+        padding-top: 75px;
     }
 
     @media screen and (max-width: 1100px){
         background: ${props => props.theme.verticalPurple};
         width: 100vw;
+        padding-top: 50px;
         
         
     }
@@ -56,6 +57,7 @@ const ColumnRight = styled.div`
         justify-content: center;
         padding: 10px 20px;
         background: ${props => props.theme.verticalPurple};
+        padding-bottom: 130px;
         
     }
 
@@ -75,7 +77,7 @@ const SectionImage = styled.div`
     @media screen and (min-width: 1000px){
 
         img{
-           width: 350px;
+           width: 250px;
            margin-bottom: 100px;
         }
     }
@@ -126,10 +128,158 @@ const StyledButton = styled(LinkR)`
     }
 `;
 
+const pathAnim = keyframes`
+    0% {
+        d: path("M0,192 C220,100,440,100,660,192 C880,290,1100,290,1320,192 L1320 500 L0 500");
+    }
+    25% {
+        d: path("M0,100 C220,100,440,292,660,292 C880,292,1100,100,1320,100 L1320 500 L0 500");
+    }
+    50% {
+        d: path("M0,192 C220,290,440,290,660,192 C880,100,1100,100,1320,192 L1320 500 L0 500");
+    }
+    75% {
+        d: path("M0,292 C220,292,440,100,660,100 C880,100,1100,292,1320,292 L1320 500 L0 500");
+    }
+    100% {
+        d: path("M0,192 C220,100,440,100,660,192 C880,290,1100,290,1320,192 L1320 500 L0 500");
+    }
+`;
+
+const WrapperTop = styled.div`
+    height: 200px;
+    width: 100%;
+    position: absolute;
+   transform: rotate(180deg);
+
+    @media screen and (max-width: 768px){
+        
+    }
+
+    @media screen and (max-width: 600px){
+       margin-top: -70px; 
+    }
+
+    svg path{
+        animation: ${pathAnim} linear 7s infinite; 
+        transform: scaleY(0.3);    
+        @media screen and (max-width: 1100px){
+            transform: scaleY(1.2);   
+    } 
+    }
+
+    svg path:nth-child(2){
+        animation-delay: 1s;
+    }
+    svg path:nth-child(3){
+        animation-delay: 3s;
+    }
+    svg path:nth-child(4){
+        animation-play-state: paused;
+    }
+`;
+
+const Wrapper = styled.div`
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    margin-top: 450px;
+
+    @media screen and (max-width: 768px){
+        margin-top: 730px;
+    }
+
+    @media screen and (max-width: 600px){
+        margin-top: 510px;
+    }
+
+    svg path{
+        animation: ${pathAnim} linear 7s infinite; 
+        transform: scaleY(0.3);    
+        @media screen and (max-width: 1100px){
+            transform: scaleY(1.2);   
+    } 
+    }
+
+    svg path:nth-child(2){
+        animation-delay: 1s;
+    }
+    svg path:nth-child(3){
+        animation-delay: 3s;
+    }
+    svg path:nth-child(4){
+        animation-play-state: paused;
+    }
+`;
+
 const GamingSection = () => {
     return (
          
         <Container id="telos">
+            <WrapperTop>
+            <svg viewBox="0 0 1320 500">
+                <path fill-opacity="0.5" d="
+                M0,192
+                C220,100,440,100,660,192
+                C880,290,1100,290,1320,192
+                L1320 500
+                L0 500
+                " fill="#9370db" />
+                 <path fill-opacity="0.5" d="
+                M0,192
+                C220,100,440,100,660,192
+                C880,290,1100,290,1320,192
+                L1320 500
+                L0 500
+                " fill="#800080" />
+                 <path fill-opacity="0.5" d="
+                M0,192
+                C220,100,440,100,660,192
+                C880,290,1100,290,1320,192
+                L1320 500
+                L0 500
+                " fill="#9932cc" />
+                 <path fill-opacity="0.5" d="
+                M0,192
+                C220,100,440,100,660,192
+                C880,290,1100,290,1320,192
+                L1320 500
+                L0 500
+                " fill="#4b0082" />
+            </svg>
+            </WrapperTop>
+            <Wrapper>
+            <svg viewBox="0 0 1320 500">
+                <path fill-opacity="0.5" d="
+                M0,192
+                C220,100,440,100,660,192
+                C880,290,1100,290,1320,192
+                L1320 500
+                L0 500
+                " fill="#9370db" />
+                 <path fill-opacity="0.5" d="
+                M0,192
+                C220,100,440,100,660,192
+                C880,290,1100,290,1320,192
+                L1320 500
+                L0 500
+                " fill="#800080" />
+                 <path fill-opacity="0.5" d="
+                M0,192
+                C220,100,440,100,660,192
+                C880,290,1100,290,1320,192
+                L1320 500
+                L0 500
+                " fill="#9932cc" />
+                 <path fill-opacity="0.5" d="
+                M0,192
+                C220,100,440,100,660,192
+                C880,290,1100,290,1320,192
+                L1320 500
+                L0 500
+                " fill="#4b0082" />
+            </svg>
+            </Wrapper>
             <ColumnLeft>
                 <SectionImage >
                 <Image src={TelosImage} alt="" />

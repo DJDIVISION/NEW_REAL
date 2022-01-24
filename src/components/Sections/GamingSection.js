@@ -70,7 +70,7 @@ const SectionImage = styled.div`
     align-items: center;
 
     img {
-        width: 100%;
+        width: 350px;
     }
     @media screen and (min-width: 1000px){
         img{
