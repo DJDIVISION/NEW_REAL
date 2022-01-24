@@ -6,10 +6,11 @@ import { Button } from "@material-ui/core";
 import { motion } from "framer-motion";
 import { ThemeProvider } from "styled-components";
 import { themes } from "../components/Themes";
-import NavBar from "../components/NavBar";
+import TokenomicsNavBar from "../components/NavBar/TokenomicsNavBar";
 import BuySellSection from "../components/Sections/BuySellSection";
 import { animationThree } from "../animations";
 import { Link as LinkR } from "react-router-dom";
+
 
 const scale = keyframes`
     0% { transform: scale(1)}
@@ -17,11 +18,20 @@ const scale = keyframes`
     100% { transform: scale(1)}
 `;
 
-const StyledButton = styled(Button)`
+const StyledButton = styled(LinkR)`
     &&& {
         color: ${props => props.theme.text};
         border: 1px solid ${props => props.theme.text};
-        margin-bottom: 30px;
+        height: 40px;
+        width: 150px;
+        
+        text-decoration: none;
+        font-size: 18px;
+        border-radius: 10px;
+        padding: 10px 10px;
+    }
+    &:hover{
+        transform: scale(1.2);
     }
 `;
 const InfoWrapper = styled.div`
@@ -79,19 +89,19 @@ const TextWrapper = styled.div`
 
 const TopLine = styled.p`
     color: ${props => props.theme.text};
-    font-size: 32px;
+    font-size: 26px;
     line-height: 16px;
     font-weight: 700;
     letter-spacing: 1.4px;
-    margin-bottom: 16px;
-    margin-top: 30px;
+    margin-top: 15px;
+    
 
     
 `;
 
 const Heading = styled.h1`
-    
-    font-size: 48px;
+    margin-top: 20px;
+    font-size: 32px;
     line-height: 1.1;
     font-weight: 600;
     color: ${props => props.theme.text};
@@ -120,6 +130,7 @@ const ListItems = styled.li`
 const Type = styled.h4`
     font-size: 18px;
     margin-right: 10px;
+    cursor: pointer;
     @media screen and (max-width: 860px){
         font-size: 16px;
     }
@@ -250,86 +261,86 @@ const TokenomicsPage = () => {
 
       const SalesFunctionIn = () => {
         document.getElementById("supply").innerHTML = "400,000,000,000";
-        document.getElementById("title-supply").innerHTML = "SALES SUPPLY";
+        document.getElementById("title-supply").innerHTML = "SALES SUPPLY:";
 
     }
     const SalesFunctionOut = () => {
       document.getElementById("supply").innerHTML = "1,000,000,000,000";
-      document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY";
+      document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY:";
     }
 
     const LiquidityFunctionIn = () => {
       document.getElementById("supply").innerHTML = "200,000,000,000";
-      document.getElementById("title-supply").innerHTML = "LIQUIDITY SUPPLY";
+      document.getElementById("title-supply").innerHTML = "LIQUIDITY SUPPLY:";
 
     }
   const LiquidityFunctionOut = () => {
   document.getElementById("supply").innerHTML = "1,000,000,000,000";
-  document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY";
+  document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY:";
   }
   const AdvisorsFunctionIn = () => {
       document.getElementById("supply").innerHTML = "30,000,000,000";
-      document.getElementById("title-supply").innerHTML = "ADVISORS SUPPLY";
+      document.getElementById("title-supply").innerHTML = "ADVISORS SUPPLY:";
 
     }
   const AdvisorsFunctionOut = () => {
   document.getElementById("supply").innerHTML = "1,000,000,000,000";
-  document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY";
+  document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY:";
   }
   const CexFunctionIn = () => {
       document.getElementById("supply").innerHTML = "100,000,000,000";
-      document.getElementById("title-supply").innerHTML = "CEX RESERVE SUPPLY";
+      document.getElementById("title-supply").innerHTML = "CEX RESERVE SUPPLY:";
 
     }
   const CexFunctionOut = () => {
   document.getElementById("supply").innerHTML = "1,000,000,000,000";
-  document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY";
+  document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY:";
   }
   const TeamFunctionIn = () => {
       document.getElementById("supply").innerHTML = "100,000,000,000";
-      document.getElementById("title-supply").innerHTML = "TEAM SUPPLY";
+      document.getElementById("title-supply").innerHTML = "TEAM SUPPLY:";
 
     }
   const TeamFunctionOut = () => {
   document.getElementById("supply").innerHTML = "1,000,000,000,000";
-  document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY";
+  document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY:";
   }
   const GiveAwaysFunctionIn = () => {
       document.getElementById("supply").innerHTML = "30,000,000,000";
-      document.getElementById("title-supply").innerHTML = "GIVEAWAYS SUPPLY";
+      document.getElementById("title-supply").innerHTML = "GIVEAWAYS SUPPLY:";
 
     }
   const GiveAwaysFunctionOut = () => {
   document.getElementById("supply").innerHTML = "1,000,000,000,000";
-  document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY";
+  document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY:";
   }
   const PTEarnFunctionIn = () => {
       document.getElementById("supply").innerHTML = "100,000,000,000";
-      document.getElementById("title-supply").innerHTML = "PLAY TO EARN SUPPLY";
+      document.getElementById("title-supply").innerHTML = "PLAY TO EARN SUPPLY:";
 
     }
   const PTEarnFunctionOut = () => {
   document.getElementById("supply").innerHTML = "1,000,000,000,000";
-  document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY";
+  document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY:";
   }
   const MarketingFunctionIn = () => {
       document.getElementById("supply").innerHTML = "40,000,000,000";
-      document.getElementById("title-supply").innerHTML = "MARKETING SUPPLY";
+      document.getElementById("title-supply").innerHTML = "MARKETING SUPPLY:";
 
     }
   const MarketingFunctionOut = () => {
   document.getElementById("supply").innerHTML = "1,000,000,000,000";
-  document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY";
+  document.getElementById("title-supply").innerHTML = "TOTAL SUPPLY:";
   }
 
-    
+  const [theme, setTheme] = useState("dark"); 
 
     return (
         <>
-            
+            <ThemeProvider theme={themes[theme]}>
             <motion.div >
-                <NavBar />
-                <InfoWrapper>
+                <TokenomicsNavBar theme={theme} setTheme={setTheme}/>
+                <InfoWrapper id="chart">
                 <InfoRow>
                     <Column1>
                     <ChartComponent data={data} />=
@@ -378,12 +389,13 @@ const TokenomicsPage = () => {
                             <TopLine id="title-supply">TOTAL SUPPLY: </TopLine>
                             <Heading id="supply">1,000,000,000,000</Heading>
                         </TextWrapper>
-                        <LinkR to="/"><StyledButton>GO HOME</StyledButton></LinkR>
+                        <StyledButton to="/HomeNoLoader">GO HOME</StyledButton>
                     </Column2>
                 </InfoRow>    
             </InfoWrapper>
-                <BuySellSection />
+                <BuySellSection/>
             </motion.div>
+        </ThemeProvider>
         
         </>
     )

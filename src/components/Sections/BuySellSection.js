@@ -302,7 +302,7 @@ const BuySellSection = () => {
 
     return(
         <>
-          <Container >
+          <Container id="taxes">
             <InfoWrapper>
                 <InfoRow>
                     <Column1>
