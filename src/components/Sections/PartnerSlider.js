@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 import { motion } from "framer-motion";
 import Slider from "react-slick";
 import { Link as LinkR } from "react-router-dom";
@@ -36,7 +36,7 @@ const Section = styled.div`
     width: 100%;
     
     padding: 3rem 10rem;
-    background: ${props => props.theme.body};
+    background: ${props => props.theme.horizontalBlue};
 `;
 
 const Carroussel = styled.div`
@@ -85,7 +85,7 @@ const MainContainer = styled.section`
     justify-content: center;
     background-repeat: no-repeat;
     padding-top: 100px;
-    
+    border-radius: 20px;
 
 
     @media screen and (max-width: 1100px) {
@@ -93,7 +93,7 @@ const MainContainer = styled.section`
         height: 60vh; 
         background-size: cover;
         background-position: center;
-        border-radius: 20px;
+        
         padding-top: 40px;
         
     }
@@ -226,6 +226,91 @@ const Image = styled.img`
     display: flex;
 `;
 
+const pathAnim = keyframes`
+    0% {
+        d: path("M0,192 C220,100,440,100,660,192 C880,290,1100,290,1320,192 L1320 500 L0 500");
+    }
+    25% {
+        d: path("M0,100 C220,100,440,292,660,292 C880,292,1100,100,1320,100 L1320 500 L0 500");
+    }
+    50% {
+        d: path("M0,192 C220,290,440,290,660,192 C880,100,1100,100,1320,192 L1320 500 L0 500");
+    }
+    75% {
+        d: path("M0,292 C220,292,440,100,660,100 C880,100,1100,292,1320,292 L1320 500 L0 500");
+    }
+    100% {
+        d: path("M0,192 C220,100,440,100,660,192 C880,290,1100,290,1320,192 L1320 500 L0 500");
+    }
+`;
+
+const WrapperTop = styled.div`
+    height: 200px;
+    width: 100%;
+    position: absolute;
+   transform: rotate(180deg);
+   margin-top: -50px;
+
+    @media screen and (max-width: 768px){
+        
+    }
+
+    @media screen and (max-width: 600px){
+       margin-top: -70px; 
+    }
+
+    svg path{
+        animation: ${pathAnim} linear 7s infinite; 
+        transform: scaleY(0.3);    
+        @media screen and (max-width: 1100px){
+            transform: scaleY(1.2);   
+    } 
+    }
+
+    svg path:nth-child(2){
+        animation-delay: 1s;
+    }
+    svg path:nth-child(3){
+        animation-delay: 3s;
+    }
+    svg path:nth-child(4){
+        animation-play-state: paused;
+    }
+`;
+
+const Wrapper = styled.div`
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    margin-top: 580px;
+
+    @media screen and (max-width: 768px){
+        margin-top: 730px;
+    }
+
+    @media screen and (max-width: 600px){
+        margin-top: 550px;
+    }
+
+    svg path{
+        animation: ${pathAnim} linear 7s infinite; 
+        transform: scaleY(0.3);    
+        @media screen and (max-width: 1100px){
+            transform: scaleY(1.2);   
+    } 
+    }
+
+    svg path:nth-child(2){
+        animation-delay: 1s;
+    }
+    svg path:nth-child(3){
+        animation-delay: 3s;
+    }
+    svg path:nth-child(4){
+        animation-play-state: paused;
+    }
+`;
+
 
 const PartnerSlider = () => {
     const settings = {
@@ -237,6 +322,70 @@ const PartnerSlider = () => {
       };
     return(
         <>
+        <WrapperTop>
+            <svg viewBox="0 0 1320 500">
+                <path fill-opacity="0.5" d="
+                M0,192
+                C220,100,440,100,660,192
+                C880,290,1100,290,1320,192
+                L1320 500
+                L0 500
+                " fill="#0014a8" />
+                 <path fill-opacity="0.5" d="
+                M0,192
+                C220,100,440,100,660,192
+                C880,290,1100,290,1320,192
+                L1320 500
+                L0 500
+                " fill="#3f00ff" />
+                 <path fill-opacity="0.5" d="
+                M0,192
+                C220,100,440,100,660,192
+                C880,290,1100,290,1320,192
+                L1320 500
+                L0 500
+                " fill="#545aa7" />
+                 <path fill-opacity="0.5" d="
+                M0,192
+                C220,100,440,100,660,192
+                C880,290,1100,290,1320,192
+                L1320 500
+                L0 500
+                " fill="#041690" />
+            </svg>
+            </WrapperTop>
+            <Wrapper>
+            <svg viewBox="0 0 1320 500">
+                <path fill-opacity="0.5" d="
+                M0,192
+                C220,100,440,100,660,192
+                C880,290,1100,290,1320,192
+                L1320 500
+                L0 500
+                " fill="#0014a8" />
+                 <path fill-opacity="0.5" d="
+                M0,192
+                C220,100,440,100,660,192
+                C880,290,1100,290,1320,192
+                L1320 500
+                L0 500
+                " fill="#3f00ff" />
+                 <path fill-opacity="0.5" d="
+                M0,192
+                C220,100,440,100,660,192
+                C880,290,1100,290,1320,192
+                L1320 500
+                L0 500
+                " fill="#545aa7" />
+                 <path fill-opacity="0.5" d="
+                M0,192
+                C220,100,440,100,660,192
+                C880,290,1100,290,1320,192
+                L1320 500
+                L0 500
+                " fill="#041690" />
+            </svg>
+            </Wrapper>
         <SectionImage id="partners">
             <Image src={PartnersImage} alt="" />
             </SectionImage>
