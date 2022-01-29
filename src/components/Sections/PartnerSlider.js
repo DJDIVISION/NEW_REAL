@@ -249,21 +249,21 @@ const WrapperTop = styled.div`
     width: 100%;
     position: absolute;
    transform: rotate(180deg);
-   margin-top: -50px;
+   margin-top: -100px;
 
     @media screen and (max-width: 768px){
         
     }
 
     @media screen and (max-width: 600px){
-       margin-top: -70px; 
+       margin-top: -120px; 
     }
 
     svg path{
         animation: ${pathAnim} linear 7s infinite; 
-        transform: scaleY(0.3);    
+        transform: scaleY(0.2);    
         @media screen and (max-width: 1100px){
-            transform: scaleY(1.2);   
+            transform: scaleY(0.8);   
     } 
     }
 
