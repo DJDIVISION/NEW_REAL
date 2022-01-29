@@ -1,44 +1,34 @@
-import React, {useState} from 'react';
+import React, {useState} from "react";
 import styled, {keyframes} from "styled-components";
-import { Link as LinkR } from "react-router-dom";
-import Slider from "react-slick";
-import "../../../node_modules/slick-carousel/slick/slick.css";
-import "../../../node_modules/slick-carousel/slick/slick-theme.css";
+import {Link as LinkR} from "react-router-dom";
+ 
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 
-
+import Slider from "react-slick";
+import "../../../node_modules/slick-carousel/slick/slick.css";
+import "../../../node_modules/slick-carousel/slick/slick-theme.css";
 
 import Nft21 from "../../images/ceo.jpg";
 import Nft22 from "../../images/cio.jpg";
 import Nft23 from "../../images/dev.jpg";
 
+const images = [Nft21, Nft22, Nft23, Nft21, Nft22, Nft23];
 
-
-const images3 = [Nft21, Nft22, Nft23, Nft21, Nft22, Nft23];
-
-
-const Container = styled.div`
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    background: ${props => props.theme.body};
-
-    @media screen and (max-width: 1100px){
-        flex-direction: column;
-    }
-`;
 const ArrowRight = styled(ArrowCircleRightIcon)`
     color: ${props => props.theme.text};
 `;
 const ArrowLeft = styled(ArrowCircleLeftIcon)`
     color: ${props => props.theme.text};
-`; 
+`;
+
 const Header = styled.h1`
     font-family: "Alphacentauri";
     font-size: 38px;
-    
+    margin-top: 100px;
     display: flex;
+    align-items: center;
+    justify-content: center;
     color: ${props => props.theme.text};
     text-shadow: 1px 2px 4px ${props => props.theme.body},
                           1px -1px 0 #000,
@@ -46,13 +36,25 @@ const Header = styled.h1`
                         -1px -1px 0 #000;
 
     @media screen and (max-width: 1100px){
-        font-size: 24px;
-        margin-top: 200px;
-        margin-bottom: 50px;
+        font-size: 32px;
+        margin-top: 140px;
+        
+        
     }
 `;
 
-
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background: ${props => props.theme.horizontalBlue};
+    margin-top: -100px;
+    @media screen and (max-width: 1100px){
+        flex-direction: column;
+        height: 95vh;
+    }
+`;
 
 
 
@@ -75,25 +77,25 @@ const pathAnim = keyframes`
 `;
 
 const WrapperTop = styled.div`
-    height: 200px;
+    height: 100px;
+    background: transparent;
     width: 100%;
-    position: absolute;
-   transform: rotate(180deg);
-   margin-top: -50px;
+    transform: rotate(180deg);
+    
 
     @media screen and (max-width: 768px){
         
     }
 
     @media screen and (max-width: 600px){
-       margin-top: -70px; 
+       
     }
 
     svg path{
         animation: ${pathAnim} linear 7s infinite; 
-        transform: scaleY(0.3);    
+        transform: scaleY(0.2);    
         @media screen and (max-width: 1100px){
-            transform: scaleY(1.2);   
+            transform: scaleY(0.8);   
     } 
     }
 
@@ -109,22 +111,21 @@ const WrapperTop = styled.div`
 `;
 
 const Wrapper = styled.div`
-    height: 200px;
+    height: 100px;
     width: 100%;
-    position: absolute;
-    margin-top: 505px;
-
+    background: transparent;
+    margin-top: -100px;
     @media screen and (max-width: 768px){
-        margin-top: 730px;
+        
     }
 
     @media screen and (max-width: 600px){
-        margin-top: 550px;
+        
     }
 
     svg path{
         animation: ${pathAnim} linear 7s infinite; 
-        transform: scaleY(0.3);    
+        transform: scaleY(0.2);    
         @media screen and (max-width: 1100px){
             transform: scaleY(1.2);   
     } 
@@ -138,21 +139,6 @@ const Wrapper = styled.div`
     }
     svg path:nth-child(4){
         animation-play-state: paused;
-    }
-`;
-
-
-const Section = styled.div`
-    background: ${props => props.theme.horizontalBlue};
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 150px;
-    @media screen and (max-width: 1100px){
-        background: ${props => props.theme.verticalBlue}; 
     }
 `;
 
@@ -189,10 +175,9 @@ const TeamSection = () => {
         beforeChange: (current, next) => setImageIndex(next),
       };
 
-    return (
-         
-        <Container id="team">
-            <WrapperTop>
+    return(
+        <>
+        <WrapperTop>
             <svg viewBox="0 0 1320 500">
                 <path fill-opacity="0.5" d="
                 M0,192
@@ -224,7 +209,20 @@ const TeamSection = () => {
                 " fill="#041690" />
             </svg>
             </WrapperTop>
-            <Wrapper>
+            
+        <Container id="team">
+            <Header>MEET THE TEAM</Header>
+            <div className="centermode">
+                <Slider {...settings}>
+                   {images.map((img, idx) => (
+                      <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
+                         <LinkR to="/TeamPage"> <img src={img} alt={img} /></LinkR>
+                      </div> 
+                   ))} 
+                </Slider>
+            </div>
+        </Container>
+        <Wrapper>
             <svg viewBox="0 0 1320 500">
                 <path fill-opacity="0.5" d="
                 M0,192
@@ -256,21 +254,11 @@ const TeamSection = () => {
                 " fill="#041690" />
             </svg>
             </Wrapper>
-            <Section id="frames">
-                <Header>MEET THE TEAM</Header>
-                <LinkR to="/TeamPage" ><div className="centermode">
-                <Slider {...settings}>
-                   {images3.map((img, idx) => (
-                      <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
-                         <img src={img} alt={img} />
-                      </div> 
-                   ))} 
-                </Slider>
-            </div></LinkR>
-            </Section>
-        </Container>
         
+        </>
     )
 }
+
+
 
 export default TeamSection;

@@ -6,15 +6,15 @@ import { Loader } from "../animations/CanvasSection"
 import { motion } from "framer-motion";
 import { animationOne, transition } from "../animations";
 import Footer from '../components/Footer';
-import PartnerSlider from "../components/Sections/PartnerSlider";
+import PartnersSection from "../components/Sections/PartnersSection";
 import Genesis from "../components/Sections/Genesis";
 import SectionMenu from "../components/Sections/TopSection";
 import GamingSection from "../components/Sections/GamingSection";
 import NftSection from "../components/Sections/NftSection";
-import TempSection from "../components/Sections/TempSection";
+import TeamSection from "../components/Sections/TeamSection";
 import BSCSection from "../components/Sections/BSCSection";
 import RoadMapSection from "../components/Sections/RoadMapSection";
-import TokenomicsSection from "../components/Sections/TempSection";
+import TokenomicsSection from "../components/Sections/TeamSection";
 
 
 
@@ -49,8 +49,8 @@ const Home = (props) => {
         <ThemeProvider theme={themes[theme]}>
         <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
             <NavBar showMenu={showMenu} theme={theme} setTheme={setTheme} setShowMenu={setShowMenu}/>
-            <TempSection />
-            
+            <TeamSection />
+            <PartnersSection />
             
             {/*  <TokenomicsSection />
             <GamingSection />

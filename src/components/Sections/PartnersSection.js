@@ -1,19 +1,11 @@
 import React, {useState} from "react";
 import styled, {keyframes} from "styled-components";
 import {Link as LinkR} from "react-router-dom";
- 
+import PartnerSlider from "./PartnerSlider";
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
+import PartnersImage from "../../images/BestPartnersDivider.png";
 
-import Slider from "react-slick";
-import "../../../node_modules/slick-carousel/slick/slick.css";
-import "../../../node_modules/slick-carousel/slick/slick-theme.css";
-
-import Nft21 from "../../images/ceo.jpg";
-import Nft22 from "../../images/cio.jpg";
-import Nft23 from "../../images/dev.jpg";
-
-const images = [Nft21, Nft22, Nft23, Nft21, Nft22, Nft23];
 
 const ArrowRight = styled(ArrowCircleRightIcon)`
     color: ${props => props.theme.text};
@@ -22,26 +14,7 @@ const ArrowLeft = styled(ArrowCircleLeftIcon)`
     color: ${props => props.theme.text};
 `;
 
-const Header = styled.h1`
-    font-family: "Alphacentauri";
-    font-size: 38px;
-    margin-top: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: ${props => props.theme.text};
-    text-shadow: 1px 2px 4px ${props => props.theme.body},
-                          1px -1px 0 #000,
-                         1px -1px 0 #000,
-                        -1px -1px 0 #000;
 
-    @media screen and (max-width: 1100px){
-        font-size: 32px;
-        margin-top: 140px;
-        
-        
-    }
-`;
 
 const Container = styled.div`
     display: flex;
@@ -54,6 +27,31 @@ const Container = styled.div`
         flex-direction: column;
         height: 95vh;
     }
+`;
+
+const SectionImage = styled.div`
+    height: 150px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+        width: 90vw;
+    }
+
+    @media screen and (min-width: 1100px){
+        height: 150px;
+        
+        img{
+            width: 30vw;
+        }
+    }
+`;
+
+const Image = styled.img`
+    width: 80vw;
+    height: auto;
+    display: flex;
 `;
 
 
@@ -142,7 +140,17 @@ const Wrapper = styled.div`
     }
 `;
 
-const TempSection = () => {
+const SliderWrapper = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 1100px){
+        padding-top: 50px;
+    }
+`;
+
+const PartnersSection = () => {
 
     const NextArrow = ({onClick}) => {
         return (
@@ -211,16 +219,12 @@ const TempSection = () => {
             </WrapperTop>
             
         <Container id="team">
-            <Header>MEET THE TEAM</Header>
-            <div className="centermode">
-                <Slider {...settings}>
-                   {images.map((img, idx) => (
-                      <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
-                         <LinkR to="/TeamPage"> <img src={img} alt={img} /></LinkR>
-                      </div> 
-                   ))} 
-                </Slider>
-            </div>
+        <SectionImage id="partners">
+            <Image src={PartnersImage} alt="" />
+        </SectionImage>
+        <SliderWrapper>
+        <PartnerSlider />
+        </SliderWrapper>
         </Container>
         <Wrapper>
             <svg viewBox="0 0 1320 500">
@@ -261,4 +265,4 @@ const TempSection = () => {
 
 
 
-export default TempSection;
+export default PartnersSection;
