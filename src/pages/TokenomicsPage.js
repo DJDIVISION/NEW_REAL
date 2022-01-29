@@ -390,7 +390,7 @@ const TokenomicsPage = () => {
                             <TopLine id="title-supply">TOTAL SUPPLY: </TopLine>
                             <Heading id="supply">1,000,000,000,000</Heading>
                         </TextWrapper>
-                        <StyledButton to="/HomeNoLoader">GO HOME</StyledButton>
+                        <StyledButton to="/">GO HOME</StyledButton>
                     </Column2>
                 </InfoRow>    
             </InfoWrapper>

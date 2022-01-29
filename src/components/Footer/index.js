@@ -48,8 +48,8 @@ const Footer = () => {
                 </FooterLinksContainer>
                 <SocialMedia>
                     <SocialWrapper>
-                        <SocialLogo to="">Destiny Airlines</SocialLogo>
-                        <WebsiteRights>Destiny World © {new Date().getFullYear()} All rights Reserved</WebsiteRights>
+                        <SocialLogo to="">Destiny World</SocialLogo>
+                        <WebsiteRights>© {new Date().getFullYear()} All rights Reserved</WebsiteRights>
                         <SocialIcons>
                             <SocialIconLink href="/" target="_blank" aria-label="Telegram">
                                 <TelegramIcon />

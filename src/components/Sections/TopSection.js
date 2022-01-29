@@ -73,7 +73,7 @@ const NewsIcon = styled(NewspaperIcon)`
 const Container = styled.div`
     display: flex;
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     background: ${props => props.theme.body};
 
     @media screen and (max-width: 900px){
@@ -86,14 +86,14 @@ const ColumnLeft = styled.div`
     flex-basis: 50%;
     background: ${props => props.theme.body};
     width: 50%;
-    height: 90vh;
+    height: 100vh;
     @media screen and (min-width: 1100px){
         padding-left: 100px;
     }
 
     @media screen and (max-width: 1100px){
         width: 100%;
-        transform: scale(0.85);
+        height: 50vh;
         margin-left: 15px;
         
     }
@@ -108,10 +108,10 @@ const ColumnRight = styled.div`
     padding-right: 150px;
     
     width: 50%;
-    height: 90vh;
-    @media screen and (max-width: 900px){
+    
+    @media screen and (max-width: 1100px){
         width: 100%;
-        margin-top: -500px;
+        height: 50vh;
         padding-right: 0;
     }
 
@@ -261,31 +261,19 @@ const DropDownMenu = () => {
                     <IconButton onClick={switchToOne}><BackIcon /></IconButton> 
                     </MenuItem>
                     <MenuItem>
-                    <LinkS to="news" smooth={true} duration={1500} spy={true} exact="true" onClick={switchToOne}><NewsIcon />NEWS</LinkS>
+                        <LinkS to="roadmap" smooth={true} duration={1500} spy={true} exact="true" onClick={switchToOne}><RoadMapIcon/>ROADMAP</LinkS>
                     </MenuItem>
                     <MenuItem>
                     <LinkS to="tokenomics" smooth={true} duration={1500} spy={true} exact="true" onClick={switchToOne}><TokenIcon />TOKENOMICS</LinkS>
                     </MenuItem>
                     <MenuItem>
+                        <LinkS to="roadmap" smooth={true} duration={1500} spy={true} exact="true" onClick={switchToOne}><RoadMapIcon/>DAPPS</LinkS>
+                    </MenuItem>
+                    <MenuItem>
                     <LinkS to="team" smooth={true} duration={1500} spy={true} exact="true" onClick={switchToOne}><TeamIcon />TEAM</LinkS>
                     </MenuItem>
                     <MenuItem>
-                    <LinkS to="gaming" smooth={true} duration={1500} spy={true} exact="true" onClick={switchToOne}><GamingIcon />GAMING</LinkS>
-                    </MenuItem>
-                    <MenuItem>
-                    <LinkS to="nft" smooth={true} duration={1500} spy={true} exact="true" onClick={switchToOne}><NftIcon />NFTS</LinkS>
-                    </MenuItem>
-                    <MenuItem>
-                        <LinkS to="roadmap" smooth={true} duration={1500} spy={true} exact="true" onClick={switchToOne}><RoadMapIcon/>ROADMAP</LinkS>
-                    </MenuItem>
-                    <MenuItem>
                         <LinkS to="partners" smooth={true} duration={2000} spy={true} exact="true" onClick={switchToOne}><PartnersIcon />PARTNERS</LinkS>
-                    </MenuItem>
-                    <MenuItem>
-                    <LinkS to="telos" smooth={true} duration={2000} spy={true} exact="true" onClick={switchToOne}><PartnersIcon />TELOS</LinkS>
-                    </MenuItem>
-                    <MenuItem>
-                    <LinkS to="bsc" smooth={true} duration={2000} spy={true} exact="true" onClick={switchToOne}><PartnersIcon />BSC</LinkS>
                     </MenuItem>
                 </MenuOverview>
         </MenuContainer>
@@ -315,7 +303,7 @@ const TopSection = () => {
          
         <Container>
             <ColumnLeft>
-                <CanvasContainer /> 
+                
             </ColumnLeft>
             <ColumnRight animate={animate} initial={{opacity: 0}}>
                 <TextWrapper>
@@ -323,7 +311,7 @@ const TopSection = () => {
                 <IconButton onClick={swicthToTwo}><Burguer /></IconButton>
                 </IconContainer>
                     <Title>DESTINY</Title>
-                    <Title>AIRLINES</Title>
+                    <Title>WORLD</Title>
                     <TopLine>WE TAKE YOU</TopLine>
                     <Subtitle>TO OUTER SPACE</Subtitle>
                 </TextWrapper>

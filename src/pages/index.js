@@ -15,7 +15,7 @@ import NftSection from "../components/Sections/NftSection";
 import TelosSection from "../components/Sections/TelosSection";
 import BSCSection from "../components/Sections/BSCSection";
 import RoadMapSection from "../components/Sections/RoadMapSection";
-import NewsSlider from "../components/Sections/NewsSlider";
+import TokenomicsSection from "../components/Sections/TempSection";
 
 
 
@@ -51,34 +51,19 @@ const Home = (props) => {
         <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
             <NavBar showMenu={showMenu} theme={theme} setTheme={setTheme} setShowMenu={setShowMenu}/>
             
-            <SectionMenu />
-            <NewsSlider />
-            <DonutSection />
-            <TeamSection />
-            <GamingSection />
-            <NftSection />
-            <RoadMapSection /> 
+            
             <TelosSection />
-            <BSCSection />
+            <TokenomicsSection />
+            <GamingSection />
+            <TeamSection />
             <PartnerSlider />
+            
+            <BSCSection />
+            
             <Footer />
         </motion.div>
         </ThemeProvider>
     );
 }
 
-function HomeLoader () {
-    
-    return (
-        <div>
-            <Loader/>
-            <Home/>
-        </div>
-    )
-}
-
-
-
-
-
-export default HomeLoader;
+export default Home;

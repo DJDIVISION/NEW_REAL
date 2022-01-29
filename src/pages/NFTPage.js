@@ -54,7 +54,7 @@ const ArrowRight = styled(ArrowCircleRightIcon)`
 `;
 const ArrowLeft = styled(ArrowCircleLeftIcon)`
     color: ${props => props.theme.text};
-`;
+`; 
 
 const Header = styled.h1`
     font-family: "Alphacentauri";
@@ -114,8 +114,6 @@ const GamingPage = () => {
         <ThemeProvider theme={themes[theme]}>
         <motion.div initial="out" animate="end" exit="out" variants={animationThree}>
             <NFTNavBar theme={theme} setTheme={setTheme}/>
-            <Genesis />
-            <SpaceOutArt />
             <Section id="frames">
                 <Header>FRAMES COLLECTION</Header>
             <div className="centermode">

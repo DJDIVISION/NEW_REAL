@@ -3,9 +3,28 @@ import styled, {keyframes} from "styled-components";
 import { Button } from "@material-ui/core";
 import { motion } from "framer-motion";
 import { Link as LinkR } from "react-router-dom";
+import Slider from "react-slick";
+import "../../../node_modules/slick-carousel/slick/slick.css";
+import "../../../node_modules/slick-carousel/slick/slick-theme.css";
+import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
+import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 
 
-import TelosImage from "../../images/telos_logo.png";
+
+import Nft21 from "../../images/nft21.jpeg";
+import Nft22 from "../../images/nft22.jpeg";
+import Nft23 from "../../images/nft23.jpeg";
+import Nft24 from "../../images/nft24.jpeg";
+import Nft25 from "../../images/nft25.jpeg";
+import Nft26 from "../../images/nft26.jpeg";
+import Nft27 from "../../images/nft27.jpeg";
+import Nft28 from "../../images/nft28.jpeg";
+import Nft29 from "../../images/nft29.jpeg";
+import Nft30 from "../../images/nft30.jpeg";
+
+
+
+const images3 = [Nft21, Nft22, Nft23, Nft24, Nft25, Nft26, Nft27, Nft28, Nft29, Nft30];
 
 
 const Container = styled.div`
@@ -18,11 +37,34 @@ const Container = styled.div`
         flex-direction: column;
     }
 `;
+const ArrowRight = styled(ArrowCircleRightIcon)`
+    color: ${props => props.theme.text};
+`;
+const ArrowLeft = styled(ArrowCircleLeftIcon)`
+    color: ${props => props.theme.text};
+`; 
+const Header = styled.h1`
+    font-family: "Alphacentauri";
+    font-size: 38px;
+    margin-top: 100px;
+    display: flex;
+    color: ${props => props.theme.text};
+    text-shadow: 1px 2px 4px ${props => props.theme.body},
+                          1px -1px 0 #000,
+                         1px -1px 0 #000,
+                        -1px -1px 0 #000;
+
+    @media screen and (max-width: 1100px){
+        font-size: 24px;
+        margin-top: 200px;
+        margin-bottom: 50px;
+    }
+`;
 
 const ColumnLeft = styled.div`
     flex-shrink: 0;
     flex-basis: 50%;
-    background: ${props => props.theme.horizontalPurple};
+    background: ${props => props.theme.horizontalBlue};
     width: 50%;
     height: 100vh;
     display: flex;
@@ -33,7 +75,7 @@ const ColumnLeft = styled.div`
     }
 
     @media screen and (max-width: 1100px){
-        background: ${props => props.theme.verticalPurple};
+        background: ${props => props.theme.verticalBlue};
         width: 100vw;
         padding-top: 50px;
         
@@ -41,7 +83,7 @@ const ColumnLeft = styled.div`
     }
 `;
 const ColumnRight = styled.div`
-    background: ${props => props.theme.horizontalPurple};
+    background: ${props => props.theme.horizontalBlue};
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,7 +98,7 @@ const ColumnRight = styled.div`
         align-items: center;
         justify-content: center;
         padding: 10px 20px;
-        background: ${props => props.theme.verticalPurple};
+        background: ${props => props.theme.verticalBlue};
         padding-bottom: 130px;
         
     }
@@ -72,13 +114,11 @@ const SectionImage = styled.div`
     align-items: center;
 
     img {
-        width: 150px;
+        width: 300px;
     }
     @media screen and (min-width: 1000px){
-
         img{
-           width: 250px;
-           margin-bottom: 100px;
+           width: 50vw;
         }
     }
 `;
@@ -151,7 +191,7 @@ const WrapperTop = styled.div`
     width: 100%;
     position: absolute;
    transform: rotate(180deg);
-   margin-top: -100px;
+   margin-top: -50px;
 
     @media screen and (max-width: 768px){
         
@@ -184,7 +224,7 @@ const Wrapper = styled.div`
     height: 200px;
     width: 100%;
     position: absolute;
-    margin-top: 500px;
+    margin-top: 530px;
 
     @media screen and (max-width: 768px){
         margin-top: 730px;
@@ -213,10 +253,56 @@ const Wrapper = styled.div`
     }
 `;
 
+const Section = styled.div`
+    background: ${props => props.theme.horizontalBlue};
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 150px;
+    @media screen and (max-width: 1100px){
+        background: ${props => props.theme.verticalBlue}; 
+    }
+`;
+
 const GamingSection = () => {
+
+    const NextArrow = ({onClick}) => {
+        return (
+            <div className="arrow next" onClick={onClick}>
+                <ArrowRight />
+            </div>
+        )
+    }
+
+    const PrevArrow = ({onClick}) => {
+        return (
+            <div className="arrow prev" onClick={onClick}>
+                <ArrowLeft />
+            </div>
+        )
+    }
+
+    const [imageIndex, setImageIndex] = useState(0);
+
+    const settings = {
+        className: "centermode",
+        infinite: true,
+        lazyLoad: true,
+        speed: 300, 
+        slidesToShow: 3, 
+        centerMode: true,
+        centerPadding: 0,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
+        beforeChange: (current, next) => setImageIndex(next),
+      };
+
     return (
          
-        <Container id="telos">
+        <Container id="roadmap">
             <WrapperTop>
             <svg viewBox="0 0 1320 500">
                 <path fill-opacity="0.5" d="
@@ -225,28 +311,28 @@ const GamingSection = () => {
                 C880,290,1100,290,1320,192
                 L1320 500
                 L0 500
-                " fill="#9370db" />
+                " fill="#0014a8" />
                  <path fill-opacity="0.5" d="
                 M0,192
                 C220,100,440,100,660,192
                 C880,290,1100,290,1320,192
                 L1320 500
                 L0 500
-                " fill="#800080" />
+                " fill="#3f00ff" />
                  <path fill-opacity="0.5" d="
                 M0,192
                 C220,100,440,100,660,192
                 C880,290,1100,290,1320,192
                 L1320 500
                 L0 500
-                " fill="#9932cc" />
+                " fill="#545aa7" />
                  <path fill-opacity="0.5" d="
                 M0,192
                 C220,100,440,100,660,192
                 C880,290,1100,290,1320,192
                 L1320 500
                 L0 500
-                " fill="#4b0082" />
+                " fill="#041690" />
             </svg>
             </WrapperTop>
             <Wrapper>
@@ -257,42 +343,42 @@ const GamingSection = () => {
                 C880,290,1100,290,1320,192
                 L1320 500
                 L0 500
-                " fill="#9370db" />
+                " fill="#0014a8" />
                  <path fill-opacity="0.5" d="
                 M0,192
                 C220,100,440,100,660,192
                 C880,290,1100,290,1320,192
                 L1320 500
                 L0 500
-                " fill="#800080" />
+                " fill="#3f00ff" />
                  <path fill-opacity="0.5" d="
                 M0,192
                 C220,100,440,100,660,192
                 C880,290,1100,290,1320,192
                 L1320 500
                 L0 500
-                " fill="#9932cc" />
+                " fill="#545aa7" />
                  <path fill-opacity="0.5" d="
                 M0,192
                 C220,100,440,100,660,192
                 C880,290,1100,290,1320,192
                 L1320 500
                 L0 500
-                " fill="#4b0082" />
+                " fill="#041690" />
             </svg>
             </Wrapper>
-            <ColumnLeft>
-                <SectionImage >
-                <Image src={TelosImage} alt="" />
-                </SectionImage>
-            </ColumnLeft>
-            <ColumnRight>
-            
-                <TopLine>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</TopLine>
-                <Heading>DAIR ON TELOS</Heading>
-           
-            <StyledButton to="/GamingPage">LEARN MORE</StyledButton>
-            </ColumnRight>
+            <Section id="frames">
+                <Header>ROADMAP</Header>
+            <div className="centermode">
+                <Slider {...settings}>
+                   {images3.map((img, idx) => (
+                      <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
+                         <img src={img} alt={img} />
+                      </div> 
+                   ))} 
+                </Slider>
+            </div>
+            </Section>
         </Container>
         
     )

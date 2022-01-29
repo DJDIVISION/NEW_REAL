@@ -97,7 +97,7 @@ const GamingNavbar = (props) => {
             
             <Nav scrollNavDown={scrollNavDown}>
                     
-                    <NavLogo to="/HomeNoLoader" >Destiny Airlines</NavLogo>
+                    <NavLogo to="/" >Destiny Airlines</NavLogo>
                    
                     <IconButton onClick={changeTheme}><SwitchIcon >
                         {icon}
