@@ -11,9 +11,9 @@ import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 
 
 
-import Nft21 from "../../images/nft21.jpeg";
-import Nft22 from "../../images/nft22.jpeg";
-import Nft23 from "../../images/nft23.jpeg";
+import Nft21 from "../../images/ceo.jpg";
+import Nft22 from "../../images/cio.jpg";
+import Nft23 from "../../images/dev.jpg";
 import Nft24 from "../../images/nft24.jpeg";
 import Nft25 from "../../images/nft25.jpeg";
 import Nft26 from "../../images/nft26.jpeg";
@@ -24,7 +24,7 @@ import Nft30 from "../../images/nft30.jpeg";
 
 
 
-const images3 = [Nft21, Nft22, Nft23, Nft24, Nft25, Nft26, Nft27, Nft28, Nft29, Nft30];
+const images3 = [Nft21, Nft22, Nft23, Nft21, Nft22, Nft23];
 
 
 const Container = styled.div`
@@ -46,7 +46,7 @@ const ArrowLeft = styled(ArrowCircleLeftIcon)`
 const Header = styled.h1`
     font-family: "Alphacentauri";
     font-size: 38px;
-    margin-top: 100px;
+    
     display: flex;
     color: ${props => props.theme.text};
     text-shadow: 1px 2px 4px ${props => props.theme.body},
@@ -121,7 +121,7 @@ const Wrapper = styled.div`
     height: 200px;
     width: 100%;
     position: absolute;
-    margin-top: 530px;
+    margin-top: 505px;
 
     @media screen and (max-width: 768px){
         margin-top: 730px;
@@ -150,6 +150,9 @@ const Wrapper = styled.div`
     }
 `;
 
+const LinkImage = styled(LinkR)`
+
+`;
 const Section = styled.div`
     background: ${props => props.theme.horizontalBlue};
     height: 100vh;
@@ -199,7 +202,7 @@ const GamingSection = () => {
 
     return (
          
-        <Container id="roadmap">
+        <Container id="team">
             <WrapperTop>
             <svg viewBox="0 0 1320 500">
                 <path fill-opacity="0.5" d="
@@ -265,12 +268,12 @@ const GamingSection = () => {
             </svg>
             </Wrapper>
             <Section id="frames">
-                <Header>ROADMAP</Header>
+                <Header>MEET THE TEAM</Header>
             <div className="centermode">
                 <Slider {...settings}>
                    {images3.map((img, idx) => (
                       <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
-                         <img src={img} alt={img} />
+                         <LinkR to="/TeamPage" ><img src={img} alt={img} /></LinkR>
                       </div> 
                    ))} 
                 </Slider>

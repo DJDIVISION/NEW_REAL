@@ -50,10 +50,11 @@ const Home = (props) => {
         <ThemeProvider theme={themes[theme]}>
         <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
             <NavBar showMenu={showMenu} theme={theme} setTheme={setTheme} setShowMenu={setShowMenu}/>
+            <TelosSection />
             <PartnerSlider />
             
-            {/* <TelosSection />
-            <TokenomicsSection />
+            
+            {/*  <TokenomicsSection />
             <GamingSection />
             <TeamSection />
             

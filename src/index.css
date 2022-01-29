@@ -35,14 +35,15 @@ code {
 
 .centermode {
   width: 100vw;
-  padding-top: 30px;
+  padding-top: 20px;
   height: 550px;
 }
 
 .slide img{
   width: 250px;
-  
+  border-radius: 20px;
   margin: 0 auto;
+  
 }
 
 .slide {
@@ -52,8 +53,9 @@ code {
 }
 
 .activeSlide {
-  transform: scale(1.2);
+  transform: scale(1);
   opacity: 1;
+  
   
 }
 
@@ -76,18 +78,19 @@ code {
 
 @media only screen and (max-width: 1100px){
   .slide img {
-    width: 30vw;
+    width: 120px;
+    
    
   }
   
   .next {
     right: 20%;
-    top: 30%;
+    top: 40%;
   }
   
   .prev {
     left: 20%;
-    top: 30%;
+    top: 40%;
   }
   
 }
