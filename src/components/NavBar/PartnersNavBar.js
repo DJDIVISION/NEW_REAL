@@ -21,9 +21,14 @@ import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 
 
 const ScrollIcon = styled(ArrowCircleUpIcon)`
-    color: gold;
+    color: ${props => props.theme.text};
     transition: 0.8s all ease;
     top: 600px;
+    transform: scale(1.4);
+
+    @media screen and (max-width: 1100px){
+        transform: scale(1.2);
+    }
 `;
 
 const SwitchIcon = styled.div`
@@ -51,7 +56,7 @@ const StyledMenuIcon = styled(MenuIcon)`
 
 
 
-const TeamNavbar = (props) => {
+const PartnersNavbar = (props) => {
 
     const [theme, setTheme] = useState("dark");
 
@@ -70,7 +75,7 @@ const TeamNavbar = (props) => {
     const [scrollNavDown, setScrollNavDown] = useState(false);
 
     const changeNavDown = () => {
-        if(window.scrollY >= 500) {
+        if(window.scrollY >= 50) {
             setScrollNavDown(true)
         } 
         else {
@@ -105,19 +110,28 @@ const TeamNavbar = (props) => {
                     </MobileIcon2> 
                     <NavMenu>
                         <NavItem>
-                            <NavbarLink to="ceo" smooth={true} duration={500} spy={true} exact="true" >DAVID</NavbarLink>
+                            <NavbarLink to="bot" smooth={true} duration={500} spy={true} exact="true" >FORTIS</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="cio" smooth={true} duration={500} spy={true} exact="true" >FILIP</NavbarLink>
+                            <NavbarLink to="group" smooth={true} duration={500} spy={true} exact="true" >TELOS</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="dev1" smooth={true} duration={500} spy={true} exact="true" >VICTOR</NavbarLink>
+                            <NavbarLink to="website" smooth={true} duration={500} spy={true} exact="true" >NFTFY</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="dev2" smooth={true} duration={2000} spy={true} exact="true" >BASHKAR</NavbarLink>
+                            <NavbarLink to="anchor" smooth={true} duration={2000} spy={true} exact="true" >ANCHOR</NavbarLink>
                         </NavItem>
                         <NavItem>
-                            <NavbarLink to="dev3" smooth={true} duration={500} spy={true} exact="true" >ABHIK</NavbarLink>
+                            <NavbarLink to="metaverse" smooth={true} duration={2000} spy={true} exact="true" >T-STARTER</NavbarLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavbarLink to="metaverse" smooth={true} duration={2000} spy={true} exact="true" >WOMBAT</NavbarLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavbarLink to="metaverse" smooth={true} duration={2000} spy={true} exact="true" >AREA X</NavbarLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavbarLink to="metaverse" smooth={true} duration={2000} spy={true} exact="true" >WAYNE</NavbarLink>
                         </NavItem>
                     </NavMenu>
                 
@@ -128,4 +142,4 @@ const TeamNavbar = (props) => {
     );
 };
 
-export default TeamNavbar;
+export default PartnersNavbar;

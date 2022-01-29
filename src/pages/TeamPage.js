@@ -15,7 +15,7 @@ import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 const Container = styled.div`
     display: flex;
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     background: ${props => props.theme.body};
 
     @media screen and (max-width: 900px){
@@ -28,7 +28,7 @@ const ColumnLeft = styled.div`
     flex-basis: 50%;
     background: ${props => props.theme.body};
     width: 50%;
-    height: 700px;
+    height: 750px;
     @media screen and (min-width: 1100px){
         padding-left: 100px;
     }
@@ -50,7 +50,7 @@ const ColumnRight = styled.div`
     padding-right: 150px;
     
     width: 50%;
-    height: 700px;
+    height: 750px;
     @media screen and (max-width: 900px){
         width: 100%;
         margin-top: -300px;

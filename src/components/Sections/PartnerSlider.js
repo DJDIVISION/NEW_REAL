@@ -208,7 +208,7 @@ const SectionImage = styled.div`
     flex-direction: column;
     align-items: center;
     img {
-        width: 100vw;
+        width: 90vw;
     }
 
     @media screen and (min-width: 1000px){
@@ -221,7 +221,7 @@ const SectionImage = styled.div`
 `;
 
 const Image = styled.img`
-    width: 100vw;
+    width: 80vw;
     height: auto;
     display: flex;
 `;
