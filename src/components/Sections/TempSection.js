@@ -1,60 +1,62 @@
-import React from "react";
+import React, {useState} from "react";
 import styled, {keyframes} from "styled-components";
+import {Link as LinkR} from "react-router-dom";
+ 
+import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
+import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
+
+import Slider from "react-slick";
+import "../../../node_modules/slick-carousel/slick/slick.css";
+import "../../../node_modules/slick-carousel/slick/slick-theme.css";
+
+import Nft21 from "../../images/ceo.jpg";
+import Nft22 from "../../images/cio.jpg";
+import Nft23 from "../../images/dev.jpg";
+
+const images = [Nft21, Nft22, Nft23, Nft21, Nft22, Nft23];
+
+const ArrowRight = styled(ArrowCircleRightIcon)`
+    color: ${props => props.theme.text};
+`;
+const ArrowLeft = styled(ArrowCircleLeftIcon)`
+    color: ${props => props.theme.text};
+`;
+
+const Header = styled.h1`
+    font-family: "Alphacentauri";
+    font-size: 38px;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: ${props => props.theme.text};
+    text-shadow: 1px 2px 4px ${props => props.theme.body},
+                          1px -1px 0 #000,
+                         1px -1px 0 #000,
+                        -1px -1px 0 #000;
+
+    @media screen and (max-width: 1100px){
+        font-size: 32px;
+        margin-top: 140px;
+        
+        
+    }
+`;
 
 const Container = styled.div`
     display: flex;
+    flex-direction: column;
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     background: ${props => props.theme.horizontalBlue};
     margin-top: -100px;
     @media screen and (max-width: 1100px){
         flex-direction: column;
-        height: 85vh;
+        height: 95vh;
     }
 `;
 
-const ColumnLeft = styled.div`
-    flex-shrink: 0;
-    flex-basis: 50%;
-    background: ${props => props.theme.horizontalBlue};
-    width: 50%;
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @media screen and (min-width: 1100px){
-        
-    }
 
-    @media screen and (max-width: 1100px){
-        background: ${props => props.theme.verticalBlue};
-        width: 100vw;
-        height: 42.5vh;
-        
-        
-    }
-`;
-const ColumnRight = styled.div`
-    background: ${props => props.theme.horizontalBlue};
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    height: 90vh;
-    padding: 10px 100px;
-    text-align: center;
-    @media screen and (max-width: 1100px){
-        height: 42.5vh;
-        width: 100vw;
-        align-items: center;
-        justify-content: center;
-        padding: 10px 20px;
-        background: ${props => props.theme.verticalBlue};
-        
-    }
-
-`;
 
 const pathAnim = keyframes`
     0% {
@@ -141,6 +143,38 @@ const Wrapper = styled.div`
 `;
 
 const TempSection = () => {
+
+    const NextArrow = ({onClick}) => {
+        return (
+            <div className="arrow next" onClick={onClick}>
+                <ArrowRight />
+            </div>
+        )
+    }
+
+    const PrevArrow = ({onClick}) => {
+        return (
+            <div className="arrow prev" onClick={onClick}>
+                <ArrowLeft />
+            </div>
+        )
+    }
+
+    const [imageIndex, setImageIndex] = useState(0);
+
+    const settings = {
+        className: "centermode",
+        infinite: true,
+        lazyLoad: true,
+        speed: 300, 
+        slidesToShow: 3, 
+        centerMode: true,
+        centerPadding: 0,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
+        beforeChange: (current, next) => setImageIndex(next),
+      };
+
     return(
         <>
         <WrapperTop>
@@ -176,14 +210,17 @@ const TempSection = () => {
             </svg>
             </WrapperTop>
             
-        <Container>
-            <ColumnLeft>
-            
-            </ColumnLeft>
-            <ColumnRight>
-            
-            </ColumnRight>
-            
+        <Container id="team">
+            <Header>MEET THE TEAM</Header>
+            <div className="centermode">
+                <Slider {...settings}>
+                   {images.map((img, idx) => (
+                      <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
+                         <LinkR to="/TeamPage"> <img src={img} alt={img} /></LinkR>
+                      </div> 
+                   ))} 
+                </Slider>
+            </div>
         </Container>
         <Wrapper>
             <svg viewBox="0 0 1320 500">
