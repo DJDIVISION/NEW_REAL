@@ -53,12 +53,12 @@ const Home = (props) => {
             
             
             <TelosSection />
-            <TokenomicsSection />
+            {/* <TokenomicsSection />
             <GamingSection />
             <TeamSection />
             <PartnerSlider />
             
-            <BSCSection />
+            <BSCSection /> */}
             
             <Footer />
         </motion.div>
