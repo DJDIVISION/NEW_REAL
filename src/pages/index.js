@@ -12,7 +12,7 @@ import SectionMenu from "../components/Sections/TopSection";
 import GamingSection from "../components/Sections/GamingSection";
 import NftSection from "../components/Sections/NftSection";
 import TeamSection from "../components/Sections/TeamSection";
-import BSCSection from "../components/Sections/BSCSection";
+import DAppSection from "../components/Sections/DAppSection";
 import RoadMapSection from "../components/Sections/RoadMapSection";
 import TokenomicsSection from "../components/Sections/TeamSection";
 
@@ -50,7 +50,9 @@ const Home = (props) => {
         <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
             <NavBar showMenu={showMenu} theme={theme} setTheme={setTheme} setShowMenu={setShowMenu}/>
             <TeamSection />
+            <DAppSection />
             <PartnersSection />
+            
             
             {/*  <TokenomicsSection />
             <GamingSection />
