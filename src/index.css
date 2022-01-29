@@ -35,8 +35,8 @@ code {
 
 .centermode {
   width: 100vw;
-  
-  height: 300px;
+  padding-top: 20px;
+  height: 550px;
 }
 
 .slide img{
@@ -78,19 +78,19 @@ code {
 
 @media only screen and (max-width: 1100px){
   .slide img {
-    width: 140px;
+    width: 120px;
     
    
   }
   
   .next {
-    right: 10%;
-    top: 60%;
+    right: 20%;
+    top: 40%;
   }
   
   .prev {
-    left: 10%;
-    top: 60%;
+    left: 20%;
+    top: 40%;
   }
   
 }

@@ -7,11 +7,11 @@ import { motion } from "framer-motion";
 import { animationOne, transition } from "../animations";
 import Footer from '../components/Footer';
 import PartnerSlider from "../components/Sections/PartnerSlider";
-import DonutSection from "../components/Sections/DonutSection";
+import Genesis from "../components/Sections/Genesis";
 import SectionMenu from "../components/Sections/TopSection";
 import GamingSection from "../components/Sections/GamingSection";
 import NftSection from "../components/Sections/NftSection";
-import TeamSection from "../components/Sections/TeamSection";
+import TempSection from "../components/Sections/TempSection";
 import BSCSection from "../components/Sections/BSCSection";
 import RoadMapSection from "../components/Sections/RoadMapSection";
 import TokenomicsSection from "../components/Sections/TempSection";
@@ -49,8 +49,7 @@ const Home = (props) => {
         <ThemeProvider theme={themes[theme]}>
         <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
             <NavBar showMenu={showMenu} theme={theme} setTheme={setTheme} setShowMenu={setShowMenu}/>
-            <TeamSection />
-            <PartnerSlider />
+            <TempSection />
             
             
             {/*  <TokenomicsSection />

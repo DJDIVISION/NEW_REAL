@@ -37,7 +37,7 @@ const ArrowLeft = styled(ArrowCircleLeftIcon)`
 const Header = styled.h1`
     font-family: "Alphacentauri";
     font-size: 38px;
-    margin-bottom: 50px;
+    
     display: flex;
     color: ${props => props.theme.text};
     text-shadow: 1px 2px 4px ${props => props.theme.body},
@@ -46,8 +46,8 @@ const Header = styled.h1`
                         -1px -1px 0 #000;
 
     @media screen and (max-width: 1100px){
-        font-size: 32px;
-        
+        font-size: 24px;
+        margin-top: 200px;
         margin-bottom: 50px;
     }
 `;
@@ -150,7 +150,7 @@ const Section = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+    padding-top: 150px;
     @media screen and (max-width: 1100px){
         background: ${props => props.theme.verticalBlue}; 
     }

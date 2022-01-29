@@ -1,130 +1,59 @@
-import React, {useState, useContext} from 'react';
+import React from "react";
 import styled, {keyframes} from "styled-components";
-import { Button } from "@material-ui/core";
-import { motion } from "framer-motion";
-import { Link as LinkR } from "react-router-dom";
-
-
-import TelosImage from "../../images/telos_logo.png";
-import RoadMapImage from "../../images/BestRoadMapDivider.png";
-import Genesis from "./Genesis";
 
 const Container = styled.div`
     display: flex;
     width: 100vw;
-    height: 100vh;
-    background: ${props => props.theme.body};
-
+    height: 90vh;
+    background: ${props => props.theme.horizontalBlue};
+    margin-top: -100px;
     @media screen and (max-width: 1100px){
         flex-direction: column;
+        height: 85vh;
     }
 `;
 
 const ColumnLeft = styled.div`
     flex-shrink: 0;
     flex-basis: 50%;
-    background: ${props => props.theme.horizontalRed};
+    background: ${props => props.theme.horizontalBlue};
     width: 50%;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     @media screen and (min-width: 1100px){
-        padding-top: 75px;
+        
     }
 
     @media screen and (max-width: 1100px){
-        background: ${props => props.theme.verticalRed};
+        background: ${props => props.theme.verticalBlue};
         width: 100vw;
-        padding-top: 50px;
+        height: 42.5vh;
         
         
     }
 `;
 const ColumnRight = styled.div`
-    background: ${props => props.theme.horizontalRed};
+    background: ${props => props.theme.horizontalBlue};
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 50%;
-    height: 100vh;
+    height: 90vh;
     padding: 10px 100px;
     text-align: center;
     @media screen and (max-width: 1100px){
-        height: 50vh;
+        height: 42.5vh;
         width: 100vw;
         align-items: center;
         justify-content: center;
         padding: 10px 20px;
-        background: ${props => props.theme.verticalRed};
-        padding-bottom: 130px;
+        background: ${props => props.theme.verticalBlue};
         
     }
 
-`;
-
-const Image = styled.img`
-    display: flex;
-`;
-
-const SectionImage = styled.div`
-    display: flex;
-    align-items: center;
-
-    img {
-        width: 300px;
-    }
-    @media screen and (min-width: 1000px){
-        img{
-           width: 50vw;
-        }
-    }
-`;
-
-
-
-const TopLine = styled.p`
-    color: ${props => props.theme.text};
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 30px;
-    @media screen and (max-width: 768px){
-        font-size: 18px;
-        margin-bottom: 20px;
-
-    }
-
-    
-`;
-
-const Heading = styled.h1`
-    font-size: 48px;
-    font-weight: 600;
-    color: ${props => props.theme.text};
-    margin-bottom: 30px;
-
-    @media screen and (max-width: 480px){
-        font-size: 32px;
-        margin-bottom: 20px;
-    }
-`;
-
-const StyledButton = styled(LinkR)`
-    &&& {
-        color: ${props => props.theme.text};
-        border: 1px solid ${props => props.theme.text};
-        height: 40px;
-        width: 150px;
-        margin-bottom: 30px;
-        text-decoration: none;
-        font-size: 18px;
-        border-radius: 10px;
-        padding: 10px 10px;
-    }
-    &:hover{
-        transform: scale(1.2);
-    }
 `;
 
 const pathAnim = keyframes`
@@ -146,25 +75,25 @@ const pathAnim = keyframes`
 `;
 
 const WrapperTop = styled.div`
-    height: 200px;
+    height: 100px;
+    background: transparent;
     width: 100%;
-    position: absolute;
-   transform: rotate(180deg);
-   margin-top: -45px;
+    transform: rotate(180deg);
+    
 
     @media screen and (max-width: 768px){
         
     }
 
     @media screen and (max-width: 600px){
-       margin-top: -70px; 
+       
     }
 
     svg path{
         animation: ${pathAnim} linear 7s infinite; 
-        transform: scaleY(0.3);    
+        transform: scaleY(0.2);    
         @media screen and (max-width: 1100px){
-            transform: scaleY(1.2);   
+            transform: scaleY(0.8);   
     } 
     }
 
@@ -180,22 +109,21 @@ const WrapperTop = styled.div`
 `;
 
 const Wrapper = styled.div`
-    height: 200px;
+    height: 100px;
     width: 100%;
-    position: absolute;
-    margin-top: 510px;
-
+    background: transparent;
+    margin-top: -100px;
     @media screen and (max-width: 768px){
-        margin-top: 730px;
+        
     }
 
     @media screen and (max-width: 600px){
-        margin-top: 550px;
+        
     }
 
     svg path{
         animation: ${pathAnim} linear 7s infinite; 
-        transform: scaleY(0.3);    
+        transform: scaleY(0.2);    
         @media screen and (max-width: 1100px){
             transform: scaleY(1.2);   
     } 
@@ -211,11 +139,11 @@ const Wrapper = styled.div`
         animation-play-state: paused;
     }
 `;
-const TokenomicsSection = () => {
-    return (
-         
-        <Container id="tokenomics">
-            <WrapperTop>
+
+const TempSection = () => {
+    return(
+        <>
+        <WrapperTop>
             <svg viewBox="0 0 1320 500">
                 <path fill-opacity="0.5" d="
                 M0,192
@@ -223,75 +151,77 @@ const TokenomicsSection = () => {
                 C880,290,1100,290,1320,192
                 L1320 500
                 L0 500
-                " fill="#ffa500" />
+                " fill="#0014a8" />
                  <path fill-opacity="0.5" d="
                 M0,192
                 C220,100,440,100,660,192
                 C880,290,1100,290,1320,192
                 L1320 500
                 L0 500
-                " fill="#7cfc00" />
+                " fill="#3f00ff" />
                  <path fill-opacity="0.5" d="
                 M0,192
                 C220,100,440,100,660,192
                 C880,290,1100,290,1320,192
                 L1320 500
                 L0 500
-                " fill="#ffff00" />
+                " fill="#545aa7" />
                  <path fill-opacity="0.5" d="
                 M0,192
                 C220,100,440,100,660,192
                 C880,290,1100,290,1320,192
                 L1320 500
                 L0 500
-                " fill="#ff4500" />
+                " fill="#041690" />
             </svg>
             </WrapperTop>
-            <Wrapper>
-            <svg viewBox="0 0 1320 500">
-                <path fill-opacity="0.5" d="
-                M0,192
-                C220,100,440,100,660,192
-                C880,290,1100,290,1320,192
-                L1320 500
-                L0 500
-                " fill="#ffa500" />
-                 <path fill-opacity="0.5" d="
-                M0,192
-                C220,100,440,100,660,192
-                C880,290,1100,290,1320,192
-                L1320 500
-                L0 500
-                " fill="#7cfc00" />
-                 <path fill-opacity="0.5" d="
-                M0,192
-                C220,100,440,100,660,192
-                C880,290,1100,290,1320,192
-                L1320 500
-                L0 500
-                " fill="#ffff00" />
-                 <path fill-opacity="0.5" d="
-                M0,192
-                C220,100,440,100,660,192
-                C880,290,1100,290,1320,192
-                L1320 500
-                L0 500
-                " fill="#ff4500" />
-            </svg>
-            </Wrapper>
+            
+        <Container>
             <ColumnLeft>
-                <Genesis />
+            
             </ColumnLeft>
             <ColumnRight>
             
-                <TopLine>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</TopLine>
-                <Heading>TOKENOMICS</Heading>
-           
-            
             </ColumnRight>
+            
         </Container>
+        <Wrapper>
+            <svg viewBox="0 0 1320 500">
+                <path fill-opacity="0.5" d="
+                M0,192
+                C220,100,440,100,660,192
+                C880,290,1100,290,1320,192
+                L1320 500
+                L0 500
+                " fill="#0014a8" />
+                 <path fill-opacity="0.5" d="
+                M0,192
+                C220,100,440,100,660,192
+                C880,290,1100,290,1320,192
+                L1320 500
+                L0 500
+                " fill="#3f00ff" />
+                 <path fill-opacity="0.5" d="
+                M0,192
+                C220,100,440,100,660,192
+                C880,290,1100,290,1320,192
+                L1320 500
+                L0 500
+                " fill="#545aa7" />
+                 <path fill-opacity="0.5" d="
+                M0,192
+                C220,100,440,100,660,192
+                C880,290,1100,290,1320,192
+                L1320 500
+                L0 500
+                " fill="#041690" />
+            </svg>
+            </Wrapper>
         
+        </>
     )
 }
 
-export default TokenomicsSection;
+
+
+export default TempSection;
