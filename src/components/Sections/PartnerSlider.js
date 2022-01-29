@@ -45,7 +45,7 @@ const Carroussel = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 80px;
-    margin-bottom: 40px;
+    
     
     
     
@@ -56,16 +56,16 @@ const Carroussel = styled.div`
     .slick-dots button:before{
         color: ${props => props.theme.text};
         font-size: 0.5rem;
-        margin-top: 10px;
-        transform: scale(1.2);
+        
     }
     
     
 
     @media screen and (max-width: 1100px) {
         width: 75vw;
-        height: 60vh;
-        margin-top: 20px;
+        height: 70vh;
+        margin-top: -10px;
+        
         border-radius: 20px;
         .slick-arrow:before{
             
@@ -77,14 +77,14 @@ const Carroussel = styled.div`
 const MainContainer = styled.section`
     
     width: 100%;
-    height: 500px;
+    height: 400px;
     background-size: contain;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
     background-repeat: no-repeat;
+    padding-top: 100px;
     
 
 
@@ -94,6 +94,8 @@ const MainContainer = styled.section`
         background-size: cover;
         background-position: center;
         border-radius: 20px;
+        padding-top: 40px;
+        
     }
     
 `;
@@ -205,12 +207,15 @@ const SectionImage = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    img {
+        width: 100vw;
+    }
 
     @media screen and (min-width: 1000px){
-        height: 350px;
+        height: 150px;
         
         img{
-            width: 50vw;
+            width: 40vw;
         }
     }
 `;
